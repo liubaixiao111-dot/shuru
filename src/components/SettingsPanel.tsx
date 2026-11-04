@@ -46,17 +46,17 @@ export function SettingsPanel(p: Props) {
 
   return (
     <div className="space-y-4">
-      {msg && <p className={`card text-sm ${msg.ok ? "text-green-700" : "text-red-600"}`}>{msg.text}</p>}
+      {msg && <p className={`card text-sm ${msg.ok ? "text-emerald-400" : "text-rose-400"}`}>{msg.text}</p>}
 
       <section className="card space-y-2">
-        <h2 className="font-medium">写作额度</h2>
-        <p className="text-sm text-ink/70">
+        <h2 className="text-base font-semibold">写作额度</h2>
+        <p className="text-sm text-zinc-300">
           当前使用：{usingByok ? `自带 Key（${name(usingByok.provider)}），不消耗平台额度` : "平台额度"}
         </p>
-        <p className="text-sm text-ink/70">平台剩余额度：{Math.max(0, p.platformTokens).toLocaleString()} token</p>
-        <p className="text-xs text-ink/50">充值即将开放。</p>
+        <p className="text-sm text-zinc-300">平台剩余额度：{Math.max(0, p.platformTokens).toLocaleString()} token</p>
+        <p className="text-xs text-zinc-500">充值即将开放。</p>
         {p.usage.length > 0 && (
-          <ul className="text-sm text-ink/60">
+          <ul className="text-sm text-zinc-400">
             {p.usage.map((u) => (
               <li key={u.mode}>
                 近 30 天{u.mode === "byok" ? "自带 Key" : "平台额度"}：写了 {u.chapters} 章，消耗 {u.tokens.toLocaleString()} token
@@ -67,27 +67,27 @@ export function SettingsPanel(p: Props) {
       </section>
 
       <section className="card space-y-3">
-        <h2 className="font-medium">自带模型 API Key</h2>
-        <p className="text-sm text-ink/60">填入你自己的 Key 后，写作消耗的是你自己的 token。Key 加密保存，只用于为你生成章节。</p>
+        <h2 className="text-base font-semibold">自带模型 API Key</h2>
+        <p className="text-sm text-zinc-400">填入你自己的 Key 后，写作消耗的是你自己的 token。Key 加密保存，只用于为你生成章节。</p>
         {p.keys.length > 0 && (
           <ul className="space-y-2 text-sm">
             {p.keys.map((k) => (
               <li key={k.provider} className="flex items-center justify-between gap-2">
                 <span>
                   {name(k.provider)} · {k.model}
-                  {k.isDefault && <span className="ml-2 text-accent">使用中</span>}
+                  {k.isDefault && <span className="ml-2 text-rose-400">使用中</span>}
                 </span>
                 <span className="flex gap-2">
                   {!k.isDefault && (
                     <button
-                      className="text-accent"
+                      className="text-rose-400"
                       onClick={() => run(() => api("/api/settings/keys", { method: "PATCH", body: { provider: k.provider } }), "已切换")}
                     >
                       使用
                     </button>
                   )}
                   <button
-                    className="text-ink/40"
+                    className="text-zinc-500"
                     onClick={() => run(() => api(`/api/settings/keys?provider=${k.provider}`, { method: "DELETE" }), "已删除")}
                   >
                     删除
@@ -99,13 +99,13 @@ export function SettingsPanel(p: Props) {
         )}
         {usingByok && (
           <button
-            className="text-sm text-accent"
+            className="text-sm text-rose-400"
             onClick={() => run(() => api("/api/settings/keys", { method: "PATCH", body: { provider: null } }), "已切回平台额度")}
           >
             改用平台额度
           </button>
         )}
-        <div className="space-y-2 border-t border-ink/10 pt-3">
+        <div className="space-y-2 border-t border-white/10 pt-3">
           <select className="input" value={provider} onChange={(e) => setProvider(e.target.value)}>
             {p.providers.map((x) => (
               <option key={x.id} value={x.id}>
@@ -143,15 +143,15 @@ export function SettingsPanel(p: Props) {
       </section>
 
       <section className="card space-y-3">
-        <h2 className="font-medium">成人向内容</h2>
-        <p className="text-sm text-ink/60">
+        <h2 className="text-base font-semibold">成人向内容</h2>
+        <p className="text-sm text-zinc-400">
           开启后，可以在新书中写暴力、黑暗、惊悚等成熟题材和含蓄的情感描写，不含露骨内容。需要先完成年龄验证。
         </p>
         {!p.ageVerified ? (
           <div className="space-y-2">
             <input className="input" placeholder="真实姓名" value={realName} onChange={(e) => setRealName(e.target.value)} />
             <input className="input" placeholder="身份证号" value={idNumber} onChange={(e) => setIdNumber(e.target.value)} />
-            <p className="text-xs text-ink/50">仅用于确认年满 18 岁，我们不保存你的姓名和证件号。</p>
+            <p className="text-xs text-zinc-500">仅用于确认年满 18 岁，我们不保存你的姓名和证件号。</p>
             <button
               className="btn-ghost"
               disabled={busy}
@@ -166,6 +166,7 @@ export function SettingsPanel(p: Props) {
           <label className="flex items-center gap-2 text-sm">
             <input
               type="checkbox"
+              className="h-5 w-5 accent-rose-500"
               checked={p.adultEnabled}
               onChange={(e) =>
                 run(
@@ -180,11 +181,11 @@ export function SettingsPanel(p: Props) {
       </section>
 
       <section className="card flex items-center justify-between text-sm">
-        <span className="text-ink/60">
+        <span className="text-zinc-400">
           {p.nickname} · {p.email}
         </span>
         <button
-          className="text-ink/50"
+          className="text-zinc-500"
           onClick={async () => {
             await api("/api/auth/logout", { body: {} });
             router.push("/");

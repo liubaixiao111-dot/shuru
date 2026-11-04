@@ -3,6 +3,7 @@
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { api } from "@/lib/api";
+import { BookCover } from "./BookCover";
 
 export interface SceneCard {
   id: string;
@@ -14,7 +15,7 @@ export interface SceneCard {
   questions: { key: string; label: string; placeholder: string }[] | null;
 }
 
-const GENRES = ["修仙", "玄幻", "都市", "言情", "悬疑", "武侠", "科幻", "末世", "历史", "其他"];
+const GENRES = ["悬疑", "仙侠", "玄幻", "都市", "言情", "科幻", "历史", "武侠", "惊悚", "其他"];
 
 export function NewBookForm({ scenes, adultEnabled }: { scenes: SceneCard[]; adultEnabled: boolean }) {
   const router = useRouter();
@@ -37,6 +38,7 @@ export function NewBookForm({ scenes, adultEnabled }: { scenes: SceneCard[]; adu
     setSceneId(s.id);
     setTitle(s.defaultTitle);
     setName(s.questions ? "" : s.protagonistName);
+    setError("");
   }
 
   async function submit() {
@@ -58,22 +60,25 @@ export function NewBookForm({ scenes, adultEnabled }: { scenes: SceneCard[]; adu
   const common = (
     <div className="space-y-3">
       <label className="block">
-        <span className="text-sm text-ink/60">书名</span>
+        <span className="text-xs text-zinc-500">书名</span>
         <input className="input mt-1" value={title} onChange={(e) => setTitle(e.target.value)} maxLength={30} />
       </label>
       {!(tab === "scene" && scene?.questions) && (
         <label className="block">
-          <span className="text-sm text-ink/60">主角名字</span>
+          <span className="text-xs text-zinc-500">主角名字</span>
           <input className="input mt-1" value={name} onChange={(e) => setName(e.target.value)} maxLength={10} />
         </label>
       )}
       {adultEnabled && (
-        <label className="flex items-center gap-2 text-sm">
-          <input type="checkbox" checked={adult} onChange={(e) => setAdult(e.target.checked)} />
-          这本书开启成人向（成熟题材，不含露骨内容）
+        <label className="flex items-center justify-between rounded-2xl bg-white/5 px-4 py-3 text-sm ring-1 ring-white/10">
+          <span>
+            成人向
+            <span className="ml-2 text-xs text-zinc-500">成熟题材，不含露骨内容</span>
+          </span>
+          <input type="checkbox" className="h-5 w-5 accent-rose-500" checked={adult} onChange={(e) => setAdult(e.target.checked)} />
         </label>
       )}
-      {error && <p className="text-sm text-red-600">{error}</p>}
+      {error && <p className="text-sm text-rose-400">{error}</p>}
       <button className="btn-primary w-full" disabled={busy || !title.trim()} onClick={submit}>
         {busy ? "正在开书…" : "开始写"}
       </button>
@@ -81,65 +86,81 @@ export function NewBookForm({ scenes, adultEnabled }: { scenes: SceneCard[]; adu
   );
 
   return (
-    <div>
-      <div className="mb-4 inline-flex rounded-full border border-ink/15 bg-white p-1 text-sm">
+    <div className="mt-6">
+      <div className="inline-flex rounded-full bg-white/5 p-1 text-sm ring-1 ring-white/10">
         {(["scene", "original"] as const).map((t) => (
           <button
             key={t}
             onClick={() => setTab(t)}
-            className={`rounded-full px-4 py-1 ${tab === t ? "bg-accent text-white" : "text-ink/70"}`}
+            className={`rounded-full px-5 py-1.5 transition ${tab === t ? "bg-white text-black" : "text-zinc-400"}`}
           >
-            {t === "scene" ? "从场景开始" : "原创设定"}
+            {t === "scene" ? "精选开场" : "原创设定"}
           </button>
         ))}
       </div>
 
       {tab === "scene" ? (
         <>
-          <ul className="grid grid-cols-2 gap-3">
+          <ul className="mt-6 grid grid-cols-2 gap-x-4 gap-y-6">
             {scenes.map((s) => (
               <li key={s.id}>
-                <button
-                  onClick={() => pick(s)}
-                  className={`card h-full w-full text-left ${sceneId === s.id ? "border-accent ring-1 ring-accent" : ""}`}
-                >
-                  <div className="text-xs text-accent">{s.genre}</div>
-                  <div className="font-medium">{s.name}</div>
-                  <div className="mt-1 text-sm text-ink/60">{s.hook}</div>
+                <button onClick={() => pick(s)} className="w-full text-left">
+                  <BookCover title={s.name} genre={s.genre} />
+                  <p className="mt-2 line-clamp-3 text-xs leading-relaxed text-zinc-400">{s.hook}</p>
                 </button>
               </li>
             ))}
           </ul>
+
           {scene && (
-            <div className="card mt-4 space-y-3">
-              {scene.questions?.map((q) => (
-                <label key={q.key} className="block">
-                  <span className="text-sm text-ink/60">{q.label}</span>
-                  <textarea
-                    className="input mt-1"
-                    rows={2}
-                    placeholder={q.placeholder}
-                    value={answers[q.key] ?? ""}
-                    onChange={(e) => setAnswers({ ...answers, [q.key]: e.target.value })}
-                  />
-                </label>
-              ))}
-              {common}
-            </div>
+            <>
+              <div className="fixed inset-0 z-40 bg-black/60 backdrop-blur-sm" onClick={() => setSceneId(null)} />
+              <div className="fixed inset-x-0 bottom-0 z-50 mx-auto max-h-[85vh] max-w-2xl overflow-y-auto rounded-t-3xl bg-[#17171a] p-5 pb-8 ring-1 ring-white/10">
+                <div className="mx-auto mb-4 h-1 w-10 rounded-full bg-white/15" />
+                <div className="mb-5 flex gap-4">
+                  <BookCover title={scene.name} genre={scene.genre} className="w-20 shrink-0" />
+                  <div>
+                    <p className="text-xs text-rose-400">{scene.genre}</p>
+                    <p className="mt-1 font-serif text-lg font-semibold">{scene.name}</p>
+                    <p className="mt-1 text-xs leading-relaxed text-zinc-400">{scene.hook}</p>
+                  </div>
+                </div>
+                <div className="space-y-3">
+                  {scene.questions?.map((q) => (
+                    <label key={q.key} className="block">
+                      <span className="text-xs text-zinc-500">{q.label}</span>
+                      <textarea
+                        className="input mt-1"
+                        rows={2}
+                        placeholder={q.placeholder}
+                        value={answers[q.key] ?? ""}
+                        onChange={(e) => setAnswers({ ...answers, [q.key]: e.target.value })}
+                      />
+                    </label>
+                  ))}
+                  {common}
+                </div>
+              </div>
+            </>
           )}
         </>
       ) : (
-        <div className="card space-y-3">
+        <div className="mt-6 space-y-4">
+          <div className="no-scrollbar -mx-4 flex gap-2 overflow-x-auto px-4">
+            {GENRES.map((g) => (
+              <button
+                key={g}
+                onClick={() => setGenre(g)}
+                className={`shrink-0 rounded-full px-4 py-1.5 text-sm ring-1 ${
+                  genre === g ? "bg-white text-black ring-white" : "text-zinc-400 ring-white/10"
+                }`}
+              >
+                {g}
+              </button>
+            ))}
+          </div>
           <label className="block">
-            <span className="text-sm text-ink/60">题材</span>
-            <select className="input mt-1" value={genre} onChange={(e) => setGenre(e.target.value)}>
-              {GENRES.map((g) => (
-                <option key={g}>{g}</option>
-              ))}
-            </select>
-          </label>
-          <label className="block">
-            <span className="text-sm text-ink/60">一句话设定</span>
+            <span className="text-xs text-zinc-500">一句话设定</span>
             <textarea
               className="input mt-1"
               rows={3}
@@ -148,15 +169,9 @@ export function NewBookForm({ scenes, adultEnabled }: { scenes: SceneCard[]; adu
               onChange={(e) => setPremise(e.target.value)}
             />
           </label>
-          <details>
-            <summary className="cursor-pointer text-sm text-ink/60">更多设定（可选）</summary>
-            <textarea
-              className="input mt-2"
-              rows={3}
-              placeholder="世界观"
-              value={world}
-              onChange={(e) => setWorld(e.target.value)}
-            />
+          <details className="rounded-2xl bg-white/[.03] px-4 py-3 ring-1 ring-white/5">
+            <summary className="cursor-pointer text-sm text-zinc-400">更多设定（可选）</summary>
+            <textarea className="input mt-3" rows={3} placeholder="世界观" value={world} onChange={(e) => setWorld(e.target.value)} />
             <textarea
               className="input mt-2"
               rows={2}

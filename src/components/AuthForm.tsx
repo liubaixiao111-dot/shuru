@@ -29,30 +29,43 @@ export function AuthForm({ mode }: { mode: "login" | "register" }) {
   }
 
   return (
-    <form onSubmit={submit} className="card mx-auto mt-10 max-w-sm space-y-3">
-      <h1 className="text-xl font-semibold">{mode === "login" ? "登录书入" : "注册书入"}</h1>
-      {mode === "register" && (
-        <input className="input" placeholder="昵称" value={nickname} onChange={(e) => setNickname(e.target.value)} />
-      )}
-      <input className="input" type="email" placeholder="邮箱" value={email} onChange={(e) => setEmail(e.target.value)} />
-      <input
-        className="input"
-        type="password"
-        placeholder={mode === "register" ? "密码（至少 8 位）" : "密码"}
-        value={password}
-        onChange={(e) => setPassword(e.target.value)}
-      />
-      {error && <p className="text-sm text-red-600">{error}</p>}
-      <button className="btn-primary w-full" disabled={busy}>
-        {busy ? "请稍候…" : mode === "login" ? "登录" : "注册并开始"}
-      </button>
-      <p className="text-center text-sm text-ink/60">
+    <main className="relative pt-16">
+      <div className="pointer-events-none absolute -right-24 -top-10 h-64 w-64 rounded-full bg-rose-500/25 blur-3xl" />
+      <Link href="/" className="relative font-serif text-3xl font-bold">
+        书入
+      </Link>
+      <h1 className="relative mt-8 text-2xl font-semibold">{mode === "login" ? "欢迎回来" : "创建账号"}</h1>
+      <p className="relative mt-1 text-sm text-zinc-400">
+        {mode === "login" ? "你的故事还在原地等你。" : "注册后送一份试用额度，可以先写起来。"}
+      </p>
+      <form onSubmit={submit} className="relative mt-8 space-y-3">
+        {mode === "register" && (
+          <input className="input" placeholder="昵称" value={nickname} onChange={(e) => setNickname(e.target.value)} />
+        )}
+        <input className="input" type="email" placeholder="邮箱" value={email} onChange={(e) => setEmail(e.target.value)} />
+        <input
+          className="input"
+          type="password"
+          placeholder={mode === "register" ? "密码（至少 8 位）" : "密码"}
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+        />
+        {error && <p className="text-sm text-rose-400">{error}</p>}
+        <button className="btn-primary w-full" disabled={busy}>
+          {busy ? "请稍候…" : mode === "login" ? "登录" : "注册并开始"}
+        </button>
+      </form>
+      <p className="relative mt-6 text-center text-sm text-zinc-500">
         {mode === "login" ? (
-          <>还没有账号？<Link className="text-accent" href="/register">注册</Link></>
+          <>
+            还没有账号？<Link className="text-rose-400" href="/register">注册</Link>
+          </>
         ) : (
-          <>已有账号？<Link className="text-accent" href="/login">登录</Link></>
+          <>
+            已有账号？<Link className="text-rose-400" href="/login">登录</Link>
+          </>
         )}
       </p>
-    </form>
+    </main>
   );
 }

@@ -33,7 +33,7 @@ export function BibleEditor({ bookId, bible, onSaved }: { bookId: string; bible:
 
   const field = (key: "world" | "protagonist" | "style", label: string) => (
     <label className="block">
-      <span className="text-sm text-ink/60">{label}</span>
+      <span className="text-sm opacity-60">{label}</span>
       <textarea
         className="input mt-1"
         rows={2}
@@ -45,11 +45,11 @@ export function BibleEditor({ bookId, bible, onSaved }: { bookId: string; bible:
 
   return (
     <div className="card mb-4 space-y-3">
-      <p className="text-sm text-ink/60">AI 每写完一章都会更新设定集。你在这里改的内容，从下一章开始生效。</p>
+      <p className="text-sm opacity-60">AI 每写完一章都会更新设定集。你在这里改的内容，从下一章开始生效。</p>
       {field("world", "世界观")}
       {field("protagonist", "主角")}
       <div>
-        <span className="text-sm text-ink/60">人物</span>
+        <span className="text-sm opacity-60">人物</span>
         {draft.characters.map((c, i) => (
           <div key={i} className="mt-1 flex gap-2">
             <input
@@ -71,7 +71,7 @@ export function BibleEditor({ bookId, bible, onSaved }: { bookId: string; bible:
               }}
             />
             <button
-              className="text-ink/40"
+              className="opacity-40"
               onClick={() => setDraft({ ...draft, characters: draft.characters.filter((_, j) => j !== i) })}
             >
               ✕
@@ -79,14 +79,14 @@ export function BibleEditor({ bookId, bible, onSaved }: { bookId: string; bible:
           </div>
         ))}
         <button
-          className="mt-2 text-sm text-accent"
+          className="mt-2 text-sm text-rose-500"
           onClick={() => setDraft({ ...draft, characters: [...draft.characters, { name: "", desc: "" }] })}
         >
           + 添加人物
         </button>
       </div>
       <label className="block">
-        <span className="text-sm text-ink/60">已发生的重要事实（一行一条）</span>
+        <span className="text-sm opacity-60">已发生的重要事实（一行一条）</span>
         <textarea
           className="input mt-1"
           rows={4}
@@ -95,7 +95,7 @@ export function BibleEditor({ bookId, bible, onSaved }: { bookId: string; bible:
         />
       </label>
       {field("style", "文风")}
-      {error && <p className="text-sm text-red-600">{error}</p>}
+      {error && <p className="text-sm text-rose-500">{error}</p>}
       <button
         className="btn-primary"
         disabled={busy}

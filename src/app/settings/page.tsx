@@ -2,7 +2,7 @@ import { redirect } from "next/navigation";
 import { currentUser } from "@/lib/auth";
 import { prisma } from "@/lib/db";
 import { PROVIDERS } from "@/lib/llm/providers";
-import { TopBar } from "@/components/TopBar";
+import { TabBar } from "@/components/TabBar";
 import { SettingsPanel } from "@/components/SettingsPanel";
 
 export default async function SettingsPage() {
@@ -18,8 +18,8 @@ export default async function SettingsPage() {
   });
 
   return (
-    <main>
-      <TopBar back="/shelf" title="设置" />
+    <main className="pb-28 pt-6">
+      <h1 className="mb-6 text-2xl font-semibold">我的</h1>
       <SettingsPanel
         nickname={user.nickname}
         email={user.email}
@@ -39,6 +39,7 @@ export default async function SettingsPage() {
           tokens: (u._sum.promptTokens ?? 0) + (u._sum.completionTokens ?? 0),
         }))}
       />
+      <TabBar />
     </main>
   );
 }

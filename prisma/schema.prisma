@@ -65,9 +65,25 @@ model Book {
   endingLeft    Int?
   // 当前阅读位置（分支树上的叶子），回到分叉点时会移动
   headChapterId String?
+  // 阅读进度：上次读到的章节和时间
+  lastReadChapterId String?
+  lastReadAt        DateTime?
   createdAt     DateTime  @default(now())
   updatedAt     DateTime  @updatedAt
   chapters      Chapter[]
+  bookmarks     Bookmark[]
+}
+
+model Bookmark {
+  id        String   @id @default(cuid())
+  bookId    String
+  book      Book     @relation(fields: [bookId], references: [id], onDelete: Cascade)
+  chapterId String
+  // 书签处的一小段原文，方便在列表里认出来
+  excerpt   String
+  createdAt DateTime @default(now())
+
+  @@unique([bookId, chapterId])
 }
 
 // 章节组成一棵树：重写或回到分叉点都会在同一个 parent 下产生新分支

@@ -2,22 +2,43 @@
 @tailwind components;
 @tailwind utilities;
 
+/* 进入阅读前的页面：深色、现代风格。阅读页会用阅读主题覆盖背景色 */
 body {
-  @apply bg-paper text-ink antialiased;
+  @apply bg-[#0d0d0f] text-zinc-100 antialiased;
+  font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
 }
 
 .btn {
-  @apply inline-flex items-center justify-center rounded-full px-4 py-2 text-sm font-medium transition disabled:opacity-50;
+  @apply inline-flex items-center justify-center rounded-full px-5 py-2.5 text-sm font-medium transition active:scale-[.98] disabled:opacity-40;
 }
 .btn-primary {
-  @apply btn bg-accent text-white hover:bg-accent/90;
+  @apply btn bg-gradient-to-r from-amber-500 to-rose-500 text-white shadow-lg shadow-rose-500/20;
 }
 .btn-ghost {
-  @apply btn border border-ink/15 bg-white/60 hover:bg-white;
+  @apply btn bg-white/5 text-zinc-100 ring-1 ring-white/10 hover:bg-white/10;
 }
 .input {
-  @apply w-full rounded-xl border border-ink/15 bg-white px-3 py-2 text-base outline-none focus:border-accent;
+  @apply w-full rounded-2xl bg-white/5 px-4 py-3 text-base text-zinc-100 outline-none ring-1 ring-white/10 placeholder:text-zinc-500 focus:ring-2 focus:ring-rose-400/60;
 }
 .card {
-  @apply rounded-2xl border border-ink/10 bg-white/70 p-4 shadow-sm;
+  @apply rounded-3xl bg-white/[.04] p-5 ring-1 ring-white/[.06];
+}
+
+/* 阅读页底部弹层里的控件用浅色（夜间主题时弹层本身是深色） */
+.reader-sheet .btn-ghost {
+  @apply bg-black/[.04] text-inherit ring-black/10 hover:bg-black/[.08];
+}
+.reader-sheet .input {
+  @apply bg-black/[.04] text-inherit ring-black/10 placeholder:text-black/30;
+}
+.reader-sheet .card {
+  @apply bg-transparent p-0 ring-0;
+}
+.reader-sheet.night .btn-ghost,
+.reader-sheet.night .input {
+  @apply bg-white/5 ring-white/10 placeholder:text-white/30;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
 }
