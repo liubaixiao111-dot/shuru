@@ -1,0 +1,107 @@
+// 开发环境用 SQLite；上线时把 provider 改为 "postgresql" 并修改 DATABASE_URL。
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id              String    @id @default(cuid())
+  email           String    @unique
+  passwordHash    String
+  nickname        String
+  // 成人向：需完成实名年龄验证后才能开启
+  ageVerifiedAt   DateTime?
+  adultEnabled    Boolean   @default(false)
+  // 平台模式下的剩余额度（单位：token）。积分定价确定后再换算。
+  platformTokens  Int       @default(200000)
+  createdAt       DateTime  @default(now())
+  sessions        Session[]
+  apiKeys         ApiKey[]
+  books           Book[]
+  usageLogs       UsageLog[]
+}
+
+model Session {
+  id        String   @id @default(cuid())
+  token     String   @unique
+  userId    String
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  expiresAt DateTime
+  createdAt DateTime @default(now())
+}
+
+// 用户自带的模型密钥，AES-256-GCM 加密存储
+model ApiKey {
+  id           String   @id @default(cuid())
+  userId       String
+  user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  provider     String
+  model        String
+  encryptedKey String
+  isDefault    Boolean  @default(false)
+  createdAt    DateTime @default(now())
+
+  @@unique([userId, provider])
+}
+
+model Book {
+  id            String    @id @default(cuid())
+  userId        String
+  user          User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  title         String
+  sceneId       String?
+  genre         String
+  // JSON：开书时的设定集。之后每章写完都会把更新后的设定集存在章节上，
+  // 这样回到分叉点重写时，用的是那个时间点的设定，不会混入另一条分支的事件。
+  bible         String
+  adult         Boolean   @default(false)
+  // ongoing | ending | finished
+  status        String    @default("ongoing")
+  // 作者选择“慢慢收尾”时剩余的收尾章数
+  endingLeft    Int?
+  // 当前阅读位置（分支树上的叶子），回到分叉点时会移动
+  headChapterId String?
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+  chapters      Chapter[]
+}
+
+// 章节组成一棵树：重写或回到分叉点都会在同一个 parent 下产生新分支
+model Chapter {
+  id          String    @id @default(cuid())
+  bookId      String
+  book        Book      @relation(fields: [bookId], references: [id], onDelete: Cascade)
+  parentId    String?
+  parent      Chapter?  @relation("ChapterTree", fields: [parentId], references: [id], onDelete: Cascade)
+  children    Chapter[] @relation("ChapterTree")
+  index       Int
+  title       String
+  content     String
+  // 作者为这一章输入的想法（为空表示“继续”让 AI 自由发挥）
+  idea        String?
+  summary     String    @default("")
+  // JSON 数组：章末给出的推荐走向
+  suggestions String    @default("[]")
+  isFinale    Boolean   @default(false)
+  // JSON：写完本章后的设定集快照
+  bible       String?
+  createdAt   DateTime  @default(now())
+}
+
+model UsageLog {
+  id               String   @id @default(cuid())
+  userId           String
+  user             User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  bookId           String?
+  // platform | byok
+  mode             String
+  provider         String
+  model            String
+  promptTokens     Int
+  completionTokens Int
+  createdAt        DateTime @default(now())
+}
