@@ -68,6 +68,8 @@ model Book {
   // 阅读进度：上次读到的章节和时间
   lastReadChapterId String?
   lastReadAt        DateTime?
+  // JSON：本书的叙事偏好（节奏、人称、内心可见、叙事助手、离屏推演、日常/压力、硬边界、暂停）
+  prefs         String    @default("{}")
   createdAt     DateTime  @default(now())
   updatedAt     DateTime  @updatedAt
   chapters      Chapter[]
@@ -99,6 +101,8 @@ model Chapter {
   content     String
   // 作者为这一章输入的想法（为空表示“继续”让 AI 自由发挥）
   idea        String?
+  // 这一段的输入方式：action | continue | wait | retcon | rewrite | skip | twist | pause
+  mode        String    @default("action")
   summary     String    @default("")
   // JSON 数组：章末给出的推荐走向
   suggestions String    @default("[]")

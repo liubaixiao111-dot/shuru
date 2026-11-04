@@ -3,20 +3,21 @@
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { api } from "@/lib/api";
-import type { Bible } from "@/lib/bible";
+import type { PublicBible } from "@/lib/bible";
 
 /** 设定集：AI 每章自动更新，作者可以随时修改 */
-export function BibleEditor({ bookId, bible, onSaved }: { bookId: string; bible: Bible; onSaved: () => void }) {
+export function BibleEditor({ bookId, bible, onSaved }: { bookId: string; bible: PublicBible; onSaved: () => void }) {
   const router = useRouter();
-  const [draft, setDraft] = useState<Bible>(bible);
+  const [draft, setDraft] = useState<PublicBible>(bible);
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState("");
 
   async function save() {
-    const clean: Bible = {
+    const clean = {
       ...draft,
       facts: draft.facts.map((f) => f.trim()).filter(Boolean),
-      characters: draft.characters.filter((c) => c.name.trim()),
+      // 关系描述是给人看的，不回写；数值由 AI 维护，服务端会按人物名合并回来
+      characters: draft.characters.filter((c) => c.name.trim()).map(({ name, desc }) => ({ name, desc })),
     };
     setBusy(true);
     setError("");

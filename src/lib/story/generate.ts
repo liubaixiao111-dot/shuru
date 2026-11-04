@@ -1,11 +1,13 @@
 import { prisma } from "../db";
 import { HttpError } from "../auth";
-import { effectiveBible, parseBible } from "../bible";
+import { effectiveBible, limitRelationChanges, parseBible, type Bible } from "../bible";
 import { checkInput } from "../moderation";
 import { pathTo } from "../tree";
 import { estimateTokens, recordUsage, resolveModels, type ResolvedModel } from "../llm/client";
 import { PROVIDERS } from "../llm/providers";
 import { buildMessages } from "./prompt";
+import { detectMode, type Mode } from "./modes";
+import { parsePrefs } from "./prefs";
 import { MarkerSplitter, parseChapter } from "./parse";
 import { buildFixMessages, buildReviewMessages, parseReview } from "./review";
 
@@ -31,12 +33,16 @@ interface GenerateArgs {
   /** 新章节挂在哪一章之后；null 表示写第一章 */
   parentId: string | null;
   idea: string | null;
+  /** 界面上点的按钮（继续、等一等、其实、改写、快进、转折）；不传则按作者的话判断 */
+  mode?: Mode | null;
 }
 
 /** 生成新章节，返回 NDJSON 事件流 */
 export async function generateChapter(args: GenerateArgs): Promise<ReadableStream<Uint8Array>> {
-  const { userId, bookId, parentId } = args;
-  const idea = args.idea?.trim() || null;
+  const { userId, bookId } = args;
+  const detected = detectMode(args.idea, args.mode);
+  const mode = detected.mode;
+  const idea = detected.idea;
   if (idea) {
     if (idea.length > 500) throw new HttpError(400, "想法请控制在 500 字以内");
     const check = checkInput(idea);
@@ -52,7 +58,14 @@ export async function generateChapter(args: GenerateArgs): Promise<ReadableStrea
   const adult = book.adult && user.adultEnabled && !!user.ageVerifiedAt;
 
   const all = await prisma.chapter.findMany({ where: { bookId } });
-  if (parentId && !all.some((c) => c.id === parentId)) throw new HttpError(400, "分叉点不存在");
+  if (args.parentId && !all.some((c) => c.id === args.parentId)) throw new HttpError(400, "分叉点不存在");
+  // “刚才不算，改成……”：撤掉上一段，从它的前一段开新分支（原来那段留在另一条分支里）
+  let parentId = args.parentId;
+  if (mode === "rewrite") {
+    if (!parentId) throw new HttpError(400, "还没有可以改写的段落");
+    parentId = all.find((c) => c.id === parentId)?.parentId ?? null;
+  }
+  const prefs = parsePrefs(book.prefs);
   const history = pathTo(all, parentId);
   const models = await resolveModels(userId);
 
@@ -65,6 +78,8 @@ export async function generateChapter(args: GenerateArgs): Promise<ReadableStrea
     adult,
     history: history.map((c) => ({ index: c.index, title: c.title, summary: c.summary, content: c.content })),
     idea,
+    mode,
+    prefs,
     nextIndex: history.length + 1,
     ending,
   });
@@ -120,6 +135,7 @@ export async function generateChapter(args: GenerateArgs): Promise<ReadableStrea
               bible,
               recap: history.map((c) => `第${c.index}章 ${c.title}：${c.summary}`),
               idea,
+              boundaries: prefs.boundaries,
               tokens,
               onRevising: (issues) => send(ctl, { t: "revising", issues }),
             });
@@ -132,7 +148,9 @@ export async function generateChapter(args: GenerateArgs): Promise<ReadableStrea
           }
 
           const saved = await saveChapter({
-            args: { ...args, idea },
+            args: { ...args, parentId, idea },
+            mode,
+            prevBible: bible,
             m,
             raw: finalRaw,
             historyLen: history.length,
@@ -170,6 +188,7 @@ async function reviewAndFix(p: {
   bible: ReturnType<typeof parseBible>;
   recap: string[];
   idea: string | null;
+  boundaries: string[];
   tokens: { prompt: number; completion: number };
   onRevising: (issues: string[]) => void;
 }): Promise<{ raw: string; issues: string[] } | null> {
@@ -180,6 +199,7 @@ async function reviewAndFix(p: {
       bible: p.bible,
       recap: p.recap,
       idea: p.idea,
+      boundaries: p.boundaries,
       chapter: `${draft.title}\n\n${draft.content}`,
     });
     const review = await m.client.chat.completions.create({
@@ -213,6 +233,8 @@ async function reviewAndFix(p: {
 
 async function saveChapter(p: {
   args: GenerateArgs;
+  mode: Mode;
+  prevBible: Bible;
   m: ResolvedModel;
   raw: string;
   historyLen: number;
@@ -224,7 +246,10 @@ async function saveChapter(p: {
   const parsed = parseChapter(raw, `第${index}章`);
   const parent = args.parentId ? await prisma.chapter.findUnique({ where: { id: args.parentId } }) : null;
   const book = await prisma.book.findUniqueOrThrow({ where: { id: args.bookId } });
-  const bibleSnapshot = parsed.bible ? JSON.stringify(parsed.bible) : effectiveBible(book.bible, parent?.bible);
+  // 关系慢热的硬限制由程序把关：每段信任、张力最多变 2；“其实……”不能给人追加好感
+  const bibleSnapshot = parsed.bible
+    ? JSON.stringify(limitRelationChanges(p.prevBible, parsed.bible, { frozen: p.mode === "retcon" }))
+    : effectiveBible(book.bible, parent?.bible);
   const isFinale = ending?.left === 1;
 
   const chapter = await prisma.chapter.create({
@@ -235,6 +260,7 @@ async function saveChapter(p: {
       title: parsed.title,
       content: parsed.content,
       idea: args.idea,
+      mode: p.mode,
       summary: parsed.summary,
       suggestions: JSON.stringify(isFinale ? [] : parsed.suggestions),
       isFinale,
@@ -248,6 +274,8 @@ async function saveChapter(p: {
     where: { id: args.bookId },
     data: {
       headChapterId: chapter.id,
+      // 暂停只管下一段
+      prefs: JSON.stringify({ ...parsePrefs(book.prefs), paused: false }),
       ...(ending
         ? endingLeft && endingLeft > 0
           ? { endingLeft }

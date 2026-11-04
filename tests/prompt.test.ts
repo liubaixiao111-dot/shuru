@@ -85,11 +85,44 @@ describe("设定集的隐藏信息", () => {
 
 describe("剧情主动修正规则", () => {
   it("写作提示包含直接发生/尝试、最小因果桥、追补设定和人物信息边界", () => {
+    const all = buildMessages(base).map((m) => m.content).join("\n");
+    expect(all).toContain("本段直接兑现");
+    expect(all).toContain("只写主角的尝试过程");
+    expect(all).toContain("最小的合理因果");
+    expect(all).toContain("只能根据自己知道的信息行动");
+    expect(buildMessages({ ...base, mode: "retcon" })[1].content).toContain("其实……");
+  });
+});
+
+describe("回合规则", () => {
+  it("结尾要把球交回给作者，不替主角做主", () => {
     const sys = buildMessages(base)[0].content;
-    expect(sys).toContain("直接发生");
-    expect(sys).toContain("尝试");
-    expect(sys).toContain("最小的合理因果");
-    expect(sys).toContain("其实……");
-    expect(sys).toContain("只能根据自己知道的信息行动");
+    expect(sys).toContain("结尾必须把球交回给作者");
+    expect(sys).toContain("不替主角说作者没说过的有分量的话");
+  });
+
+  it("不同输入方式带不同写法，偏好会进提示词", () => {
+    const cont = buildMessages({ ...base, idea: null, mode: "continue" })[1].content;
+    expect(cont).toContain("主角只做不需要决定的细微反应");
+    const retcon = buildMessages({ ...base, idea: "其实我带了刀", mode: "retcon" })[1].content;
+    expect(retcon).toContain("不能让别人凭空对主角产生好感");
+    const sys = buildMessages({
+      ...base,
+      prefs: {
+        pace: "slow",
+        person: "second",
+        tone: "daily",
+        innerView: true,
+        assistant: false,
+        offscreen: false,
+        boundaries: ["动物受伤"],
+        paused: true,
+      },
+    });
+    expect(sys[0].content).toContain("用“你”称呼主角");
+    expect(sys[0].content).toContain("日常向");
+    expect(sys[0].content).toContain("不要动物受伤");
+    expect(sys[0].content).toContain("暂时冻结");
+    expect(sys[1].content).toContain("作者刚才按了暂停");
   });
 });

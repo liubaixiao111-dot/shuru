@@ -31,6 +31,7 @@ export function NewBookForm({ scenes, adultEnabled }: { scenes: SceneCard[]; adu
   const [premise, setPremise] = useState("");
   const [world, setWorld] = useState("");
   const [protagonist, setProtagonist] = useState("");
+  const [tone, setTone] = useState<"pressure" | "daily">("pressure");
   const [error, setError] = useState("");
   const [busy, setBusy] = useState(false);
 
@@ -48,7 +49,7 @@ export function NewBookForm({ scenes, adultEnabled }: { scenes: SceneCard[]; adu
       const payload =
         tab === "scene"
           ? { sceneId, title, protagonistName: name || undefined, adult, answers: scene?.questions ? answers : undefined }
-          : { title, protagonistName: name || undefined, adult, original: { genre, premise, world, protagonist } };
+          : { title, protagonistName: name || undefined, adult, tone, original: { genre, premise, world, protagonist } };
       const res = await api<{ id: string; needsFirstChapter: boolean }>("/api/books", { body: payload });
       router.push(`/book/${res.id}${res.needsFirstChapter ? "?start=1" : ""}`);
     } catch (e) {
@@ -169,6 +170,24 @@ export function NewBookForm({ scenes, adultEnabled }: { scenes: SceneCard[]; adu
               onChange={(e) => setPremise(e.target.value)}
             />
           </label>
+          <div className="grid grid-cols-2 gap-2">
+            {(
+              [
+                ["pressure", "有压力", "开局就有麻烦和期限"],
+                ["daily", "日常", "没有倒计时，张力来自人"],
+              ] as const
+            ).map(([v, label, hint]) => (
+              <button
+                key={v}
+                type="button"
+                onClick={() => setTone(v)}
+                className={`rounded-2xl px-4 py-3 text-left ring-1 ${tone === v ? "bg-white/10 ring-white/40" : "ring-white/10"}`}
+              >
+                <div className="text-sm text-white">{label}</div>
+                <div className="mt-0.5 text-xs text-zinc-500">{hint}</div>
+              </button>
+            ))}
+          </div>
           <details className="rounded-2xl bg-white/[.03] px-4 py-3 ring-1 ring-white/5">
             <summary className="cursor-pointer text-sm text-zinc-400">更多设定（可选）</summary>
             <textarea className="input mt-3" rows={3} placeholder="世界观" value={world} onChange={(e) => setWorld(e.target.value)} />

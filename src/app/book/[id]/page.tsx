@@ -3,6 +3,7 @@ import { currentUser } from "@/lib/auth";
 import { prisma } from "@/lib/db";
 import { effectiveBible, parseBible, publicBible } from "@/lib/bible";
 import { pathTo } from "@/lib/tree";
+import { parsePrefs } from "@/lib/story/prefs";
 import { Reader, type ReaderChapter } from "@/components/Reader";
 
 export default async function BookPage({
@@ -52,6 +53,7 @@ export default async function BookPage({
         bookmarks={bookmarks.map((b) => ({ chapterId: b.chapterId, excerpt: b.excerpt }))}
         chapters={chapters}
         bible={publicBible(parseBible(effectiveBible(book.bible, path.at(-1)?.bible)))}
+        storyPrefs={parsePrefs(book.prefs)}
         autoStart={start === "1" && chapters.length === 0}
       />
     </main>

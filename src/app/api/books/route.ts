@@ -12,6 +12,8 @@ const Body = z.object({
   protagonistName: z.string().trim().max(10, "主角名最多 10 字").optional(),
   adult: z.boolean().default(false),
   sceneId: z.string().optional(),
+  // 日常：没有倒计时和外部压力；压力：有事件、有期限。不传则按场景默认
+  tone: z.enum(["pressure", "daily"]).optional(),
   // 原创开局
   original: z
     .object({
@@ -54,6 +56,7 @@ export const POST = handle(async (req: Request) => {
         genre: scene.genre,
         bible: JSON.stringify(bible),
         adult: body.adult,
+        prefs: JSON.stringify({ tone: body.tone ?? (scene.id === "my-life" ? "daily" : "pressure") }),
       },
     });
     if (scene.opening) {
@@ -90,6 +93,7 @@ export const POST = handle(async (req: Request) => {
       genre: body.original.genre,
       bible: JSON.stringify(bible),
       adult: body.adult,
+      prefs: JSON.stringify({ tone: body.tone ?? "pressure" }),
     },
   });
   return NextResponse.json({ id: book.id, needsFirstChapter: true });

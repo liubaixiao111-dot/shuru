@@ -13,11 +13,16 @@ export const REVIEW_CHECKLIST = [
   "主角凭空获得能力、物品、情报或运气。",
   "作者的想法没有兑现：主角自己的动作被写成落空或被偷换；或者作用于别人的想法被直接写成了对方无条件照办。",
   "因果断裂：事件缺少起因，转折突兀，或者时间跨度不合理。",
+  "替主角做主：替主角说了作者没说过的有分量的话、替主角做了选择或下了情绪结论。",
+  "结尾没有把球交回给作者：以总结、感慨或旁白收尾，或者替主角把结尾那个决定做掉了，作者读完不知道该接什么（全书最后一章除外）。",
+  "关系突变：一段之内从陌生到交心，或者信任、好感的变化说不出原因。",
   "出现露骨的性描写，或涉及未成年人的不当内容。",
 ];
 
 export interface ReviewInput {
   bible: Bible;
+  /** 作者登记的边界 */
+  boundaries?: string[];
   /** 前情摘要（按顺序） */
   recap: string[];
   idea: string | null;
@@ -38,6 +43,7 @@ export function buildReviewMessages(r: ReviewInput) {
     `设定集（含人物的目的与秘密）：\n${JSON.stringify(r.bible, null, 2)}`,
     r.recap.length ? `前情摘要：\n${r.recap.join("\n")}` : "前情：这是第一章。",
     r.idea ? `作者对本章的想法：${r.idea}` : "作者对本章没有特别要求。",
+    ...(r.boundaries?.length ? [`作者登记的边界（出现即为问题）：${r.boundaries.join("；")}`] : []),
     `待审章节：\n${r.chapter}`,
   ].join("\n\n");
 
