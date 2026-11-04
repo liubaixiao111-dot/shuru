@@ -81,6 +81,7 @@ export const POST = handle(async (req: Request) => {
     characters: [],
     style: "",
     facts: [`故事设定：${body.original.premise}`],
+    state: { time: "", place: "", threads: [] },
   };
   const book = await prisma.book.create({
     data: {

@@ -89,6 +89,8 @@ model Chapter {
   isFinale    Boolean   @default(false)
   // JSON：写完本章后的设定集快照
   bible       String?
+  // JSON 数组：写后审校发现并已自动修正的问题，空数组表示无需修正
+  reviewNotes String    @default("[]")
   createdAt   DateTime  @default(now())
 }
 

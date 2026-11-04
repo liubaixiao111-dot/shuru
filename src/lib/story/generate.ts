@@ -7,11 +7,23 @@ import { estimateTokens, recordUsage, resolveModels, type ResolvedModel } from "
 import { PROVIDERS } from "../llm/providers";
 import { buildMessages } from "./prompt";
 import { MarkerSplitter, parseChapter } from "./parse";
+import { buildFixMessages, buildReviewMessages, parseReview } from "./review";
+
+/** 写后审校默认开启；设置 STORY_REVIEW=off 可关闭（例如压测时） */
+function reviewEnabled() {
+  return process.env.STORY_REVIEW !== "off";
+}
 
 export type StreamEvent =
   | { t: "delta"; v: string }
   | { t: "done"; chapter: { id: string; index: number; title: string; suggestions: string[]; isFinale: boolean } }
-  | { t: "error"; message: string };
+  | { t: "error"; message: string }
+  /** 正文写完，开始审校 */
+  | { t: "review" }
+  /** 审校发现问题，正在修正 */
+  | { t: "revising"; issues: string[] }
+  /** 修正完成，用新的标题和正文替换已显示的内容 */
+  | { t: "revised"; v: string };
 
 interface GenerateArgs {
   userId: string;
@@ -45,10 +57,11 @@ export async function generateChapter(args: GenerateArgs): Promise<ReadableStrea
   const models = await resolveModels(userId);
 
   const ending = book.status === "ending" && book.endingLeft ? { left: book.endingLeft } : null;
+  const bible = parseBible(effectiveBible(book.bible, history.at(-1)?.bible));
   const messages = buildMessages({
     bookTitle: book.title,
     genre: book.genre,
-    bible: parseBible(effectiveBible(book.bible, history.at(-1)?.bible)),
+    bible,
     adult,
     history: history.map((c) => ({ index: c.index, title: c.title, summary: c.summary, content: c.content })),
     idea,
@@ -90,14 +103,43 @@ export async function generateChapter(args: GenerateArgs): Promise<ReadableStrea
           const tail = splitter.flush();
           if (tail) send(ctl, { t: "delta", v: tail });
 
-          const saved = await saveChapter({ args: { ...args, idea }, m, raw, historyLen: history.length, ending });
-          await recordUsage({
-            userId,
-            bookId,
+          const tokens = {
+            prompt: usage?.prompt_tokens ?? estimateTokens(messages.map((x) => x.content).join("")),
+            completion: usage?.completion_tokens ?? estimateTokens(raw),
+          };
+
+          // 写后审校：发现不合理之处时自动修正一次
+          let finalRaw = raw;
+          let reviewNotes: string[] = [];
+          if (reviewEnabled()) {
+            send(ctl, { t: "review" });
+            const fixed = await reviewAndFix({
+              m,
+              messages,
+              raw,
+              bible,
+              recap: history.map((c) => `第${c.index}章 ${c.title}：${c.summary}`),
+              idea,
+              tokens,
+              onRevising: (issues) => send(ctl, { t: "revising", issues }),
+            });
+            if (fixed) {
+              finalRaw = fixed.raw;
+              reviewNotes = fixed.issues;
+              const p = parseChapter(fixed.raw, `第${history.length + 1}章`);
+              send(ctl, { t: "revised", v: `${p.title}\n\n${p.content}` });
+            }
+          }
+
+          const saved = await saveChapter({
+            args: { ...args, idea },
             m,
-            promptTokens: usage?.prompt_tokens ?? estimateTokens(messages.map((x) => x.content).join("")),
-            completionTokens: usage?.completion_tokens ?? estimateTokens(raw),
+            raw: finalRaw,
+            historyLen: history.length,
+            ending,
+            reviewNotes,
           });
+          await recordUsage({ userId, bookId, m, promptTokens: tokens.prompt, completionTokens: tokens.completion });
           send(ctl, { t: "done", chapter: saved });
           ctl.close();
           return;
@@ -117,12 +159,65 @@ export async function generateChapter(args: GenerateArgs): Promise<ReadableStrea
   });
 }
 
+/**
+ * 审校一遍，有实质问题时带着问题清单重写一次。
+ * 返回 null 表示无需修正（或审校/修正失败，保留原稿，不影响写作）。
+ */
+async function reviewAndFix(p: {
+  m: ResolvedModel;
+  messages: ReturnType<typeof buildMessages>;
+  raw: string;
+  bible: ReturnType<typeof parseBible>;
+  recap: string[];
+  idea: string | null;
+  tokens: { prompt: number; completion: number };
+  onRevising: (issues: string[]) => void;
+}): Promise<{ raw: string; issues: string[] } | null> {
+  const { m, tokens } = p;
+  try {
+    const draft = parseChapter(p.raw, "本章");
+    const reviewMessages = buildReviewMessages({
+      bible: p.bible,
+      recap: p.recap,
+      idea: p.idea,
+      chapter: `${draft.title}\n\n${draft.content}`,
+    });
+    const review = await m.client.chat.completions.create({
+      model: m.model,
+      messages: reviewMessages,
+      temperature: 0.2,
+    });
+    const reviewText = review.choices[0]?.message?.content ?? "";
+    tokens.prompt += review.usage?.prompt_tokens ?? estimateTokens(reviewMessages.map((x) => x.content).join(""));
+    tokens.completion += review.usage?.completion_tokens ?? estimateTokens(reviewText);
+
+    const result = parseReview(reviewText);
+    if (result.ok) return null;
+
+    p.onRevising(result.issues);
+    const fixMessages = buildFixMessages(p.messages, p.raw, result.issues);
+    const fix = await m.client.chat.completions.create({ model: m.model, messages: fixMessages, temperature: 0.8 });
+    const fixedRaw = fix.choices[0]?.message?.content ?? "";
+    tokens.prompt += fix.usage?.prompt_tokens ?? estimateTokens(fixMessages.map((x) => x.content).join(""));
+    tokens.completion += fix.usage?.completion_tokens ?? estimateTokens(fixedRaw);
+
+    // 修正稿明显残缺时放弃，保留原稿
+    const fixed = parseChapter(fixedRaw, "本章");
+    if (fixed.content.length < draft.content.length * 0.5) return null;
+    return { raw: fixedRaw, issues: result.issues };
+  } catch (e) {
+    console.error("[review] 审校失败，保留原稿", e);
+    return null;
+  }
+}
+
 async function saveChapter(p: {
   args: GenerateArgs;
   m: ResolvedModel;
   raw: string;
   historyLen: number;
   ending: { left: number } | null;
+  reviewNotes: string[];
 }) {
   const { args, raw, historyLen, ending } = p;
   const index = historyLen + 1;
@@ -144,6 +239,7 @@ async function saveChapter(p: {
       suggestions: JSON.stringify(isFinale ? [] : parsed.suggestions),
       isFinale,
       bible: bibleSnapshot,
+      reviewNotes: JSON.stringify(p.reviewNotes),
     },
   });
 

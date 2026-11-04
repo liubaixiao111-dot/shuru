@@ -2,7 +2,7 @@ import { NextResponse } from "next/server";
 import { prisma } from "@/lib/db";
 import { HttpError, requireUser } from "@/lib/auth";
 import { handle } from "@/lib/http";
-import { BibleSchema } from "@/lib/bible";
+import { BibleSchema, effectiveBible, mergeHidden, parseBible } from "@/lib/bible";
 
 type Ctx = { params: Promise<{ id: string }> };
 
@@ -13,7 +13,11 @@ export const PUT = handle(async (req: Request, ctx: Ctx) => {
   const bible = BibleSchema.parse((await req.json()).bible);
   const book = await prisma.book.findFirst({ where: { id, userId: user.id } });
   if (!book) throw new HttpError(404, "找不到这本书");
-  const json = JSON.stringify(bible);
+  const head = book.headChapterId
+    ? await prisma.chapter.findUnique({ where: { id: book.headChapterId } })
+    : null;
+  const previous = parseBible(effectiveBible(book.bible, head?.bible));
+  const json = JSON.stringify(mergeHidden(bible, previous));
   if (book.headChapterId) {
     await prisma.chapter.update({ where: { id: book.headChapterId }, data: { bible: json } });
   } else {

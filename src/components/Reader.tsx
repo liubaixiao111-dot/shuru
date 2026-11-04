@@ -15,6 +15,8 @@ export interface ReaderChapter {
   idea: string | null;
   suggestions: string[];
   isFinale: boolean;
+  /** 写后审校自动修正过的问题 */
+  reviewNotes: string[];
   /** 同一个分叉点下的所有分支（含自己），按创建顺序 */
   siblingIds: string[];
 }
@@ -30,7 +32,10 @@ interface ReaderBook {
 type StreamEvent =
   | { t: "delta"; v: string }
   | { t: "done"; chapter: { id: string } }
-  | { t: "error"; message: string };
+  | { t: "error"; message: string }
+  | { t: "review" }
+  | { t: "revising"; issues: string[] }
+  | { t: "revised"; v: string };
 
 export function Reader({
   book,
@@ -47,6 +52,7 @@ export function Reader({
   const [viewIndex, setViewIndex] = useState(chapters.length - 1);
   const [idea, setIdea] = useState("");
   const [streaming, setStreaming] = useState<string | null>(null);
+  const [phase, setPhase] = useState<"writing" | "review" | "revising">("writing");
   const [error, setError] = useState("");
   const [panel, setPanel] = useState<null | "toc" | "bible" | "menu">(null);
   const started = useRef(false);
@@ -68,6 +74,7 @@ export function Reader({
 
   async function write(parentId: string | null, text: string | null) {
     setError("");
+    setPhase("writing");
     setStreaming("");
     window.scrollTo({ top: 0 });
     try {
@@ -94,6 +101,9 @@ export function Reader({
           if (!line.trim()) continue;
           const ev = JSON.parse(line) as StreamEvent;
           if (ev.t === "delta") setStreaming((s) => (s ?? "") + ev.v);
+          if (ev.t === "review") setPhase("review");
+          if (ev.t === "revising") setPhase("revising");
+          if (ev.t === "revised") setStreaming(ev.v);
           if (ev.t === "error") throw new Error(ev.message);
         }
       }
@@ -140,7 +150,11 @@ export function Reader({
     const [first, ...rest] = streaming.split("\n");
     return (
       <article className="font-serif">
-        <p className="mb-2 text-xs text-ink/40">AI 正在写第 {chapters.length + 1} 章…</p>
+        <p className="mb-2 text-xs text-ink/40">
+          {phase === "writing" && `AI 正在写第 ${chapters.length + 1} 章…`}
+          {phase === "review" && "写完了，正在校对剧情是否合理…"}
+          {phase === "revising" && "发现了不合理的地方，正在修正…"}
+        </p>
         <h2 className="text-2xl font-bold">{rest.length ? first : ""}</h2>
         <div className="mt-4 whitespace-pre-wrap text-lg leading-loose">{rest.length ? rest.join("\n") : first}</div>
         <span className="inline-block h-5 w-2 animate-pulse bg-accent/60" />
@@ -224,6 +238,10 @@ export function Reader({
         {viewing.idea && <p className="mt-2 text-sm text-ink/50">你的想法：{viewing.idea}</p>}
         <div className="mt-4 whitespace-pre-wrap text-lg leading-loose">{viewing.content}</div>
         <p className="mt-6 text-xs text-ink/40">本章内容由 AI 生成</p>
+        {/* 只显示数量：审校意见里可能提到人物的秘密，展示原文会剧透 */}
+        {viewing.reviewNotes.length > 0 && (
+          <p className="mt-1 text-xs text-ink/40">校对时自动修正了 {viewing.reviewNotes.length} 处不合理的地方</p>
+        )}
       </article>
 
       <div className="mt-4 flex flex-wrap items-center gap-2 text-sm">
