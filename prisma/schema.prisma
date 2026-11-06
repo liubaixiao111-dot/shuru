@@ -70,6 +70,14 @@ model Book {
   lastReadAt        DateTime?
   // JSON：本书的叙事偏好（节奏、人称、内心可见、叙事助手、离屏推演、日常/压力、硬边界、暂停）
   prefs         String    @default("{}")
+  // legacy：书入自己的续写逻辑；at：叙事引擎（engine/adult-tension）
+  engine        String    @default("legacy")
+  // 叙事引擎的会话号、修订号、下一次写操作的请求号
+  atSession     String?
+  atRevision    Int?
+  atNextReq     String?
+  // JSON：开局时运行时返回的 opening，用来写开局正文
+  atOpening     String?
   createdAt     DateTime  @default(now())
   updatedAt     DateTime  @updatedAt
   chapters      Chapter[]

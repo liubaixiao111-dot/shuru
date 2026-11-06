@@ -1,0 +1,2492 @@
+{
+ "background_cast": [
+  {
+   "adult_context": "年满二十五岁、在会展中心干了多年的正式场务。",
+   "age_range": [
+    25,
+    45
+   ],
+   "function": "helper",
+   "gender": "any",
+   "id": "bg_stagehand",
+   "line": "马道的灯又热了一度，有事喊我搭把手。",
+   "location_ids": [
+    "loc_catwalk_above_mainstage",
+    "loc_wire_rigging_control_catwalk"
+   ],
+   "name": null,
+   "role": "舞台场务"
+  },
+  {
+   "adult_context": "年满三十岁、持证执业的驻场医生。",
+   "age_range": [
+    30,
+    50
+   ],
+   "function": "helper",
+   "gender": "any",
+   "id": "bg_medic",
+   "line": "穿重甲的人一头晕就叫我，别硬撑。",
+   "location_ids": [
+    "loc_backstage_dressing_tent"
+   ],
+   "name": null,
+   "role": "驻场医疗站医生"
+  },
+  {
+   "adult_context": "年满二十二岁、签约平台的成年主播。",
+   "age_range": [
+    22,
+    32
+   ],
+   "function": "rumor_source",
+   "gender": "any",
+   "id": "bg_streamer",
+   "line": "家人们，后台探班，我们看看千金的帐篷在哪儿。",
+   "location_ids": [
+    "loc_backstage_vertical_ladder_well"
+   ],
+   "name": null,
+   "role": "持媒体证的网红主播"
+  },
+  {
+   "adult_context": "年满四十岁、在家族集团任职多年的高管。",
+   "age_range": [
+    40,
+    55
+   ],
+   "function": "obstacle",
+   "gender": "any",
+   "id": "bg_family_envoy",
+   "line": "闭展前，家里要一个答复。",
+   "location_ids": [
+    "loc_backstage_vertical_ladder_well"
+   ],
+   "name": null,
+   "role": "千金家族派来的代表"
+  },
+  {
+   "adult_context": "年满三十岁、商业厂牌的正式雇员。",
+   "age_range": [
+    30,
+    45
+   ],
+   "function": "obstacle",
+   "gender": "any",
+   "id": "bg_rival_manager",
+   "line": "撞没撞款，今晚台下自有公论。",
+   "location_ids": [
+    "loc_foh_sound_light_booth"
+   ],
+   "name": null,
+   "role": "对家厂牌的展台经理"
+  },
+  {
+   "adult_context": "年满二十岁、报名参加漫展服务的成年志愿者。",
+   "age_range": [
+    20,
+    28
+   ],
+   "function": "messenger",
+   "gender": "any",
+   "id": "bg_volunteer",
+   "line": "总监让我带句话：马道那边先别上人。",
+   "location_ids": [
+    "loc_backstage_vertical_ladder_well"
+   ],
+   "name": null,
+   "role": "候场通道的志愿者"
+  }
+ ],
+ "cast_combos": [
+  {
+   "chemistry": "{cosplayer_mu_yunli.name}只许你碰{cosplayer_mu_yunli.ta}的内衬；外人面前叫你护具师，关上帐篷才肯喊你的名字。",
+   "id": "cc_cosplayer_and_dresser_tent",
+   "identity_ids": [
+    "pi_cosplay_lead_stage_assistant"
+   ],
+   "player_positions": [
+    "low"
+   ],
+   "power_structure": "npc_high",
+   "relations": [
+    {
+     "a": "player",
+     "a_to_b": {
+      "tension": 3,
+      "trust": 4
+     },
+     "b": "cosplayer_mu_yunli",
+     "b_to_a": {
+      "tension": 4,
+      "trust": 4
+     },
+     "reason": "上周终版试穿夜，你在工坊更衣室吻了{cosplayer_mu_yunli.ta}；{cosplayer_mu_yunli.ta}定下轻拽两下领口丝带就停的约定。",
+     "stage": "intimate"
+    }
+   ],
+   "slots": [
+    "cosplayer_mu_yunli"
+   ],
+   "stakes": {
+    "irreplaceable_goal": "{cosplayer_mu_yunli.ta}要你只说一句：是陪{cosplayer_mu_yunli.ta}上马道，还是替{cosplayer_mu_yunli.ta}把腰封解开。",
+    "limit_gap": "{cosplayer_mu_yunli.ta}今晚输了就得回家联姻；你开口劝{cosplayer_mu_yunli.ta}别飞，是越了护具师的本分。",
+    "meeting_reason": "{cosplayer_mu_yunli.name}只穿着机甲底层的真丝内衬站在镜前，让你把威亚受力环直接扣上贴身腰封，说就算电动绞盘被砍，也要赌一把手动展翼。",
+    "resource_gap": "{cosplayer_mu_yunli.ta}握着翼甲的穿戴拆解权和工坊去留；你只有内间通行牌和内衬快拆扣。"
+   },
+   "tags": [
+    "intimate"
+   ],
+   "tension_engine_ids": [
+    "te_family_ultimatum",
+    "te_wire_cut"
+   ]
+  },
+  {
+   "chemistry": "三届漫展都是你在马道上护{cosplayer_mu_yunli.name}起落，两人私下早已认定彼此，人前仍只谈挂点和配重。",
+   "id": "cc_cosplayer_and_rigger_catwalk",
+   "identity_ids": [
+    "pi_stage_rigging_technician"
+   ],
+   "player_positions": [
+    "equal"
+   ],
+   "power_structure": "equal",
+   "relations": [
+    {
+     "a": "player",
+     "a_to_b": {
+      "tension": 2,
+      "trust": 5
+     },
+     "b": "cosplayer_mu_yunli",
+     "b_to_a": {
+      "tension": 3,
+      "trust": 5
+     },
+     "reason": "{cosplayer_mu_yunli.ta}把亲手打磨的第一枚钛合金翼羽铭牌交给你贴身收着，约好拿了金奖就公开。",
+     "stage": "committed"
+    }
+   ],
+   "slots": [
+    "cosplayer_mu_yunli"
+   ],
+   "stakes": {
+    "irreplaceable_goal": "{cosplayer_mu_yunli.ta}要你在登台前给一句准话：一起跳，还是由你在平台上稳稳放{cosplayer_mu_yunli.ta}下去。",
+    "limit_gap": "{cosplayer_mu_yunli.ta}要飞得漂亮；你得对十万人和{cosplayer_mu_yunli.ta}的命负责，放不放手全在你。",
+    "meeting_reason": "追光灯把马道烤得发烫，{cosplayer_mu_yunli.name}握住你正检查背甲挂点的手，低声问你时间码一响，敢不敢陪{cosplayer_mu_yunli.ta}做双人配重空降。",
+    "resource_gap": "{cosplayer_mu_yunli.ta}握着高空动作的编排；你握着双点威亚主控手柄和安全副索。"
+   },
+   "tags": [
+    "intimate"
+   ],
+   "tension_engine_ids": [
+    "te_wire_cut",
+    "te_release_ring"
+   ]
+  },
+  {
+   "chemistry": "你是能一票定音的主审，{cosplayer_mu_yunli.name}在评审席前对你恭敬得挑不出错，私下却敢把倔强全摊给你看。",
+   "id": "cc_chief_judge_and_cosplayer_award",
+   "identity_ids": [
+    "pi_anime_expo_safety_marshal"
+   ],
+   "player_positions": [
+    "high"
+   ],
+   "power_structure": "player_high",
+   "relations": [
+    {
+     "a": "player",
+     "a_to_b": {
+      "tension": 4,
+      "trust": 3
+     },
+     "b": "cosplayer_mu_yunli",
+     "b_to_a": {
+      "tension": 4,
+      "trust": 4
+     },
+     "reason": "初审夜在展馆天台吹风，{cosplayer_mu_yunli.ta}靠着栏杆说不肯解散工坊，那晚你吻了{cosplayer_mu_yunli.ta}。",
+     "stage": "intimate"
+    }
+   ],
+   "slots": [
+    "cosplayer_mu_yunli"
+   ],
+   "stakes": {
+    "irreplaceable_goal": "{cosplayer_mu_yunli.ta}要你按规矩看{cosplayer_mu_yunli.ta}飞一次，而不是看在私情上放行。",
+    "limit_gap": "你签了字就得为事故担责，还会被疑偏私；{cosplayer_mu_yunli.ta}被驳回就只能走平地T台。",
+    "meeting_reason": "安全总监刚递来改平地走秀的建议书，{cosplayer_mu_yunli.name}在更衣帐篷里仰头看着你，请你签发登台前最后一次高空动态实测许可。",
+    "resource_gap": "你握着金奖定音权和高空特批签章；{cosplayer_mu_yunli.ta}只有一套没在正式场飞过的翼甲。"
+   },
+   "tags": [
+    "intimate",
+    "workplace_power"
+   ],
+   "tension_engine_ids": [
+    "te_wire_cut",
+    "te_family_ultimatum"
+   ]
+  },
+  {
+   "chemistry": "你们一起画出翼甲的第一张手稿；{cosplayer_mu_yunli.name}吵架时叫你合伙人，图纸改对了才叫你的名字。",
+   "id": "cc_cosplayer_and_cofounder_wing",
+   "identity_ids": [
+    "pi_cosplay_prop_production_director"
+   ],
+   "player_positions": [
+    "low",
+    "equal",
+    "high"
+   ],
+   "power_structure": "switchable",
+   "relations": [
+    {
+     "a": "player",
+     "a_to_b": {
+      "tension": 3,
+      "trust": 4
+     },
+     "b": "cosplayer_mu_yunli",
+     "b_to_a": {
+      "tension": 4,
+      "trust": 4
+     },
+     "reason": "通宵喷珠光漆那夜，{cosplayer_mu_yunli.ta}困得靠在你怀里睡了半宿，醒来在你指节上咬了一口。",
+     "stage": "flirting"
+    }
+   ],
+   "slots": [
+    "cosplayer_mu_yunli"
+   ],
+   "stakes": {
+    "irreplaceable_goal": "{cosplayer_mu_yunli.ta}要你决定，今晚到底亮不亮出二代母盘。",
+    "limit_gap": "二代结构一公开就没了下季的商业底牌；不公开，今晚可能被当众指认撞型。",
+    "meeting_reason": "{cosplayer_mu_yunli.name}把你拉进绞盘平台，指着对家刚发的撞型预告图，要你和{cosplayer_mu_yunli.ta}在马道上现场换成从没公开过的二代折叠逆翼。",
+    "resource_gap": "{cosplayer_mu_yunli.ta}握着翼甲的穿戴权和工坊去留；你握着五成股权和二代翼骨的加密母盘。"
+   },
+   "tags": [
+    "intimate"
+   ],
+   "tension_engine_ids": [
+    "te_cad_leak",
+    "te_family_ultimatum"
+   ]
+  },
+  {
+   "chemistry": "{assistant_shen_ruoxuan.name}是工坊里最护短的人，跟你说话从不绕弯，账目和心事都只对你一个人摊开。",
+   "id": "cc_shen_and_cofounder_patent",
+   "identity_ids": [
+    "pi_cosplay_prop_production_director"
+   ],
+   "player_positions": [
+    "equal"
+   ],
+   "power_structure": "equal",
+   "relations": [
+    {
+     "a": "player",
+     "a_to_b": {
+      "tension": 3,
+      "trust": 4
+     },
+     "b": "assistant_shen_ruoxuan",
+     "b_to_a": {
+      "tension": 3,
+      "trust": 4
+     },
+     "reason": "上月去东京采买特种面料，对完账的酒店房间里{assistant_shen_ruoxuan.ta}留你到天亮，也把家族施压的底细说了。",
+     "stage": "intimate"
+    }
+   ],
+   "slots": [
+    "assistant_shen_ruoxuan"
+   ],
+   "stakes": {
+    "irreplaceable_goal": "{assistant_shen_ruoxuan.ta}要你答应：不管工坊保不保得住，别让千金今晚被人当众泼脏水。",
+    "limit_gap": "{assistant_shen_ruoxuan.ta}是家族派来的随行，站出来指认就等于和家族翻脸；你要维权，就得先承认工坊有人泄密。",
+    "meeting_reason": "{assistant_shen_ruoxuan.name}在帐篷隔间把对家宣传册和结构总监的转账截图塞进你手里，要你在登台前把二代翼骨的时间戳母盘备好。",
+    "resource_gap": "{assistant_shen_ruoxuan.ta}握着帐篷门禁和对家宣传册上的证据；你握着二代翼骨的原创时间戳。"
+   },
+   "tags": [
+    "intimate"
+   ],
+   "tension_engine_ids": [
+    "te_cad_leak",
+    "te_family_ultimatum"
+   ]
+  },
+  {
+   "chemistry": "{sound_engineer_he_yan.name}只认声压级和节拍点，跟你却有一套不用开口的默契：耳机往你手边一推，就是有事商量。",
+   "id": "cc_he_yan_and_rigger_timecode",
+   "identity_ids": [
+    "pi_stage_rigging_technician"
+   ],
+   "player_positions": [
+    "equal"
+   ],
+   "power_structure": "equal",
+   "relations": [
+    {
+     "a": "player",
+     "a_to_b": {
+      "tension": 2,
+      "trust": 3
+     },
+     "b": "sound_engineer_he_yan",
+     "b_to_a": {
+      "tension": 2,
+      "trust": 3
+     },
+     "reason": "去年跨年演唱会，你们在体育场导播间顶着寒风联调了整晚耳返延迟，一个点都没错。",
+     "stage": "familiar"
+    }
+   ],
+   "slots": [
+    "sound_engineer_he_yan"
+   ],
+   "stakes": {
+    "irreplaceable_goal": "{sound_engineer_he_yan.ta}要你拍板时间码方案，并且别让{sound_engineer_he_yan.ta}一个人担下录音的事。",
+    "limit_gap": "录音交出去{sound_engineer_he_yan.ta}就得罪组委会；你不知道录音，空降就可能在半空断电。",
+    "meeting_reason": "{sound_engineer_he_yan.name}在导播间把监听耳机递给你，放了一段安全总监打算在副歌高潮切掉马道电源的拾音，问你高空时间码按哪套方案走。",
+    "resource_gap": "{sound_engineer_he_yan.ta}握着灯光威亚的同步时间码和后台监听频道；你握着威亚主控手柄。"
+   },
+   "tags": [
+    "workplace"
+   ],
+   "tension_engine_ids": [
+    "te_wire_cut"
+   ]
+  },
+  {
+   "chemistry": "{marshal_sun_jian.name}在联席会上处处顺着你，转身又在规程上处处设卡，你们谁也没把底牌亮全。",
+   "id": "cc_chief_judge_and_marshal_rule",
+   "identity_ids": [
+    "pi_anime_expo_safety_marshal"
+   ],
+   "player_positions": [
+    "high"
+   ],
+   "power_structure": "player_high",
+   "relations": [
+    {
+     "a": "player",
+     "a_to_b": {
+      "tension": 4,
+      "trust": 0
+     },
+     "b": "marshal_sun_jian",
+     "b_to_a": {
+      "tension": 4,
+      "trust": 1
+     },
+     "reason": "开展前的联席会上，{marshal_sun_jian.name}递来一份高空免责函，话里话外试探你和千金家族高层的交情。",
+     "stage": "testing"
+    }
+   ],
+   "slots": [
+    "marshal_sun_jian"
+   ],
+   "stakes": {
+    "irreplaceable_goal": "对方想摸清你和千金家族有没有私交，以及你会不会护着这场高空秀。",
+    "limit_gap": "你越权放行要担事故责任；对方硬砍节目，迟早要解释那张检测单是谁授意的。",
+    "meeting_reason": "{marshal_sun_jian.name}在爬梯井口拦住你，晃着一张声压震动超标的检测单，试探你肯不肯顺水推舟，把高空空降改成平地走秀。",
+    "resource_gap": "主审的签章在你手里；对方握着高空节目的一票否决权和主舞台切闸权。"
+   },
+   "tags": [
+    "workplace_power"
+   ],
+   "tension_engine_ids": [
+    "te_wire_cut",
+    "te_family_ultimatum"
+   ]
+  },
+  {
+   "chemistry": "{mechanic_lu_yang.name}寡言，教你东西却格外耐心，总在你开口前就把你的安全扣多检查一遍。",
+   "id": "cc_lu_yang_and_dresser_harness",
+   "identity_ids": [
+    "pi_cosplay_lead_stage_assistant"
+   ],
+   "player_positions": [
+    "low"
+   ],
+   "power_structure": "npc_high",
+   "relations": [
+    {
+     "a": "player",
+     "a_to_b": {
+      "tension": 3,
+      "trust": 3
+     },
+     "b": "mechanic_lu_yang",
+     "b_to_a": {
+      "tension": 4,
+      "trust": 4
+     },
+     "reason": "彩排收工后，{mechanic_lu_yang.ta}在马道上从背后握着你的手指教你打八字防脱结，呼吸落在你耳后。",
+     "stage": "flirting"
+    }
+   ],
+   "slots": [
+    "mechanic_lu_yang"
+   ],
+   "stakes": {
+    "irreplaceable_goal": "{mechanic_lu_yang.ta}要你答应，今晚无论发生什么，先顾好自己。",
+    "limit_gap": "{mechanic_lu_yang.ta}私加的释放环一出事就是终身禁赛；你知道得越多，越难置身事外。",
+    "meeting_reason": "{mechanic_lu_yang.name}在绞盘平台拉住你的手腕，把一枚备用手动缓降器塞进你的工具包，叮嘱你上马道后寸步别离千金身边。",
+    "resource_gap": "{mechanic_lu_yang.ta}握着马道驻留许可和防脱副索挂接权；你只是跟在千金身边的护具师。"
+   },
+   "tags": [
+    "intimate"
+   ],
+   "tension_engine_ids": [
+    "te_release_ring",
+    "te_wire_cut"
+   ]
+  },
+  {
+   "chemistry": "{cosplayer_mu_yunli.name}骄傲，{assistant_shen_ruoxuan.name}护短，两人一个眼神就能互相打掩护；你被挑进帐篷那天起，就成了第三个知道内情的人。",
+   "id": "cc_mu_shen_tent_fitting",
+   "identity_ids": [
+    "pi_cosplay_lead_stage_assistant"
+   ],
+   "player_positions": [
+    "low"
+   ],
+   "power_structure": "npc_high",
+   "relations": [
+    {
+     "a": "player",
+     "a_to_b": {
+      "tension": 3,
+      "trust": 4
+     },
+     "b": "cosplayer_mu_yunli",
+     "b_to_a": {
+      "tension": 4,
+      "trust": 4
+     },
+     "reason": "四天前试装夜，你们在帐篷里接了吻；千金把工坊保险柜的密码只告诉了你。",
+     "stage": "intimate"
+    },
+    {
+     "a": "player",
+     "a_to_b": {
+      "tension": 3,
+      "trust": 3
+     },
+     "b": "assistant_shen_ruoxuan",
+     "b_to_a": {
+      "tension": 4,
+      "trust": 3
+     },
+     "reason": "前晚整理服饰箱时助理替你擦掉领口的银粉，贴耳说千金挑你做护具师是存了私心。",
+     "stage": "flirting"
+    },
+    {
+     "a": "cosplayer_mu_yunli",
+     "a_to_b": {
+      "tension": 1,
+      "trust": 5
+     },
+     "b": "assistant_shen_ruoxuan",
+     "b_to_a": {
+      "tension": 2,
+      "trust": 5
+     },
+     "reason": "这些年千金在家族里的每一次出格，都是助理在前头挡下的。",
+     "stage": "committed"
+    }
+   ],
+   "slots": [
+    "cosplayer_mu_yunli",
+    "assistant_shen_ruoxuan"
+   ],
+   "stakes": {
+    "irreplaceable_goal": "两人都要你站在自己这边：一个想让你陪千金飞，一个想让你劝千金留条退路。",
+    "limit_gap": "家族的返程机票压在化妆箱底；三人里谁走漏一句，今晚的高空就会被叫停。",
+    "meeting_reason": "{assistant_shen_ruoxuan.name}半跪着替{cosplayer_mu_yunli.name}收紧腿甲束带，顺手把返程机票压进化妆箱底；千金在镜里看见你，伸手让你扣上胸甲内侧那枚展翼拉环，三人默契地瞒着门外的安全总监。",
+    "resource_gap": "千金握着翼甲穿戴权，助理握着门禁和备用服饰箱钥匙；你只有内衬快拆扣。"
+   },
+   "tags": [
+    "intimate"
+   ],
+   "tension_engine_ids": [
+    "te_family_ultimatum",
+    "te_release_ring"
+   ]
+  },
+  {
+   "chemistry": "{designer_chu_zimo.name}斯文，{mechanic_lu_yang.name}寡言，两人在平台上一个算参数一个挂钢索，谁也不提图纸，都在等你开口。",
+   "id": "cc_chu_lu_catwalk_retrofit",
+   "identity_ids": [
+    "pi_stage_rigging_technician",
+    "pi_cosplay_prop_production_director",
+    "pi_anime_expo_safety_marshal"
+   ],
+   "player_positions": [
+    "low",
+    "equal",
+    "high"
+   ],
+   "power_structure": "switchable",
+   "relations": [
+    {
+     "a": "player",
+     "a_to_b": {
+      "tension": 3,
+      "trust": 4
+     },
+     "b": "mechanic_lu_yang",
+     "b_to_a": {
+      "tension": 4,
+      "trust": 4
+     },
+     "reason": "三天前收工后，{mechanic_lu_yang.name}在绞盘平台的防滑垫上吻了你，又把手动展翼的改装方案全交了底。",
+     "stage": "intimate"
+    },
+    {
+     "a": "player",
+     "a_to_b": {
+      "tension": 3,
+      "trust": 1
+     },
+     "b": "designer_chu_zimo",
+     "b_to_a": {
+      "tension": 4,
+      "trust": 1
+     },
+     "reason": "昨日封箱时{designer_chu_zimo.name}单独来借二代翼骨的配重表，试探今晚会不会临时启用二代结构。",
+     "stage": "testing"
+    },
+    {
+     "a": "mechanic_lu_yang",
+     "a_to_b": {
+      "tension": 4,
+      "trust": 1
+     },
+     "b": "designer_chu_zimo",
+     "b_to_a": {
+      "tension": 3,
+      "trust": 2
+     },
+     "reason": "威亚师早看出结构总监这三天的配重参数改得不对，一直没有说破。",
+     "stage": "testing"
+    }
+   ],
+   "slots": [
+    "designer_chu_zimo",
+    "mechanic_lu_yang"
+   ],
+   "stakes": {
+    "irreplaceable_goal": "两人都要你定：今晚换不换二代逆翼，图纸的账又由谁来认。",
+    "limit_gap": "图纸外泄瞒不过今晚；释放环没报备，一换结构就更难瞒住组委会。",
+    "meeting_reason": "{mechanic_lu_yang.name}在平台上把双点钢索改挂到二代逆翼的承重环，满头冷汗的{designer_chu_zimo.name}解开备用碳纤连杆替威亚师配平，见你上来，低声坦白初代图纸已经外泄。",
+    "resource_gap": "结构总监握着三维母盘和碳纤连杆秘钥，威亚师握着钢索挂点；你握着放不放行的那一句话。"
+   },
+   "tags": [
+    "workplace"
+   ],
+   "tension_engine_ids": [
+    "te_cad_leak",
+    "te_release_ring"
+   ]
+  }
+ ],
+ "channels": [
+  {
+   "fidelity": "exact",
+   "id": "ch_backstage_earpiece",
+   "reach": "所有戴耳返的工作人员同时听见",
+   "text": "后台耳返公共频道"
+  },
+  {
+   "fidelity": "exact",
+   "id": "ch_staff_group",
+   "reach": "几分钟内传到组委会和各工位",
+   "text": "工作人员群消息"
+  },
+  {
+   "fidelity": "distorted",
+   "id": "ch_live_danmaku",
+   "reach": "一刷屏就传遍十万观众",
+   "text": "官方直播间的弹幕"
+  }
+ ],
+ "character_templates": [
+  {
+   "adult_context": "年满二十三岁、已独立经营机甲工坊的同人圈Coser。",
+   "age_range": [
+    23,
+    26
+   ],
+   "appearance_options": [
+    "一身高弹的玄色演出连体服，勾勒出玲珑曼妙的身段，容貌冷艳骄傲，两腮被射灯烤得泛起一点酡红，眼神满是不服输的执拗。",
+    "一头染成淡银紫色的长发高高束起，发梢沾着汗珠，真丝内衬外只扣了半副胸甲，锁骨上一层薄汗，神情骄矜，手上的分寸一点不乱。"
+   ],
+   "decision": {
+    "avoids": [
+     "拿家族压她的人"
+    ],
+    "contrast": "镜头前是光芒万丈的机甲女王；帐篷里被你扣腰封时，耳根先红了。",
+    "core_value": "图纸是我画的，天也得我自己飞。",
+    "goal_options": [
+     "拿下金奖，把工坊留在自己手里",
+     "等你亲口说出，你也想留在她身边"
+    ],
+    "never": [
+     "在镜头前示弱"
+    ],
+    "prefers": [
+     "敢陪她赌一把的人"
+    ],
+    "pressure_responses": {
+     "breaking": "摘下头盔坐在航空箱上，第一次问你：要是我输了呢",
+     "high": "咬着牙要照原计划起飞，谁劝都不听",
+     "low": "笑得更骄傲，把不安藏到镜头后面",
+     "mid": "把人都支开，独自在帐篷里一遍遍试拉环"
+    },
+    "relationship_stance": "嘴上从不先认输；认定了谁，就把最贴身的那枚扣子交给谁。",
+    "withdrawal": "把帐篷内间的帘子拉死，只留一盏化妆灯。"
+   },
+   "gender": "female",
+   "gender_reason": "标题写明是千金Coser，固定为女性。",
+   "id": "cosplayer_mu_yunli",
+   "identity": {
+    "authority": "握着自研翼甲的穿戴拆解权、压轴秀的高空动作编排和工坊团队的去留。",
+    "exposure": "私改了高空手动展翼、没向组委会报备，一旦被翻出来，节目当场取消。",
+    "hidden": "冰冷重甲的内衬下，藏着只为你一人留出的贴身安全扣位，她从没告诉过别人。",
+    "limits": [
+     "今晚拿不下金奖和风投，就得解散工坊回家联姻"
+    ],
+    "obligations": [
+     "对每一个陪她熬夜的工坊伙伴负责"
+    ],
+    "resources": [
+     "一张自研翼甲的穿戴钥匙卡",
+     "一罐高压紧凑型防花妆速冷清凉喷雾"
+    ]
+   },
+   "intimacy_tendency": {
+    "attraction_sources": [
+     "手稳、肯担事的人",
+     "敢当面顶她一句的人"
+    ],
+    "boundaries": [
+     "高空作业和身体不适时，只许贴近和照料"
+    ],
+    "desire_range": [
+     3,
+     5
+    ],
+    "desired_position": "帐篷镜前替她扣最后一枚拉环的位置",
+    "dislikes": [
+     "被当成家族的摆件"
+    ],
+    "expression": "登台后红着脸把一张亲笔签名的限定贵宾卡塞进对方手里，扭过头说：散场后来帐篷找我，不来也随你。",
+    "likes": [
+     "汗湿后被冰毛巾擦过颈侧"
+    ],
+    "preconditions": [
+     "两人清醒，心意出于自己"
+    ],
+    "self_control_range": [
+     2,
+     4
+    ]
+   },
+   "public_role": "同人圈顶流千金Coser兼机甲工坊主理人",
+   "schedule": [
+    {
+     "from": 0,
+     "location_id": "loc_backstage_dressing_tent",
+     "to": 600
+    },
+    {
+     "from": 600,
+     "location_id": "loc_catwalk_above_mainstage",
+     "to": 780
+    },
+    {
+     "from": 780,
+     "location_id": "loc_backstage_dressing_tent",
+     "to": 1200
+    },
+    {
+     "from": 1200,
+     "location_id": "loc_catwalk_above_mainstage",
+     "to": 1439
+    }
+   ],
+   "situation": {
+    "exits": [
+     {
+      "cost": "释放环一旦出错，所有帮她的人都要陪着担责。",
+      "option": "照原计划挂威亚空降"
+     },
+     {
+      "cost": "金奖评分大跌，闭展一过就得回家联姻。",
+      "option": "改走平地T台求稳"
+     }
+    ],
+    "pressure": "飞，就拿工坊和名声去赌；不飞，金奖和独立一起丢掉。",
+    "trigger": "家族下了闭展通牒，安全总监又递来改走平地的建议书。"
+   },
+   "tags": [
+    "intimate",
+    "workplace"
+   ],
+   "voices": {
+    "inner": "要是今晚输了，你还会不会来找我。",
+    "surface": "你只管扣好，我飞得稳。"
+   }
+  },
+  {
+   "adult_context": "年满二十四岁、持证上岗多年的舞台威亚机械师。",
+   "age_range": [
+    24,
+    26
+   ],
+   "appearance_options": [
+    "工装背心外勒着高空背带，小臂上有几道旧绳勒的浅痕，皮肤被追光烤成麦色。",
+    "额前碎发被汗打湿，安全帽挂在腰侧，说话前总先看一眼对方的扣具。"
+   ],
+   "decision": {
+    "avoids": [
+     "拿安全开玩笑的人"
+    ],
+    "contrast": "人前寡言得像块铁；教你打绳结时，耳朵会悄悄红。",
+    "core_value": "绳子不会骗人，人会。",
+    "goal_options": [
+     "让千金今晚平安落地",
+     "让你知道他这几年看向谁"
+    ],
+    "never": [
+     "丢下马道上的人自己走"
+    ],
+    "prefers": [
+     "守规矩又肯担当的人"
+    ],
+    "pressure_responses": {
+     "breaking": "坐在平台边一言不发，把释放环拆下来攥在手里",
+     "high": "宁可停飞也不肯冒险放人下去",
+     "low": "话更少，手上的检查多做一遍",
+     "mid": "把你拉到身后，自己去顶安全总监的盘问"
+    },
+    "relationship_stance": "不会说好听话，只会把你的安全扣多检查一遍。",
+    "withdrawal": "一个人蹲在绞盘旁，把钢索一圈圈重新盘好。"
+   },
+   "gender": "male",
+   "gender_reason": "卡中设定为男性威亚机械师。",
+   "id": "mechanic_lu_yang",
+   "identity": {
+    "authority": "握着十二米马道的驻留许可、双点威亚的升降曲线和防脱副索的挂接权。",
+    "exposure": "私下帮千金在主索上加了一套没报备的手动展翼释放环，出一次错就是终身禁赛。",
+    "hidden": "这三天一直看出结构总监的配重参数改得不对，却还没想好要不要说破。",
+    "limits": [
+     "不能越过组委会私自改动起吊方案"
+    ],
+    "obligations": [
+     "保证马道上每个人都稳稳下来"
+    ],
+    "resources": [
+     "一枚备用的手动缓降器",
+     "马道驻留许可"
+    ]
+   },
+   "intimacy_tendency": {
+    "attraction_sources": [
+     "被人信任托付",
+     "肯听他把话说完的人"
+    ],
+    "boundaries": [
+     "高空作业时只许牵手和扶稳"
+    ],
+    "desire_range": [
+     2,
+     4
+    ],
+    "desired_position": "马道上站在你身后半步的位置",
+    "dislikes": [
+     "有人在马道上逞强"
+    ],
+    "expression": "把你的手指拢进掌心，低声说：别怕，我在。",
+    "likes": [
+     "收工后有人递一瓶冰水"
+    ],
+    "preconditions": [
+     "两人清醒，都已落地、安全"
+    ],
+    "self_control_range": [
+     3,
+     5
+    ]
+   },
+   "public_role": "连续三届为千金挂威亚的舞台机械师",
+   "schedule": [
+    {
+     "from": 0,
+     "location_id": "loc_wire_rigging_control_catwalk",
+     "to": 540
+    },
+    {
+     "from": 540,
+     "location_id": "loc_catwalk_above_mainstage",
+     "to": 1080
+    },
+    {
+     "from": 1080,
+     "location_id": "loc_wire_rigging_control_catwalk",
+     "to": 1439
+    }
+   ],
+   "situation": {
+    "exits": [
+     {
+      "cost": "被记黄牌，往后的高空节目都要重新审。",
+      "option": "主动向主审交代释放环"
+     },
+     {
+      "cost": "一旦被查出，罪名会落到千金头上。",
+      "option": "把释放环藏起来照常起吊"
+     }
+    ],
+    "pressure": "认下改装就没了饭碗；不认，千金就得替他扛。",
+    "trigger": "安全总监要查高空方案，释放环随时会被翻出来。"
+   },
+   "tags": [
+    "workplace",
+    "intimate"
+   ],
+   "voices": {
+    "inner": "我只想你今晚别出事，别的都不重要。",
+    "surface": "扣好了再走，别回头。"
+   }
+  },
+  {
+   "adult_context": "年满二十六岁、工坊合伙人身份的道具结构工程师。",
+   "age_range": [
+    26,
+    28
+   ],
+   "appearance_options": [
+    "斯文的细框眼镜，衬衫袖口挽到小臂，指节上沾着碳纤粉末。",
+    "脸色发白，额角渗着冷汗，手机一直攥在手心里不肯放下。"
+   ],
+   "decision": {
+    "avoids": [
+     "当众逼问"
+    ],
+    "contrast": "人前斯文从容；被你看穿时，声音会先发抖。",
+    "core_value": "图纸可以重画，信任不能。",
+    "goal_options": [
+     "赶在开场前把二代逆翼换上，补回自己捅的窟窿",
+     "求你帮他瞒到赛后，由他亲口认错"
+    ],
+    "never": [
+     "眼看千金被泼脏水不管"
+    ],
+    "prefers": [
+     "肯给人改错机会的人"
+    ],
+    "pressure_responses": {
+     "breaking": "当着众人摘下工牌，承认图纸是他卖的",
+     "high": "主动交出秘钥，求你们换二代结构",
+     "low": "笑着打圆场，说只是巧合",
+     "mid": "躲进平台算参数，不敢和任何人对视"
+    },
+    "relationship_stance": "温和体贴，习惯先替别人着想，惹了祸却只会一个人扛。",
+    "withdrawal": "抱着翼甲箱坐在平台角落，盯着手机上的转账记录。"
+   },
+   "gender": "male",
+   "gender_reason": "卡中设定为男性结构总监。",
+   "id": "designer_chu_zimo",
+   "identity": {
+    "authority": "握着钛铝合金翼甲的三维工程母盘、翼骨连杆的调校参数和工坊专利备案号。",
+    "exposure": "三天前把初代翼骨的CAD图纸私卖给对家厂牌抵债，对家今晚准备当众指控撞型。",
+    "hidden": "卖图纸那天起就没睡过一个整觉，最怕的不是丢饭碗，是千金看他的眼神。",
+    "limits": [
+     "欠着加工设备的高息尾款"
+    ],
+    "obligations": [
+     "对翼甲结构的安全签字负责"
+    ],
+    "resources": [
+     "工坊的碳纤连杆秘钥",
+     "专利备案号回执"
+    ]
+   },
+   "intimacy_tendency": {
+    "attraction_sources": [
+     "被人当作值得信的人",
+     "懂结构的同行"
+    ],
+    "boundaries": [
+     "不在人前越界"
+    ],
+    "desire_range": [
+     1,
+     3
+    ],
+    "desired_position": "工坊里能和你并肩画图的位置",
+    "dislikes": [
+     "被人看不起"
+    ],
+    "expression": "低头替你理好袖口，说一句谢谢，又说一句对不起。",
+    "likes": [
+     "深夜工坊里的一杯热咖啡"
+    ],
+    "preconditions": [
+     "两人清醒，旧账已经说开"
+    ],
+    "self_control_range": [
+     3,
+     5
+    ]
+   },
+   "public_role": "道具工坊结构总监",
+   "schedule": [
+    {
+     "from": 0,
+     "location_id": "loc_wire_rigging_control_catwalk",
+     "to": 600
+    },
+    {
+     "from": 600,
+     "location_id": "loc_backstage_vertical_ladder_well",
+     "to": 900
+    },
+    {
+     "from": 900,
+     "location_id": "loc_wire_rigging_control_catwalk",
+     "to": 1439
+    }
+   ],
+   "situation": {
+    "exits": [
+     {
+      "cost": "私卖图纸的事一并被翻出，合伙人身份保不住。",
+      "option": "交出建模时间戳日志"
+     },
+     {
+      "cost": "高空参数全靠别人盲调。",
+      "option": "签股权退让书留在后台"
+     }
+    ],
+    "pressure": "坦白就得离开工坊；隐瞒，今晚千金替他背锅。",
+    "trigger": "对家已经买好水军，撞型指控随时会在直播间炸开。"
+   },
+   "tags": [
+    "workplace"
+   ],
+   "voices": {
+    "inner": "我把最不该卖的东西卖了。",
+    "surface": "参数没问题，你放心。"
+   }
+  },
+  {
+   "adult_context": "年满三十六岁、持证上岗多年的会展安全总监。",
+   "age_range": [
+    36,
+    42
+   ],
+   "appearance_options": [
+    "深色制服熨得笔挺，胸前挂着对讲机和组委会工牌，眉心常年锁着。",
+    "手里总捏着一叠检测单，说话不紧不慢，眼神像在给人打分。"
+   ],
+   "decision": {
+    "avoids": [
+     "当面翻旧账"
+    ],
+    "contrast": "人前铁面，人后会给马道上的人多挂一条副索。",
+    "core_value": "十万人在场，宁可错砍，不可出事。",
+    "goal_options": [
+     "体面地完成家族交代的事",
+     "让你承认安全总监这份差事的难处"
+    ],
+    "never": [
+     "拿十万人的安全开玩笑"
+    ],
+    "prefers": [
+     "按规矩办事的人"
+    ],
+    "pressure_responses": {
+     "breaking": "被拆穿后沉默很久，问你一句：换你会怎么做",
+     "high": "当众亮出检测单，要求立刻改平地",
+     "low": "拿规程说话，一条条念",
+     "mid": "加派人手盯着马道和帐篷"
+    },
+    "relationship_stance": "公事公办，私下却总在试探谁能信。",
+    "withdrawal": "退回爬梯井口，站在人群里一动不动地看着马道。"
+   },
+   "gender": "any",
+   "gender_reason": "安全总监不限性别，开局再定。",
+   "id": "marshal_sun_jian",
+   "identity": {
+    "authority": "握着高空威亚节目的准入一票否决权、主舞台声光电的应急切闸权和后台清场权。",
+    "exposure": "收了千金家族的私下嘱托，要在登台前找借口砍掉高空威亚。",
+    "hidden": "其实最怕的是真出事；答应家族之前，偷偷把马道的防脱副索又加了一条。",
+    "limits": [
+     "切闸要写明理由，事后接受主审复核"
+    ],
+    "obligations": [
+     "十万人展馆零事故"
+    ],
+    "resources": [
+     "主舞台的切闸钥匙",
+     "声压震动检测单"
+    ]
+   },
+   "intimacy_tendency": {
+    "attraction_sources": [
+     "不怕事、敢顶回来的人",
+     "守得住秘密的人"
+    ],
+    "boundaries": [
+     "不在当班时越界"
+    ],
+    "desire_range": [
+     1,
+     3
+    ],
+    "desired_position": "主审身边能说上话的位置",
+    "dislikes": [
+     "被人当成谁的走狗"
+    ],
+    "expression": "把对讲机关掉放在一边，才肯说一句不是公事的话。",
+    "likes": [
+     "一句真心的辛苦了"
+    ],
+    "preconditions": [
+     "两人清醒，公务之外"
+    ],
+    "self_control_range": [
+     4,
+     5
+    ]
+   },
+   "public_role": "漫展组委会特派现场安全总监",
+   "schedule": [
+    {
+     "from": 0,
+     "location_id": "loc_backstage_vertical_ladder_well",
+     "to": 720
+    },
+    {
+     "from": 720,
+     "location_id": "loc_foh_sound_light_booth",
+     "to": 1080
+    },
+    {
+     "from": 1080,
+     "location_id": "loc_backstage_vertical_ladder_well",
+     "to": 1439
+    }
+   ],
+   "situation": {
+    "exits": [
+     {
+      "cost": "家族那边交不了差，往后少不了麻烦。",
+      "option": "撤回切闸令，签下合格回执"
+     },
+     {
+      "cost": "一旦录音交到主审手里，当场被撤职。",
+      "option": "坚持切闸到底"
+     }
+    ],
+    "pressure": "录音一流出，切闸权和名声都保不住。",
+    "trigger": "导播间录下了对方和家族代表的通话。"
+   },
+   "tags": [
+    "workplace_power",
+    "workplace"
+   ],
+   "voices": {
+    "inner": "我也不想砍这个节目。",
+    "surface": "规程就是规程。"
+   }
+  },
+  {
+   "adult_context": "年满二十六岁、跟随千金多年的专职服化造型主管。",
+   "age_range": [
+    26,
+    29
+   ],
+   "appearance_options": [
+    "利落的黑色短发别在耳后，腰间挂着针包和备用发夹，眼神干练。",
+    "半跪在地毯上替人收束带时，袖口挽起，手腕上缠着一圈软尺。"
+   ],
+   "decision": {
+    "avoids": [
+     "拍千金丑照的镜头"
+    ],
+    "contrast": "人前雷厉风行；被你夸一句手巧，会别过脸去笑。",
+    "core_value": "护着她，是我自己选的。",
+    "goal_options": [
+     "让千金今晚飞完全场",
+     "听你说一句，你也看见了她这些年的付出"
+    ],
+    "never": [
+     "出卖千金"
+    ],
+    "prefers": [
+     "护着自己人的人"
+    ],
+    "pressure_responses": {
+     "breaking": "坐在服饰箱上，第一次承认自己也累了",
+     "high": "当面回绝家族代表，哪怕丢了差事",
+     "low": "笑着挡掉外人，一根发丝都不让乱",
+     "mid": "把证据塞给信得过的人，自己去拦门"
+    },
+    "relationship_stance": "护短、直接，喜欢谁就替谁把路先扫干净。",
+    "withdrawal": "躲进外帐整理头饰，把每一枚发夹排得整整齐齐。"
+   },
+   "gender": "female",
+   "gender_reason": "卡中设定为女性服化助理。",
+   "id": "assistant_shen_ruoxuan",
+   "identity": {
+    "authority": "握着私人更衣帐篷的门禁、机甲内衬的贴合度检查和备用服饰箱的钥匙。",
+    "exposure": "替千金压着家族送来的明天相亲晚宴机票，家族还不知道票在她手里。",
+    "hidden": "千金私改释放环的改装单在她手里，家族代表正逼她交出来。",
+    "limits": [
+     "名义上是家族派给千金的人"
+    ],
+    "obligations": [
+     "不让千金出一点差错"
+    ],
+    "resources": [
+     "备用服饰箱的钥匙",
+     "对家展台的宣传册"
+    ]
+   },
+   "intimacy_tendency": {
+    "attraction_sources": [
+     "细心、懂分寸的人",
+     "肯替千金着想的人"
+    ],
+    "boundaries": [
+     "千金需要她的时候不越界"
+    ],
+    "desire_range": [
+     2,
+     4
+    ],
+    "desired_position": "帐篷外帐里替你留着的一张椅子",
+    "dislikes": [
+     "被当成传话筒"
+    ],
+    "expression": "贴着你耳边说话，指尖替你理平衣领。",
+    "likes": [
+     "有人替她把软尺收好"
+    ],
+    "preconditions": [
+     "两人都清醒，也都想清楚了"
+    ],
+    "self_control_range": [
+     3,
+     5
+    ]
+   },
+   "public_role": "千金的专属随行服化助理",
+   "schedule": [
+    {
+     "from": 0,
+     "location_id": "loc_backstage_dressing_tent",
+     "to": 660
+    },
+    {
+     "from": 660,
+     "location_id": "loc_backstage_vertical_ladder_well",
+     "to": 840
+    },
+    {
+     "from": 840,
+     "location_id": "loc_backstage_dressing_tent",
+     "to": 1439
+    }
+   ],
+   "situation": {
+    "exits": [
+     {
+      "cost": "失去家族给的职位和年终双薪。",
+      "option": "把改装单锁进服饰箱，回绝家族"
+     },
+     {
+      "cost": "千金会知道是她交的。",
+      "option": "交出改装单换千金一条退路"
+     }
+    ],
+    "pressure": "交了，千金今晚飞不成；不交，她自己的差事就到头了。",
+    "trigger": "家族代表到了后台，要她交出改装单和千金的行踪。"
+   },
+   "tags": [
+    "workplace",
+    "intimate"
+   ],
+   "voices": {
+    "inner": "我替她挡了这么多年，谁来替我挡一次。",
+    "surface": "这里我盯着，你进去。"
+   }
+  },
+  {
+   "adult_context": "年满二十四岁、持证上岗的舞台声学与时间码主管。",
+   "age_range": [
+    24,
+    27
+   ],
+   "appearance_options": [
+    "一边耳朵常年挂着监听耳返，黑色T恤上印着某支乐队的巡演日期。",
+    "导播间的微光照着他清瘦的侧脸，手指在推子上停得很稳。"
+   ],
+   "decision": {
+    "avoids": [
+     "拿他当工具用的人"
+    ],
+    "contrast": "人前只认数据；和你分戴一副耳返时，手心会出汗。",
+    "core_value": "节拍不会等人。",
+    "goal_options": [
+     "让今晚的压轴曲一个点都不错",
+     "找到一个能一起扛下录音的人"
+    ],
+    "never": [
+     "改了时间码不告诉别人"
+    ],
+    "prefers": [
+     "技术上较真的人"
+    ],
+    "pressure_responses": {
+     "breaking": "当着安全总监的面按下回放键",
+     "high": "主动下调超重低音，替高空让出余量",
+     "low": "只谈声压和节拍，不碰别的",
+     "mid": "把录音存了三份，悄悄找你商量"
+    },
+    "relationship_stance": "不爱说话，认准了的搭档就一直配合下去。",
+    "withdrawal": "摘掉耳返，一个人坐在黑着灯的导播间里。"
+   },
+   "gender": "male",
+   "gender_reason": "卡中设定为男性音频工程师。",
+   "id": "sound_engineer_he_yan",
+   "identity": {
+    "authority": "握着线阵列音响分频、灯光威亚同步时间码的触发键和后台监听频道。",
+    "exposure": "录下了安全总监和家族代表商议借低频共振砍掉高空威亚的通话。",
+    "hidden": "录音交出去他就再也接不到组委会的活，可他更不想看千金在半空断电。",
+    "limits": [
+     "不能擅自改动组委会批过的节目时间码"
+    ],
+    "obligations": [
+     "让每一个节拍点都准"
+    ],
+    "resources": [
+     "一段调音台环境拾音",
+     "后台监听频道的密钥"
+    ]
+   },
+   "intimacy_tendency": {
+    "attraction_sources": [
+     "不用开口的默契",
+     "对节拍同样较真的人"
+    ],
+    "boundaries": [
+     "导播间亮着录制灯时不越界"
+    ],
+    "desire_range": [
+     2,
+     3
+    ],
+    "desired_position": "导播台旁并肩坐着的位置",
+    "dislikes": [
+     "噪音"
+    ],
+    "expression": "把耳返的另一边轻轻挂到你耳朵上。",
+    "likes": [
+     "一起听完一段前奏"
+    ],
+    "preconditions": [
+     "两人清醒，收工之后"
+    ],
+    "self_control_range": [
+     3,
+     5
+    ]
+   },
+   "public_role": "主舞台主控音频与时间码工程师",
+   "schedule": [
+    {
+     "from": 0,
+     "location_id": "loc_backstage_vertical_ladder_well",
+     "to": 480
+    },
+    {
+     "from": 480,
+     "location_id": "loc_foh_sound_light_booth",
+     "to": 1439
+    }
+   ],
+   "situation": {
+    "exits": [
+     {
+      "cost": "从此接不到组委会的活。",
+      "option": "把录音交给主审"
+     },
+     {
+      "cost": "开场鼓点气势大减。",
+      "option": "下调低音替高空让出余量"
+     }
+    ],
+    "pressure": "交出录音就得罪组委会；不交，高空秀会在半空被切电。",
+    "trigger": "安全总监发现导播间有人录了音。"
+   },
+   "tags": [
+    "workplace"
+   ],
+   "voices": {
+    "inner": "我只想有人站在我这边。",
+    "surface": "这段你得听。"
+   }
+  }
+ ],
+ "clock_start": {
+  "label": "国际漫展开幕首日，八月",
+  "minute": 840
+ },
+ "clock_style": "hm",
+ "content_tags": [
+  "intimate",
+  "workplace",
+  "workplace_power"
+ ],
+ "custom": false,
+ "customs": [
+  "登台前，Coser会把自己的一件小饰物交给最信任的人保管，落地后再亲手取回。",
+  "后台不说“掉”字，威亚师只说“下来”，要说就说“稳稳下来”。",
+  "压轴秀开场前，全组人在梯井口碰一次拳，谁也不许提输。",
+  "首日收工后，工坊的人会挤在更衣帐篷里分一箱冰镇柠檬盐水。"
+ ],
+ "daily_activities": [
+  {
+   "beats": [
+    "更衣帐篷的暖灯下，{player.name}从身后环住对方",
+    "手指贴着真丝内衬，一格格收紧承重腰封"
+   ],
+   "duration_minutes": 20,
+   "hook_ids": [
+    "hook_mu_wrist_ring",
+    "hook_mu_waist_seal",
+    "hook_mu_red_wrist"
+   ],
+   "id": "act_tent_waist_seal",
+   "location_ids": [
+    "loc_backstage_dressing_tent"
+   ],
+   "start_minute": null,
+   "tags": [
+    "intimate"
+   ],
+   "title": "帐内贴身扣腰封"
+  },
+  {
+   "beats": [
+    "千金把亲手打磨的钛合金微缩翼羽塞进{player.name}的胸袋",
+    "指尖隔着布料，轻轻点在心口上"
+   ],
+   "duration_minutes": 15,
+   "hook_ids": [
+    "hook_mu_wrist_ring",
+    "hook_mu_waist_seal",
+    "hook_mu_red_wrist"
+   ],
+   "id": "act_wing_feather_pocket",
+   "location_ids": [
+    "loc_backstage_dressing_tent"
+   ],
+   "start_minute": null,
+   "tags": [
+    "intimate"
+   ],
+   "title": "翼羽铭牌塞进胸袋"
+  },
+  {
+   "beats": [
+    "十二米马道的栏杆边，两人把安全副索扣在同一个主锁环上",
+    "肩挨着肩，俯瞰台下星海一样的荧光棒"
+   ],
+   "duration_minutes": 25,
+   "hook_ids": [],
+   "id": "act_catwalk_shared_lock",
+   "location_ids": [
+    "loc_catwalk_above_mainstage"
+   ],
+   "start_minute": null,
+   "tags": [
+    "intimate"
+   ],
+   "title": "马道并肩试重"
+  },
+  {
+   "beats": [
+    "卸下闷热的演出领圈",
+    "浸过薄荷水的冰毛巾擦过对方发红的脸颊、脖颈和锁骨"
+   ],
+   "duration_minutes": 15,
+   "hook_ids": [],
+   "id": "act_mint_towel_collarbone",
+   "location_ids": [
+    "loc_backstage_dressing_tent"
+   ],
+   "start_minute": null,
+   "tags": [
+    "intimate"
+   ],
+   "title": "冰毛巾轻拭锁骨汗"
+  },
+  {
+   "beats": [
+    "导播间的微光里，两人分戴一副定制耳返",
+    "压轴曲的前奏像心跳，桌下十指悄悄扣紧"
+   ],
+   "duration_minutes": 20,
+   "hook_ids": [],
+   "id": "act_booth_shared_earpiece",
+   "location_ids": [
+    "loc_foh_sound_light_booth"
+   ],
+   "start_minute": null,
+   "tags": [
+    "intimate"
+   ],
+   "title": "导播间分戴耳返"
+  },
+  {
+   "beats": [
+    "绞盘旁，{player.name}的手覆在对方握着张力计的手背上",
+    "两根钢索一寸寸对齐，呼吸也慢慢对齐"
+   ],
+   "duration_minutes": 20,
+   "hook_ids": [],
+   "id": "act_platform_hand_on_hand",
+   "location_ids": [
+    "loc_wire_rigging_control_catwalk"
+   ],
+   "start_minute": null,
+   "tags": [
+    "workplace"
+   ],
+   "title": "平台手覆手校钢索"
+  },
+  {
+   "beats": [
+    "替对方整理领口内衬时，目光在镜中撞上",
+    "对方勾住{player.name}的手指，轻轻拽了两下丝带"
+   ],
+   "duration_minutes": 10,
+   "hook_ids": [
+    "hook_mu_wrist_ring",
+    "hook_mu_waist_seal",
+    "hook_mu_red_wrist"
+   ],
+   "id": "act_collar_ribbon_signal",
+   "location_ids": [
+    "loc_backstage_dressing_tent"
+   ],
+   "start_minute": null,
+   "tags": [
+    "intimate"
+   ],
+   "title": "领口丝带试演暗号"
+  },
+  {
+   "beats": [
+    "彩排落地后坐在平台的防滑垫上",
+    "隔着薄软内衬，揉开被背带勒紧的肩胛和后腰"
+   ],
+   "duration_minutes": 20,
+   "hook_ids": [],
+   "id": "act_rub_harness_marks",
+   "location_ids": [
+    "loc_wire_rigging_control_catwalk"
+   ],
+   "start_minute": null,
+   "tags": [
+    "intimate"
+   ],
+   "title": "揉开背带勒痕"
+  },
+  {
+   "beats": [
+    "侧翼候场的阴影里，两人共用一只吸管杯喝冰镇柠檬海盐水",
+    "趁没人注意，飞快交换一个轻吻"
+   ],
+   "duration_minutes": 10,
+   "hook_ids": [],
+   "id": "act_ladder_lemon_salt",
+   "location_ids": [
+    "loc_backstage_vertical_ladder_well"
+   ],
+   "start_minute": null,
+   "tags": [
+    "intimate"
+   ],
+   "title": "梯井共饮柠檬盐水"
+  }
+ ],
+ "default_npc_gender_mix": {
+  "female": 0.5,
+  "male": 0.5,
+  "nonbinary": 0.0
+ },
+ "default_person": "second",
+ "era": "当代国际动漫展的开幕季",
+ "extends": null,
+ "forbidden_terms": [
+  "仙法",
+  "御剑",
+  "银两",
+  "捕快",
+  "镖局",
+  "客栈",
+  "真气",
+  "法宝"
+ ],
+ "hooks": [
+  {
+   "id": "hook_mu_wrist_ring",
+   "kind": "observe",
+   "location_ids": [
+    "loc_backstage_dressing_tent"
+   ],
+   "slot": "cosplayer_mu_yunli",
+   "text": "后台私人更衣帐篷的化妆镜前，千金Coser{npc.name}正穿着贴身真丝机甲内衬调试腕部展翼拉环，脚边的航空箱里放着四十斤重的钛铝合金翼甲。"
+  },
+  {
+   "id": "hook_mu_waist_seal",
+   "kind": "approach",
+   "location_ids": [
+    "loc_backstage_dressing_tent"
+   ],
+   "slot": "cosplayer_mu_yunli",
+   "text": "{npc.name}掀开帐篷内间的帘子把你拉进去，背过身撩起长发：腰封最后两格我自己扣不上，你来。"
+  },
+  {
+   "id": "hook_mu_red_wrist",
+   "kind": "approach",
+   "location_ids": [
+    "loc_catwalk_above_mainstage"
+   ],
+   "slot": "cosplayer_mu_yunli",
+   "text": "{npc.name}在马道栏杆边摘下护手，把被背带磨红的手腕伸到你面前，语气还是骄傲的：别让外人看见，替我缠一下。"
+  },
+  {
+   "id": "hook_lu_release_ring",
+   "kind": "observe",
+   "location_ids": [
+    "loc_catwalk_above_mainstage"
+   ],
+   "slot": "mechanic_lu_yang",
+   "text": "主舞台上方十二米的悬空马道边，威亚机械师{npc.name}正低头检查双点威亚钢索上的手动释放环，台下十万观众的预热声浪阵阵传来。"
+  },
+  {
+   "id": "hook_lu_spare_descender",
+   "kind": "approach",
+   "location_ids": [
+    "loc_wire_rigging_control_catwalk"
+   ],
+   "slot": "mechanic_lu_yang",
+   "text": "{npc.name}把一枚备用缓降器按进你掌心，指腹在你手背上多停了一下：这个别让安全总监看见。"
+  },
+  {
+   "id": "hook_lu_sore_shoulder",
+   "kind": "approach",
+   "location_ids": [
+    "loc_wire_rigging_control_catwalk"
+   ],
+   "slot": "mechanic_lu_yang",
+   "text": "{npc.name}从马道下到平台时肩膀一沉，被你扶住；{npc.ta}低声说背带勒了一下午，问你能不能帮忙把肩扣松开。"
+  },
+  {
+   "id": "hook_chu_rival_poster",
+   "kind": "observe",
+   "location_ids": [
+    "loc_wire_rigging_control_catwalk"
+   ],
+   "slot": "designer_chu_zimo",
+   "text": "威亚绞盘控制平台角落，道具工坊结构总监{npc.name}正对着手机上的对家撞型宣传图脸色发白，随行助理拿着一叠转账截图站在旁边。"
+  },
+  {
+   "id": "hook_chu_confession",
+   "kind": "approach",
+   "location_ids": [
+    "loc_wire_rigging_control_catwalk"
+   ],
+   "slot": "designer_chu_zimo",
+   "text": "{npc.name}把你拉到翼甲箱后面，手里攥着加密母盘的读取卡，声音发紧：有件事，我只敢先告诉你。"
+  },
+  {
+   "id": "hook_shen_brochure",
+   "kind": "approach",
+   "location_ids": [
+    "loc_backstage_dressing_tent"
+   ],
+   "slot": "assistant_shen_ruoxuan",
+   "text": "{npc.name}把一本对家宣传册塞进你怀里，翻到折角那页：这张翼骨结构图，你比我认得清。"
+  },
+  {
+   "id": "hook_shen_folded_ticket",
+   "kind": "approach",
+   "location_ids": [
+    "loc_backstage_dressing_tent"
+   ],
+   "slot": "assistant_shen_ruoxuan",
+   "text": "{npc.name}从化妆箱底抽出一张明早的返程机票，当着你的面对折：这张票在我手里，千金还不知道。"
+  },
+  {
+   "id": "hook_shen_rack_cover",
+   "kind": "approach",
+   "location_ids": [
+    "loc_backstage_vertical_ladder_well"
+   ],
+   "slot": "assistant_shen_ruoxuan",
+   "text": "候场通道里有直播镜头扫过来，{npc.name}一把将你拽到挂满备用服饰的衣架后，贴着你肩头小声说：先别出声。"
+  },
+  {
+   "id": "hook_sun_stop_notice",
+   "kind": "observe",
+   "location_ids": [
+    "loc_backstage_vertical_ladder_well"
+   ],
+   "slot": "marshal_sun_jian",
+   "text": "侧翼登高爬梯井入口处，安全总监{npc.name}正捏着一份高空节目叫停通知单，主舞台音控导播间的音频师透过玻璃窗向后台比出了监听手势。"
+  },
+  {
+   "id": "hook_sun_test_sheet",
+   "kind": "approach",
+   "location_ids": [
+    "loc_backstage_vertical_ladder_well"
+   ],
+   "slot": "marshal_sun_jian",
+   "text": "{npc.name}在梯井口伸手拦下你，把那张声压超标的检测单递过来：你先看一眼，再决定今晚站哪一边。"
+  },
+  {
+   "id": "hook_he_playback",
+   "kind": "approach",
+   "location_ids": [
+    "loc_foh_sound_light_booth"
+   ],
+   "slot": "sound_engineer_he_yan",
+   "text": "{npc.name}隔着导播台把一副监听耳机推到你手边，按下回放键：这段你得听，听完再说时间码。"
+  },
+  {
+   "id": "hook_he_cold_cup",
+   "kind": "approach",
+   "location_ids": [
+    "loc_foh_sound_light_booth"
+   ],
+   "slot": "sound_engineer_he_yan",
+   "text": "{npc.name}把冰镇柠檬水贴上你发烫的后颈，眼睛仍盯着频谱：马道上热吧，坐这儿缓一缓。"
+  },
+  {
+   "id": "hook_he_channel_ask",
+   "kind": "request",
+   "location_ids": [
+    "loc_foh_sound_light_booth"
+   ],
+   "slot": "sound_engineer_he_yan",
+   "text": "{npc.name}摘下一边耳返，请你替{npc.ta}去后台问来安全总监的对讲频道号，说今晚的切闸指令得提前听见。"
+  }
+ ],
+ "id": "cosplayer_dressing_tent_zipper_jam",
+ "locations": [
+  {
+   "affordances": [
+    "两人扣在同一个主锁环上的安全副索",
+    "追光灯烤热的栏杆",
+    "台下星海一样的荧光棒"
+   ],
+   "detail": "悬在主舞台上方的钢格栅马道，追光灯烤得栏杆发烫，往下看是十万人的荧光棒海。",
+   "exits": [
+    "loc_wire_rigging_control_catwalk",
+    "loc_backstage_vertical_ladder_well"
+   ],
+   "id": "loc_catwalk_above_mainstage",
+   "name": "主舞台上方十二米马道",
+   "pressure_modifiers": {},
+   "privacy": "semi",
+   "tags": [
+    "workplace"
+   ],
+   "visibility": "台下看得见马道上的人影，听不见说话。",
+   "witnesses": [
+    "bg_stagehand"
+   ]
+  },
+  {
+   "affordances": [
+    "能并肩坐下的防滑垫",
+    "没报备的手动展翼释放环",
+    "装着二代逆翼的翼甲箱"
+   ],
+   "detail": "马道尽头围起来的小平台，只有威亚组能进，地上铺着防滑垫，翼甲箱和备用钢索堆在角落。",
+   "exits": [
+    "loc_catwalk_above_mainstage"
+   ],
+   "id": "loc_wire_rigging_control_catwalk",
+   "name": "威亚绞盘控制平台",
+   "pressure_modifiers": {},
+   "privacy": "private",
+   "tags": [
+    "workplace",
+    "intimate"
+   ],
+   "visibility": "幕布挡着，台下和后台都看不见。",
+   "witnesses": [
+    "bg_stagehand"
+   ]
+  },
+  {
+   "affordances": [
+    "能藏住两个人的服饰衣架",
+    "冰镇柠檬盐水的吸管杯",
+    "贴满节目单的候场白板"
+   ],
+   "detail": "通往马道的垂直爬梯和侧翼候场通道，挂满备用服饰的衣架排成一列，主播、志愿者和工作人员来来往往。",
+   "exits": [
+    "loc_catwalk_above_mainstage",
+    "loc_backstage_dressing_tent",
+    "loc_foh_sound_light_booth"
+   ],
+   "id": "loc_backstage_vertical_ladder_well",
+   "name": "侧翼爬梯井与候场通道",
+   "pressure_modifiers": {},
+   "privacy": "public",
+   "tags": [
+    "workplace"
+   ],
+   "visibility": "人来人往，镜头随时会扫过来。",
+   "witnesses": [
+    "bg_streamer",
+    "bg_volunteer",
+    "bg_family_envoy"
+   ]
+  },
+  {
+   "affordances": [
+    "真丝内衬与承重腰封",
+    "浸过薄荷水的冰毛巾",
+    "压在化妆箱底的返程机票",
+    "能躺下歇息的通风躺椅"
+   ],
+   "detail": "千金专属的双层帐篷，外帐摆着宣传册和头饰，内间有化妆镜、通风躺椅和装翼甲的航空箱，暖灯只照得见镜前一角。",
+   "exits": [
+    "loc_backstage_vertical_ladder_well"
+   ],
+   "id": "loc_backstage_dressing_tent",
+   "name": "后台的私人更衣帐篷",
+   "pressure_modifiers": {},
+   "privacy": "private",
+   "tags": [
+    "intimate",
+    "workplace"
+   ],
+   "visibility": "厚幕布隔开外面，只听得见脚步和直播的说话声。",
+   "witnesses": [
+    "bg_medic"
+   ]
+  },
+  {
+   "affordances": [
+    "能分戴的一副定制耳返",
+    "录着密谈的环境拾音",
+    "压轴曲的前奏回放"
+   ],
+   "detail": "观众席后方的玻璃导播间，调音台和时间码控台闪着微光，监听耳机挂在每张椅背上。",
+   "exits": [
+    "loc_backstage_vertical_ladder_well"
+   ],
+   "id": "loc_foh_sound_light_booth",
+   "name": "主舞台音控与时间码导播间",
+   "pressure_modifiers": {},
+   "privacy": "semi",
+   "tags": [
+    "workplace"
+   ],
+   "visibility": "隔着玻璃看得见里面的人，声音透不出去。",
+   "witnesses": [
+    "bg_rival_manager"
+   ]
+  }
+ ],
+ "name_pools": {
+  "family": [
+   "沐",
+   "楚",
+   "凌",
+   "安",
+   "顾",
+   "洛",
+   "沈",
+   "唐",
+   "萧",
+   "叶",
+   "陆",
+   "钟"
+  ],
+  "given_female": [
+   "云璃",
+   "诗雨",
+   "梦华",
+   "语汐",
+   "若雪",
+   "芷晴",
+   "紫嫣",
+   "欣然",
+   "曼琳",
+   "晓彤",
+   "清漪",
+   "若萱"
+  ],
+  "given_male": [
+   "扬",
+   "天成",
+   "子墨",
+   "浩然",
+   "逸飞",
+   "俊熙",
+   "景云",
+   "正宇",
+   "博文",
+   "星辰",
+   "晨曦",
+   "凯瑞"
+  ],
+  "given_neutral": [
+   "羽",
+   "辰",
+   "诺",
+   "清",
+   "霖",
+   "川",
+   "夏",
+   "秋",
+   "越",
+   "遥",
+   "凡",
+   "宁"
+  ],
+  "nickname_patterns": [
+   {
+    "gender": "any",
+    "pattern": "小{family}"
+   },
+   {
+    "gender": "any",
+    "pattern": "老{family}"
+   }
+  ],
+  "order": "family_first"
+ },
+ "notes": "按原稿加入，保留十万人漫展主舞台上空十二米马道、钛铝合金机甲胸甲卡死护栏与内六角折叠工具刀拆螺栓脱壳的骨架。与另一个在家里画同人本的同人圈世界拉开：这里写的是漫展现场——舞台、后台更衣帐篷、排长队的签售台、散场后会展中心外面的烧烤摊，女主角是机械专业出身、自己画图打印机甲的千金Coser。写死的人名改为身份称呼；婴儿肥只在一条外貌里保留；年龄放宽；人物组合按权力结构放开玩家身份，压力与日常不再锁死钩子，加了几个不限地点的靠近型钩子；亲密前提写明脱困之后、双方清醒自愿；新增后台私人更衣帐篷与四个亲密日常。\n2026-10-24 按写作规则 v2 与 Gemini 创意卡改造：拉链卡住改为十二米高空翼甲空降秀，围绕家族联姻通牒、图纸外泄和未报备的手动展翼释放环展开。",
+ "player_identities": [
+  {
+   "age_range": [
+    22,
+    30
+   ],
+   "baseline": "你专职负责千金重甲内层的贴身软甲穿戴、重心配平和马道随行照应，是少数能进私人更衣帐篷内间的人。",
+   "gender": "any",
+   "id": "pi_cosplay_lead_stage_assistant",
+   "reputation": "后台公认手最稳的护具师。",
+   "resources": [
+    "更衣帐篷内间的通行牌",
+    "内衬快拆扣"
+   ],
+   "risks": [
+    "高空一旦出事，第一个被问责的就是贴身护具。"
+   ],
+   "role": "千金Coser的内衬与护具师",
+   "social_position": "low",
+   "title_patterns": [
+    {
+     "gender": "any",
+     "pattern": "{family}"
+    },
+    {
+     "gender": "any",
+     "pattern": "{given}"
+    }
+   ]
+  },
+  {
+   "age_range": [
+    25,
+    35
+   ],
+   "baseline": "你在十二米马道和绞盘平台负责千金的空降起吊与半空定格，连续几届漫展的高空节目都由你放行。",
+   "gender": "any",
+   "id": "pi_stage_rigging_technician",
+   "reputation": "圈里出了名的不出错。",
+   "resources": [
+    "双点威亚主控手柄",
+    "高空安全副索"
+   ],
+   "risks": [
+    "节目被叫停或半空出了差错，你的执照和名声一起赔进去。"
+   ],
+   "role": "高空威亚特技主控师",
+   "social_position": "equal",
+   "title_patterns": [
+    {
+     "gender": "any",
+     "pattern": "{family}"
+    },
+    {
+     "gender": "any",
+     "pattern": "{given}"
+    }
+   ]
+  },
+  {
+   "age_range": [
+    24,
+    32
+   ],
+   "baseline": "你和千金一起画出这套钛铝合金可动翼甲的原始手稿，工坊的每一张图纸都有你的签名。",
+   "gender": "any",
+   "id": "pi_cosplay_prop_production_director",
+   "reputation": "工坊里的另一半脑子。",
+   "resources": [
+    "工坊五成股权的投票权",
+    "二代变形翼骨的加密母盘"
+   ],
+   "risks": [
+    "撞型的脏水泼下来，你和工坊的原创名声一起沉底。"
+   ],
+   "role": "机甲工坊联合创始人兼总设计师",
+   "social_position": "equal",
+   "title_patterns": [
+    {
+     "gender": "any",
+     "pattern": "{family}"
+    },
+    {
+     "gender": "any",
+     "pattern": "{given}"
+    }
+   ]
+  },
+  {
+   "age_range": [
+    32,
+    45
+   ],
+   "baseline": "你统辖主舞台压轴展演的放行、原创专利的现场仲裁和金奖的最终评定，是今晚整座展馆最难被说动的人。",
+   "gender": "any",
+   "id": "pi_anime_expo_safety_marshal",
+   "reputation": "以铁面公正著称的评审。",
+   "resources": [
+    "金奖一票定音权",
+    "高空特技特批签章"
+   ],
+   "risks": [
+    "被人看出偏私，你的主审资格和多年的公信力就到头了。"
+   ],
+   "role": "工艺大奖赛主审兼总督导",
+   "social_position": "high",
+   "title_patterns": [
+    {
+     "gender": "any",
+     "pattern": "{family}"
+    },
+    {
+     "gender": "any",
+     "pattern": "{given}"
+    }
+   ]
+  }
+ ],
+ "premise": "十万人云集的国际动漫盛会首日，主舞台压轴是一位同人圈顶流千金Coser亲手画图、监制的钛铝合金可动翼甲大秀。开展前三天，千金每天都在主舞台上方十二米的悬空马道走位彩排，威亚机械师、工坊结构总监、随行服化助理和主控音频师围着主舞台忙前忙后。八月的展馆人声鼎沸，后台更衣帐篷外满是等候开场的欢呼。",
+ "pressures": [
+  {
+   "choice": "替总监瞒下来换上二代逆翼，还是把底单交出去。",
+   "exits": [
+    {
+     "cost": "翼甲重了三公斤，要人在马道上手动辅助起吊。",
+     "option": "让结构总监配合换上二代逆翼，交出建模日志"
+    },
+    {
+     "cost": "对家被取消资格，工坊家丑外扬，风投要扣三成估值。",
+     "option": "把底单和专利备案号交给主审团"
+    },
+    {
+     "cost": "今晚的展翼参数只能靠两个人现场盲调。",
+     "option": "让总监签股权退让书，留在后台做保障"
+    }
+   ],
+   "far": {
+    "consequence": "工坊的合伙人结构要重新洗牌。",
+    "due_days": 14,
+    "trigger": "赛后行业协会调查图纸流向"
+   },
+   "flags": [
+    "timed",
+    "leverage"
+   ],
+   "hook_ids": [],
+   "id": "p_wing_cad_sold",
+   "immediate": {
+    "minutes": 10,
+    "text": "威亚师把转账底单拍在翼甲箱上，平台上没人说话。"
+   },
+   "leverage": {
+    "basis": "{mechanic_lu_yang.name}握着{designer_chu_zimo.name}私卖初代图纸、偷改配重参数的转账底单。",
+    "holder": "mechanic_lu_yang",
+    "subject": "designer_chu_zimo"
+   },
+   "location_ids": [
+    "loc_wire_rigging_control_catwalk"
+   ],
+   "near": {
+    "deadline_minutes": 90,
+    "text": "对家的水军已经就位，开场前不处理，指控就会在直播间炸开。"
+   },
+   "objective": "开场前把撞型的脏水挡下来，图纸的账也得有人认。",
+   "source": "person",
+   "start_minute": null,
+   "tags": [
+    "workplace"
+   ],
+   "title": "私卖翼骨图纸的转账底单",
+   "trigger": "{mechanic_lu_yang.name}查实，对家敢买水军指控撞型，是因为{designer_chu_zimo.name}三天前把初代翼骨图纸卖给对方抵债。"
+  },
+  {
+   "choice": "交出改装单换千金一条退路，还是顶住家族把单子藏下。",
+   "exits": [
+    {
+     "cost": "家族当场解除助理的随行合约。",
+     "option": "助理把单子锁进服饰箱，当面回绝家族代表"
+    },
+    {
+     "cost": "切闸权交主审团重议，开场推迟。",
+     "option": "拿音频师录下的安全总监密谈反制家族"
+    },
+    {
+     "cost": "高空要先过一轮实测，双人展翼可能被砍成单人。",
+     "option": "由千金自己补报改装单，请主审团现场复核"
+    }
+   ],
+   "far": {
+    "consequence": "威亚师和千金都要被追责。",
+    "due_days": 21,
+    "trigger": "赛后组委会复查改装记录"
+   },
+   "flags": [
+    "timed",
+    "leverage"
+   ],
+   "hook_ids": [],
+   "id": "p_release_ring_sheet",
+   "immediate": {
+    "minutes": 10,
+    "text": "家族代表就在外帐等着。"
+   },
+   "leverage": {
+    "basis": "{assistant_shen_ruoxuan.name}手里握着{cosplayer_mu_yunli.name}私加释放环、未向组委会报备的改装单。",
+    "holder": "assistant_shen_ruoxuan",
+    "subject": "cosplayer_mu_yunli"
+   },
+   "location_ids": [
+    "loc_backstage_dressing_tent"
+   ],
+   "near": {
+    "deadline_minutes": 60,
+    "text": "开场前交不出单子，家族就会直接找安全总监施压。"
+   },
+   "objective": "保住改装单，也保住千金今晚的高空。",
+   "source": "person",
+   "start_minute": null,
+   "tags": [
+    "workplace"
+   ],
+   "title": "手动展翼释放环的未报备改装单",
+   "trigger": "家族代表找到{assistant_shen_ruoxuan.name}，要助理交出{cosplayer_mu_yunli.name}私加释放环的改装单，好给取消高空一个理由。"
+  },
+  {
+   "choice": "出去挡人，还是带千金从后侧通道离开。",
+   "exits": [
+    {
+     "cost": "外帐桌上的初代翼甲草图被镜头扫到几秒。",
+     "option": "请服化助理端着头饰出去引开镜头，两人从后侧直上爬梯井"
+    },
+    {
+     "cost": "没法陪千金爬上十二米马道。",
+     "option": "{player.name}亲自走出帐篷，接受一段赛前采访"
+    },
+    {
+     "cost": "正式登台时间被迫提前。",
+     "option": "请音频师播放压轴秀的倒数预热音效，把媒体引回主舞台"
+    }
+   ],
+   "far": {
+    "consequence": "帐篷里的片段被人反复截图议论。",
+    "due_days": 3,
+    "trigger": "探班视频剪辑上传"
+   },
+   "flags": [
+    "timed"
+   ],
+   "hook_ids": [
+    "hook_mu_wrist_ring",
+    "hook_mu_waist_seal",
+    "hook_mu_red_wrist"
+   ],
+   "id": "p_streamer_outside_tent",
+   "immediate": {
+    "minutes": 5,
+    "text": "自拍杆的影子已经映在幕布上。"
+   },
+   "leverage": null,
+   "location_ids": [
+    "loc_backstage_dressing_tent"
+   ],
+   "near": {
+    "deadline_minutes": 20,
+    "text": "再拖下去，主播就会掀开外帐，直播间十万人都能看见。"
+   },
+   "objective": "不让镜头拍到帐篷里的两人，也不耽误登台。",
+   "source": "person",
+   "start_minute": null,
+   "tags": [
+    "intimate"
+   ],
+   "title": "帐篷外的探班直播镜头",
+   "trigger": "{player.name}在帐篷里贴身调整千金的真丝内衬和高空腰封时，两名持媒体证的主播举着自拍杆直播到了外帐。"
+  },
+  {
+   "choice": "用舞台实绩反杀，还是先把证据摆出来。",
+   "exits": [
+    {
+     "cost": "原本留给下季的二代铰链结构彻底公开。",
+     "option": "空降瞬间在大屏同步放出建模过程视频和二代逆翼实拍"
+    },
+    {
+     "cost": "结构总监泄密的事赛后要接受行业协会质询。",
+     "option": "和结构总监在候场通道开简短说明会，出示专利回执"
+    },
+    {
+     "cost": "整场压轴秀改成全程严苛的技术计分。",
+     "option": "请主审团在开场广播宣读决赛作品的原创查重编号"
+    }
+   ],
+   "far": {
+    "consequence": "工坊接下来的巡展邀约会被撤掉一半。",
+    "due_days": 10,
+    "trigger": "赛后流言被营销号转载"
+   },
+   "flags": [
+    "timed"
+   ],
+   "hook_ids": [],
+   "id": "p_copycat_danmaku",
+   "immediate": {
+    "minutes": 5,
+    "text": "候场通道的电视墙上，弹幕刷成了一片。"
+   },
+   "leverage": null,
+   "location_ids": [
+    "loc_backstage_vertical_ladder_well"
+   ],
+   "near": {
+    "deadline_minutes": 45,
+    "text": "开场前流言不压下去，评委打分时会先入为主。"
+   },
+   "objective": "在登台前或登台时，让流言站不住脚。",
+   "source": "rumor",
+   "start_minute": null,
+   "tags": [
+    "workplace"
+   ],
+   "title": "撞款心虚的弹幕流言",
+   "trigger": "对家在官方直播间刷起弹幕，说千金的新机甲撞了商厂的款，还心虚地取消了高空，台下跟着起哄。"
+  },
+  {
+   "choice": "全押今晚的金奖，还是和家族谈一条折中的路。",
+   "exits": [
+    {
+     "cost": "两人未来一年要全负荷跑完六场国际巡展对赌。",
+     "option": "助千金完成二代逆翼空降，拿下金奖和领投协议"
+    },
+    {
+     "cost": "工坊下季度得搬离市中心老厂房，迁去远郊。",
+     "option": "以合伙人或新资方的名义补齐工坊流动资金，回绝家族"
+    },
+    {
+     "cost": "这套获奖机甲的首展冠名权归家族集团。",
+     "option": "和家族妥协，千金挂名家族文创顾问换三年不干涉"
+    }
+   ],
+   "far": {
+    "consequence": "工坊团队解散，翼甲图纸归家族集团所有。",
+    "due_days": 7,
+    "trigger": "家族收回工坊场地"
+   },
+   "flags": [
+    "timed"
+   ],
+   "hook_ids": [
+    "hook_mu_wrist_ring",
+    "hook_mu_waist_seal",
+    "hook_mu_red_wrist"
+   ],
+   "id": "p_family_gold_ultimatum",
+   "immediate": {
+    "minutes": 10,
+    "text": "家族代表把通牒放在化妆台上，转身出了帐篷。"
+   },
+   "leverage": null,
+   "location_ids": [
+    "loc_backstage_dressing_tent"
+   ],
+   "near": {
+    "deadline_minutes": 480,
+    "text": "闭展前拿不出金奖或意向书，工坊的场地就要交还家族。"
+   },
+   "objective": "闭展前保住工坊，也保住千金自己选的路。",
+   "source": "institution",
+   "start_minute": null,
+   "tags": [
+    "workplace_power"
+   ],
+   "title": "金奖对赌与联姻通牒",
+   "trigger": "家族下了闭展通牒：拿不下金奖、落实不了三百万风投意向书，工坊明早收回，千金乘早班机回家出席联姻家宴。"
+  },
+  {
+   "choice": "走高空吊装，还是换一条更慢更稳的路。",
+   "exits": [
+    {
+     "cost": "高空风速变大，空降的摆幅更难控制。",
+     "option": "和威亚师用检修滑车从爬梯井垂直吊装组件，打开马道天窗引风"
+    },
+    {
+     "cost": "千金赛后得多留半小时签名。",
+     "option": "拿千金的后台合影名额向隔壁展台换两台冷风机和干冰背心"
+    },
+    {
+     "cost": "出场动线临时改为从东侧高台起跳。",
+     "option": "请总督导签发临时调令，开辟东侧消防通道运送组件"
+    }
+   ],
+   "far": {
+    "consequence": "后几天的高空节目全部限电演出。",
+    "due_days": 5,
+    "trigger": "展馆供电整改"
+   },
+   "flags": [
+    "timed"
+   ],
+   "hook_ids": [],
+   "id": "p_aircon_trip_blockade",
+   "immediate": {
+    "minutes": 10,
+    "text": "马道上的温度一下子升了好几度，汗顺着脊背往下淌。"
+   },
+   "leverage": null,
+   "location_ids": [
+    "loc_catwalk_above_mainstage"
+   ],
+   "near": {
+    "deadline_minutes": 60,
+    "text": "开场前翼甲组件送不上去，二代逆翼就没法换装。"
+   },
+   "objective": "在登台前把翼甲组件送上马道，也让人熬过这阵闷热。",
+   "source": "accident",
+   "start_minute": null,
+   "tags": [
+    "workplace"
+   ],
+   "title": "空调跳闸与西侧通道封控",
+   "trigger": "两万瓦电脑灯满载，后台临时空调跳闸停机；西侧货运通道又被安保铁马封住，四十斤的二代翼甲组件和冷气都被堵在马道下方。"
+  },
+  {
+   "choice": "抢着恢复照常登台，还是降低难度先顾身体。",
+   "exits": [
+    {
+     "cost": "登台前只剩一点时间重穿轻量内衬。",
+     "option": "立刻卸下肩甲胸甲，冰袋敷颈、喂淡盐水，再叫驻场医生来帐篷检查"
+    },
+    {
+     "cost": "双人高空翻转简化成平稳滑翔。",
+     "option": "扶对方平躺在通风躺椅上轻揉肩背，同时请医疗站带便携制氧机来会诊"
+    },
+    {
+     "cost": "放弃高空旋转的加分项。",
+     "option": "先送对方去医务室吸氧补液，等医生确认指标平稳，再替对方分担一半配重登台"
+    }
+   ],
+   "far": {
+    "consequence": "医生要求一周内不得穿戴重甲。",
+    "due_days": 7,
+    "trigger": "赛后复查身体"
+   },
+   "flags": [
+    "timed"
+   ],
+   "hook_ids": [
+    "hook_mu_wrist_ring",
+    "hook_mu_waist_seal",
+    "hook_mu_red_wrist"
+   ],
+   "id": "p_heat_exhaustion_tent",
+   "immediate": {
+    "minutes": 5,
+    "text": "对方脸色发白，额头冰凉，呼吸又浅又急。"
+   },
+   "leverage": null,
+   "location_ids": [
+    "loc_backstage_dressing_tent"
+   ],
+   "near": {
+    "deadline_minutes": 40,
+    "text": "开场前恢复不过来，高空动作就只能放弃。"
+   },
+   "objective": "先让人缓过来，再决定还能不能登台。",
+   "source": "nature",
+   "start_minute": null,
+   "tags": [
+    "workplace"
+   ],
+   "title": "重甲闷热与肩背痉挛",
+   "trigger": "千金穿着四十斤重甲在追光下彩排走位后退回帐篷，闷热加上肩部承重环压迫，突发轻度热衰竭，肩背痉挛，靠在椅背上喘不过气。"
+  }
+ ],
+ "region": "十万人国际漫展主舞台：十二米马道、威亚平台与后台更衣帐篷",
+ "rules": [
+  {
+   "id": "r_wire_double_sign",
+   "text": "高空威亚节目须经安全总监和大赛主审双签放行，任何一方都能一票叫停。"
+  },
+  {
+   "id": "r_mod_must_report",
+   "text": "道具改装必须提前向组委会报备，未报备的高空机构一经查实，责任人终身禁赛。"
+  },
+  {
+   "id": "r_copy_arbitration",
+   "text": "撞型抄袭的指控须当场出示原创时间戳，由主审团现场仲裁。"
+  },
+  {
+   "id": "r_tent_inner_access",
+   "text": "私人更衣帐篷的内间只许登记过的服化人员进入，媒体证不得越过外帐。"
+  }
+ ],
+ "schema_version": 1,
+ "stage_labels": {
+  "acquainted": "后台点头",
+  "committed": "翼羽相许",
+  "familiar": "并肩彩排",
+  "flirting": "帐篷暧昧",
+  "intimate": "内衬私情",
+  "stranger": "展馆擦肩",
+  "testing": "马道交锋"
+ },
+ "status": "released",
+ "style_hint": "写后台的热、汗、追光和金属的凉；人前是镜头和规程，人后是贴身的扣子和压低的话。少写机械原理，多写手、肩和呼吸。",
+ "tension_engines": [
+  {
+   "id": "te_family_ultimatum",
+   "text": "家族下了闭展通牒：拿不下金奖和风投，千金就得解散工坊回家联姻。"
+  },
+  {
+   "id": "te_wire_cut",
+   "text": "安全总监受了家族嘱托，正找借口砍掉十二米高空威亚空降。"
+  },
+  {
+   "id": "te_cad_leak",
+   "text": "初代翼骨图纸已被私卖给对家，撞型指控今晚随时会在台下炸开。"
+  },
+  {
+   "id": "te_release_ring",
+   "text": "主索上那套手动展翼释放环没向组委会报备，被翻出来就是终身禁赛。"
+  }
+ ],
+ "title": "登台前的Coser",
+ "tone": [
+  "十万人的欢呼",
+  "十二米马道上的风",
+  "真丝内衬下的扣位",
+  "闭展前的家族通牒"
+ ],
+ "twists": [
+  {
+   "category": "意外",
+   "id": "tw_wing_unfolds",
+   "requires": [
+    "cosplayer_mu_yunli"
+   ],
+   "text": "时间码炸响，你和{cosplayer_mu_yunli.name}在十二米高空手动展开银白逆翼，十万人的欢呼掀翻展馆；可主索因超载被判赛后整条报废，下一场巡展还没有备件。"
+  },
+  {
+   "category": "信息",
+   "id": "tw_timestamp_on_screen",
+   "requires": [
+    "designer_chu_zimo"
+   ],
+   "text": "导播间在大屏放出半年前的原始工程时间戳，对家的撞型指控当场站不住；可同一份日志也照出{designer_chu_zimo.name}三天前私下导出过初代图纸。"
+  },
+  {
+   "category": "资源",
+   "id": "tw_investor_signs",
+   "requires": [
+    "cosplayer_mu_yunli"
+   ],
+   "text": "台下的文创投资人当场递来三百万领投意向书，{cosplayer_mu_yunli.name}不用回家联姻了，代价是工坊明年得按期交出三套巡演机甲。"
+  },
+  {
+   "category": "关系",
+   "id": "tw_shen_returns_ticket",
+   "requires": [
+    "assistant_shen_ruoxuan"
+   ],
+   "text": "{assistant_shen_ruoxuan.name}当着家族代表的面退掉返程机票，宣布留在工坊做运营主管，转头却只对你说了一句：我留下，不全是为了千金。"
+  },
+  {
+   "category": "人事",
+   "id": "tw_crew_joins_tour",
+   "requires": [
+    "sound_engineer_he_yan",
+    "mechanic_lu_yang"
+   ],
+   "text": "{sound_engineer_he_yan.name}和{mechanic_lu_yang.name}受邀加入工坊的巡演班底，可组委会也为那套未报备的释放环，给威亚师记了一次黄牌。"
+  },
+  {
+   "category": "制度",
+   "id": "tw_sun_spare_rope",
+   "requires": [
+    "marshal_sun_jian"
+   ],
+   "text": "{marshal_sun_jian.name}当众签下切闸令，你上了马道才发现，主锁环旁多挂了一条没登记的防脱副索，登记牌上是安全总监的工号。"
+  },
+  {
+   "category": "制度",
+   "id": "tw_sun_withdraws",
+   "requires": [
+    "marshal_sun_jian"
+   ],
+   "text": "面对录音和主审团的特批签章，{marshal_sun_jian.name}撤回切闸令，签下安全合格回执，只要求返场谢幕改走平地升降台。"
+  },
+  {
+   "category": "关系",
+   "id": "tw_tent_set_up",
+   "requires": [
+    "cosplayer_mu_yunli",
+    "assistant_shen_ruoxuan"
+   ],
+   "text": "你以为帐篷内间的门禁失灵才被关在里面，其实是{cosplayer_mu_yunli.name}让{assistant_shen_ruoxuan.name}故意锁的：登台前，千金只想听你一句真心话。"
+  },
+  {
+   "category": "时限",
+   "id": "tw_curtain_call",
+   "requires": [
+    "cosplayer_mu_yunli"
+   ],
+   "text": "金箔纸雨落满主舞台，奖杯已经递到{cosplayer_mu_yunli.name}手里；你得决定是走上台在十万人面前与千金并肩谢幕，还是在马道终点等千金卸甲。"
+  }
+ ]
+}

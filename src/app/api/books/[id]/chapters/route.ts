@@ -3,6 +3,9 @@ import { requireUser } from "@/lib/auth";
 import { handle } from "@/lib/http";
 import { generateChapter } from "@/lib/story/generate";
 import { MODES } from "@/lib/story/modes";
+import { prisma } from "@/lib/db";
+import { HttpError } from "@/lib/auth";
+import { generateAtTurn } from "@/lib/at/host";
 
 const Body = z.object({
   parentId: z.string().nullable(),
@@ -17,7 +20,12 @@ export const POST = handle(async (req: Request, ctx: Ctx) => {
   const user = await requireUser();
   const { id } = await ctx.params;
   const body = Body.parse(await req.json());
-  const stream = await generateChapter({ userId: user.id, bookId: id, parentId: body.parentId, idea: body.idea, mode: body.mode });
+  const book = await prisma.book.findFirst({ where: { id, userId: user.id } });
+  if (!book) throw new HttpError(404, "找不到这本书");
+  const stream =
+    book.engine === "at"
+      ? await generateAtTurn({ userId: user.id, book, idea: body.idea, mode: body.mode })
+      : await generateChapter({ userId: user.id, bookId: id, parentId: body.parentId, idea: body.idea, mode: body.mode });
   return new Response(stream, {
     headers: { "Content-Type": "application/x-ndjson; charset=utf-8", "Cache-Control": "no-store" },
   });

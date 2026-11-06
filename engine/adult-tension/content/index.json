@@ -1,0 +1,4576 @@
+{
+ "content_version": "2026.10.29",
+ "schema_version": 1,
+ "worlds": [
+  {
+   "content_tags": [
+    "violence",
+    "coercion_theme",
+    "bodily_harm",
+    "substance",
+    "death",
+    "workplace_power",
+    "workplace",
+    "supernatural",
+    "disaster"
+   ],
+   "default_person": "second",
+   "era": "剑与魔法鼎盛纪元（迷宫都市深渊层）",
+   "id": "abyss_collapsed_refuge",
+   "modes": [
+    "daily",
+    "pressure"
+   ],
+   "region": "迷宫地下城第七层，外廊半塌的古代安全区",
+   "sha256": "c6237f6324e05d04e73a94a9a66485a2b5599a7ad6d77063307c85fcb493f239",
+   "status": "released",
+   "summary": "迷宫都市第七层，一处外廊塌了一半的古代安全区。S级远征队冲击深渊领主溃败，退回这里休整，等王都金主决定续约还是解散。白天清点战利品、照料伤员，夜里两人一班守着方尖碑的蓝光。溃退那夜谁丢下了谁、谁私藏了魔核、赏金怎么分，每个人心里都有一本账。",
+   "title": "魔石灯下的远征队"
+  },
+  {
+   "content_tags": [
+    "intimate",
+    "supernatural",
+    "crime",
+    "disaster"
+   ],
+   "default_person": "second",
+   "era": "剑与魔法的教廷时代，深渊流放营的雨季",
+   "id": "abyss_dungeon_exiled_saintess",
+   "modes": [
+    "daily",
+    "pressure"
+   ],
+   "region": "深渊九十九层：竖井吊篮、绝壁悬桥、溶洞泵房大堂与圣女石穴",
+   "sha256": "6c8345209ea5b84f7c18cff63cf864646b777ee1f5be376baa0910c54dc42d60",
+   "status": "released",
+   "summary": "深渊九十九层的钟乳石大溶洞终年不见天日，只有连接上层矿道的悬空吊篮定时升降。被教廷流放的高阶圣女住在竖井边的石穴里，白天用祝祷替矿工压制瘴气，夜里守着一盏长明圣灯。随行的近卫圣骑士、买下矿脉的商会女东家和定期下井的审判所掌印官，都围着这座孤悬绝壁的营地打转。",
+   "title": "九十九层的吊篮"
+  },
+  {
+   "content_tags": [
+    "intimate",
+    "explicit",
+    "violence",
+    "bodily_harm",
+    "death",
+    "workplace_power",
+    "crime",
+    "workplace",
+    "supernatural",
+    "disaster"
+   ],
+   "default_person": "second",
+   "era": "中世纪低魔黑暗帝国边境（黑曜石要塞断罪地牢）",
+   "id": "abyssal_dungeon_knightess_crest",
+   "modes": [
+    "daily",
+    "pressure"
+   ],
+   "region": "低魔黑暗帝国北境黑曜石要塞地下三层断罪地牢",
+   "sha256": "3aa7c57ccf29502aefb02a57de195281f81588ed426746f2f88ac2cd68e95ea3",
+   "status": "released",
+   "summary": "低魔黑暗帝国北境的黑曜石要塞。圣殿女骑士长兵败受审，锁骨上烙着一道每逢子夜就灼痛的深渊魔纹，押在地下三层的断罪地牢；主审是曾与骑士长并肩七年的前廷大审判官。狂热的军团长想以“异端”之名把人送上火刑柱，好借机夺权；地牢的看守长、潜进来的异端药剂师、混入守军的副官，各有各的打算。",
+   "title": "受审的高傲女骑士"
+  },
+  {
+   "content_tags": [
+    "intimate",
+    "workplace",
+    "workplace_power",
+    "crime",
+    "disaster"
+   ],
+   "default_person": "second",
+   "era": "当代近未来，商业航天亚轨道载人首飞定档前夜",
+   "id": "aerospace_simulator_pod_gauge_release",
+   "modes": [
+    "daily",
+    "pressure"
+   ],
+   "region": "戈壁商业航天测控基地：总装大厅、悬空模拟球舱与白杨林宿舍",
+   "sha256": "a46a1a8f2f414953e1b3c0037b23e76620e54ef1554f7ee7356f5b6552740c8c",
+   "status": "released",
+   "summary": "商业航天测控基地的总装大厅里，悬空的全动模拟飞行球舱日夜运转。心高气傲的首席女飞官每次进舱，都要把再入大气层的黑障科目跑得滴水不漏；环控总师、总装测试主管、航电主管与替补试飞员常年围着这座球舱轮班。基地外是戈壁清冷的晴空，宿舍楼和总装大厅之间只隔一条白杨林步道。",
+   "title": "不肯签字的女飞官"
+  },
+  {
+   "content_tags": [
+    "intimate",
+    "workplace",
+    "workplace_power",
+    "crime",
+    "bodily_harm"
+   ],
+   "default_person": "second",
+   "era": "2002 年秋末，旧校舍拆除前夕",
+   "id": "afterschool_cellar_president_confession",
+   "modes": [
+    "daily",
+    "pressure"
+   ],
+   "region": "私立圣罗兰大学百年旧校舍：地窖档案室、钟楼配线回廊与顶层广播室",
+   "sha256": "e8d0ee4512ae2bc85d370d05b34c5115cd4d9518b91df04afaf45d9a2ec8bdad",
+   "status": "released",
+   "summary": "2002 年秋末，名门私立圣罗兰大学的百年西洋旧校舍即将拆除、改建新礼堂。研究生会女会长带着干事在地下钟楼的备品档案室里清查历年社团经费底册，一箱一箱核到黄昏，发现三年前有几笔专项拨款怎么也对不上。风纪委员会每晚按点巡楼落锁，校报的记者也常在旧校舍外围打转。",
+   "title": "被绑发带女会长"
+  },
+  {
+   "content_tags": [
+    "intimate",
+    "violence",
+    "bodily_harm",
+    "workplace_power",
+    "crime",
+    "workplace",
+    "supernatural",
+    "disaster"
+   ],
+   "default_person": "second",
+   "era": "帝国皇家魔导院地下禁书库，古代秘药暴走之夜",
+   "id": "alchemy_archive_potion_backlash",
+   "modes": [
+    "daily",
+    "pressure"
+   ],
+   "region": "皇家魔导院地下百米月光石禁忌炼药暗室",
+   "sha256": "b4d80a44a165e28c24bd5aa6dc3a757c74787d99306ba9c013dad5b5b6ee5635",
+   "status": "released",
+   "summary": "皇家魔导院地下的禁忌炼药暗室里，冷面首席魔导师带着后辈搭档复原一种古代共鸣秘药，已经熬了大半年：白天授课、审稿，夜里守着琉璃导管看药色。暗室的龙鳞闸门遇到异常会自锁；首席有一本丝绒日记，从不让人碰。",
+   "title": "秘药高热女首席"
+  },
+  {
+   "content_tags": [
+    "intimate",
+    "bodily_harm",
+    "death",
+    "crime",
+    "workplace",
+    "supernatural",
+    "disaster"
+   ],
+   "default_person": "second",
+   "era": "极寒雪山绝顶的古代石构神殿",
+   "id": "alpine_sanctuary_dagger_rescue",
+   "modes": [
+    "daily",
+    "pressure"
+   ],
+   "region": "雪线神殿的绝顶平台、环形祭坛与石屋营地",
+   "sha256": "e6c29996c26ceb18d3810228221328625cf614fd182c56c09ba3648d90186472",
+   "status": "released",
+   "summary": "海拔四千米的雪线神殿一年只在夏秋开山，朝圣者踏着冰阶上来求一句降福。当值圣女按祖制守着“不受凡人触碰”的戒律，独居在祭坛后的暖室。每年封山前，山下请来的石匠、铭文学者和科考队协调官都会住进神殿边的石屋，一面修缮风化的环形巨石祭坛、拓印古碑，一面清点过冬的炭火与补给。",
+   "title": "禁触的雪线圣女"
+  },
+  {
+   "content_tags": [
+    "intimate",
+    "violence",
+    "bodily_harm",
+    "crime",
+    "workplace",
+    "disaster"
+   ],
+   "default_person": "second",
+   "era": "乱世军阀混战与前朝皇陵古墓机关探险期",
+   "id": "ancient_tomb_gravity_sand_spill",
+   "modes": [
+    "daily",
+    "pressure"
+   ],
+   "region": "千尺地下皇陵地宫悬空玄武岩天平翻板大殿",
+   "sha256": "24ced0898be016e810927d7bba667afbac311a101301e12c0f8c1dc350d61cc3",
+   "status": "released",
+   "summary": "军阀混战的年头，发丘摸金世家的女掌门受雇带队探一座前朝皇陵，督军府派了工兵团跟着，名为护送，实为盯梢。白天测风水、画地宫图，夜里在墓道口扎营。地宫的天平翻板机关还没摸清，工兵团长总想用炸药开路。",
+   "title": "流沙殿摸金女魁"
+  },
+  {
+   "content_tags": [
+    "intimate",
+    "violence",
+    "bodily_harm",
+    "substance",
+    "crime",
+    "workplace",
+    "workplace_power",
+    "disaster"
+   ],
+   "default_person": "second",
+   "era": "近未来公海军火交割与私人武装安保的年代",
+   "id": "arms_dealer_heiress_yacht_standoff",
+   "modes": [
+    "daily",
+    "pressure"
+   ],
+   "region": "南太平洋公海上一艘六十米长的私人防暴游艇",
+   "sha256": "294b0663f3add6e85f3d09fea646fc7a0d05454b7ec9542d0182e5586d8f8466",
+   "status": "released",
+   "summary": "军工联合体家族的掌舵女继承人，带着贴身保镖队长、轮机部大管轮和随船医护官，乘六十米长的私人防暴游艇在南太平洋公海上洽谈防空算力核心的跨国交割，一走就是十天。白天在主沙龙宴会厅会见各方代表，夜里在飞桥驾驶室核对海图与航线。九月正值南太平洋的台风季，公海上的风浪一天比一天急。",
+   "title": "防弹密室女军火商"
+  },
+  {
+   "content_tags": [
+    "intimate",
+    "workplace_power",
+    "crime",
+    "workplace"
+   ],
+   "default_person": "second",
+   "era": "当代北京国家博物馆，宋画特展揭幕前夕",
+   "id": "art_restorer_roller_piercing_jam",
+   "modes": [
+    "daily",
+    "pressure"
+   ],
+   "region": "悬空玻璃修复中庭、观摩连廊、展柜暗廊、暗房与阁楼工作室",
+   "sha256": "9fb225500c5ac5dfb97469bf0ebf43de394cd88f9b5b94652b61e25673342e78",
+   "status": "released",
+   "summary": "国家博物馆的宋画特展即将揭幕，首席古画修复师每天在悬空全景玻璃中庭里为国宝宋画做最后的展前全色与托裱核验，中庭技术总调度、修复副手与展柜技师在旁协同。外圈观摩连廊上架满了媒体与学界的长焦镜头，所有展品与修复档案都要在揭幕礼开始前封柜定稿。",
+   "title": "揭幕前的修复师"
+  },
+  {
+   "content_tags": [
+    "romance_light",
+    "workplace",
+    "nightlife"
+   ],
+   "default_person": "second",
+   "era": "当代（艺术季的两周）",
+   "id": "art_season_studios",
+   "modes": [
+    "daily",
+    "pressure"
+   ],
+   "region": "城市旧厂区改成的独立创作社区",
+   "sha256": "09a1d04430cbb9a51e50438e96bf681a5a5ccfd00c1c1bed4809ac3223a8e0ef",
+   "status": "released",
+   "summary": "两周的艺术季，旧厂区里的工作室、排练厅、版画工作坊和一间开到凌晨的酒吧挤在一起；合作与竞争都发生在所有人都看得见的地方。",
+   "title": "艺术季的酒局"
+  },
+  {
+   "content_tags": [
+    "intimate",
+    "violence",
+    "bodily_harm",
+    "crime",
+    "disaster"
+   ],
+   "default_person": "second",
+   "era": "天启末年梅雨初夏，东厂缇骑追剿江湖暗门",
+   "id": "assassin_rainy_temple_ointment",
+   "modes": [
+    "daily",
+    "pressure"
+   ],
+   "region": "浙闽交界翠竹深山里被山洪断道的兰若古寺",
+   "sha256": "ec62382673dfcd5016bea2819eab50519e18ce88a3b1b61327af84447b7d619d",
+   "status": "released",
+   "summary": "浙闽交界的翠竹深山里，一座荒废的兰若古寺立在悬崖断壁边。连绵半月的梅雨把山溪涨成山洪，冲垮了出山的石桥。江湖暗门的刺客、隐姓埋名的医家传人、巡按御史麾下的推官和守殿行者各怀心事，挤在古寺的残殿暖阁里，守着一盏如豆油灯，听殿外风雨。",
+   "title": "破庙拔毒女刺客"
+  },
+  {
+   "content_tags": [
+    "intimate",
+    "workplace",
+    "crime"
+   ],
+   "default_person": "second",
+   "era": "开元十二年盛夏，长安城南郊的皇家摘星楼",
+   "id": "astronomer_observatory_lightning_blind",
+   "modes": [
+    "daily",
+    "pressure"
+   ],
+   "region": "长安南郊的摘星楼：三十丈浑天台、观星回廊、浑仪暗室与漏刻值房",
+   "sha256": "e34405ed590c3f4bc9829fcf3214d60d0e46f34edf3234bd32f8c8b23fe8c968",
+   "status": "released",
+   "summary": "开元年间，长安城南郊的皇家摘星楼高三十丈。钦天监漏刻女官每夜在高台上报出时辰，全城一百零八坊的更鼓便跟着敲响。灵台郎掌管浑天仪的水运，两人一个看水、一个看星，在楼上搭档了三年。每逢盛夏雷雨夜，值守官吏与禁军便一同留在楼内核对星历，守着天亮那一通开城鼓。",
+   "title": "摘星楼漏刻女官"
+  },
+  {
+   "content_tags": [
+    "intimate",
+    "crime",
+    "workplace"
+   ],
+   "default_person": "second",
+   "era": "当代跨国艺术品拍卖行的秋拍季",
+   "id": "auctioneer_heiress_vault_heist_lock",
+   "modes": [
+    "daily",
+    "pressure"
+   ],
+   "region": "城中百年拍卖行：拍卖大厅、私人预展室与地下金库",
+   "sha256": "124ced96c0d52535562c22f71e87c0e176224d18ec960285e968042ec0d8f42b",
+   "status": "released",
+   "summary": "城中最古老的跨国艺术品拍卖行，正值一年一度最热闹的秋拍夜场。首席女拍卖师站在聚光灯下的拍卖台前，眼观六路、耳听电话委托席此起彼伏，一槌能落下数亿成交；散场后则常在私人预展室与地下金库展厅里，同老鉴定师、金库架构师和电话委托组长复盘核验。前厅后院都灯火通明。",
+   "title": "落槌后的女拍卖师"
+  },
+  {
+   "content_tags": [
+    "romance_light",
+    "violence",
+    "substance"
+   ],
+   "default_person": "second",
+   "era": "幕末（文久三年，1863 年）",
+   "id": "bakumatsu_machiya",
+   "modes": [
+    "daily",
+    "pressure"
+   ],
+   "region": "京都三条一带的町屋街区与一处小道场",
+   "sha256": "ee7bece080fa2f278ddd27f27647023d60329968045b2fa9c698ed4e0f2c6017",
+   "status": "released",
+   "summary": "文久三年的京都，时局一夜三变；町人、浪士、藩士、艺人住在同一条町上，礼法之下各有去处。",
+   "title": "幕末微醺的艺伎"
+  },
+  {
+   "content_tags": [
+    "intimate",
+    "workplace"
+   ],
+   "default_person": "second",
+   "era": "当代三亚，海滨国际沙排公开赛女子决赛日",
+   "id": "beach_volleyball_anchor_vibe_trap",
+   "modes": [
+    "daily",
+    "pressure"
+   ],
+   "region": "三亚海滨沙排中央球场：网前沙区、环形看台、遮阳棚、理疗室与运动员小木屋",
+   "sha256": "301dd7e9268813c8b02e602b9f56dfc31f13b9c677f93a87f7f82dd8f4f3d858",
+   "status": "released",
+   "summary": "三亚海滨国际沙排公开赛进入女子决赛日。国家队的王牌主攻和副攻搭档每天在中央球场扣杀、拦网，组委会竞赛主任、国际排联技术代表、司线员和随队防护师在场边各司其职。海风裹着热浪吹过金色沙滩与环形看台，赛后就要公布新一届奥运周期的国家队双人组合名单。",
+   "title": "救球扑地女主攻"
+  },
+  {
+   "content_tags": [
+    "intimate",
+    "bodily_harm",
+    "crime",
+    "workplace",
+    "disaster"
+   ],
+   "default_person": "second",
+   "era": "现代江南临河的百年旧书肆",
+   "id": "bookstore_atrium_paperweight_rescue",
+   "modes": [
+    "daily",
+    "pressure"
+   ],
+   "region": "书肆天井茶席、二楼藏书回廊、阁楼与临河水埠",
+   "sha256": "9e3e0072c6dc433c7de9b571b95853ad002328e2ae8b61c95ecd1c5fa13ed900",
+   "status": "released",
+   "summary": "江南临河的百年旧书肆，黄梅天里细雨连绵，青石阶与乌篷船水埠终日笼在水汽里。借住在二楼阁楼替书肆编修旧家谱的青年编目员，每晚都在台灯下抄录到打烊之后；驻店的木作修复师、古籍修复师与文保督导常在一楼天井围炉焙茶、核对书目。河水每年入夏都会漫上临河石埠。",
+   "title": "梅雨阁楼编目员"
+  },
+  {
+   "content_tags": [
+    "romance_light",
+    "intimate",
+    "coercion_theme",
+    "nightlife",
+    "workplace_power"
+   ],
+   "default_person": "second",
+   "era": "1930 年代",
+   "id": "calendar_poster",
+   "modes": [
+    "daily",
+    "pressure"
+   ],
+   "region": "通商口岸城市，片厂、画室、舞厅和征信所挤在同一条街上",
+   "sha256": "714c6f710b73c0220aa16adec72f5a1a0fd89ca0d5c07b6e5ab522c74823b180",
+   "status": "released",
+   "summary": "一张脸可以卖三次：银幕一次，街墙一次，舞池一次；演员、画师、大班和侦探都在算这张脸到底归谁。",
+   "title": "月份牌上的女郎"
+  },
+  {
+   "content_tags": [
+    "intimate",
+    "humiliation",
+    "workplace_power",
+    "gambling",
+    "coercion_theme"
+   ],
+   "default_person": "second",
+   "era": "当代维也纳，金色大厅一场大提琴协奏曲首演前的排练周",
+   "id": "cellist_hall_tailpin_lock_jam",
+   "modes": [
+    "daily",
+    "pressure"
+   ],
+   "region": "金色大厅：独奏台、侧台调音廊、乐器整备室、独奏家休息室与对街的咖啡馆",
+   "sha256": "3387ab16643e531dc5afe38927258a3267611c241760c63c3a50827f4e304e42",
+   "status": "released",
+   "summary": "维也纳金色大厅的大提琴协奏曲首演前一周，清冷的大提琴女神每天排练到闭馆。排练周开始那晚，女神自己提了一个赌约：首演之前锁着那件钛合金贞操带，银钥匙押在赢家手里，撑不住就说“休止”，钥匙当场归还。转播组的摄像师最近总把长焦对着女神的裙摆。",
+   "title": "赌输的大提琴家"
+  },
+  {
+   "content_tags": [
+    "intimate",
+    "substance",
+    "workplace_power",
+    "crime",
+    "workplace",
+    "nightlife",
+    "disaster"
+   ],
+   "default_person": "second",
+   "era": "当代都市的豪门商战",
+   "id": "chaebol_chairwoman_submerged_maybach",
+   "modes": [
+    "daily",
+    "pressure"
+   ],
+   "region": "雨季的城中：集团大厦顶层与地下暗渠",
+   "sha256": "9b0c5df34216d18de0b4afde9586b058f9f181afaa8ba26861874306a3442ea5",
+   "status": "released",
+   "summary": "老董事长猝逝，长女接掌千亿财阀，叔叔一派在董事会里虎视眈眈，只等新任董事长出一次错。新董事长白天主持例会、接洽银团，夜里乘防弹座驾往返集团大厦，随行只有父亲生前亲挑的保镖、首席秘书和老司机。入夏以后，城中低洼的暗渠一遇暴雨就会临时封控。",
+   "title": "暗渠里的女董事长"
+  },
+  {
+   "content_tags": [
+    "intimate",
+    "workplace_power",
+    "crime",
+    "workplace",
+    "disaster"
+   ],
+   "default_person": "second",
+   "era": "2000年代初首尔江南区暴雨深夜（跨国财阀控股权交割前夜）",
+   "id": "chaebol_heiress_vault_hostage",
+   "modes": [
+    "daily",
+    "pressure"
+   ],
+   "region": "首尔江南区顶奢财阀双子塔大厦地下五层核心安防重型保险库与通风夹层",
+   "sha256": "9dcc1f2b7d76ebdfd33f49b9b454de3d6b428cb420821e9662df17c3bccad5f1",
+   "status": "released",
+   "summary": "跨国控股权交割前夜，财阀第一继承人千金带人下到双子塔地下五层的钛合金金库，核对最后一批底单。并购部的副专务想在交割前翻盘，买通一支武装突击队守住了走廊；特搜部的检察官早盯上副专务的回扣账，总工程师和专职司机也还在楼里。外头下着江南区几十年一遇的暴雨，备用电源上次演练没撑满时长。",
+   "title": "金库氧气倒计时"
+  },
+  {
+   "content_tags": [
+    "intimate",
+    "violence",
+    "coercion_theme",
+    "bodily_harm",
+    "substance",
+    "death",
+    "workplace_power",
+    "crime",
+    "workplace",
+    "disaster"
+   ],
+   "default_person": "second",
+   "era": "唐末昭宗年间长安城",
+   "id": "chang_an_rainy_dali_temple_inquest",
+   "modes": [
+    "daily",
+    "pressure"
+   ],
+   "region": "唐末长安大理寺深处的验尸石室、架阁库与地下重牢",
+   "sha256": "ac551ed205ac9a6c205dc1a049561fe33a7c0fdf7edde3f215b45bd465d1969a",
+   "status": "released",
+   "summary": "唐末的长安，执掌三司重权的宰相嫡长子在平康坊离奇暴毙，案子落到大理寺。铁面无私的司刑女官秘密提调一位蒙冤下狱的前推官，在青石验尸房里对着尸身查了几天。相府要五更封棺、以心风结案，门阀的人日夜盯着大理寺；秋雨连绵，验尸房的地下重库常渗水。",
+   "title": "大理寺提刑女官"
+  },
+  {
+   "content_tags": [
+    "intimate",
+    "crime",
+    "workplace",
+    "disaster"
+   ],
+   "default_person": "second",
+   "era": "宣统二年九月，长白山初雪时节",
+   "id": "changbai_ginseng_blizzard_crevasse",
+   "modes": [
+    "daily",
+    "pressure"
+   ],
+   "region": "长白山天池：老林子地窨子、冰壁栈道、天坑石崖与温泉冰穴",
+   "sha256": "83f5f6cf2ae07afeaca60e96e2bf4f604393b3ee1e047eeac925cde4f3cd481e",
+   "status": "released",
+   "summary": "宣统二年九月，长白山已落初雪。采参世家的新任女把头接下一桩差事，领着关东地质考察队与奉天参行掌柜进老林子上天池。一边寻祖传的参脉，一边勘火山岩层，一行人在林海雪原里走了一个月，白天踏雪翻岭，夜里在地窨子与冰穴里烤火核对路线。",
+   "title": "天池采参女把头"
+  },
+  {
+   "content_tags": [
+    "intimate",
+    "violence",
+    "coercion_theme",
+    "bodily_harm",
+    "substance",
+    "death",
+    "crime",
+    "workplace",
+    "disaster"
+   ],
+   "default_person": "second",
+   "era": "明末天启年间（风雪绝壁孤庙）",
+   "id": "changming_temple_snowbound",
+   "modes": [
+    "daily",
+    "pressure"
+   ],
+   "region": "太行绝顶与官道交界处的半废弃唐代石寺大殿与后山禅房",
+   "sha256": "d72c6c7f60d891264c29dc85d4739704c5a4287f8fb405567844f0dcf8c0fa3c",
+   "status": "released",
+   "summary": "明末天启年间，太行绝顶的半废石寺是官道上唯一的落脚处，冬天总有几个借宿的人：押解钦犯的锦衣卫百户、行脚铃医、不肯报名号的独行客。入冬头一场大雪那夜，后殿老僧死在禅房里，百户封了山门逐个盘查；借宿的人白天劈柴煮粥，夜里围着火盆互相提防。下山的悬索栈桥年久失修，大雪一来就过不去。",
+   "title": "风雪古刹借宿夜"
+  },
+  {
+   "content_tags": [
+    "intimate",
+    "humiliation",
+    "substance",
+    "workplace_power",
+    "crime",
+    "workplace",
+    "disaster"
+   ],
+   "default_person": "second",
+   "era": "2000年代初东京高円寺老旧木造公寓梅雨季深夜",
+   "id": "childhood_friend_tatami_roomshare",
+   "modes": [
+    "daily",
+    "pressure"
+   ],
+   "region": "高円寺中央线铁道旁老旧木造公寓二楼西侧六叠榻榻米单间与公共狭小走廊",
+   "sha256": "533f54ddfbe1da2e2645297a24ed2c014dafa564db69cdf23af3d2c3c85edff2",
+   "status": "released",
+   "summary": "同乡的青梅竹马考进了东京的名门大学，常来高円寺这间六叠榻榻米的老公寓蹭饭、借书，嘴上毒舌，从不留宿。纸门隔音极差，房东严查异性留宿；梅雨季的中央线时不时停运，屋里的单人被褥只有一床。",
+   "title": "六叠合租俏青梅"
+  },
+  {
+   "content_tags": [
+    "intimate",
+    "violence",
+    "bodily_harm",
+    "death",
+    "workplace",
+    "supernatural",
+    "crime"
+   ],
+   "default_person": "second",
+   "era": "边境战争与符文结界纪元",
+   "id": "cleric_bunker_sanctuary_overload",
+   "modes": [
+    "daily",
+    "pressure"
+   ],
+   "region": "边境村庄半塌礼拜堂下的地下墓室救护所",
+   "sha256": "d0d090463799a500ed74bd6d145ed02b51bcbac9e9b8e49adf980f224b0372d4",
+   "status": "released",
+   "summary": "边境前线一座钟楼半塌的村庄礼拜堂，地下墓室改成了野战救护所。首席白衣女牧师领着随军修女守着几十张担架，重装骑士长和工兵老班长带人驻守地面交通壕与门廊。白天在烛光下换药、祈祷、核录阵亡与伤病名册，夜里轮流照看圣泉引水廊的水脉与结界。晚秋寒雨连绵，礼拜堂下的烛火彻夜不熄。",
+   "title": "地下救护所女牧师"
+  },
+  {
+   "content_tags": [
+    "romance_light",
+    "intimate",
+    "bodily_harm"
+   ],
+   "default_person": "second",
+   "era": "架空的维多利亚风格年代",
+   "id": "clockwork_circus",
+   "modes": [
+    "daily",
+    "pressure"
+   ],
+   "region": "一支机械马戏团，每座城只停七天",
+   "sha256": "479d2765379c2f45f0d67ce841224c9f08e92b85e4e948468ec57aeb45f4049b",
+   "status": "released",
+   "summary": "马戏团是一个家，也是一座笼子；第七夜拆帐篷的时候，谁跟着走，谁留下？",
+   "title": "发条马戏的伶人"
+  },
+  {
+   "content_tags": [
+    "intimate",
+    "workplace_power",
+    "crime"
+   ],
+   "default_person": "second",
+   "era": "当代顶尖高校的九月迎新典礼开幕日",
+   "id": "cold_president_podium_harness_jam",
+   "modes": [
+    "daily",
+    "pressure"
+   ],
+   "region": "万人大礼堂：主舞台发言席、侧幕通道、导播总控与后台配电区",
+   "sha256": "3358f936ae96b3bb5484c1a6802ca363b0c76c70b954a846e5b882391777239c",
+   "status": "released",
+   "summary": "顶尖学府的万人大礼堂里，迎新典礼即将开幕，台下坐满成年新生与校领导。研究生会主席在侧幕默诵讲稿，副主席拿着对讲机指挥走位，导播室的推流监视器红绿闪烁。这篇致辞关系唯一的保荐名额，也关系校会大权落在谁手里。",
+   "title": "讲台急升的主席"
+  },
+  {
+   "content_tags": [
+    "intimate",
+    "violence",
+    "humiliation",
+    "workplace_power",
+    "workplace",
+    "disaster"
+   ],
+   "default_person": "second",
+   "era": "现代冷战",
+   "id": "cold_war_bunker_cipher_incineration",
+   "modes": [
+    "daily",
+    "pressure"
+   ],
+   "region": "华北要塞花岗岩地下三十米国防通信暗堡",
+   "sha256": "528050b91cadae64f5730a97370841fc001ec177a516c7a5a7ae12a20cea239f",
+   "status": "released",
+   "summary": "冷战年代，华北要塞地下三十米的国防通信暗堡，首席女报务员在机要舱室里值了三年班；保密检查员、勘测技术员和炊事班长是这个月才调下来的。白天收发电报、焚毁废码，夜里在铁架床上听渗水声。雨季山里的暗河会涨，水压装甲门的自锁装置是老式的。",
+   "title": "暗堡进水女报务"
+  },
+  {
+   "content_tags": [
+    "intimate",
+    "bodily_harm",
+    "crime",
+    "workplace",
+    "disaster"
+   ],
+   "default_person": "second",
+   "era": "战事第二年初春，前线停火换俘窗口期内的地下野战医院",
+   "id": "combat_surgeon_bunker_cavein_vigil",
+   "modes": [
+    "daily",
+    "pressure"
+   ],
+   "region": "前线后方的地下野战医院：主帐篷、分诊室、药品库房与军医掩蔽部",
+   "sha256": "dfd647e92f05dc2ae1d31af654db44b770595127367aa6100e55b66d3161b47b",
+   "status": "released",
+   "summary": "前线后方的地下野战医院里，清冷寡言的外科女军医白天在帐篷里查房、分药、替伤员读家书，难得在停火的间隙煮一杯苦咖啡。地下分诊室和掩蔽部由野战工兵组长带人驻守，护士长、老卫生员与通讯兵轮班照料从前线转下来的伤员。今年初春刚签下短暂的停火换俘协定，前线难得安静了一整天，医院奉命在停火期满前拔营后撤。",
+   "title": "战地救护女军医"
+  },
+  {
+   "content_tags": [
+    "intimate",
+    "violence",
+    "coercion_theme",
+    "substance",
+    "crime",
+    "workplace",
+    "nightlife"
+   ],
+   "default_person": "second",
+   "era": "1940（租界变天前夕）",
+   "id": "concession_darkroom",
+   "modes": [
+    "daily",
+    "pressure"
+   ],
+   "region": "法租界霞飞路深处的老洋房公馆与地下暗房",
+   "sha256": "217fdd01eeb11a71e9496d19ee752c42e8554c594ca7b6e2e84d6913cd066998",
+   "status": "released",
+   "summary": "1940 年的法租界，霞飞路深处一座老洋房，楼上是名流、遗老、走私商与各方线人交错的画廊沙龙，楼下是弥漫定影液酸涩气息的狭窄暗房。沙龙每周开三晚，暗房替人冲洗不能见光的底片。租界随时可能变天，人人都在找去南洋的船票。",
+   "title": "霞飞路暗房女谍"
+  },
+  {
+   "content_tags": [
+    "intimate",
+    "coercion_theme",
+    "humiliation",
+    "workplace_power",
+    "workplace"
+   ],
+   "default_person": "second",
+   "era": "当代杭州大学城商圈，一家通宵便利店的夜班",
+   "id": "convenience_clerk_cooler_tail_jam",
+   "modes": [
+    "daily",
+    "pressure"
+   ],
+   "region": "通宵便利店：冷柜通道、步入式冷库、店门口、收银台与员工休息间",
+   "sha256": "6a6447c4079f376452be78892539566855be06ab87738d0bc249eeb0e7bd51de",
+   "status": "released",
+   "summary": "杭州大学城商圈的通宵便利店，落地窗亮得像玻璃盒子，夜跑和吃宵夜的年轻人来来往往。纯欲的夜班店员每晚补货、收银、跟熟客聊两句，百褶裙下偷偷塞着一只毛绒猫尾肛塞，是自己挑的小秘密。这个秘密前几天被一个人撞破了，店员红着脸求那个人替自己瞒着。商圈的巡查督导常在后半夜来查岗。",
+   "title": "冷柜前夜班店员"
+  },
+  {
+   "content_tags": [
+    "workplace",
+    "disaster",
+    "crime",
+    "intimate"
+   ],
+   "default_person": "second",
+   "era": "现代远海海关缉私",
+   "id": "cool_detective_shipping_container_rope",
+   "modes": [
+    "daily",
+    "pressure"
+   ],
+   "region": "台风前夕的远海：缉私船与被接舷的走私货轮",
+   "sha256": "c1b5c4218a152d6ed04318360c4304c128c09c0c35f3ee54e7fd4fed90de31de",
+   "status": "released",
+   "summary": "海关缉私船在远海追踪一艘重型走私货轮已经三天。王牌女警官和随船轮机工程师、登临突击组长、报务员、随船军医轮流值夜，吃住都挤在狭窄的船舱里；白天在驾驶台盯雷达、核舱单，夜里在后甲板复盘航线。九月台风季将至，海面上的风浪一层层往上涨。",
+   "title": "悬在舷外的女警官"
+  },
+  {
+   "content_tags": [
+    "intimate",
+    "crime",
+    "workplace",
+    "supernatural"
+   ],
+   "default_person": "second",
+   "era": "世界树结实季尾声的精灵林城",
+   "id": "cool_elven_ranger_tree_hollow_cage_lock",
+   "modes": [
+    "daily",
+    "pressure"
+   ],
+   "region": "世界树下的精灵林城：树冠集市、游侠树屋与地下根道",
+   "sha256": "d3e8eadac1dcee48bdf17890620dc2d5584b1929ed010c874ef412151986b333",
+   "status": "released",
+   "summary": "世界树下的精灵林城，今年第一次依约允许人类学者与商人在结实季进入根系空腔考察。巡林游侠奉命担任向导，带着人类古植物学者在林城里住了一季，白天下到根系木台观测采样，夜里在树屋里整理图谱。树冠集市上花蜜与草药交易正旺，老巡林长与根道守卫队日夜巡视着通往地底的古老根道。",
+   "title": "巡林的精灵游侠"
+  },
+  {
+   "content_tags": [
+    "intimate",
+    "workplace",
+    "bodily_harm"
+   ],
+   "default_person": "second",
+   "era": "当代国际模玩大展评审前的独立GK手办工作室",
+   "id": "cool_figure_painter_airbrush_trap",
+   "modes": [
+    "daily",
+    "pressure"
+   ],
+   "region": "文创园区一栋三层小楼：喷涂车间、暗房、阁楼与顶层露台",
+   "sha256": "f15fddcf788f1d3126be015f98a8a63bd8e719449b6d96ae14626d4ecfec8c4c",
+   "status": "released",
+   "summary": "文创园区一栋三层小楼里，防爆灯常年亮着，空气里是硝基漆和香蕉水的清苦味。涂装师、雕刻师和调色师从老牌模玩大厂出走，自立门户做孤品重工GK，在圈里刚闯出一点名声。工作室第一件独立作品要送上国际模玩大展的闭门评审，展会的人、物流商和老东家的人都盯着这扇门。",
+   "title": "赶工GK的涂装师"
+  },
+  {
+   "content_tags": [
+    "intimate",
+    "workplace_power",
+    "workplace",
+    "disaster"
+   ],
+   "default_person": "second",
+   "era": "当代国际动漫游戏博览会压轴日",
+   "id": "cool_genshin_cosplayer_zipper_trap",
+   "modes": [
+    "daily",
+    "pressure"
+   ],
+   "region": "国家会展中心主舞台后台、VIP更衣间与会展酒店",
+   "sha256": "c6cef34b2ba3169e094a5c6604b9bdba0aa4ac944db57089b95171effa5a6f59",
+   "status": "released",
+   "summary": "国际动漫游戏博览会压轴日，特邀嘉宾声优穿着一身重工刺绣的角色战袍在主舞台与签售区之间连轴转，场馆里的应援欢呼声此起彼伏。演艺执行总监、高定战袍工艺师与展馆安保巡查员全天在后台备演连廊协同调度。主展厅闭馆后会开启全区红外布防，所有演职人员都要在清场铃响前完成交接。",
+   "title": "签售会的游戏声优"
+  },
+  {
+   "content_tags": [
+    "intimate",
+    "workplace_power",
+    "workplace",
+    "disaster"
+   ],
+   "default_person": "second",
+   "era": "当代湾岸机车改装圈的盛夏赛季",
+   "id": "cool_mechanic_storm_hangar_rollup_jam",
+   "modes": [
+    "daily",
+    "pressure"
+   ],
+   "region": "海边老机库改成的机车改装工坊、装卸平台与隔壁汽配街",
+   "sha256": "3217b255085349c47989a0497e334df8a25abbd1fc59c6c911e96c764571d057",
+   "status": "released",
+   "summary": "海边一座废弃老机库改成了机车改装工坊，机油味和工具声响了三年。女机械师和合伙试车手把一台老款赛车调到了极致，开幕赛验车就在眼前。职业厂队的老板看中的却是女机械师自研的电控和这块地：开价买断整台车和电控，条件是摘掉工坊招牌、并入厂队。隔壁汽配店的房东、车友会和老师傅都冒雨聚到了这间亮着暖灯的机库里。",
+   "title": "车行里的女机械师"
+  },
+  {
+   "content_tags": [
+    "intimate",
+    "violence",
+    "bodily_harm",
+    "death",
+    "crime",
+    "workplace"
+   ],
+   "default_person": "second",
+   "era": "大唐盛世贞观年间大理寺最高司法勘验与玄武岩地下冰库期",
+   "id": "coroner_court_ice_vault_deadlock",
+   "modes": [
+    "daily",
+    "pressure"
+   ],
+   "region": "长安城大理寺官署地下十丈挑高六米玄武岩古法冰鉴停尸正厅",
+   "sha256": "fbf56af5a37ea630dc4150d149f3b8e3e10b1d19fc391514886ee26d8e4a4dfa",
+   "status": "released",
+   "summary": "贞观年间的盛夏，长安热得井水都发温，大理寺地下十丈的玄武岩冰鉴停尸大堂成了全城最凉的地方。大理寺首位女仵作守着一具暑天不能腐的毒杀案尸身，少卿天天顶着日头下来问案，两人在冰雾里对坐了一个月。案子牵扯到宫里，冰库的千斤铁门只有一道地锁。",
+   "title": "冰窖验骨女仵作"
+  },
+  {
+   "content_tags": [
+    "intimate",
+    "workplace",
+    "workplace_power"
+   ],
+   "default_person": "second",
+   "era": "当代国际动漫展的开幕季",
+   "id": "cosplayer_dressing_tent_zipper_jam",
+   "modes": [
+    "daily",
+    "pressure"
+   ],
+   "region": "十万人国际漫展主舞台：十二米马道、威亚平台与后台更衣帐篷",
+   "sha256": "5a7310a0f77793610703d458905f1b75f60ab6f71e8d6db1d2903eeee6967d81",
+   "status": "released",
+   "summary": "十万人云集的国际动漫盛会首日，主舞台压轴是一位同人圈顶流千金Coser亲手画图、监制的钛铝合金可动翼甲大秀。开展前三天，千金每天都在主舞台上方十二米的悬空马道走位彩排，威亚机械师、工坊结构总监、随行服化助理和主控音频师围着主舞台忙前忙后。八月的展馆人声鼎沸，后台更衣帐篷外满是等候开场的欢呼。",
+   "title": "登台前的Coser"
+  },
+  {
+   "content_tags": [
+    "intimate",
+    "violence",
+    "bodily_harm",
+    "substance",
+    "workplace_power",
+    "crime",
+    "gambling",
+    "workplace",
+    "disaster"
+   ],
+   "default_person": "second",
+   "era": "1990年代初公海跨国豪华间谍邮轮暴风雨之夜",
+   "id": "cruise_spy_honeymoon_suite",
+   "modes": [
+    "daily",
+    "pressure"
+   ],
+   "region": "北大西洋公海维多利亚号邮轮顶层总统套房与底舱密室",
+   "sha256": "16b358d37c0cdca24cbdd5c0346ec7c59d7863202ed53c6285e049efc6ca0f99",
+   "status": "released",
+   "summary": "公海豪华邮轮上，两名受训特工伪装成新婚蜜月夫妇潜入套房窃取微缩胶卷。套房各处布满窃听器，门外安保主管步步盘查。两人在窃听死角里低语配合，在假面伪装与铁律纪律间极限周旋。",
+   "title": "假面蜜月女卧底"
+  },
+  {
+   "content_tags": [
+    "intimate",
+    "bodily_harm",
+    "crime",
+    "workplace",
+    "disaster"
+   ],
+   "default_person": "second",
+   "era": "远洋第四十七天的十万吨LNG运输船",
+   "id": "cryogenic_lng_tank_relief_crisis",
+   "modes": [
+    "daily",
+    "pressure"
+   ],
+   "region": "好望角外海，LNG船的生活区与后甲板",
+   "sha256": "220d4b92d1e7e2f2d747049641c7cd67814ce91e72372cfa02fd01238031a580",
+   "status": "released",
+   "summary": "十万吨级LNG运输船驶到好望角外海，海上的日子一晃就是四十七天。船员每周只分得到二十分钟卫星电话配额，周六晚上的船员餐厅歌会是唯一的消遣。清冷果敢的女轮机长与事务长、随船探亲的家属、跟船历练的船东少东家和搭船采风的摄影师同船远渡，白天各司其职，夜里听着西风带的涌浪排解漫长航程的寂寥。",
+   "title": "好望角的女轮机长"
+  },
+  {
+   "content_tags": [
+    "intimate",
+    "violence",
+    "workplace_power",
+    "crime",
+    "workplace",
+    "disaster"
+   ],
+   "default_person": "second",
+   "era": "近未来赛博朋克巨企垄断与霓虹反抗军纪元",
+   "id": "cyberpunk_neon_elevator_cable_crisis",
+   "modes": [
+    "daily",
+    "pressure"
+   ],
+   "region": "千米高空的跨城天轨穿梭缆车与中转塔",
+   "sha256": "86fc4573b89fec40062c7c4f859248e1912754d5564199363d9b7befe2bdbee3",
+   "status": "released",
+   "summary": "跨城天轨缆车在酸雨云层间往返，车窗外是巨企核心区的霓虹全息广告，主缆维护预算一季比一季少。反抗军的黑客化名电工值守底盘机械舱，暗中护送底巢流民和一份数据出城。这一班车上，巨企公关总监、天轨监察总监、黑市货运商和独立主播都买了票。",
+   "title": "千米滑坠缆车"
+  },
+  {
+   "content_tags": [
+    "intimate",
+    "crime",
+    "workplace",
+    "disaster"
+   ],
+   "default_person": "second",
+   "era": "高寒矿山冬季封井停产的时节",
+   "id": "deep_pit_quarry_hoist_brake_failure",
+   "modes": [
+    "daily",
+    "pressure"
+   ],
+   "region": "深山超深矿坑：井口灯房、天轮台与地下三百米竖井",
+   "sha256": "c5d53e3efdd5f1470b2fc8d564974ebe551459091baebc5c74fd84dae0af0cce",
+   "status": "released",
+   "summary": "深山矿坑的井口灯房里，下井要在木板上挂铜牌，升井摘牌才算活着回来。开采旺季已过，暴风雪即将封住出山的路，三百米竖井要停产大修、采区封存。女总工整夜守在提升机房和天轮台，灯房外聚着讨要尾款的货主和等亲人升井的家属。",
+   "title": "深井提升斗女总工"
+  },
+  {
+   "content_tags": [
+    "intimate",
+    "explicit",
+    "violence",
+    "bodily_harm",
+    "death",
+    "workplace_power",
+    "crime",
+    "workplace",
+    "supernatural",
+    "disaster"
+   ],
+   "default_person": "second",
+   "era": "平安末期，梅雨季的深山（后山结界衰弱）",
+   "id": "defeated_shrine_broken_barrier",
+   "modes": [
+    "daily",
+    "pressure"
+   ],
+   "region": "深山古稻荷神社与后山地下寒泉秘窟",
+   "sha256": "5bcecdf66b1e90c8048007a63d1469d59c01ff5b782e9ffb2ee186aa2e0b732a",
+   "status": "released",
+   "summary": "深山里一座半废的稻荷神社，冷艳的名门巫女长奉命驻守后山结界，寄宿的剑士替神社劈柴挑水，阴阳巡捕奉密令也住了进来。白天修结界、熬药，夜里巡山。巫女长前些日子沾了狐火余毒，神志清明，只是灵脉还没平复；腰间的神乐铃遇动即响。",
+   "title": "退魔巫女破戒夜"
+  },
+  {
+   "content_tags": [
+    "intimate",
+    "violence",
+    "crime",
+    "workplace",
+    "supernatural"
+   ],
+   "default_person": "second",
+   "era": "圣战第四年夏至的人魔停战谈判",
+   "id": "demon_general_sanctuary_barrier_trap",
+   "modes": [
+    "daily",
+    "pressure"
+   ],
+   "region": "远古圣殿：停战会馆、中庭古祭坛、钟楼与魔族使节客居",
+   "sha256": "ef730101e75df1bad0c208b704e242dd214423f5f47e7a826da6f2f176be5b6e",
+   "status": "released",
+   "summary": "圣战打到第四年，魔军与人类圣殿在夏至前后头一回停火议和。魔军先锋女统帅以全权停战使节的身份，带着一杆黑曜战矛住进圣殿西侧的使节客居；老参谋、女祭司长、魔导古文字学者和圣殿卫队长，每天在停战会馆与中庭之间来回。夏至的圣殿昼长夜短，中庭晚钟每晚准时敲响。",
+   "title": "停战使节魔军统帅"
+  },
+  {
+   "content_tags": [
+    "intimate",
+    "workplace",
+    "workplace_power",
+    "coercion_theme"
+   ],
+   "default_person": "second",
+   "era": "明治三十年代初秋（山岳荒废古神社神乐殿）",
+   "id": "demon_slayer_kagura_hall_purification",
+   "modes": [
+    "daily",
+    "pressure"
+   ],
+   "region": "深山古道之巅荒废三百年的一宫神社神乐殿与后方闭锁结界内殿",
+   "sha256": "a92f1a110df1f9c6bb68ed1a78cdd43758f9a42823efac8cd8cc124e2f24ad77",
+   "status": "released",
+   "summary": "明治三十年代初秋，名门退魔女剑士奉命进山清剿大妖，御神刀在恶斗中断成两截，人也中了瘴毒，只好退守山顶一座荒废三百年的古神社。巫祝守着殿里的神火，随队的浪人、刀匠、采药人轮流守夜、熬药、接刀；京都派来的巡按使要把这一切记进考功簿。秋雨一来，山道就塌。",
+   "title": "守至破晓女剑士"
+  },
+  {
+   "content_tags": [
+    "intimate",
+    "violence",
+    "bodily_harm",
+    "substance",
+    "workplace_power",
+    "crime",
+    "workplace",
+    "disaster"
+   ],
+   "default_person": "second",
+   "era": "现代，横跨太平洋的高空航线",
+   "id": "domination_reversal_csuite_jet",
+   "modes": [
+    "daily",
+    "pressure"
+   ],
+   "region": "横跨太平洋的湾流G650私人公务机机舱",
+   "sha256": "da1022d263e60201dd3b735b28bfafd751a8c91fa49d399005c00110d20630e3",
+   "status": "released",
+   "summary": "财阀的冷傲女总裁这一个月都在天上：横跨太平洋的湾流公务机就是移动办公室。首席特助和法务总监跟着飞，白天在机舱里开视频会议，夜里在真皮大床旁的工作台改合同。总裁有幽闭恐惧，从不让人知道；这条航线入秋后常遇雷暴。",
+   "title": "坠机边缘女总裁"
+  },
+  {
+   "content_tags": [
+    "intimate",
+    "humiliation",
+    "workplace_power",
+    "disaster"
+   ],
+   "default_person": "second",
+   "era": "现代都市·漫展开展前夜",
+   "id": "doujin_artist_deadline_blackout",
+   "modes": [
+    "daily",
+    "pressure"
+   ],
+   "region": "都市创意园区·复式LOFT画室核心区",
+   "sha256": "14af5f516874caac2cfabac990dde111ca41b1e3082e5c8ebbaff7310ea9de01",
+   "status": "released",
+   "summary": "漫展开展前一周，神级同人女画师在创意园区的复式画室里赶新刊，执委会的场务总监、合志的客座画师和楼下的音乐人邻居轮流上来探班送吃的。画室那张六十公斤的多轴手绘台是二手货，伺服电机时灵时不灵；印厂的截稿日一天天近了。",
+   "title": "赶稿暗室女画师"
+  },
+  {
+   "content_tags": [
+    "intimate",
+    "violence",
+    "bodily_harm",
+    "workplace",
+    "workplace_power",
+    "crime",
+    "supernatural",
+    "disaster"
+   ],
+   "default_person": "second",
+   "era": "神代黄昏，凡人弑神纪元",
+   "id": "dragonsfall_blood_banner",
+   "modes": [
+    "daily",
+    "pressure"
+   ],
+   "region": "极北冻原万仞断角大峡谷：第七军团围龙大营",
+   "sha256": "412ea9046115ca0c74f02bb3a9fbc982f3b60fb6902afb8d739f75153a6d1ba9",
+   "status": "released",
+   "summary": "极北冻原的断角大峡谷里终年风雪，暗蓝极光压着崖顶。第七军团在此扎营数月，三十六道玄铁重链楔进万载玄冰，把一头鳞甲染血的坠落古龙锁在深渊石柱上，崖顶巨弩环伺。王都派来的大祭司要活取龙血，女团长有旧恩未报，老兵等着安家饷，巫医和走私商各怀心思，营火的松明烟气里，人人都在等王都的终局圣裁。",
+   "title": "弑神血旗女团长"
+  },
+  {
+   "content_tags": [
+    "intimate",
+    "violence",
+    "bodily_harm",
+    "workplace_power",
+    "crime",
+    "workplace",
+    "supernatural",
+    "disaster"
+   ],
+   "default_person": "second",
+   "era": "魔法纪元末叶深渊裂隙爆发期（地下城最深层远古遗迹）",
+   "id": "drow_scout_ancient_ruins_shelter",
+   "modes": [
+    "daily",
+    "pressure"
+   ],
+   "region": "地下大迷宫第十层未探明古代精灵遗迹石室与剧毒瘴气溶洞",
+   "sha256": "0da9a100a2783ec32b903ccc35b7e2451a77ca4fbd9f039cd93a7053e0d12978",
+   "status": "released",
+   "summary": "王立遗迹调查团在地下大迷宫第十层扎营。黑暗精灵女斥候受雇当向导，和调查官、塔盾卫士、魔导工匠一起测绘一座未探明的古代精灵遗迹，白天下探记录，夜里在荧光苔藓的石室里轮流守夜。地脉近来不稳，遗迹深处的瘴气溶洞没人敢进。",
+   "title": "暴走的暗精灵斥候"
+  },
+  {
+   "content_tags": [
+    "intimate",
+    "workplace",
+    "disaster",
+    "bodily_harm"
+   ],
+   "default_person": "second",
+   "era": "当代莫高窟，四月沙尘季封窟之前",
+   "id": "dunhuang_fresco_cave_sandstorm",
+   "modes": [
+    "daily",
+    "pressure"
+   ],
+   "region": "莫高窟九层楼：第96窟大佛平台、顶层檐廊、防沙门回廊与职工宿舍",
+   "sha256": "c761642caba92ac470665295ec3725e3eb73759d45d08d97b2aa142088e92625",
+   "status": "released",
+   "summary": "莫高窟九层楼下的职工宿舍区，壁画修复师和驻窟工程师隔壁住了两年：一个日夜待在洞窟脚手架上，一笔一笔为盛唐壁画做加固与临摹；一个常年巡看洞内温湿度和防沙门。四月鸣沙山风沙渐起，第96窟正做封窟前最后一次夜间高精数字化扫描，海外借展团的策展人这周也住进了院里。",
+   "title": "沙暴封窟夜"
+  },
+  {
+   "content_tags": [
+    "intimate",
+    "workplace_power",
+    "workplace",
+    "bodily_harm",
+    "disaster"
+   ],
+   "default_person": "second",
+   "era": "当代百年国家大剧院的新制作演出季",
+   "id": "elegant_conductor_pit_hydraulic_stall",
+   "modes": [
+    "daily",
+    "pressure"
+   ],
+   "region": "百年国家大剧院：金色大厅、乐池、大幕侧翼与顶层排练厅",
+   "sha256": "922b7fe2548585498f0c65fd221f675cd608481cdf33413a1b949cbce2aa677e",
+   "status": "released",
+   "summary": "百年国家大剧院的金色大厅里，红丝绒座椅在水晶吊灯下静穆肃立。演出季最重的新歌剧首演只剩三天，百人乐团与合唱团在乐池和台上连轴排练。剧院第一位女性首席指挥站在指挥台上，要用先父留下的改编总谱开幕；首席小提琴、运营总监和客座独唱家在大幕两侧各怀心思。",
+   "title": "升降台下女指挥"
+  },
+  {
+   "content_tags": [
+    "intimate",
+    "substance",
+    "crime",
+    "workplace",
+    "disaster"
+   ],
+   "default_person": "second",
+   "era": "古典奇幻皇家天文占星与宏大精密天体仪机关时代",
+   "id": "elegant_diviner_astrology_tower_clock",
+   "modes": [
+    "daily",
+    "pressure"
+   ],
+   "region": "百米高空皇家占星台悬空露台边缘与黄道偏心差速齿轮枢纽",
+   "sha256": "8232aa97af7383f60e425966d8be7253e88a1521f96910de5bda32a063d25fdf",
+   "status": "released",
+   "summary": "王都星象学院里有两派：宫廷大占星术士看星象断吉凶，新来的皇家天文学者拿望远镜和算盘算星轨，两人为一部新历法吵了一整季，每晚还得一起登上百米占星台观测。台上的黄铜天体仪重环年久失修，差速齿轮的定位插销已经锈了。",
+   "title": "宫廷大占星术士"
+  },
+  {
+   "content_tags": [
+    "intimate",
+    "crime",
+    "disaster"
+   ],
+   "default_person": "second",
+   "era": "当代沿海特大城市的台风季",
+   "id": "elevator_umbrella_tip_brake_release",
+   "modes": [
+    "daily",
+    "pressure"
+   ],
+   "region": "沿海高层商住楼：三十层合租公寓、候梯连廊与一楼中控大堂",
+   "sha256": "ff9ffb3925cb8b7de4bc855d90c7e6e4e1936f389e9196ddd73d3659080f08bc",
+   "status": "released",
+   "summary": "沿海特大城市三十层的高层公寓里，两人合租了三年，冰箱上贴着泛黄的值日表，玄关并排摆着两双拖鞋。台风季如期而至，三年的合租合同今夜到期，房东催着交房验房。窗外风雨渐起，客厅里堆着打包好的纸箱与换季衣物。",
+   "title": "悬停电梯的室友"
+  },
+  {
+   "content_tags": [
+    "intimate",
+    "violence",
+    "bodily_harm",
+    "death",
+    "workplace_power",
+    "crime",
+    "workplace",
+    "supernatural",
+    "disaster"
+   ],
+   "default_person": "second",
+   "era": "高魔中世纪地下城探索与远古神明遗迹大坍塌危机时代",
+   "id": "elven_priestess_collapsed_sanctuary",
+   "modes": [
+    "daily",
+    "pressure"
+   ],
+   "region": "迷宫都市深渊地下三十三层封印之失落辉光古圣坛大理石断壁与地热深渊裂隙",
+   "sha256": "e629794b3fe9dc313105cd7ee08a92f6f3852f2d404658cee02216970977fb73",
+   "status": "released",
+   "summary": "迷宫都市地下三十三层有一座远古神明圣坛，圣月王庭出身的女祭司长奉命驻守，净化上古秽恶源核。远征军派了一名持盾骑士护卫，同营的还有占星学者和被贬的游侠。白天净化、巡逻，夜里在断壁下烤火。地脉每隔几天就震一次，回地面的竖井只有一条。",
+   "title": "单膝正骨女祭司"
+  },
+  {
+   "content_tags": [
+    "intimate",
+    "bodily_harm",
+    "crime",
+    "workplace",
+    "disaster"
+   ],
+   "default_person": "second",
+   "era": "近现代顶级欧洲风情私人马术庄园与现代化赛马俱乐部时代",
+   "id": "equestrian_heiress_stable_fire_trap",
+   "modes": [
+    "daily",
+    "pressure"
+   ],
+   "region": "暴风雨深夜马术庄园挑高十米马厩深处重型钢木草料储备库与狭窄吊闸通道",
+   "sha256": "c9716d8314bf1d76db481a4b60b764e67894420b35b4a794d660af35481a52d5",
+   "status": "released",
+   "summary": "欧式私人马术庄园里，骄傲又嘴硬的马术千金是俱乐部的头牌女骑手，白天在马场上跳障、喝下午茶，跟庄园的马术兽医斗了一整个夏天的嘴。马厩的草料库堆得太满，雷雨季的高压电缆就从屋顶上过。",
+   "title": "嘴硬的马术女骑手"
+  },
+  {
+   "content_tags": [
+    "intimate",
+    "workplace_power",
+    "crime",
+    "workplace"
+   ],
+   "default_person": "second",
+   "era": "当代江南，太湖畔百年老宅的开库晒画日",
+   "id": "estate_vault_lockout_tea_scoop_rescue",
+   "modes": [
+    "daily",
+    "pressure"
+   ],
+   "region": "沈氏老宅：宗祠检视大堂、中庭水榭茶寮与地下字画大库",
+   "sha256": "0ddf5a614c76e970eeac62ae2b764e7e3659bca3f177114f40e23840e423d345",
+   "status": "released",
+   "summary": "太湖之畔的百年深宅，每年六月初六启地库晒画。青砖地上积着散不去的梅雨潮气，茶烟里坐满各怀心思的沈氏族人。当家少夫人独掌地下书画大库与开库铜匙，核对历代宗谱卷轴；中庭茶寮琴声未断，族老、海外归来的堂兄和拍卖行的估价顾问早已按捺不住，都在等开库这一天把分家的话说出口。",
+   "title": "开库日的少夫人"
+  },
+  {
+   "content_tags": [
+    "intimate",
+    "humiliation"
+   ],
+   "default_person": "second",
+   "era": "当代湖南千年古书院，成人礼大典的礼仪示范前二十五秒",
+   "id": "etiquette_podium_magnet_trap",
+   "modes": [
+    "daily",
+    "pressure"
+   ],
+   "region": "古书院明伦堂：电磁讲案、讲案屏蔽罩死角、主讲席侧阶与外圈观礼席",
+   "sha256": "818c9a231137378cb4025853c6ea792730bb4b8975a7adffacdc2a28ff8beaf8",
+   "status": "released",
+   "summary": "千年古书院的明伦堂，一年一度的成人礼大典下周举行，端庄的国学女讲师每天在讲案前排练示范揖礼，副山长、赞礼官和古琴乐师都来看过。讲案底下新装了一套电磁扩声设备，调试时漏过磁；讲师天青旗袍里那对夹在乳尖上的钢珠乳夹，是只有自己知道的秘密。",
+   "title": "成人礼的礼仪讲师"
+  },
+  {
+   "content_tags": [
+    "intimate",
+    "supernatural",
+    "disaster",
+    "crime"
+   ],
+   "default_person": "second",
+   "era": "现代神道，深山古社三年一度的夏日神乐大祭",
+   "id": "exorcist_miko_broken_kagura_hall",
+   "modes": [
+    "daily",
+    "pressure"
+   ],
+   "region": "深山古社伏魔殿：八角主祭台、正门外回廊、后庭御神木、神乐库房与大巫女内室",
+   "sha256": "4df6b97411d4930ba36ee412305f76ed46aac062703add1d44977749e28dcf50",
+   "status": "released",
+   "summary": "深山古社的伏魔殿隐在千年杉林深处，大殿正中悬着一顶八角鎏金青铜华盖。退魔大巫女常年驻守社中，同掌事女官、社务总长一起打理香火与结界。每逢夏日神乐祭，本厅监事、民俗学者和地方媒体都会上山留宿；山间暴雨一起，下山的参道便云雾锁山。",
+   "title": "华盖倾坠伏魔殿"
+  },
+  {
+   "content_tags": [
+    "intimate",
+    "humiliation",
+    "death",
+    "workplace_power",
+    "disaster"
+   ],
+   "default_person": "second",
+   "era": "当代艺术大学科技文化双创园区挑空艺术工坊画室黄昏入夜时段",
+   "id": "fairy_artist_tablet_clamp_trap",
+   "modes": [
+    "daily",
+    "pressure"
+   ],
+   "region": "美院复合挑空画室数位创作区与百寸投屏玄关客厅互通区域",
+   "sha256": "2538dbe06c7efa8e26ffee6aab91bb9cb6afa9c3cbe38e6a3413fd9373f698b2",
+   "status": "released",
+   "summary": "美院的挑空画室里，以工笔仙女闻名的青年国画家和室友合租，画案旁有一台装裱用的热压裱画机，玄关客厅挂着一块能投屏的百寸大屏。画家白天画正经的工笔，夜里偷偷画十八禁同人稿，打印出来自己裱。室友常带学长和画廊经纪人回来看画；那台裱画机的压板阀芯最近有点漏气。",
+   "title": "大屏前的仙女画师"
+  },
+  {
+   "content_tags": [
+    "intimate",
+    "violence",
+    "coercion_theme",
+    "humiliation",
+    "bodily_harm",
+    "supernatural",
+    "disaster"
+   ],
+   "default_person": "second",
+   "era": "神魔旧纪元末期",
+   "id": "fallen_demon_empress_throne_pact",
+   "modes": [
+    "daily",
+    "pressure"
+   ],
+   "region": "悬空神殿残破王座大厅",
+   "sha256": "697f2c8d7b1b6cee32e2b8b23bfabe8695f1f2972aedf117ee551715635fe8a6",
+   "status": "released",
+   "summary": "神魔旧纪元的末期，纯血魔王的千金皇女住在一座悬空的石砌神殿里。坐在精金王座上接见各方来使：深渊盟约的见证使、修补结界的人族炼金术士、合约就快到期的佣兵剑士。白天议事，夜里在王座大厅独自饮酒。人族联军的圣骑士团已经在边境集结，神殿的拱顶年久失修。",
+   "title": "王座受降魔皇女"
+  },
+  {
+   "content_tags": [
+    "intimate",
+    "workplace",
+    "workplace_power",
+    "coercion_theme"
+   ],
+   "default_person": "second",
+   "era": "中世纪剑与魔法衰退期（北方边境要塞沦陷后的初冬）",
+   "id": "fallen_knight_dungeon_pact",
+   "modes": [
+    "daily",
+    "pressure"
+   ],
+   "region": "北方黑石要塞地下三层积水重装石牢与排污暗渠水牢",
+   "sha256": "cf22f947a1de65209f01b548d1871a09b73ba72ff6a8d485148dcb702c8d11bc",
+   "status": "released",
+   "summary": "黑石要塞上月被征服军攻陷，圣王国第一近卫女骑士长断后力竭被俘，戴着秘银手枷关在地下三层的水牢。征服军的审查法官每天提审，逼问残部撤退的密道图；先锋千夫长嫌审得慢，隔几天就带兵来催。狱卒、书记官、送药的医师进进出出，有人奉命看管，有人想救人出去。北境入冬，暗河水一夜比一夜冷。",
+   "title": "处决前两个时辰"
+  },
+  {
+   "content_tags": [
+    "intimate",
+    "violence",
+    "coercion_theme",
+    "bodily_harm",
+    "workplace_power",
+    "crime",
+    "workplace",
+    "disaster"
+   ],
+   "default_person": "second",
+   "era": "2000年代初东海公海暴风雨夜（万吨间谍散货轮水下密闭隔舱）",
+   "id": "female_agent_cargo_hold_interrogation",
+   "modes": [
+    "daily",
+    "pressure"
+   ],
+   "region": "公海深处伪装为远洋散货轮的武装间谍母船水下三层压载水舱与通海管道夹层",
+   "sha256": "09ac4263607297e39c922c3d11022ac38beee5963050043cbfb0f7f8f913918d",
+   "status": "released",
+   "summary": "东海公海上有一艘伪装成万吨散货轮的间谍母船。对外情报局的王牌女特工化名上船当报务员，已经潜伏了一个月，机要破译员、蛙人突击手和领事馆随员是同一条线上的人。白天收发电报，夜里在压载舱附近找那卷微缩胶卷的下落。热带风暴季到了，多国特勤都在盯这条船。",
+   "title": "压载舱的王牌女谍"
+  },
+  {
+   "content_tags": [
+    "intimate",
+    "humiliation",
+    "crime",
+    "disaster"
+   ],
+   "default_person": "third",
+   "era": "当代夏夜台风暴雨侵袭突发断电之暗夜死线",
+   "id": "fencing_hall_rehab_duel",
+   "modes": [
+    "daily",
+    "pressure"
+   ],
+   "region": "省击剑运动训练中心地下二层通顶国家级剑道专馆",
+   "sha256": "4822d2930c28aff32b49a39ca454ee814a80af61691fd2113de3f839a1441872",
+   "status": "released",
+   "summary": "省击剑训练中心地下二层的剑馆里，全国青年锦标赛连冠的女剑客伤愈复出。每晚闭馆后加练一场秘密对抗赛，赛事监督、康复师和器材管理员都被叫来作陪。剑馆的电动计分屏挂在钢索上，台风季的电闸已经跳过两回。",
+   "title": "地下剑馆女冠军"
+  },
+  {
+   "content_tags": [
+    "intimate",
+    "violence",
+    "bodily_harm",
+    "substance",
+    "workplace_power",
+    "workplace",
+    "disaster"
+   ],
+   "default_person": "second",
+   "era": "当代国际电影节颁奖典礼终局盛典期",
+   "id": "film_queen_awards_stage_vault_lock",
+   "modes": [
+    "daily",
+    "pressure"
+   ],
+   "region": "国家级大剧院挑空三十米主舞台旋转机械台与幕后暗道区",
+   "sha256": "d523021b8eae36f50003938859bf87b53e9fac56113ac302d5ef37131c4697a2",
+   "status": "released",
+   "summary": "国际电影节颁奖盛典彩排了两周，三金影后天天在侧台走位，灯光总设计天天为影后封后那一刻的追光调到深夜。主舞台的双环旋转台和防暴铁闸是联动的，场外这几天总有人聚集抗议。",
+   "title": "裂鱼尾裙女影后"
+  },
+  {
+   "content_tags": [
+    "intimate",
+    "explicit",
+    "violence",
+    "bodily_harm",
+    "death",
+    "workplace_power",
+    "crime",
+    "workplace",
+    "supernatural",
+    "disaster"
+   ],
+   "default_person": "second",
+   "era": "魔导蒸汽帝国，雷暴季",
+   "id": "floating_city_alchemist_isolation",
+   "modes": [
+    "daily",
+    "pressure"
+   ],
+   "region": "魔导蒸汽朋克帝国三千米浮空城禁术研究院顶层",
+   "sha256": "6785c51596470242c9131bed2c7782fc1b7912ce2ea36bc91fee5438f1a7cfaf",
+   "status": "released",
+   "summary": "三千米雷暴云海上的浮空城顶层实验室，帝国首席女炼金术士日夜解析一件禁物，贴身卫队长守在门外，多疑的总督每周来查一次进度。首席体内潜藏着被教廷称作“魅魔真祖”的古血，一直靠药压着；工房的八重封闭结界只有首席本人能开。",
+   "title": "血脉觉醒的高热夜"
+  },
+  {
+   "content_tags": [
+    "romance_light",
+    "intimate",
+    "coercion_theme"
+   ],
+   "default_person": "second",
+   "era": "架空的维多利亚年代",
+   "id": "fog_bathhouse",
+   "modes": [
+    "daily",
+    "pressure"
+   ],
+   "region": "雾都港务街上的一座蒸汽浴场",
+   "sha256": "24aeacdcf97e9fd8bead3748f839224df1e58cdc1fe3ca91ea72006d0de07375",
+   "status": "released",
+   "summary": "雾里人人只是一个号码，号码和名字的对应只在一个人手里；那个人什么时候对、对给谁看？",
+   "title": "雾夜马车俏贵妇"
+  },
+  {
+   "content_tags": [
+    "romance_light",
+    "intimate",
+    "violence",
+    "supernatural",
+    "coercion_theme"
+   ],
+   "default_person": "second",
+   "era": "仙侠世界，收徒大典前三天",
+   "id": "foothill_town",
+   "modes": [
+    "daily",
+    "pressure"
+   ],
+   "region": "一座仙门山脚下的集镇，镇上住满了来求仙的人和落选的人",
+   "sha256": "6c3eee8a8bfa779641db1d30cb14ad94de06c2295412e9ae9892b55c77eb0a6f",
+   "status": "released",
+   "summary": "上不了山的人，在山下怎么活？上了山又被赶下来的人，在山下还剩什么？",
+   "title": "仙山客栈老板娘"
+  },
+  {
+   "content_tags": [
+    "intimate",
+    "explicit",
+    "violence",
+    "coercion_theme",
+    "bodily_harm",
+    "death",
+    "workplace_power",
+    "crime",
+    "workplace",
+    "supernatural",
+    "disaster"
+   ],
+   "default_person": "second",
+   "era": "架空皇朝腊月，大雪封宫、太上皇弥留之际",
+   "id": "forbidden_city_snowbound_cabinet_secret",
+   "modes": [
+    "daily",
+    "pressure"
+   ],
+   "region": "架空皇朝紫禁城文华殿后值庐与古今通集库",
+   "sha256": "21a553d33212771dfe1bec0bdebc6136aa383834c583de45bfab61f5295be2d0",
+   "status": "released",
+   "summary": "架空皇朝的紫禁深宫，太上皇久病卧榻。司礼监女尚仪掌着天子六玺与一只朱批传位密匣，当朝首辅是昔年太学旧识，也是储位之争里最难缠的对手。两人白天在文华殿后值庐批阅章奏，入夜隔着暖阁棋枰对弈试探。锦衣卫指挥使奉太后之命带刀宿卫宫禁；腊月连日大雪，宫门落锁比往常更早。",
+   "title": "紫禁封宫夜"
+  },
+  {
+   "content_tags": [
+    "intimate",
+    "violence",
+    "bodily_harm",
+    "death",
+    "workplace_power",
+    "crime",
+    "workplace",
+    "disaster"
+   ],
+   "default_person": "second",
+   "era": "当代近未来高科技都市与司法鉴定中心孤立悬疑博弈时代",
+   "id": "forensic_pathologist_autopsy_isolation",
+   "modes": [
+    "daily",
+    "pressure"
+   ],
+   "region": "江海市国家司法鉴定中心地下二层停电闭锁之恒温无菌解剖实验区与冷藏停尸长廊",
+   "sha256": "e875d46cf5e1c9155c59160e62bd2a987bce60ced0adfb4737a1ede2df9c4d47",
+   "status": "released",
+   "summary": "江海市国家司法鉴定中心地下二层的解剖中心，政法世家出身的天才首席女法医接手了一桩豪门连环谋杀案，遗体一具接一具送来。被指控泄密、停职受查的青年痕检刑警被派来随同看守，两人白天对着尸检报告争论，夜里在冷藏长廊尽头的值班室里轮流打盹。台风季的电网不稳，解剖中心遇到断电会自动落闸。",
+   "title": "台风夜解剖室"
+  },
+  {
+   "content_tags": [
+    "intimate",
+    "violence",
+    "humiliation",
+    "bodily_harm",
+    "death",
+    "disaster"
+   ],
+   "default_person": "third",
+   "era": "极北寒冬暴风雪侵袭万吨雪崩压塌要塞外桥之生死死线",
+   "id": "frontier_tavern_exiled_paladin",
+   "modes": [
+    "daily",
+    "pressure"
+   ],
+   "region": "极北冰封断崖要塞悬空八十米黑曜石连廊断桥与避难前厅",
+   "sha256": "feb2cded794ead85146129ac7cd3adea19d15be31bc0f7358d64b9533fa2b492",
+   "status": "released",
+   "summary": "极北冰封断崖上的要塞，悬空八十米的黑曜石连桥是进堡的唯一通路。被逐出圣殿骑士团的前女统领带着难民车队在这里落脚，白天修城墙、分口粮，夜里在避难前厅的酒馆里听佣兵吹牛；领主派来的督军和攻城器械师都盯着这位不受欢迎的客人。山上的积雪一冬比一冬厚，连桥的铁链已经锈了。",
+   "title": "退队的重甲统领"
+  },
+  {
+   "content_tags": [
+    "intimate",
+    "violence",
+    "humiliation",
+    "crime",
+    "workplace"
+   ],
+   "default_person": "second",
+   "era": "当代近未来",
+   "id": "frozen_border_river_contraband_hold",
+   "modes": [
+    "daily",
+    "pressure"
+   ],
+   "region": "极北界河国境关卡万吨重型破冰船双层底舱",
+   "sha256": "60f8fbc6f96fa6439e8f5782c888d47f1f2a0824ca92e485f7cd9b7f0f9165b3",
+   "status": "released",
+   "summary": "极北界河上的万吨破冰船，一冬天都在国境关卡附近来回开道。卧底的女缉私警官化名在轮机舱当机工，白天抡扳手、记油耗，夜里查双层底舱里来路不明的货；随船的科考研究员、船东代表和帮厨水手各有各的心思。这一带的浮冰越来越重，底舱的抗震导轨焊过两次。",
+   "title": "破冰底舱女缉私"
+  },
+  {
+   "content_tags": [
+    "intimate",
+    "humiliation",
+    "substance",
+    "workplace_power",
+    "workplace"
+   ],
+   "default_person": "second",
+   "era": "当代香港秋季拍卖夜，压轴粉钻项链开拍前三十秒",
+   "id": "gemologist_auction_display_harness_jam",
+   "modes": [
+    "daily",
+    "pressure"
+   ],
+   "region": "防弹玻璃特展厅：粉钻旋转展台、藏家与媒体环形席、拍卖台侧阶与地下液压控制室",
+   "sha256": "ad39c692ff298d1ce5a701abd61fdc3b969e154e6f6a70fb0774a73f2e6a6efe",
+   "status": "released",
+   "summary": "香港秋季拍卖会的预展周，八米高的防弹玻璃特展厅里，高傲的女设计师每天陪藏家看自己的压轴作品——一条五十九克拉的艳彩粉钻项链。拍卖行的亚洲区总裁、委托人和保安主管都围着这件拍品转。设计师礼裙底下戴着一条自己做的纯金脚踝细链；旋转展台的气动防弹罩还在调试。",
+   "title": "粉钻压轴设计师"
+  },
+  {
+   "content_tags": [
+    "intimate",
+    "workplace_power",
+    "workplace"
+   ],
+   "default_person": "second",
+   "era": "当代动漫文化街区的十月首发季",
+   "id": "gentle_merch_shop_loft_latch_trap",
+   "modes": [
+    "daily",
+    "pressure"
+   ],
+   "region": "动漫文化街区独栋周边店：一层痛墙展厅、二层仓储阁楼与后巷钢梯",
+   "sha256": "34750dbc81d80c4d3216e28a260c4287e19d3fd802f63a59bb9789f8b07fc24a",
+   "status": "released",
+   "summary": "十月的动漫文化街区，独栋周边集合店正为明早的周年限定马口铁吧唧首发通宵备货。温柔的女店长系着淡粉色吉祥物围裙，在二层钢结构阁楼里带着合伙人、打板师和店员清点几千枚流沙与镭射徽章；楼下街角已有漫迷带着折叠椅提前夜排，整条街都浸在首发前夜的热闹与暗流里。",
+   "title": "首发前夜女店长"
+  },
+  {
+   "content_tags": [
+    "intimate",
+    "bodily_harm",
+    "workplace_power",
+    "crime",
+    "workplace",
+    "disaster"
+   ],
+   "default_person": "second",
+   "era": "现代和风温泉山庄与天然地热溶洞水工时代",
+   "id": "gentle_onsen_proprietress_steam_cavern",
+   "modes": [
+    "daily",
+    "pressure"
+   ],
+   "region": "露天风吕后山挑高十米天然钟乳石引水溶洞与引流暗渠闸槽",
+   "sha256": "7d3a08d4a47f2daced862c8825e1a142ecbad19c0d3609f8371e9d45944e4702",
+   "status": "released",
+   "summary": "山里一家开了百年的老风吕旅馆，少老板娘从母亲手里接过旅馆的第三年。山体连着闹了几次小地震，县里派来一位地热地质工程师，在旅馆住了一个月，勘察后山溶洞的泉道。白天量水温、修引水暗渠，夜里在帐场对账。后山的出水口有块巨石松动了，泉温最近一直往上走。",
+   "title": "风吕屋少老板娘"
+  },
+  {
+   "content_tags": [
+    "intimate",
+    "coercion_theme",
+    "bodily_harm",
+    "crime",
+    "workplace",
+    "disaster"
+   ],
+   "default_person": "second",
+   "era": "深层地热能源大开发超深高温高压定向钻探施工期",
+   "id": "geothermal_deep_well_blowout_preventer",
+   "modes": [
+    "daily",
+    "pressure"
+   ],
+   "region": "深层地热井口超高压液压防喷器与泥浆管汇死角通道",
+   "sha256": "56859f8ff4531da17990c96a1d92f7a696f49fb020f7c5335f89013954303521",
+   "status": "released",
+   "summary": "海拔四千米的高原地热田上，钻井队的板房挨着一眼冒热气的野温泉，空气里永远一股硫磺味。冷艳的女总地质师带着司钻和安全督察，白天定井位、看岩芯，夜里在板房里吃火锅。这口千米深井打进了高压蒸汽层，防喷器的液压管线漏过一次。",
+   "title": "高原井喷女地质师"
+  },
+  {
+   "content_tags": [
+    "romance_light",
+    "intimate",
+    "violence"
+   ],
+   "default_person": "second",
+   "era": "架空古代",
+   "id": "ghost_market",
+   "modes": [
+    "daily",
+    "pressure"
+   ],
+   "region": "大漠商路上的千佛窟，只在月黑之夜开张的鬼市",
+   "sha256": "6ab2b5c2c71f844769eceb2fb48f2c47282d751cf8d22612a38efe1251eb9dec",
+   "status": "released",
+   "summary": "鬼市每次开在不同的窟里，回去的路要靠人记；灯灭之前，你得决定信谁画的图。",
+   "title": "鬼市掌灯引路娘"
+  },
+  {
+   "content_tags": [
+    "intimate",
+    "violence",
+    "coercion_theme",
+    "humiliation",
+    "bodily_harm",
+    "substance",
+    "death",
+    "workplace_power",
+    "crime",
+    "workplace",
+    "nightlife",
+    "disaster"
+   ],
+   "default_person": "second",
+   "era": "当代东京银座顶级地下政商俱乐部深夜闭门清算时段",
+   "id": "ginza_club_csuite_wardrobe_secret",
+   "modes": [
+    "daily",
+    "pressure"
+   ],
+   "region": "东京银座八丁目地下会员制政商俱乐部“黑曜石”VIP包厢区",
+   "sha256": "f71ee2dc7ce015999730042e606b4801013f51cd00d08388471a6670c242cb03",
+   "status": "released",
+   "summary": "银座八丁目的地下会员制俱乐部，是掌控三千亿市值的冷血女社长谈生意的地方：包厢里定价格，更衣室里换衣服，一周来三晚。半年前被社长裁撤封杀的首席审计官手里，据说还留着一套原始财务底片；黑道的过桥债主最近也常在俱乐部出现，海外对赌协议的清算日越来越近。",
+   "title": "更衣室的造假底片"
+  },
+  {
+   "content_tags": [
+    "intimate",
+    "coercion_theme",
+    "humiliation",
+    "workplace_power"
+   ],
+   "default_person": "second",
+   "era": "当代杭州棋院，中日围棋擂台赛决胜局的最后读秒",
+   "id": "go_master_tatami_corset_trap",
+   "modes": [
+    "daily",
+    "pressure"
+   ],
+   "region": "杭州棋院玻璃演播厅：榻榻米对局室、移门导槽、候场静心阁与观摩外廊",
+   "sha256": "092723d7cd930bb01b07e63f57d59f94ac791a4f04dbba80f734118bc540e12a",
+   "status": "released",
+   "summary": "杭州棋院的全景悬空玻璃演播厅里，中日围棋擂台赛打到了最后几局，中方女擂主守着最后一擂，每天对局、复盘，夜里在对局室旁的休息间里摆棋。和服里那件矫正体态的纯黑皮革鱼骨束身胸衣是多年的习惯。对局室的紫光檀移门装在地热导轨上，天一热就涩。",
+   "title": "中日擂台女擂主"
+  },
+  {
+   "content_tags": [
+    "intimate",
+    "crime",
+    "workplace",
+    "workplace_power",
+    "substance",
+    "bodily_harm"
+   ],
+   "default_person": "second",
+   "era": "1894 年隆冬，黑森林绝壁上的古堡",
+   "id": "gothic_castle_head_maid_discipline",
+   "modes": [
+    "daily",
+    "pressure"
+   ],
+   "region": "黑森林深处的孤悬古堡：壁炉大厅、更衣暗室、断桥回廊与地下酒窖",
+   "sha256": "cdf9af93001ec7637400e9286ac141c15f4160699a6ecdf174c489417c77c152",
+   "status": "released",
+   "summary": "十九世纪末的黑森林深处，一座古堡孤悬在绝壁上。年轻的继承人从王都归来接手破败的领地，才发现内宅大权全在首席女仆长手里：三十六座库房的铁十字钥匙串、领地账本和百年家规都归女仆长执掌。丧偶的摄政公爵夫人带着王都猎兵与税务公证官同住堡中，大雪一下，出山的木吊桥便与世隔绝。",
+   "title": "掌权的冷艳女管家"
+  },
+  {
+   "content_tags": [
+    "romance_light",
+    "intimate",
+    "coercion_theme",
+    "substance",
+    "workplace_power",
+    "workplace",
+    "disaster"
+   ],
+   "default_person": "second",
+   "era": "十九世纪末黑蔷薇公爵领孤岛古堡维多利亚晚期",
+   "id": "gothic_manor_maid_secret",
+   "modes": [
+    "daily",
+    "pressure"
+   ],
+   "region": "迷雾孤岛悬崖黑石古堡主楼寝宫、客殿与侧廊",
+   "sha256": "2b43a644b9af10f7cc56a23990a1adf852f671b73b6fd986116982a1332bc904",
+   "status": "released",
+   "summary": "孤岛悬崖上的黑石古堡，白日以戒尺与家规管教全府的女仆长，与古堡继承人之间压着多年未说出口的情意；主仆私情一经查实，仆役便要被逐出古堡。隔壁住着继承人的名门未婚妻，回廊里有提灯巡夜的老管家。秋天多雨，通往岸上的悬崖浮桥常被冲断。",
+   "title": "递辞呈的女仆长"
+  },
+  {
+   "content_tags": [
+    "coercion_theme",
+    "substance",
+    "workplace_power",
+    "crime",
+    "workplace",
+    "supernatural"
+   ],
+   "default_person": "second",
+   "era": "剑与魔法鼎盛纪元（边境公会暗室）",
+   "id": "guild_backroom_debt",
+   "modes": [
+    "daily",
+    "pressure"
+   ],
+   "region": "边境拓荒重镇冒险者公会地底石窖追偿室与抵押契约库",
+   "sha256": "96d65001981828975a9de919edd8ec8fde43e811cdc0fc83663c2b08e10d2796",
+   "status": "released",
+   "summary": "边境拓荒重镇的冒险者公会，地底的石窖是追偿室。一支 S 级远征队讨伐失败，欠下三百万金币的违约赔偿，仅存的队长和幸存的神官每天被叫下来谈分期，王国的密查特使也在查这次全灭的内情。公会给了一条生路：一份深渊第十层的绝密盗掘委托，报酬丰厚，风险也高。",
+   "title": "背负黑账看板娘"
+  },
+  {
+   "content_tags": [
+    "intimate",
+    "substance",
+    "workplace_power",
+    "crime",
+    "workplace",
+    "disaster"
+   ],
+   "default_person": "second",
+   "era": "奇幻蒸汽魔导与飞空艇公会全盛时代",
+   "id": "guild_receptionist_vault_anchor_lock",
+   "modes": [
+    "daily",
+    "pressure"
+   ],
+   "region": "边境公会悬空锚定转台与重型魔导绞盘底舱机房",
+   "sha256": "751c4ca43b89b3636ebc4e235944b7a8a21169bc13124c054fc8bc14525af663",
+   "status": "released",
+   "summary": "边境的飞空要塞里，公会大厅从早到晚挤满冒险者，柜台后那位温婉的总务长，三年来给每一张公会卡盖过章，下班后还要去底舱机房核对锚定转台的检修账目。这一季高空魔导气流特别乱，锚定转台的主导轨震松过一次，飞空艇机械师说防坠棘爪该换了。",
+   "title": "慢半拍的总务长"
+  },
+  {
+   "content_tags": [
+    "intimate",
+    "workplace",
+    "workplace_power",
+    "disaster",
+    "bodily_harm"
+   ],
+   "default_person": "second",
+   "era": "现代滨海都市的冬天，冻雨季",
+   "id": "gyaru_classmate_stranded_commuter",
+   "modes": [
+    "daily",
+    "pressure"
+   ],
+   "region": "跨江八十米高空悬挂单轨：末班车尾厢、江心桥塔与桥南公寓",
+   "sha256": "1d8b22c659a1aa24bd46165f79a4c09cb5b26d3b4d0d59bc8b993331846b346a",
+   "status": "released",
+   "summary": "现代滨海都市的跨江八十米高空悬挂单轨，每晚末班车载着从市中心摄影棚收工的人过江。在时装学院成人夜校进修的辣妹模特，每天下课搭这班车去拍平面，收工后再搭末班车回桥南公寓。单轨公司的安全主管常在江心桥塔站巡线，随车摄影师和合租买手也常搭同一班车。",
+   "title": "悬空单轨的辣妹"
+  },
+  {
+   "content_tags": [
+    "intimate",
+    "workplace",
+    "workplace_power",
+    "violence",
+    "bodily_harm",
+    "crime",
+    "disaster"
+   ],
+   "default_person": "second",
+   "era": "近未来高频量子金融算法垄断与超算冷通道闭锁对峙时代",
+   "id": "hacker_datacenter_cold_corridor_blackout",
+   "modes": [
+    "daily",
+    "pressure"
+   ],
+   "region": "北欧花岗岩山体地下六十米跨国清算银行Tier4超算中心冷热隔离通道与主交换机房",
+   "sha256": "97498307031a97106001cf3de7ae87fb6a64f875bba2b0288c10b52b5d69eebb",
+   "status": "released",
+   "summary": "北欧花岗岩山体地下六十米，跨国清算银行的超算中心，受聘的首席全栈安全架构师白天做渗透演练，夜里在冷通道的隔离间里写补丁。值班总工、红队分析师和网络反恐局的卧底警官都在这座山里进进出出。境外黑客组织“深海幽灵”盯上这里已经半年，冬天的外部电网并不稳。",
+   "title": "极夜里的女极客"
+  },
+  {
+   "content_tags": [
+    "romance_light",
+    "intimate",
+    "coercion_theme",
+    "nightlife",
+    "workplace_power"
+   ],
+   "default_person": "second",
+   "era": "当代，拆迁前最后一个夏天",
+   "id": "half_street",
+   "modes": [
+    "daily",
+    "pressure"
+   ],
+   "region": "南方老城区一条要拆的老街",
+   "sha256": "a5abb8983780104ea736bf8571ab38c699d51a0178eecb4dda9e221fb781256c",
+   "status": "released",
+   "summary": "拆迁公告贴出来了，签约越早补偿越多；在这条街上住了几十年的人，要在搬走之前把彼此的人情账算清。",
+   "title": "拆迁前的老街坊"
+  },
+  {
+   "content_tags": [
+    "intimate",
+    "coercion_theme",
+    "humiliation",
+    "workplace_power",
+    "crime"
+   ],
+   "default_person": "second",
+   "era": "当代江南古风影视城，古典舞《洛神》水上首演开场前十五秒",
+   "id": "hanfu_fairy_pavilion_bell_dudou_jam",
+   "modes": [
+    "daily",
+    "pressure"
+   ],
+   "region": "影视城水榭：碧波主台、飞檐风铃下的美人靠、九曲桥石阶与沿湖栈道",
+   "sha256": "f822ff9c0139ab6690e63daf9f716817923c34d2ee5de0a5444eb4370e5ebaa7",
+   "status": "released",
+   "summary": "江南古风影视城的露天水榭，古典舞《洛神》的水上首演下周开场，独舞演员每天在碧波主台上迎风试位，现场总督导、群舞编导和机械维保主管陪着排到天黑。舞衣里那件真丝肚兜挂着一条白银挂链；飞檐下的铜风铃被湖风一吹就乱转。",
+   "title": "水上洛神女舞者"
+  },
+  {
+   "content_tags": [
+    "workplace",
+    "romance_light"
+   ],
+   "default_person": "second",
+   "era": "1990 年代末（1998 年）",
+   "id": "harbor_night_shift",
+   "modes": [
+    "daily",
+    "pressure"
+   ],
+   "region": "南方沿海港城的集装箱码头",
+   "sha256": "84aef9b7e0548cc325a269400c637be95e8bd40906b7cd4b2cb7022feeb314f6",
+   "status": "released",
+   "summary": "集装箱码头的夜班从晚八点到早八点，灯一直亮到天明，人很少，交接班的十分钟里什么都可能发生。",
+   "title": "港口夜班"
+  },
+  {
+   "content_tags": [
+    "intimate",
+    "violence",
+    "coercion_theme",
+    "bodily_harm",
+    "death",
+    "workplace_power",
+    "crime",
+    "workplace",
+    "disaster"
+   ],
+   "default_person": "second",
+   "era": "当代公海特大雷暴雨之夜（豪华远洋邮轮底舱倾覆前夕）",
+   "id": "heiress_ballast_tank_submersion",
+   "modes": [
+    "daily",
+    "pressure"
+   ],
+   "region": "北大西洋公海十级风暴中即将沉没的奢华邮轮负四层水密压载隔舱与受损管道夹层",
+   "sha256": "013d5dd4c875e5477b852911bf96b4a22217fa66cd6e14394c4d1ad646598aee",
+   "status": "released",
+   "summary": "跨越北大西洋的奢华邮轮上，财阀冷傲千金带着随行青年侍从参加一场为期一周的慈善航程：白天在甲板上应酬、夜里在宴会厅里压轴。船上有人在打千金的主意，侍从查了几天还没查到是谁；这个季节的北大西洋风暴一场接一场，负四层的压载舱据说检修没过关。",
+   "title": "压载舱里的人质"
+  },
+  {
+   "content_tags": [
+    "intimate",
+    "violence",
+    "coercion_theme",
+    "humiliation",
+    "substance",
+    "workplace_power",
+    "crime",
+    "workplace",
+    "disaster"
+   ],
+   "default_person": "second",
+   "era": "近现代豪门博弈时期",
+   "id": "heiress_panic_room_stalemate",
+   "modes": [
+    "daily",
+    "pressure"
+   ],
+   "region": "半山临海独栋豪宅安全屋",
+   "sha256": "f08331702370d8b3ee354f5f5389ea00825ce19c5331c24f23468bb98d4097cc",
+   "status": "released",
+   "summary": "半山临海的独栋豪宅里，名门千金刚从父亲手里接过家族信托，世交财团的继承人、主家的信托律师和安全屋门锁工程师轮番上门。白天开会签字，夜里在露台上喝酒。家族的对头放话要让千金签不成；豪宅的重装安全屋是新装的，气动门的离合器还在调试。",
+   "title": "安全屋的财团千金"
+  },
+  {
+   "content_tags": [
+    "intimate",
+    "workplace_power"
+   ],
+   "default_person": "second",
+   "era": "当代顶级音乐学院，千金第一场个人独奏专场开演前的深夜候场",
+   "id": "heiress_piano_choker_lever_jam",
+   "modes": [
+    "daily",
+    "pressure"
+   ],
+   "region": "挑高独奏琴房施坦威九尺钢琴区与门禁会客前厅连通区域",
+   "sha256": "86a6e6728399152a2b9fb6f0220f5eae76eba20f9295da94dd859128034b5082",
+   "status": "released",
+   "summary": "财阀千金读完钢琴硕士，第一场个人独奏专场下周开演，每天在挑高独奏琴房里练到深夜，调律师、大提琴同侪和安保队长进进出出。向来傲慢的千金锁上琴房时，会偷偷戴上一只金属扣真皮项圈对着镜子摆拍；那架施坦威九尺钢琴的延音踏板最近有点涩。",
+   "title": "首演前钢琴千金"
+  },
+  {
+   "content_tags": [
+    "intimate",
+    "bodily_harm",
+    "workplace_power",
+    "workplace",
+    "disaster"
+   ],
+   "default_person": "second",
+   "era": "当代香港船王家族与青衣船厂的十号风球风暴潮之夜",
+   "id": "hongkong_shipping_cargo_hold",
+   "modes": [
+    "daily",
+    "pressure"
+   ],
+   "region": "香港青衣霍家船厂浮船坞里进坞大修的三万吨级散货轮二十米深主货舱底板区",
+   "sha256": "8245d4bfe70e99cc81104ca6aca488bf3463935138b420d1d77158c6e0d1ed3e",
+   "status": "released",
+   "summary": "霍家旗舰三万吨散货轮进了青衣船厂的浮船坞大修，接班千金跟着甲板总水手长在船上验收了半个月，白天爬舱底、对图纸，夜里在船员餐厅吃宵夜。老船长和海事处的督察隔几天就来看一次进度。台风季到了，浮坞的压载系统是三十年前的。",
+   "title": "十号风球船坞"
+  },
+  {
+   "content_tags": [
+    "intimate",
+    "coercion_theme",
+    "workplace_power",
+    "crime",
+    "workplace",
+    "disaster"
+   ],
+   "default_person": "second",
+   "era": "主汛期的特大型水利枢纽",
+   "id": "hydroelectric_penstock_intake_gate_stuck",
+   "modes": [
+    "daily",
+    "pressure"
+   ],
+   "region": "峡谷重力坝的坝顶调度室与水下廊道",
+   "sha256": "bae7e0e904724d50761d5774fcd7fd49e84c4c66c1f4b354ddb3ee86db7bf3c4",
+   "status": "released",
+   "summary": "峡谷里的特大型混凝土重力坝进入七月主汛期，全体水工与调度人员吃住在坝上，半山腰库区移民村的灯火夜夜倒映在江面上。年轻冷傲的水力首席女总监带着闸门值班长、巡检老工长与防汛督察，白天巡查百米水下的排水廊道，夜里守在坝顶调度室紧盯水位曲线与库区迁建进度。去年防渗廊道的一张验收单，和一纸泄洪令，压在同一张签字台上。",
+   "title": "洪峰水坝女调度"
+  },
+  {
+   "content_tags": [
+    "intimate",
+    "bodily_harm",
+    "crime",
+    "workplace",
+    "disaster"
+   ],
+   "default_person": "second",
+   "era": "十马赫国家级超高声速空气动力学风洞运行期",
+   "id": "hypersonic_wind_tunnel_nozzle_jam",
+   "modes": [
+    "daily",
+    "pressure"
+   ],
+   "region": "喷管喉道两千度极热微米级调节腔狭窄死角",
+   "sha256": "6459db461f73182a5066ab539bba12ccf19cee81e410d811fdf120cbefbe10f6",
+   "status": "released",
+   "summary": "西南山沟里的三线老基地，一次吹风要吃掉半座城的电，试验只能排在后半夜用电低谷，基地子弟是听着吹风的爆鸣长大的。傲娇女总师带着风洞运行值班长调一套新喷管，白天算数据，夜里守吹风。喷管可调喉道的水冷套是旧的，热障试验一次比一次接近极限。",
+   "title": "十马赫风洞女总师"
+  },
+  {
+   "content_tags": [
+    "intimate",
+    "workplace",
+    "workplace_power",
+    "violence",
+    "bodily_harm",
+    "crime",
+    "disaster",
+    "substance"
+   ],
+   "default_person": "second",
+   "era": "现代私立脑科学研究所顶层隔音催眠诊室午夜",
+   "id": "hypnosis_clinic_subconscious_backlash",
+   "modes": [
+    "daily",
+    "pressure"
+   ],
+   "region": "海滨悬崖私立神经认知研究所顶层隔音诊室",
+   "sha256": "64c6a4592442079ece84fa6c8bbbd30996e8fc32a944983ac96bdd13b5062c47",
+   "status": "released",
+   "summary": "海滨悬崖上的私立神经认知研究所，冷面的首席主试研究员带着一位自愿受试的博士生做双向脑电反馈的催眠实验，已经做了大半年。白天跑实验、写论文，夜里在顶层的隔音诊室里整理数据。仪器的共振保护一直没调好；主试有一本日记，藏了两年。",
+   "title": "被窥破的催眠师"
+  },
+  {
+   "content_tags": [
+    "intimate",
+    "violence",
+    "bodily_harm",
+    "substance",
+    "death",
+    "workplace_power",
+    "crime",
+    "workplace",
+    "disaster"
+   ],
+   "default_person": "second",
+   "era": "罗曼诺夫风高魔帝国北境拓荒与宫廷政变寒冬时代",
+   "id": "imperial_princess_cabin_warmth",
+   "modes": [
+    "daily",
+    "pressure"
+   ],
+   "region": "北方冻原黑松林绝壁深处废弃护林巡林员双层石木结构避难木屋",
+   "sha256": "74323686826c52f48e643e7add2c17a26d14d87e5c64f61e57fbadbe1f4866c4",
+   "status": "released",
+   "summary": "帝国北境的拓荒地，皇帝的金发长女奉命巡视边陲，借住在黑松林边一间旧护林员的石木小屋，流放的巡林游侠被指派当向导。白天骑马巡视定居点，夜里在壁炉边听游侠讲林子里的事。皇女那件鲸骨胸衣穿脱都得有人帮忙；王都传来的消息一封比一封坏。",
+   "title": "政变雪夜的皇女"
+  },
+  {
+   "content_tags": [
+    "intimate",
+    "violence",
+    "coercion_theme",
+    "humiliation",
+    "workplace"
+   ],
+   "default_person": "second",
+   "era": "欧式古典裁判所时期",
+   "id": "inquisition_dungeon_pact_reversal",
+   "modes": [
+    "daily",
+    "pressure"
+   ],
+   "region": "圣殿裁判所阶梯大厅",
+   "sha256": "76d2d36ccd8873af1f5092b36af24b2d956070be46f885f3f3271d8d22fff959",
+   "status": "released",
+   "summary": "圣殿裁判所的阶梯大厅里，一位前首席女法官因“同情异端”被停职受审，案子拖了一个季度。教廷派来巡回监察使，外邦辩护律师替女法官出庭，钟表匠受邀检修大厅底槽那道老闸门。白天开庭、对质，夜里各自回廊下的客房。大厅地下的水银机关据说还能用。",
+   "title": "水银殿的女审判长"
+  },
+  {
+   "content_tags": [
+    "intimate",
+    "workplace_power",
+    "workplace",
+    "disaster"
+   ],
+   "default_person": "second",
+   "era": "昭和初期关东大震灾后伊豆半岛避暑隐居时期",
+   "id": "izu_autumn_villa_debt_contract",
+   "modes": [
+    "daily",
+    "pressure"
+   ],
+   "region": "伊豆修善寺深山断崖上的九条家红叶山庄",
+   "sha256": "dee818f8a66486770ab04ec093d6ac4b284257b3c5775c89a941e427b4e10f3a",
+   "status": "released",
+   "summary": "昭和初年，名门九条家因丝绢期货亏空面临清算，新任女家督退居伊豆断崖上的红叶山庄，想用祖传古砚抵押还债。登门的特使债权人，正是三年前被家族当众逐出家门的前任执事；分家的堂亲也带着陆军的关系来分一杯羹。秋雨时节，进山的路常被泥石流截断。",
+   "title": "破产名门女家督"
+  },
+  {
+   "content_tags": [
+    "intimate",
+    "humiliation",
+    "workplace_power"
+   ],
+   "default_person": "second",
+   "era": "当代杭州百年木造武道馆，全国剑道锦标赛女子团体决赛开赛前二十秒",
+   "id": "kendo_captain_scoreboard_bell_trap",
+   "modes": [
+    "daily",
+    "pressure"
+   ],
+   "region": "木造武道馆：枫木决胜台、大太鼓吊索滑轮台口、裁判长席与选手通道的队旗拐角",
+   "sha256": "8f5f2f166614bf6379048104bcb9dd21e90a36448d68c413dcba4ae49191075f",
+   "status": "released",
+   "summary": "百年木造武道馆里，全国剑道锦标赛进入最后三天，三连霸的元气女主将每天在决胜台上练到闭馆，馆长、副审和太鼓手都是看着主将长大的。主将胴甲里私下戴着一对纯银乳铃，一动就轻轻一颤；悬挂大太鼓的吊索滑轮组最近有点松。",
+   "title": "太鼓下的女主将"
+  },
+  {
+   "content_tags": [
+    "romance_light",
+    "intimate"
+   ],
+   "default_person": "second",
+   "era": "1987 年（昭和六十二年）",
+   "id": "kissa_street",
+   "modes": [
+    "daily",
+    "pressure"
+   ],
+   "region": "东京近郊一条私铁沿线的商店街：五家喫茶店、一间钱汤，末班车 23:40",
+   "sha256": "91c4eb2e8c8771d0b704b4ed10d29d4e83073fc668c55488670d08ca3af6bda0",
+   "status": "released",
+   "summary": "常客的习惯比招牌活得久。可店要转让了，那些寄存在店里的东西和心事，谁来认领？",
+   "title": "喫茶街的熟客账"
+  },
+  {
+   "content_tags": [
+    "intimate",
+    "humiliation",
+    "workplace_power",
+    "gambling"
+   ],
+   "default_person": "second",
+   "era": "当代苏州古典园林，昆曲《牡丹亭》水上夜演谢幕前二十秒",
+   "id": "kunqu_water_stage_mist_arm_trap",
+   "modes": [
+    "daily",
+    "pressure"
+   ],
+   "region": "园林水景戏台：镜面戏台中央、穿斗雕花回廊、汉白玉观礼台阶与池底造雾泵房",
+   "sha256": "3d745df5a1a7c1db90e2c63b1362ed6f4a1e7164e722cf256e2f37ac0cfd58b6",
+   "status": "released",
+   "summary": "苏州古典园林的露天水景戏台，《牡丹亭》的水上夜演连演一个月，首席闺门旦每晚唱完最后一折才下台。园林文旅公司的总经理、笛师和灯光师天天陪着。闺门旦水田衣领口里贴身戴着一条细银乳链；水景喷雾的连杆是新装的，偶尔会自己回缩。",
+   "title": "昆曲闺门旦"
+  },
+  {
+   "content_tags": [
+    "intimate",
+    "violence",
+    "coercion_theme",
+    "humiliation",
+    "bodily_harm",
+    "death",
+    "workplace_power",
+    "crime",
+    "workplace",
+    "disaster"
+   ],
+   "default_person": "second",
+   "era": "大正末年京都鞍马山深处名门宗祠古刹避世法会时期",
+   "id": "kyoto_monastery_widow_forbidden",
+   "modes": [
+    "daily",
+    "pressure"
+   ],
+   "region": "京都鞍马山深处的一条家宗祠古刹紫云院",
+   "sha256": "ecc1de324d7de455ece692f7b54e100846b7da7ed5bc845ab9e3bcc2c2cf4a55",
+   "status": "released",
+   "summary": "大正末年，京都鞍马山深处的紫云院，一条家前任当主的百日大祭要办整整一个月。新寡的当主独力主持法会，分家的长辈天天来逼着分遗产、改嫁出族；被召回山寺协助护丧的，是亡夫那位同龄的前推官义弟。梅雨连绵，山路时常被冲断。",
+   "title": "百日祭的新寡当主"
+  },
+  {
+   "content_tags": [
+    "romance_light",
+    "supernatural"
+   ],
+   "default_person": "second",
+   "era": "架空的旧时乡镇（不指明朝代）",
+   "id": "lantern_festival_town",
+   "modes": [
+    "daily",
+    "pressure"
+   ],
+   "region": "河湾上的灯会小镇",
+   "sha256": "add8419363dad541456d02dc409d559ee698bcec15b9dab022d999259487a697",
+   "status": "released",
+   "summary": "灯会七夜，人与非人共用一条长街；规矩写在契约与称谓里，叫错一个名字就是大事。",
+   "title": "未摘狐面的妖女"
+  },
+  {
+   "content_tags": [
+    "romance_light",
+    "intimate",
+    "coercion_theme",
+    "workplace_power",
+    "workplace"
+   ],
+   "default_person": "second",
+   "era": "当代",
+   "id": "last_issue",
+   "modes": [
+    "daily",
+    "pressure"
+   ],
+   "region": "一座中等城市的地方报社，停刊前最后两周",
+   "sha256": "0eb234a04159d7943aa6989cfe800fe3516ef2d65c15a2c2737efc30d2b326db",
+   "status": "released",
+   "summary": "最后一期该写什么：城里人都想看的那件事，还是能让所有人体面离开的那篇稿子？",
+   "title": "停刊号的天窗"
+  },
+  {
+   "content_tags": [
+    "intimate",
+    "humiliation",
+    "bodily_harm",
+    "workplace"
+   ],
+   "default_person": "second",
+   "era": "当代宁波，民国藏书楼改建的古籍特藏馆，周五夜读会",
+   "id": "librarian_atrium_ladder_choker_jam",
+   "modes": [
+    "daily",
+    "pressure"
+   ],
+   "region": "民国藏书楼：五米黄铜书梯高台、楼下天井阅览厅、善本红木书廊与书梯维保凹室",
+   "sha256": "9369424ef9d9c99a7be36f28ce465da8ad34f9099d09f7d2121ef9e4e1753852",
+   "status": "released",
+   "summary": "宁波一座民国藏书楼改建的古籍特藏馆，每周五有夜读会，楼下的天井阅览厅能坐一百多人。清冷的女馆员白天编目、取书，夜读会时站在五米高的黄铜移动书梯上替读者找善本；盘扣开衫里贴身戴着一条素银项圈胸链。书梯滚轮的逆止齿有点咬，老馆长说过要修。",
+   "title": "铜书梯上的馆员"
+  },
+  {
+   "content_tags": [
+    "intimate",
+    "humiliation",
+    "workplace_power",
+    "workplace"
+   ],
+   "default_person": "third",
+   "era": "当代盛夏，ACG夏日嘉年华万人盛典之夜",
+   "id": "lolita_stage_lift_garter_trap",
+   "modes": [
+    "daily",
+    "pressure"
+   ],
+   "region": "海滨国际博览中心一号馆：中央液压主舞台、台下机械暗井与转播车",
+   "sha256": "573a4e8883f4107cd4ca95b98e1ec2ec24f9b7dffbbcfd9848ae9a1fa8c32b09",
+   "status": "released",
+   "summary": "ACG夏日嘉年华的最后三天，顶流舞见每晚穿着高定花嫁洛丽塔洋装，在中央六米液压升降圆台上跳压轴独舞，品牌总监、安保主管和舞台监督都在台下守着。舞见裙下的白蕾丝吊袜带用的是鸭嘴扣；升降台边缘的防夹胶条反向自锁过一次。",
+   "title": "谢幕时的舞见"
+  },
+  {
+   "content_tags": [
+    "intimate",
+    "violence",
+    "bodily_harm",
+    "death",
+    "workplace_power",
+    "crime",
+    "workplace",
+    "disaster"
+   ],
+   "default_person": "second",
+   "era": "近未来硬科幻近地轨道殖民卫星崩溃与太空战役失重逃生时代",
+   "id": "mecha_pilot_wreckage_cockpit",
+   "modes": [
+    "daily",
+    "pressure"
+   ],
+   "region": "拉格朗日L2点同步轨道残骸带漂流之破损重型突击机甲狭小密封双人逃生驾驶舱",
+   "sha256": "1e829fb889b218c4d9f2012e999f8a1d4409f4982a332b23388848190d520c18",
+   "status": "released",
+   "summary": "近地轨道殖民地的防御战打到第九天，联合舰队的王牌女机师每天出击两次，回舰后在机库里和戴罪的损管机械士争论座机的抗荷服该怎么补。舰上缺人缺件，四立方米的双人逃生舱好几台没检修；叛舰的残部还藏在附近的残骸带里。",
+   "title": "救生舱的王牌机师"
+  },
+  {
+   "content_tags": [
+    "intimate",
+    "humiliation",
+    "bodily_harm",
+    "workplace",
+    "disaster"
+   ],
+   "default_person": "second",
+   "era": "硬核科幻",
+   "id": "mecha_valkyrie_cockpit_synchronize",
+   "modes": [
+    "daily",
+    "pressure"
+   ],
+   "region": "地下二十米大跨度战术机甲整备机库",
+   "sha256": "b09921e659305155878f70fa4ea29a88da0913c126bcd70349574ad02f1f4b3c",
+   "status": "released",
+   "summary": "地下二十米的战术机甲整备机库里，王牌女机师和整备组正在调一台新型双人座舱机甲，军部的观察官、制造商的技术代表和战地记者都来看同步测试。白天试车，夜里改参数。整备起重桁架是战前的老设备，敌方空袭的范围一周比一周近。",
+   "title": "悬空的双人座舱"
+  },
+  {
+   "content_tags": [
+    "romance_light",
+    "intimate",
+    "violence",
+    "disaster"
+   ],
+   "default_person": "second",
+   "era": "灾后第十五年",
+   "id": "mending_market",
+   "modes": [
+    "daily",
+    "pressure"
+   ],
+   "region": "废土上一座正在复兴的小镇，集市只收修好的东西",
+   "sha256": "14bd204748c277ee172a0bfb1ca4bd3e2e6ca7beffb3a7ba196d3b6358c06489",
+   "status": "released",
+   "summary": "灾难过去了，可灾难里欠下的债和做过的事没过去；正在重建的小镇，要不要记住这些？",
+   "title": "枕下的旧恨"
+  },
+  {
+   "content_tags": [
+    "intimate",
+    "romance_light",
+    "workplace",
+    "workplace_power",
+    "coercion_theme",
+    "disaster"
+   ],
+   "default_person": "second",
+   "era": "当代维港金融中心，台风季的深夜",
+   "id": "midnight_penthouse_executive_secret",
+   "modes": [
+    "daily",
+    "pressure"
+   ],
+   "region": "维多利亚湾畔天际中心大厦八十八层：社长办公室、休息套房、高管长廊与电梯厅",
+   "sha256": "2f87a21e8de112fbfefff21a029d77c3ecd6f494fbacc1ea23e9a143906d9301",
+   "status": "released",
+   "summary": "维港天际中心大厦八十八层，神谷集团社长白天在董事会上言辞如刀，夜里一个人留在办公室看报表，首席秘书总是最后一个下班。投资部的分析员最近恢复出一份离岸账本，签名是社长的，挪用的是数千名员工的养老金。合规总监在查，常务董事在等借口；台风季的大楼封过一次楼。",
+   "title": "握黑账的女社长"
+  },
+  {
+   "content_tags": [
+    "intimate",
+    "crime",
+    "supernatural"
+   ],
+   "default_person": "third",
+   "era": "当代日本，夏秋之交的深山古社",
+   "id": "miko_mountain_curse_ritual",
+   "modes": [
+    "daily",
+    "pressure"
+   ],
+   "region": "御神山半腰的千年古社：悬空神乐回廊、地宫净手泉与后山古道",
+   "sha256": "87ba68076456b1b9bbd087eeafd4b30db19159b61fb96931812452fc1f7f975d",
+   "status": "released",
+   "summary": "御神山半腰有一座千年古社，主祭殿外挑出一段悬空十二米的木构神乐回廊。首席大巫女每年夏秋之交在回廊上主持镇山祈福古仪，侍从乐女在廊下吹龙笛伴奏。今年社里住进了神道考古研究生、银行派来的鉴定师和几位外客，白天各忙各的，夜里在观礼平台看排练。",
+   "title": "受困神龛大巫女"
+  },
+  {
+   "content_tags": [
+    "romance_light",
+    "intimate",
+    "coercion_theme",
+    "nightlife"
+   ],
+   "default_person": "second",
+   "era": "1999 年",
+   "id": "millennium_netcafe",
+   "modes": [
+    "daily",
+    "pressure"
+   ],
+   "region": "一座内陆城市夜市边上的通宵网吧和隔壁的音像店",
+   "sha256": "bbf9f0cd1fce34c13caa3eb82cc1e30d6cae1d32038a21dc009735788eed398f",
+   "status": "released",
+   "summary": "网上认识的人一个个走进了这条街；网名后面的那个人，和你想象的是不是同一个？",
+   "title": "世纪末网吧包厢"
+  },
+  {
+   "content_tags": [
+    "romance_light",
+    "intimate",
+    "coercion_theme",
+    "workplace_power",
+    "workplace",
+    "supernatural",
+    "disaster"
+   ],
+   "default_person": "second",
+   "era": "西幻神圣帝国，圣辉历三百一十二年的雨季",
+   "id": "monastery_saintess_fallen_crest",
+   "modes": [
+    "daily",
+    "pressure"
+   ],
+   "region": "圣城大圣堂：忏悔密龛、地下圣水池、主殿石廊与圣女祈祷露台",
+   "sha256": "a2242432a49d9abef60276617cb453b6e7e435a519d327a6833fec8a2dec67be",
+   "status": "released",
+   "summary": "讨伐深渊领主归来后，大圣女的左肩胛下多了一道暗紫色的咒痕，每到午夜就灼痛发作，圣光随之黯淡；一旦被裁判所的测魔罗盘照到，就是异端火刑。全城唯一懂得封印古咒的人，是被关在忏悔室里的异端学者。副审判官每夜巡殿，红衣枢机在等圣女失足；下个月就是万人朝圣大典。",
+   "title": "藏起堕纹的圣女"
+  },
+  {
+   "content_tags": [
+    "intimate",
+    "violence",
+    "coercion_theme",
+    "bodily_harm",
+    "workplace_power",
+    "crime",
+    "workplace",
+    "disaster"
+   ],
+   "default_person": "second",
+   "era": "1990年代初泡沫破裂后东京下町暴雨连绵之夜",
+   "id": "neighbor_wife_thin_wall",
+   "modes": [
+    "daily",
+    "pressure"
+   ],
+   "region": "墨田区昭和老旧三层木造出租公寓二楼",
+   "sha256": "739cabe5a9b7f77c4b4c3ce36842f371a115de23846b79f85ece3d10d789f786",
+   "status": "released",
+   "summary": "泡沫刚破的东京墨田区，一栋昭和年间的三层木造公寓，墙薄得能听见隔壁翻身。202 住着新婚两年的主妇，丈夫在信用金库跑外勤，这阵子常常深夜才回，有时整夜不归。房东住一楼，每月初挨门收租；梅雨一来，二楼走廊就漏水，住户们轮流去阳台清排水槽。",
+   "title": "薄墙那头的主妇"
+  },
+  {
+   "content_tags": [
+    "intimate",
+    "violence",
+    "coercion_theme",
+    "bodily_harm",
+    "substance",
+    "crime",
+    "workplace"
+   ],
+   "default_person": "second",
+   "era": "末世浩劫后（辐射海湾沉船城）",
+   "id": "neon_scrap_clinic",
+   "modes": [
+    "daily",
+    "pressure"
+   ],
+   "region": "搁浅战舰与拼焊集装箱拼成的底舱黑市与神经诊所",
+   "sha256": "20d3de88282938b0fcd4b81534c056a10f7db36df194f75b1960ae26488b6df9",
+   "status": "released",
+   "summary": "辐射酸雨日夜倾盆的海湾沉船城，搁浅战舰的锈蚀底舱里开着一家神经诊所。氧气按小时计费，纯净水与抗畸变血清是唯一的通货；付不起账的人只能把后颈的神经接口押给质押铁笼。负债的实验体、拆修工和赏金猎手每天都在这里进出。辐射风暴季快到了，气闸一锁就是几天。",
+   "title": "神经诊所的筹码"
+  },
+  {
+   "content_tags": [
+    "intimate",
+    "romance_light",
+    "workplace",
+    "workplace_power",
+    "crime"
+   ],
+   "default_person": "second",
+   "era": "当代都市，三甲医院重点专科复核考评期",
+   "id": "night_clinic_blackout_prescription",
+   "modes": [
+    "daily",
+    "pressure"
+   ],
+   "region": "综合医疗大楼四层：负压无菌配药中心与洁净区外廊",
+   "sha256": "0e9a14d87b6db4e757580644f1b9865a54add900eee128cbf22d9a5de3b22d5f",
+   "status": "released",
+   "summary": "综合医疗大楼四层的负压无菌配药中心，紫外灯在暗处泛着幽蓝的光，空气里是含氯消毒液和酒精的凉味。这里负责全院重症抢救特药和静脉营养液的配制，主任白天跑病房，夜里守在大厅把关处方签字。国家重点专科复核考评正在进行，卫健委专家组驻院彻查高值耗材和特药账目，医药代表、护士长、主任药师和夜班保卫各有心事，在外廊里来回穿行。",
+   "title": "考评门外女主任"
+  },
+  {
+   "content_tags": [
+    "romance_light",
+    "intimate",
+    "workplace",
+    "workplace_power",
+    "bodily_harm"
+   ],
+   "default_person": "second",
+   "era": "近未来",
+   "id": "night_repair",
+   "modes": [
+    "daily",
+    "pressure"
+   ],
+   "region": "一座巨型城市的修理局，地面是全息广告，地下是管廊",
+   "sha256": "793c60105fed891a716645487b7e2497fd967efb2db4a8966b854da18f32a08e",
+   "status": "released",
+   "summary": "城市的一切都有记录，只有夜班修理工知道哪些记录是假的。",
+   "title": "改写故障日志"
+  },
+  {
+   "content_tags": [
+    "intimate",
+    "violence",
+    "bodily_harm",
+    "workplace_power",
+    "crime",
+    "workplace",
+    "disaster"
+   ],
+   "default_person": "second",
+   "era": "冷战末期地下战略核工程与废弃核井封存期",
+   "id": "nuclear_silo_blast_door_lockdown",
+   "modes": [
+    "daily",
+    "pressure"
+   ],
+   "region": "地下百米核发射井超重型碳化钨防爆闸门大厅",
+   "sha256": "ff61e0d3cc1660786697e94f4205604b42c9d00ba18d8c0ff15c73b74560ebef",
+   "status": "released",
+   "summary": "冷战年代封存至今的废弃核导弹发射深井，退役的发射指挥女军官被请回来带队做封存评估，核防化士官长、督导监察官和见习技术员跟着下井。白天清点设备、拍照存档，夜里住在井口的营房。井下那台老式电子管告警机还连着自毁密封程序，没人敢断电。",
+   "title": "核井防爆门下沉"
+  },
+  {
+   "content_tags": [
+    "intimate",
+    "violence",
+    "bodily_harm",
+    "substance",
+    "death",
+    "workplace_power",
+    "crime",
+    "workplace",
+    "disaster"
+   ],
+   "default_person": "second",
+   "era": "中世纪晚期阿尔卑斯极寒雪岭（教廷裁判所前哨戒律院）",
+   "id": "nun_confessional_snowbound_sanctuary",
+   "modes": [
+    "daily",
+    "pressure"
+   ],
+   "region": "绝壁之巅风雪断绝的黑石圣玛利亚修道院闭锁忏悔室与地下藏经石窟",
+   "sha256": "8a85c6d86841cc4f8f64ba3f8df35a3483a505e78eaa737da2e922e38cf2b5e1",
+   "status": "released",
+   "summary": "阿尔卑斯绝顶的黑石修道院，严守贞誓的见习修女在药剂房和告解室之间度过每一天。这个冬天，修道院收留了一位受教廷追缉、负了伤的青年学者，还有悔悟逃亡的裁判所卫士和采药帮工。白天诵经、劳作，夜里守着壁炉。山上的柴一年比一年难砍，悬崖吊桥大雪一压就断。",
+   "title": "告解窗前小修女"
+  },
+  {
+   "content_tags": [
+    "intimate",
+    "humiliation",
+    "workplace_power",
+    "workplace"
+   ],
+   "default_person": "second",
+   "era": "当代上海，三甲医院急诊大楼的周一清晨",
+   "id": "nurse_station_cart_garter_clip_jam",
+   "modes": [
+    "daily",
+    "pressure"
+   ],
+   "region": "急诊大楼：玻璃护士站环岛、备品凹槽、分诊连廊、药房内库与值班室",
+   "sha256": "b235dd54a33ea946b1c2c9b347b94839767a3d367567dc7278a21545b1533391",
+   "status": "released",
+   "summary": "上海三甲医院的急诊大楼昼夜通明，规培满一年的年轻护士每天在全透明的玻璃护士站环岛核对医嘱、清点抢救车备品，忙起来连口温水都顾不上喝。当班住院总、护士长与药房调剂师每晚围绕急诊交接连轴运转。每周一清晨交班前，分管医疗的副院长都会带专家组巡查急诊大通道，当场抽查台账并敲定规培留院名额。",
+   "title": "规培护士查房夜"
+  },
+  {
+   "content_tags": [
+    "intimate",
+    "violence",
+    "bodily_harm",
+    "substance",
+    "death",
+    "workplace_power",
+    "crime",
+    "workplace",
+    "disaster"
+   ],
+   "default_person": "second",
+   "era": "架空帝国末年极寒冬夜前沿阵地（暴风雪零下三十度绝境冻土）",
+   "id": "officer_trench_last_bullet_vow",
+   "modes": [
+    "daily",
+    "pressure"
+   ],
+   "region": "帝国北境防线第七突出部第十四号半地下前沿混凝土掩体与散兵坑交通壕",
+   "sha256": "94837bfcf8b9414ef86ec7a48ce16ecae13ef49a8aa3a44f1c2cf77d3bd029b2",
+   "status": "released",
+   "summary": "帝国末年的北境防线，第七突出部第十四号掩体里，近卫装甲掷弹兵的青年女少校带着一个连守了一个冬天。白天修交通壕、清点弹药，夜里在掩体里烤火、写家书。暖气锅炉老是熄火，无线电时通时断，敌军的装甲集团正在两翼集结。",
+   "title": "弹尽粮绝女少校"
+  },
+  {
+   "content_tags": [
+    "intimate",
+    "bodily_harm",
+    "workplace_power",
+    "crime",
+    "workplace",
+    "disaster"
+   ],
+   "default_person": "second",
+   "era": "超深水半潜式钻井平台深海油气勘探期",
+   "id": "offshore_oil_platform_diverter",
+   "modes": [
+    "daily",
+    "pressure"
+   ],
+   "region": "月池下方分流器环形防喷器液压控制死角",
+   "sha256": "1a75b2e99ea0227900b990664e2d512f70ce47dc310949b37482a3e66bfd96cd",
+   "status": "released",
+   "summary": "平台上的人二十八天一轮换，今天倒班直升机刚落，换班的人拎着行李走下停机坪。傲娇的女总监带着平台吊车司机长和监察官，白天盯钻进、开碰头会，夜里在生活楼里吃宵夜。这口井的地层报告说浅层可能有高压气包，台风预警又升了一级。",
+   "title": "台风夜的月池"
+  },
+  {
+   "content_tags": [
+    "intimate",
+    "violence",
+    "coercion_theme",
+    "bodily_harm",
+    "crime",
+    "workplace",
+    "disaster"
+   ],
+   "default_person": "second",
+   "era": "特大型露天煤矿千万吨级连续开采装备运行期",
+   "id": "open_pit_coal_excavator_fire",
+   "modes": [
+    "daily",
+    "pressure"
+   ],
+   "region": "万吨轮斗挖掘机悬空六十米受料臂卷扬机房",
+   "sha256": "f2f3ed524c9bd13f58f6f1d30eeed5198da97b32238e86f88dba061409094d1e",
+   "status": "released",
+   "summary": "草原深处的露天煤矿，冬天零下三十度，白毛风卷着雪粒和煤尘打在脸上，排土场外就是牧民的冬窝子。英气的女总指挥管着万吨轮斗挖掘机的连续开采，和斗轮机司机长、监察官天天在受料臂下的卷扬机房里开会。煤尘积得太厚，液压油路漏过两次。",
+   "title": "斗轮机女总指挥"
+  },
+  {
+   "content_tags": [
+    "intimate",
+    "workplace_power",
+    "crime"
+   ],
+   "default_person": "second",
+   "era": "1889 年巴黎大歌剧院的演出季开幕",
+   "id": "opera_house_understage_mechanism",
+   "modes": [
+    "daily",
+    "pressure"
+   ],
+   "region": "巴黎大歌剧院：飞桥舞台、镜廊、皇家包厢与地下深井",
+   "sha256": "54f62cf469502ad2377684e58793a30c4b7331dd248c776c90a511a951087b1a",
+   "status": "released",
+   "summary": "1889 年的巴黎大歌剧院，水晶枝形吊灯照亮环形镜廊与天鹅绒包厢，名流贵胄齐聚，观赏演出季开幕首演《天鹅湖》。台上首席芭蕾舞姬领衔群舞，台下首席指挥、服装总监、驻场机械总师与董事会赞助男爵各司其职，在乐章与香槟背后角力新一季的名利归属。",
+   "title": "失态的首席舞姬"
+  },
+  {
+   "content_tags": [
+    "intimate",
+    "violence",
+    "death",
+    "workplace_power",
+    "crime",
+    "workplace",
+    "disaster"
+   ],
+   "default_person": "second",
+   "era": "近未来深空天梯轨道建设与空天防御纪元",
+   "id": "orbital_elevator_cable_failure",
+   "modes": [
+    "daily",
+    "pressure"
+   ],
+   "region": "三万米高空轨道电梯对流层重型配重锚定外露机库",
+   "sha256": "6f834c3502d5890bf169965475e35798d51d590d1def95bd846e378bf7b12e33",
+   "status": "released",
+   "summary": "三万米高空的轨道电梯锚定站，空天防卫军的冰山女上尉带着一个班驻守，白天巡检配重环和主缆，夜里在外露机库旁的舱室里轮流值班。地月联合防卫军的督导和见习技术员这个月也住了进来。近地轨道上的袭击越来越频繁，主缆的张力绞盘报过两次过热。",
+   "title": "高空风暴女上尉"
+  },
+  {
+   "content_tags": [
+    "intimate",
+    "bodily_harm",
+    "workplace_power",
+    "crime",
+    "workplace",
+    "disaster"
+   ],
+   "default_person": "second",
+   "era": "古典奇幻边境河港驻防与大型水利机械防御枢纽时代",
+   "id": "paladin_commander_flooded_dungeon_armor",
+   "modes": [
+    "daily",
+    "pressure"
+   ],
+   "region": "边境大河河港城水门吊桥重型链条绞盘机房与急流泄水导轨",
+   "sha256": "33ee974c5a19db14cd6d2d901ed14e18901613d45f7e1678cd1c6fa2ee9329fd",
+   "status": "released",
+   "summary": "边境大河上的河港城，水门、吊桥和税关都归驻防的铁骑女统领管。王国派来一位水门工程师改造老绞盘，两人为工期吵了一个汛期；税关书吏、船行老板和商会账房每天都来打听开闸的日子。春汛要来了，吊桥的主承重钢缆锈得厉害。",
+   "title": "河港水门的铁骑"
+  },
+  {
+   "content_tags": [
+    "intimate",
+    "violence",
+    "coercion_theme",
+    "bodily_harm",
+    "substance",
+    "workplace_power",
+    "crime",
+    "workplace",
+    "nightlife",
+    "disaster",
+    "romance_light"
+   ],
+   "default_person": "second",
+   "era": "1941年深秋，上海孤岛时期，法租界风雨飘摇的一夜",
+   "id": "paramount_shanghai_secret_agent",
+   "modes": [
+    "daily",
+    "pressure"
+   ],
+   "region": "百乐门：三楼香闺、二楼大舞池、法租界梧桐后巷、地下酒窖",
+   "sha256": "88ad8f34b05ec894c13d12729229f85e6ad8f243c2b8115afbde03bffe869fbe",
+   "status": "released",
+   "summary": "1941 年深秋，上海成了孤岛，静安寺路上的百乐门照旧夜夜笙歌。76 号特务处的女处长常在三楼香闺约人谈事，身边潜伏着一位军统的“入幕之宾”，已经三个月；华人督察长和青帮的军火掮客都是这里的熟客。军统的刺杀名单据说就要外泄。",
+   "title": "76号冷艳女处长"
+  },
+  {
+   "content_tags": [
+    "intimate",
+    "coercion_theme",
+    "humiliation",
+    "substance",
+    "workplace_power",
+    "workplace"
+   ],
+   "default_person": "second",
+   "era": "当代香港中环，一家独角兽上市前的闭门路演周",
+   "id": "partner_boardroom_arm_lace_jam",
+   "modes": [
+    "daily",
+    "pressure"
+   ],
+   "region": "中环投行顶层：路演会议室、同传间、茶歇露台与维港酒店套房",
+   "sha256": "4cb5f2bb87718d0a6d4035409eee39ab2e06bc4916b5e6dc0bf20efa5a152bb3",
+   "status": "released",
+   "summary": "香港中环，一家独角兽上市前的闭门路演进入最后一周。冷艳的女合伙人白天在顶层会议室对着基金董事讲估值，夜里回对面酒店的套房改底稿。上周一场私下的赌约，合伙人输了：铅笔裙里黑色蕾丝吊袜带的下面多了一枚静音跳蛋，遥控器交给了赢家，暗号一说就停。基金的副主席最近总盯着合伙人看。",
+   "title": "港交所敲钟日"
+  },
+  {
+   "content_tags": [
+    "intimate",
+    "humiliation",
+    "workplace_power",
+    "gambling"
+   ],
+   "default_person": "second",
+   "era": "当代上海外滩米其林三星法餐厅，评审品鉴前二十五秒",
+   "id": "pastry_chef_oven_hinge_corset_jam",
+   "modes": [
+    "daily",
+    "pressure"
+   ],
+   "region": "三星法餐厅：开放式甜品台、冷加工间、大理石品鉴吧台与后勤机电室",
+   "sha256": "cc1f6f2708f05b0dd4467469e4aa11340bf7a3aaaa8697a275366d2a4726d9fc",
+   "status": "released",
+   "summary": "外滩的米其林三星法餐厅，冷艳的女主厨管着开放式甜品台，双排扣厨师服里面穿着一件蕾丝束身衣，每晚的现烤舒芙蕾是招牌。老板、行政总厨和侍酒师都在等下个月的米其林复评；甜品台那台烤箱的回弹门轴越来越紧，修了两次还是会突然一合。",
+   "title": "评委前的甜品主厨"
+  },
+  {
+   "content_tags": [
+    "intimate",
+    "violence",
+    "bodily_harm",
+    "death",
+    "workplace_power",
+    "crime",
+    "workplace",
+    "disaster"
+   ],
+   "default_person": "second",
+   "era": "近未来科技前沿暴风雨深夜（地下深层超导粒子对撞失控封闭事故）",
+   "id": "physics_professor_magnetic_containment",
+   "modes": [
+    "daily",
+    "pressure"
+   ],
+   "region": "国家深地前沿科学研究中心地下负七层强磁场受控核聚变及超导环形实验室密闭核心舱",
+   "sha256": "ba788adb884a8c7958998995632806de134eb6c052366fd0828723010ce8e645",
+   "status": "released",
+   "summary": "国家深地科学研究中心的负七层，超导磁约束实验室一年到头不停机。天才冰山女物理学家带着青年低温工程师、电磁医学研究员和安防副主管，白天调主线圈，夜里守液氦。实验室的防爆铅门遇到磁场异常会全盘自锁，雷雨季的电网骤停过一次。",
+   "title": "冰山女物理学家"
+  },
+  {
+   "content_tags": [
+    "intimate",
+    "workplace"
+   ],
+   "default_person": "second",
+   "era": "江南老街百年书场的入梅时节",
+   "id": "pingtan_diva_stage_wrench_rescue",
+   "modes": [
+    "daily",
+    "pressure"
+   ],
+   "region": "江南老街的百年书场：听书堂口、台口书座、后台妆镜间与二楼传书小轩",
+   "sha256": "e4e98cd6c10bb074f914a6a40f9a7e256c184ed92b515b2e56ab39ea758dd34f",
+   "status": "released",
+   "summary": "江南老街上的百年书场，每逢开书，老听客泡一壶碧螺春、抓一把瓜子，等台上的评弹女先生把上一回留下的关子接着往下唱。长篇弹词《玉蜻蜓》已连说三十八回，拼双档的弦师、快要封琴的老先生、沪上来的电台制片人和跨界学艺的成年研修生在台前台后走动，台口第一排茶座，每回都有熟客准时落座。",
+   "title": "评弹女先生留扣"
+  },
+  {
+   "content_tags": [
+    "intimate",
+    "violence",
+    "crime",
+    "disaster"
+   ],
+   "default_person": "second",
+   "era": "帝国覆亡第三年的近代欧洲流亡岁月",
+   "id": "princess_lodge_avalanche_spur_lever",
+   "modes": [
+    "daily",
+    "pressure"
+   ],
+   "region": "阿尔卑斯雪峰之巅的旧皇家猎苑行宫",
+   "sha256": "08869987786351099221159e15985bcc3eb2af2d4af5ed8640c4f423d7d0762a",
+   "status": "released",
+   "summary": "阿尔卑斯雪峰之巅的旧皇家猎苑行宫里，暴风雪拍打着结冰的彩绘玻璃。帝国覆亡已有三年，长皇女带着最后一队效忠近卫在此避难，壁炉里的松木炭火彻夜不熄。下山的盘山道积雪渐深，摄政派特使、维也纳黑市画商和老守山人都聚在大沙龙里，等着开春前的去留决断。",
+   "title": "雪封行宫长皇女"
+  },
+  {
+   "content_tags": [
+    "intimate",
+    "coercion_theme",
+    "humiliation",
+    "workplace_power"
+   ],
+   "default_person": "second",
+   "era": "当代海港城市的百年大教堂，主日大弥撒开场前三分钟",
+   "id": "pure_choir_sister_organ_choker_jam",
+   "modes": [
+    "daily",
+    "pressure"
+   ],
+   "region": "大教堂挑空圣咏阁楼：管风琴低音风道后廊、大理石栏杆、风箱检修爬道与备唱侧厅",
+   "sha256": "fac2039f22ccc6f8027642a680cad97a135a0d8b054ce07f788b337465cd159a",
+   "status": "released",
+   "summary": "海港城市的百年大教堂，唱诗班的女高音领唱每个主日都要领唱大弥撒，平日在圣咏阁楼管风琴的低音风道后廊一个人校音。锁骨上那条纯银共鸣铃铛颈带从不离身。管风琴助理、乐谱总监和声学工程师常在阁楼进出；联动摇臂的铸铜配重松了，执事长说过几次要修。",
+   "title": "唱诗班的领唱"
+  },
+  {
+   "content_tags": [
+    "intimate",
+    "bodily_harm",
+    "workplace_power",
+    "disaster"
+   ],
+   "default_person": "second",
+   "era": "当代顶级国风数字影视文化传媒基地商业大片拍摄期",
+   "id": "pure_hanfu_model_wire_ribbon_knot_jam",
+   "modes": [
+    "daily",
+    "pressure"
+   ],
+   "region": "国家级数字影视基地八号挑高十米巨型实景影棚飞天威亚区与马道区",
+   "sha256": "2e5cadfb7b1ba12104061d12706b3a4aad7108298cc5ace314fced2aae1600c4",
+   "status": "released",
+   "summary": "国家级数字影视基地八号棚在拍一部敦煌飞天主题的国风大片，签约汉服模特吊了半个月威亚，武术指导天天在跳架上教模特走飞天身段、在半空回眸。电动威亚卷扬机是租来的，过载报警响过几次；顶层的大功率镝灯也该换了。",
+   "title": "吊威亚的汉服模特"
+  },
+  {
+   "content_tags": [
+    "workplace",
+    "disaster",
+    "crime",
+    "intimate"
+   ],
+   "default_person": "second",
+   "era": "近现代大型国家古籍图书馆与机械化智能密集书库时代",
+   "id": "pure_librarian_shelving_lift_crisis",
+   "modes": [
+    "daily",
+    "pressure"
+   ],
+   "region": "国家图书馆挑高十五米贯通中庭高空悬臂检修吊笼与密集移动书架夹道",
+   "sha256": "7fbbff6739f557c7631a5cc58454f8175e8d72efd73ccceab86925ec32958091",
+   "status": "released",
+   "summary": "国家图书馆古籍部的借还台后面，那位戴金丝眼镜的管理员已经盖了三年日期章；有一本诗集，三年里总被同一个人借走。古籍修复技师这个月在中庭的高空悬臂吊笼上检修书库，下面是万斤重的密集书架。吊笼的顶绳该换了，申请单还压在采购科。",
+   "title": "吊笼里的管理员"
+  },
+  {
+   "content_tags": [
+    "intimate",
+    "workplace_power",
+    "crime",
+    "workplace",
+    "disaster"
+   ],
+   "default_person": "second",
+   "era": "现代成年高等教育校区旧式近代历史建筑与古典图书阅览馆时代",
+   "id": "pure_literature_girl_attic_storm_shelter",
+   "modes": [
+    "daily",
+    "pressure"
+   ],
+   "region": "旧教学楼顶层大开间四面落地木格窗图书大厅与逃生移门",
+   "sha256": "a80b51a5f47a511ce0f1e82a04c043fdbf837cf88c53ac8b16d0cf72290adfbf",
+   "status": "released",
+   "summary": "大学里那栋百年旧教学楼要不要拆，学校吵了一整年。顶层的老图书厅里，古典文献专业的硕士研究生一边写论文一边兼做古籍编目，建筑系的博士研究生被派来测绘这栋旧楼，两人在图书厅里各占一张长桌，待了一个学期。四面木格窗都松了，台风季一刮就响。",
+   "title": "老图书厅的硕士生"
+  },
+  {
+   "content_tags": [
+    "intimate",
+    "coercion_theme",
+    "humiliation",
+    "workplace_power",
+    "crime"
+   ],
+   "default_person": "second",
+   "era": "当代大运会网球女单决赛，万人露天中央球场的决胜盘局间休息",
+   "id": "pure_tennis_idol_umpire_hook_trap",
+   "modes": [
+    "daily",
+    "pressure"
+   ],
+   "region": "万人网球中心中央球场：裁判高脚椅底座、休息伞、球员通道与蹬梯阴影",
+   "sha256": "25e8113fe12dc4665c245ebd5465bbc564064e7d40c33bd6ac3f8939196528ee",
+   "status": "released",
+   "summary": "大运会的网球女单进入最后几轮，人称初恋校花的头号种子每天在万人中央球场上打球，穿线师、助理裁判和转播镜头总监都认得这位选手。校花纯白百褶裙里系着一根骨盆康复限位绳，是伤愈后的习惯；主裁判座椅的防滑横杠刚换过，冲压倒钩有点利。",
+   "title": "大运会女单决赛"
+  },
+  {
+   "content_tags": [
+    "intimate",
+    "workplace_power",
+    "workplace",
+    "disaster"
+   ],
+   "default_person": "second",
+   "era": "当代顶级声音工程制作基地深夜乙女游戏年度资料片压轴配音阶段",
+   "id": "pure_voice_actress_booth_lock",
+   "modes": [
+    "daily",
+    "pressure"
+   ],
+   "region": "国家数字音频制作中心地下二层专业级母带录音棚与主控混音控制室",
+   "sha256": "db7c230650bbf8206bd33b1e4a87b527218ae1e02f54f79b32f8e4d97091e60c",
+   "status": "released",
+   "summary": "乙女游戏的年度资料片还有一周交付。签约第五年的声优每晚在母带录音棚里录到凌晨，录音导演在主控室一遍遍喊重来，声学工程师和夜间巡视的特勤也常来看一眼。录音棚的双层气密玻璃门靠负压密封，大楼的排风机变频器最近不太稳。",
+   "title": "第十一次告白"
+  },
+  {
+   "content_tags": [
+    "intimate",
+    "crime",
+    "workplace"
+   ],
+   "default_person": "second",
+   "era": "当代跨洋航线上的一趟告别航班",
+   "id": "purser_airbar_choker_drawer_jam",
+   "modes": [
+    "daily",
+    "pressure"
+   ],
+   "region": "波音777头等舱：跃层环形吧台、配餐操作间、包厢走廊、旋梯平台与上层机组休息舱",
+   "sha256": "711e2859503ac557041bcabde5da0d4abac1aad3e591864470b8007d3e8dbd33",
+   "status": "released",
+   "summary": "外资航空的波音777跨洋夜航穿行在平流层，头等舱跃层环形吧台亮着琥珀色壁灯。首席乘务长飞这条航线已是第八个年头，制服领口内侧总贴身戴着一条细白金链。随班乘务员、跟机机械师和便衣空警都是默契的老搭档；平飞之后，吧台后侧的配餐间是全机最安静的角落。",
+   "title": "头等舱配餐间"
+  },
+  {
+   "content_tags": [
+    "intimate",
+    "workplace",
+    "nightlife",
+    "disaster"
+   ],
+   "default_person": "second",
+   "era": "明末清初金陵秦淮河风雅极盛与漕运通衢期",
+   "id": "qinhuai_pipa_painted_boat_leak",
+   "modes": [
+    "daily",
+    "pressure"
+   ],
+   "region": "金陵秦淮河大型双层游舫二层开敞式雕花观景主楼与露台区",
+   "sha256": "742cc0970d76674ea96f101a1d782b2707aeec4342e7c17d109bc226722e64f0",
+   "status": "released",
+   "summary": "明末清初的秦淮河，教坊司的首席琵琶行首每夜在一艘双层雕花画舫上献艺，复社名士、巡江官差、盐商贵戚都是座上客，修船匠隔几天就来补一次船底。漕运繁忙，重载漕船常在夜里横冲直撞；画舫的紫檀屏风太重，折页铜轴早就松了。",
+   "title": "画舫琵琶女行首"
+  },
+  {
+   "content_tags": [
+    "romance_light",
+    "intimate",
+    "violence",
+    "coercion_theme",
+    "bodily_harm"
+   ],
+   "default_person": "second",
+   "era": "远未来",
+   "id": "quarantine_ring",
+   "modes": [
+    "daily",
+    "pressure"
+   ],
+   "region": "银河边境的一座环形空间站，检疫期还剩二十一天",
+   "sha256": "76ca89e2100599a077d286f7257482162b55ae9c7c109547628a014ac54a2870",
+   "status": "released",
+   "summary": "二十一天里谁也不能离站；数据比人先到，可数据也会说谎。",
+   "title": "隔离第二十天"
+  },
+  {
+   "content_tags": [
+    "intimate",
+    "substance",
+    "workplace_power",
+    "crime",
+    "workplace",
+    "disaster"
+   ],
+   "default_person": "second",
+   "era": "1990年代末深冬（北方海岛私人疗养院地下负压病区）",
+   "id": "quarantine_ward_scalpel_isolation",
+   "modes": [
+    "daily",
+    "pressure"
+   ],
+   "region": "北方暴雪绝岛私人神经与感染医学疗养院地下二层负压隔离监护病区与病理试剂冷库",
+   "sha256": "76973e0e1a3c3de9f93a96e21c775910a238bb69738092140a6377c084236bea",
+   "status": "released",
+   "summary": "北方海岛上的私人神经与感染医学疗养院，冷面女外科主任执掌地下二层的负压隔离病区。一期临床试验死过人，财团派来的行政代理人想把原始病历和涂片销毁；厚生省的督察官上岛核查，研究员、住院医、调剂师夹在中间。入冬后暴雪常把渡轮和外电网一起切断。",
+   "title": "防护服裂女主刀"
+  },
+  {
+   "content_tags": [
+    "intimate",
+    "coercion_theme",
+    "humiliation",
+    "workplace_power",
+    "crime",
+    "workplace"
+   ],
+   "default_person": "second",
+   "era": "当代上海临街电台直播间，午夜热线开播前十五秒",
+   "id": "radio_host_studio_mic_chain_trap",
+   "modes": [
+    "daily",
+    "pressure"
+   ],
+   "region": "临街电台：落地玻璃直播间、麦克风悬臂死角、隔音推门与窗外人行道",
+   "sha256": "774ebbaac295e069b9241eee991c0f613ec27e7b3ec7594fdb6c21de3d98e042",
+   "status": "released",
+   "summary": "临街电台的落地玻璃直播间，治愈系深夜电台的知性女主播每晚零点开播，窗外总有几个粉丝举着长焦贴着玻璃。录音总监、导播和维保主管是老搭档，新任总监制刚到任。女主播真丝衬衫里贴身戴着一条白金乳链；悬臂麦克风的转轴最近有点涩。",
+   "title": "开播前的电台主持"
+  },
+  {
+   "content_tags": [
+    "intimate",
+    "humiliation"
+   ],
+   "default_person": "second",
+   "era": "现代江南",
+   "id": "rainy_archive_manuscript_authentication",
+   "modes": [
+    "daily",
+    "pressure"
+   ],
+   "region": "华东水乡古典藏书阁楼底层通廊字画架区",
+   "sha256": "2cb5625e62be38c9ff00d8abdc9dfc0653def1d1a93163cb26f17c433fb71a84",
+   "status": "released",
+   "summary": "江南水乡的古典藏书楼，女掌卷人在底层通廊的字画架区守了五年，进修的古籍修复师、报社的文化记者和守夜人都是这里的常客。白天揭裱、编目，夜里点灯抄书。梅雨下个不停，江水年年漫到地基；那架八百斤的紫檀十二折屏风立得有点斜。",
+   "title": "抢救孤本掌卷女"
+  },
+  {
+   "content_tags": [
+    "intimate",
+    "romance_light",
+    "infidelity",
+    "workplace",
+    "workplace_power",
+    "coercion_theme",
+    "disaster"
+   ],
+   "default_person": "second",
+   "era": "1998年夏末，八号台风登陆东京的那一夜",
+   "id": "rainy_night_childhood_neighbor_wife",
+   "modes": [
+    "daily",
+    "pressure"
+   ],
+   "region": "东京郊外老木造公寓枫叶庄：201室六叠单间、二楼外廊、隔壁202室与一楼洗衣棚",
+   "sha256": "e38f53a118cfef3a42f72fb6a09e5c64bd225140747b1ce9a94e362017f3c657",
+   "status": "released",
+   "summary": "1998 年夏末的东京郊外，老木造公寓枫叶庄里住着一对在同一条老街长大的青梅竹马。去年青梅嫁给了常年在大阪出差的商社职员，搬进隔壁的 202 室，常来串门借东西。青梅怕打雷，更怕午夜那通准时打来的查岗电话；手提包里装着一份只差对方盖章的离婚届。台风季到了，202 的屋顶漏得厉害。",
+   "title": "藏离婚书的人妻"
+  },
+  {
+   "content_tags": [
+    "intimate",
+    "workplace_power",
+    "workplace",
+    "disaster"
+   ],
+   "default_person": "second",
+   "era": "当代陆家嘴金融中心超高层跨国并购谈判期",
+   "id": "red_circle_lawyer_storm_skybridge",
+   "modes": [
+    "daily",
+    "pressure"
+   ],
+   "region": "陆家嘴双子塔超甲级写字楼62层悬空玻璃天桥与避难层连廊区",
+   "sha256": "c450b53b136e6dc2f5e70d3d75364ce858ea18e7daaf6c1d2b36aa0bd20016ff",
+   "status": "released",
+   "summary": "陆家嘴双子塔六十二层的全景玻璃天桥连着东西两座塔。一场百亿跨境并购在天桥里谈了三周：红圈所的女合伙人代表买方，对面是卖方的首席财务官，天桥结构总工天天来查阻尼铰链。签字日就在这几天，台风季的天桥摆得厉害，电动防火钢闸门误报过一次。",
+   "title": "风暴天桥女合伙人"
+  },
+  {
+   "content_tags": [
+    "intimate",
+    "bodily_harm",
+    "crime",
+    "workplace",
+    "disaster"
+   ],
+   "default_person": "second",
+   "era": "千万吨级炼化一体化加氢裂化装置高压运行期",
+   "id": "refinery_hydrocrack_pressure_seal",
+   "modes": [
+    "daily",
+    "pressure"
+   ],
+   "region": "四百度加氢反应器底部八角垫检修隔热罩通道",
+   "sha256": "781b95ff5605f4b381d80005ec2bfd9dee57ba6545289231e5f4da2c138ff670",
+   "status": "released",
+   "summary": "化工城的大检修季，装置区搭满脚手架，三千名外协检修工住在厂外板房村，每张动火作业票要七个人签字。冰山女总工带着中控室的主操和安全监察长，白天跑现场、签票，夜里在中控室盯曲线。加氢裂化装置的反应器主法兰去年就有微漏的记录，这次大修工期压得很紧。",
+   "title": "加氢塔下的检修季"
+  },
+  {
+   "content_tags": [
+    "romance_light",
+    "intimate",
+    "coercion_theme",
+    "supernatural"
+   ],
+   "default_person": "second",
+   "era": "近未来，灵气复苏第十年",
+   "id": "registry_city",
+   "modes": [
+    "daily",
+    "pressure"
+   ],
+   "region": "一座人和非人按契约共处的沿海城市",
+   "sha256": "4417dc99c54b12c3db004daee11e9e2b560cc3db6e6ec8387dfc917cdde1a4cf",
+   "status": "released",
+   "summary": "契约一登记就自动执行，真名读出来就生效；在这座城里，谁握着你的真名，谁就握着你的命。",
+   "title": "偏厅受审除籍女"
+  },
+  {
+   "content_tags": [
+    "romance_light",
+    "workplace"
+   ],
+   "default_person": "second",
+   "era": "1920 年代（民国十五年）",
+   "id": "republic_press_street",
+   "modes": [
+    "daily",
+    "pressure"
+   ],
+   "region": "通商口岸城市的报馆与手艺街",
+   "sha256": "3284cbf3a4548954d5d01d4385f1ad146e9ed824bb5eb74081a0e26fe0c944e2",
+   "status": "released",
+   "summary": "《江声晚报》每晚十一点截稿；排字房、裁缝铺、照相馆、茶楼、当铺挨在一条街上，谁的消息都藏不住太久。",
+   "title": "报馆截稿女主编"
+  },
+  {
+   "content_tags": [
+    "romance_light",
+    "intimate",
+    "violence",
+    "coercion_theme",
+    "supernatural"
+   ],
+   "default_person": "second",
+   "era": "剑与魔法，魔王死后第十年",
+   "id": "retired_hero",
+   "modes": [
+    "daily",
+    "pressure"
+   ],
+   "region": "一座由勇者、魔族和普通人共同经营的边境城市",
+   "sha256": "a96ea66a0a3e907c4a2dcb01120d4e9332686411a21d15c65006098b4138ba7a",
+   "status": "released",
+   "summary": "仗打完了，英雄得学着过日子：当年的仇人成了邻居，当年的战友成了债主。",
+   "title": "同居魔族女勇者"
+  },
+  {
+   "content_tags": [
+    "intimate",
+    "workplace",
+    "disaster"
+   ],
+   "default_person": "second",
+   "era": "当代南海海上航天发射平台的临射倒计时终局阶段",
+   "id": "rocket_chief_engineer_gantry_lock",
+   "modes": [
+    "daily",
+    "pressure"
+   ],
+   "region": "南海海上发射平台八号大推力运载火箭发射塔高空钢梁桁架与吊笼作业区",
+   "sha256": "dfef3e340bddddec28f4465ecca8a4893f6856d65edff75281c9832240686272",
+   "status": "released",
+   "summary": "南海上的一座半潜式发射平台，大推力火箭立在塔架里等了半个月的窗口。测控女总师和索具总工在平台上同吃同住，一个管光路一个管吊笼，白天测试，夜里在甲板上看星星吵架。发射塔的露天吊笼是临时改装的，台风季的窗口一推再推。",
+   "title": "雷暴里的半潜台"
+  },
+  {
+   "content_tags": [
+    "intimate",
+    "bodily_harm",
+    "workplace_power",
+    "crime",
+    "workplace",
+    "disaster"
+   ],
+   "default_person": "second",
+   "era": "千吨级商业液体运载火箭高密度发射期",
+   "id": "rocket_turbopump_valve_jam_crisis",
+   "modes": [
+    "daily",
+    "pressure"
+   ],
+   "region": "发射台导流槽下方火箭尾段涡轮泵死角狭缝",
+   "sha256": "d2ba438f72164d8ac3ab8c45e9d9f404279521ba9564c804b6ac88dfc8260760",
+   "status": "released",
+   "summary": "海边的商业发射场，发射前夜镇上的海鲜大排档坐满了来看火箭的游客，场里的人有个老规矩：进场之前谁也不说“完了”两个字。冷艳女总师带着加注班长和安全总监，连着三周白天测试、夜里复盘。一级尾段的液氧吹除阀在低温试验里卡过一次，原因还没查清。",
+   "title": "发射前四十秒"
+  },
+  {
+   "content_tags": [
+    "intimate",
+    "workplace",
+    "workplace_power",
+    "bodily_harm",
+    "disaster"
+   ],
+   "default_person": "second",
+   "era": "大雪封山的十二月，老温泉疗养院移交前夕",
+   "id": "sanatorium_boiler_nurse_rescue",
+   "modes": [
+    "daily",
+    "pressure"
+   ],
+   "region": "东北林区老温泉疗养院：地热泵房、管廊、理疗室与二楼阳光廊",
+   "sha256": "15af0a02fee28a1839e631fc2a681156206576dc4c557f2935052506022f320b",
+   "status": "released",
+   "summary": "东北林区深处的老温泉疗养院，十二月大雪封山，邮车一周进山两趟，整座院子的暖气和理疗池全靠地下泵房引出的天然地热。疗养院的夜班护士白天照看常年住山里的老林工，夜里常提着保温桶下泵房看水温。省城地产集团的收购评估团这周住进了前楼，院里都在议论开春关停改建。",
+   "title": "泵房爆裂夜"
+  },
+  {
+   "content_tags": [
+    "intimate",
+    "crime",
+    "workplace"
+   ],
+   "default_person": "second",
+   "era": "盛夏放榜季的顶尖公立大学",
+   "id": "server_gas_lock_steel_ruler_rescue",
+   "modes": [
+    "daily",
+    "pressure"
+   ],
+   "region": "大学地下三层的智慧数据中心：监控大厅、主服务器大厅、冷通道与磁带冷库",
+   "sha256": "fbfa8945e97a68607ae158eec13ac6aa6c5643f5abee12075536ed6fb100853a",
+   "status": "released",
+   "summary": "顶尖公立大学的地下数据中心常年恒温十八度，冷通道两侧亮着成排的蓝色指示灯。每年放榜公示前，学界最年轻的理事会理事长都会亲自坐镇机房，同驻场工程师、技术处长和招生监察官一起核验最终录取库。外面暑气蒸腾，地下三层只有机柜风扇昼夜不息的嗡鸣。",
+   "title": "零点放榜理事长"
+  },
+  {
+   "content_tags": [
+    "intimate",
+    "violence",
+    "bodily_harm",
+    "workplace_power",
+    "workplace",
+    "disaster"
+   ],
+   "default_person": "second",
+   "era": "民国时期远东金融中心外滩万国建筑博览群与租界特殊工程期",
+   "id": "shanghai_bank_vault_trap",
+   "modes": [
+    "daily",
+    "pressure"
+   ],
+   "region": "上海外滩远东泰丰银行挑高八米地下重力防爆金库环形回廊与水暖阀室",
+   "sha256": "b668c7fca6e92bfe8538e1be0311c56c57decd9f6f7d108c06ee16e5b8735d35",
+   "status": "released",
+   "summary": "民国的上海外滩，督军府的千金每月都要来泰丰银行的地下金库，替父亲在军饷提存单上盖印，每回都点名要那位留洋回来的华人安防总工程师陪着下库。租界里最近不太平，乱军的传言一天比一天多；金库的落闸系统是总工程师亲手设计的，消防总管却是二十年前的老管子。",
+   "title": "督军千金下金库"
+  },
+  {
+   "content_tags": [
+    "intimate",
+    "workplace_power",
+    "workplace",
+    "disaster"
+   ],
+   "default_person": "second",
+   "era": "当代盛夏台风夜（东京千駄谷将棋会馆顶层）",
+   "id": "shogi_master_sealed_move_night",
+   "modes": [
+    "daily",
+    "pressure"
+   ],
+   "region": "关东平原被特大台风瘫痪的千駄谷将棋会馆顶层古雅幽玄和室与断电庭院",
+   "sha256": "9fd473f699df45acf73bf80f07f6f824ac513fd3879d48a17b575420a240f94e",
+   "status": "released",
+   "summary": "盛夏的东京千駄谷，将棋名人头衔战打到终局，九段女棋圣与挑战者在会馆顶层的幽玄之室对局两天。第一天傍晚封手，信封交给立会人保管，第二天开封再续。棋圣连着几夜睡不着，在和室里一个人摆棋；台风季的会馆停过一次电。",
+   "title": "九段女棋圣封手夜"
+  },
+  {
+   "content_tags": [
+    "intimate",
+    "violence",
+    "coercion_theme",
+    "bodily_harm",
+    "death",
+    "workplace_power",
+    "crime",
+    "workplace",
+    "disaster"
+   ],
+   "default_person": "second",
+   "era": "1978年深冬中苏边境",
+   "id": "siberian_express_sleeper_car7",
+   "modes": [
+    "daily",
+    "pressure"
+   ],
+   "region": "大兴安岭断崖边停摆的国际联运快车七号软卧车厢与守车",
+   "sha256": "a408d98efc7e5d7237ddd18462169d39b797f8aca6b64ccdbb28ae4a8e9b5668",
+   "status": "released",
+   "summary": "1978 年深冬，一列国际联运快车在中苏边境的林海里穿行，七号软卧包厢押着一名关乎边境走私大案的受审要犯。停职察看的保卫干事负责押解，铁路局的首席女法医随车复核要犯的病历，纪检督察和机械检修师也在这节车厢。列车被暴雪截停在大兴安岭断崖前的那一夜，要犯死在了包厢里。",
+   "title": "七号车厢女法医"
+  },
+  {
+   "content_tags": [
+    "intimate",
+    "coercion_theme",
+    "bodily_harm",
+    "crime",
+    "workplace",
+    "disaster"
+   ],
+   "default_person": "second",
+   "era": "中世纪冷兵器要塞防御与魔导火药战争时代",
+   "id": "silver_paladin_armory_fuse_race",
+   "modes": [
+    "daily",
+    "pressure"
+   ],
+   "region": "要塞地下五十米玄武岩军械密库狭窄弹药转运检修坑道",
+   "sha256": "686c97d28deecc53a63ab60dfac0218f195a17d923a455dd232509811bb29815",
+   "status": "released",
+   "summary": "边境要塞被围的第四十天，圣殿派来的女骑士长守着最后一道城墙，每夜亲自登上城头点一遍名，白天和军械工学官清点地下军械库的火药。新兵、佣兵队长和外科医官都住在城里。敌军的投石机一天比一天近，军械库的防爆钢闸是老式的。",
+   "title": "围城四十天骑士长"
+  },
+  {
+   "content_tags": [
+    "intimate",
+    "substance",
+    "workplace_power",
+    "crime",
+    "workplace",
+    "disaster"
+   ],
+   "default_person": "second",
+   "era": "近现代高山极地齿轨观光铁路与重型雪国列车时代",
+   "id": "snow_train_conductor_cliff_peril",
+   "modes": [
+    "daily",
+    "pressure"
+   ],
+   "region": "海拔三千米雪山千仞悬崖半悬空脱轨列车尾厢与狭窄连廊",
+   "sha256": "f46500a28da88ad3dd666ab4b78a4081650b5b754697364c90c57e4086022c28",
+   "status": "released",
+   "summary": "跑三天两夜雪国线路的高山齿轨观光列车上，温婉的女乘务长每晚都会挨个车厢给乘客分毛毯，展望车厢里的热红酒也是乘务长亲手温的。新来的乘务员、宣传摄影师和搭车的救援队员都在这趟车上。线路要经过一段千仞绝壁，这个季节的雪崩预警一直是黄色。",
+   "title": "雪国线的乘务长"
+  },
+  {
+   "content_tags": [
+    "explicit",
+    "violence",
+    "coercion_theme",
+    "humiliation",
+    "bodily_harm",
+    "substance",
+    "infidelity",
+    "crime"
+   ],
+   "default_person": "second",
+   "era": "1980 年代末深冬",
+   "id": "snowbound_onsen",
+   "modes": [
+    "daily",
+    "pressure"
+   ],
+   "region": "深山峡谷老派秘汤别馆",
+   "sha256": "49c5e6637533c5a1763d913e1625bad7c3786457becaf12fd110b0c2e6e38f26",
+   "status": "released",
+   "summary": "深山峡谷里的老派秘汤别馆，每到深冬就只剩几位长住的客人：信贷会社的审查员、潜逃私奔的婚纱设计师、冒名顶替的周刊撰稿人。七个人各怀私密与罪责，白天泡 42℃ 的硫磺汤，夜里在大广间里打牌。今冬的雪比往年大，山道已经封了；高压线也老了，柴油和炭都按人头配给。",
+   "title": "封山私汤若女将"
+  },
+  {
+   "content_tags": [
+    "intimate",
+    "violence",
+    "bodily_harm",
+    "substance",
+    "workplace_power",
+    "crime",
+    "workplace",
+    "disaster"
+   ],
+   "default_person": "second",
+   "era": "冷战风云极寒午夜（中立国与敌国暗战封锁之横贯大陆极地列车）",
+   "id": "spy_express_sleeper_compartment",
+   "modes": [
+    "daily",
+    "pressure"
+   ],
+   "region": "穿越暴风雪无人冻土荒原之横贯欧亚极地快车七号一等软卧车厢豪华双人间包厢与车尾吸烟",
+   "sha256": "401be6f7ef9ad546ae536c2b7b04cf6bdb977ccfb2f573228519ce1c7a480713",
+   "status": "released",
+   "summary": "冷战年代，一列横贯大陆的极地快车穿越无人冻土区，七号一等软卧住着一位中立国的外交随员，同车的还有战地摄影记者和铁路财团的特派员。代号“夜莺”的王牌女谍报员也在这趟车上，化名一等舱的乘客；宪兵队每过一个关卡都要查一遍夫妻证件，冬天的暴风雪常让列车停在荒原上。",
+   "title": "宪兵查证假新婚"
+  },
+  {
+   "content_tags": [
+    "intimate",
+    "workplace_power",
+    "workplace",
+    "crime"
+   ],
+   "default_person": "second",
+   "era": "当代广电传媒中心的跨年晚会联排季",
+   "id": "stage_mic_pack_clip_ratchet_release",
+   "modes": [
+    "daily",
+    "pressure"
+   ],
+   "region": "广电传媒中心一号演播大厅：水幕舞台、侧幕暗廊与总控室",
+   "sha256": "c9fa44717eefdecd1a140165d3f66f93c37ba837e2c2d78ecf9d5d9f559885ae",
+   "status": "released",
+   "summary": "十二月的一号演播大厅，女团正为跨年晚会的回归舞台带妆联排。挑高舞台下堆着粉丝提前送来的应援灯牌，C位每晚都在水幕灯架下练到最晚；队长、声乐总监、执行经纪人和技术团队在后台与总控室之间来回奔忙，要定下直播夜最终的声光方案和站位。",
+   "title": "湿透舞台女团C位"
+  },
+  {
+   "content_tags": [
+    "violence",
+    "coercion_theme",
+    "bodily_harm",
+    "substance",
+    "death",
+    "workplace_power",
+    "workplace",
+    "disaster"
+   ],
+   "default_person": "second",
+   "era": "重工业蒸汽装甲战争纪元",
+   "id": "steam_mech_fortress_zero",
+   "modes": [
+    "daily",
+    "pressure"
+   ],
+   "region": "阿尔卑斯断崖要塞‘黑鸦之臼’最前线崩塌主阵地与熔炉车间",
+   "sha256": "f5e269cd06424b8d4b46d73376335493b19d6a3dce6d3b606b952fd24de43c23",
+   "status": "released",
+   "summary": "帝国主力撤回内陆后，阿尔卑斯断崖上的要塞“黑鸦之臼”只留下“第零独立敢死番队”断后：降将、死囚、抗命军官和残废老兵。白天修三具老式动力装甲、补城墙，夜里在熔炉车间旁烤火。熔炉的压力阀早该换，煤和穿甲弹一天比一天少，敌军的重炮车队在山下集结。",
+   "title": "敢死第零番队"
+  },
+  {
+   "content_tags": [
+    "intimate",
+    "violence",
+    "coercion_theme",
+    "bodily_harm",
+    "workplace_power",
+    "crime",
+    "workplace",
+    "disaster"
+   ],
+   "default_person": "second",
+   "era": "蒸汽机械工业革命与皇家浮空战舰空战纪元",
+   "id": "steampunk_airship_furnace_rupture",
+   "modes": [
+    "daily",
+    "pressure"
+   ],
+   "region": "皇家无畏级重型浮空战舰主蒸汽动力防爆轮机舱",
+   "sha256": "9524a7084f1847f756ac964dec7286857d4dc95902e48b535da5a8fe7ecd0c1e",
+   "status": "released",
+   "summary": "皇家无畏级浮空战舰正在边境空域巡航。帝国空勤的首席女机械师总监管着主蒸汽动力轮机舱，和当值炉头、差分机演算员三班倒，空勤督导武官隔几天就下来查一次。主锅炉的安全阀弹簧该换了，补给船却一直没到；敌方的炮舰最近常在云层里出没。",
+   "title": "皇家飞艇泄压"
+  },
+  {
+   "content_tags": [
+    "intimate",
+    "coercion_theme",
+    "humiliation",
+    "workplace_power"
+   ],
+   "default_person": "second",
+   "era": "当代上海万人电竞馆，总决赛夺冠后的谢幕直播",
+   "id": "streamer_arena_headphone_bell_jam",
+   "modes": [
+    "daily",
+    "pressure"
+   ],
+   "region": "万人电竞馆：对战玻璃房解说席、弱电线槽暗角、首排赞助商席与升降坡道",
+   "sha256": "efc572ebf21920a6f8decdfa4bb05c25c7a2eafa3703a5d56da2b6cf1111c088",
+   "status": "released",
+   "summary": "万人电竞总决赛的这一周，千万粉丝的软萌顶流女主播在场馆的解说席上连播七天，穿着露肩水手服短裙，脖子上是一只挂着纯银铃铛的丝绒项圈。声学工程师、钢架督导和摇臂摄像手天天陪着彩排；赞助商的二世祖每天都捧着礼盒来解说席外转一圈。",
+   "title": "夺冠后的女主播"
+  },
+  {
+   "content_tags": [
+    "intimate",
+    "violence",
+    "death",
+    "workplace_power",
+    "crime",
+    "workplace",
+    "disaster"
+   ],
+   "default_person": "second",
+   "era": "近未来深海万米科考与深渊勘探纪元",
+   "id": "subsea_abyss_airlock_stalemate",
+   "modes": [
+    "daily",
+    "pressure"
+   ],
+   "region": "万米海沟深海科考站双向耐压减压气闸舱",
+   "sha256": "1fcaaac551309c335facd0831e461ecfd93540074f11903f69f34a683985f9d9",
+   "status": "released",
+   "summary": "万米海沟的深海科考站，首席深潜技术主管带着副驾驶员、安全监察官和极端生物学研究员轮班下潜，白天采样、夜里在生活舱里吃罐头。深渊断裂带最近微震不断，双向减压气闸舱的平衡阀上次检修时有两毫米的形变。",
+   "title": "万米深海女潜员"
+  },
+  {
+   "content_tags": [
+    "intimate",
+    "coercion_theme",
+    "humiliation",
+    "substance",
+    "workplace_power",
+    "crime",
+    "workplace"
+   ],
+   "default_person": "second",
+   "era": "当代上海国际车展，概念超跑全球首发合影前三十秒",
+   "id": "supercar_model_chassis_ankle_cuff_jam",
+   "modes": [
+    "daily",
+    "pressure"
+   ],
+   "region": "国际车展中央大厅：旋转展台、展车前唇暗处、媒体警戒线与贵宾廊道",
+   "sha256": "fd4ee357a4920bc94caa386b464f6c5c6bb865a6870f31f0a6ae2e2caf3314c7",
+   "status": "released",
+   "summary": "国际车展开幕前后的一周，清冷的顶流车模每天在中央大厅的概念超跑展台上换姿势、拍照，底盘工程师、展台调速操纵员和媒体督导都围着这台车转。车模右脚踝上戴着一条情趣细银链；碳纤维导流板的防松螺栓有几颗没拧紧。",
+   "title": "幕布后高定车模"
+  },
+  {
+   "content_tags": [
+    "intimate",
+    "workplace",
+    "workplace_power",
+    "violence",
+    "bodily_harm",
+    "crime",
+    "disaster"
+   ],
+   "default_person": "second",
+   "era": "当代深冬特大暴风雪之夜（北国荒原深处的支线铁道）",
+   "id": "supervisor_stranded_diesel_train",
+   "modes": [
+    "daily",
+    "pressure"
+   ],
+   "region": "北国崇山峻岭间被暴雪掩埋的荒废单线铁道与脱轨迫停的单节旧式柴油客车厢",
+   "sha256": "445ff3e929fabcdafb6f7adb7139c3a3812ff1346fa721ca5c046c6adc72462a",
+   "status": "released",
+   "summary": "北国荒原深处的支线铁道，一天只有一班单节老式柴油客车。外贸本部的精英女部长带着青年下属去山那边的工厂谈一份关系企业存亡的跨国竞标，每天早出晚归搭这班车；同车的还有返乡的柴油机技师和林业巡山队员。车厢的暖风发电机老出毛病，这个冬天的雪特别大。",
+   "title": "脱轨专列女上司"
+  },
+  {
+   "content_tags": [
+    "intimate",
+    "violence",
+    "bodily_harm",
+    "workplace",
+    "disaster"
+   ],
+   "default_person": "second",
+   "era": "当代江南太湖流域非物质文化遗产活态保护与古建修缮期",
+   "id": "suzhou_embroidery_cellar_flood",
+   "modes": [
+    "daily",
+    "pressure"
+   ],
+   "region": "姑苏古镇临水百年沈氏宗祠二层挑空大绣轩与临河雕花飞廊",
+   "sha256": "aef649349a202e883194e52cc2ecf4d00bc87d234e317ef12b47a4cc902b8643",
+   "status": "released",
+   "summary": "姑苏古镇的临水宗祠里，苏绣非遗传人守着一座挑空绣轩。这个梅雨季，营造社派来的大木作营造师天天在绣轩里修梁补柱，两人一个绣花一个刨木，一墙之隔待了三个月。太湖到了汛期，那架千斤重的明代黄杨木双面绣大棚架一直没固定。",
+   "title": "宗祠绣轩苏绣娘"
+  },
+  {
+   "content_tags": [
+    "intimate",
+    "violence",
+    "bodily_harm",
+    "workplace_power",
+    "crime",
+    "workplace",
+    "supernatural",
+    "disaster"
+   ],
+   "default_person": "second",
+   "era": "正道玄门末法劫难（正魔暗涌与宗门禁地万劫重锁时代）",
+   "id": "sword_fairy_demon_pagoda_seal",
+   "modes": [
+    "daily",
+    "pressure"
+   ],
+   "region": "昆仑绝顶万丈地心深渊九幽锁妖塔第七重极阴血池法阵密室与镇煞铜柱刑台",
+   "sha256": "a5b5ea78234000ce0bde09f5f7084f6fa0a6b8db6d2b3409f39a7ac89c3d0cdb",
+   "status": "released",
+   "summary": "昆仑绝顶之下的九幽锁妖塔，天衍宗首席女剑仙奉命驻守第七重，镇着一池血煞；外山经阁的守阁门人、天机峰的阵法推演士和戒律堂的行刑使轮流下塔协助。白天巡阵、换符，夜里打坐调息。封印已经撑了三百年，近来天魔劫雷一次比一次近。",
+   "title": "走火入魔女剑仙"
+  },
+  {
+   "content_tags": [
+    "intimate",
+    "workplace_power",
+    "crime",
+    "workplace",
+    "disaster"
+   ],
+   "default_person": "second",
+   "era": "东方奇幻上古王陵地宫与机关神道暗河秘境时代",
+   "id": "sword_shrine_maiden_submerged_crypt_gate",
+   "modes": [
+    "daily",
+    "pressure"
+   ],
+   "region": "水淹王陵地宫神道尽头万斤蟠龙青铜升降巨闸底槽与急流泄水口",
+   "sha256": "15375d1d53a8489dacae51fe8f9395946adc9e869dcb88b8a8fd5f3c3c6ca081",
+   "status": "released",
+   "summary": "上古王陵前有一座守陵村，村里世代出守陵的剑巫女。今年汛期，朝廷派来一位古陵水工探险家勘察地宫的暗河水道，剑巫女奉命带路，白天下地宫测水位，夜里在村口茶棚里听挑夫和河工书吏聊天。地宫神道尽头的蟠龙青铜重闸，绞盘已经锈死了一半。",
+   "title": "守陵村的剑巫女"
+  },
+  {
+   "content_tags": [
+    "intimate",
+    "substance",
+    "workplace_power",
+    "disaster"
+   ],
+   "default_person": "second",
+   "era": "十九世纪末巴黎，电灯刚装进音乐厅、雷暴还能让全城断电的年代",
+   "id": "symphony_hall_cello_repair_deadline",
+   "modes": [
+    "daily",
+    "pressure"
+   ],
+   "region": "巴黎大音乐厅舞台侧翼与地下二十米恒温储琴金库",
+   "sha256": "ff55fddb87e09627582d3b29f8b085e651fae227ca621add13544cda3aec8a93",
+   "status": "released",
+   "summary": "十九世纪末的巴黎，大音乐厅为建团七十周年准备一场交响盛典，大提琴独奏首席每天在侧翼练到熄灯，古董琴存放在地下二十米刚通了电的恒温储琴金库。录音师、使馆随员和金库看守是这阵子的常客。夏天的雷暴还能让全城断电，金库的气密门是电磁阀控制的。",
+   "title": "琴库里的首席"
+  },
+  {
+   "content_tags": [
+    "workplace",
+    "disaster",
+    "intimate"
+   ],
+   "default_person": "second",
+   "era": "当代国家水上运动竞技与大型场馆深水循环工程期",
+   "id": "synchronized_swimmer_pool_jam",
+   "modes": [
+    "daily",
+    "pressure"
+   ],
+   "region": "国家跳水馆地下十米深潜减压井池底与循环阀室",
+   "sha256": "c53c3b7d3e051a8f2e36f871ffe9408d9fa35a413569f63d8f55081bca04403d",
+   "status": "released",
+   "summary": "国家跳水馆的地下十米深处是一口深潜减压井。花样游泳女冠军每天在上面的池子里练到天黑，深潜机械师每天在下面的阀室里修到半夜，两人常在更衣室门口碰见。主水循环的进水阀有气蚀的毛病，修了几次没修好。",
+   "title": "花泳冠军与池底灯"
+  },
+  {
+   "content_tags": [
+    "intimate",
+    "humiliation",
+    "bodily_harm",
+    "disaster"
+   ],
+   "default_person": "third",
+   "era": "大正末年台风暴雨侵袭华族洋馆突发火警之暗夜死线",
+   "id": "taisho_mansion_insolvency_night",
+   "modes": [
+    "daily",
+    "pressure"
+   ],
+   "region": "东京郊外九条伯爵府邸挑空十米欧风洋馆二层回廊书阁与红茶沙龙",
+   "sha256": "cd48db0db170331e18319e633fdc6bfcc06923c453fa1b2eec5301ef6d697462",
+   "status": "released",
+   "summary": "大正末年，东京郊外的九条伯爵府邸，家道中落的伯爵千金守着这座欧风洋馆，帝国银行派来的清算监理官一周来三次清点家产。府里还请着一位西洋钢琴教师，报社的社会版记者也常来打听。台风季到了，洋馆二层回廊那排老樟木书架有点歪，地契就锁在里面。",
+   "title": "华族洋馆清算夜"
+  },
+  {
+   "content_tags": [
+    "intimate",
+    "humiliation",
+    "bodily_harm",
+    "disaster"
+   ],
+   "default_person": "second",
+   "era": "现代古典",
+   "id": "tea_ceremony_iemoto_succession_duel",
+   "modes": [
+    "daily",
+    "pressure"
+   ],
+   "region": "京都岚山名胜名园开敞式水榭主茶室外廊",
+   "sha256": "73e556dc725044a614a17e9ecc8a8e077210e305a57c1755dd6bf865c64047dc",
+   "status": "released",
+   "summary": "京都岚山的名园水榭，茶道宗门的准女家元正在为继承仪式做准备，每天在开敞的主茶室里点茶、待客。分家的少主虎视眈眈，评议会请来的见证律师和名园的园丁每天都在外廊走动。秋雨下个不停，水榭的山墙有点沉降，那扇两吨重的木门拉起来越来越涩。",
+   "title": "茶室里的准家元"
+  },
+  {
+   "content_tags": [
+    "intimate",
+    "coercion_theme",
+    "humiliation",
+    "workplace_power",
+    "disaster"
+   ],
+   "default_person": "second",
+   "era": "当代江南非遗文化博览会，闭幕大典开场前的最后彩排",
+   "id": "tea_mistress_water_piercing_pump_jam",
+   "modes": [
+    "daily",
+    "pressure"
+   ],
+   "region": "博览会中央镜面水景舞台：青石茶席台、池底潜水泵检修井、竹帘茶歇亭与九曲石桥",
+   "sha256": "2d3b8feb4c81aa59ba391c2d5b1201fa0c5f6d78c16fd2fcd484ed95e3856dd8",
+   "status": "released",
+   "summary": "江南非遗博览会的最后一周，茶道宗家的准家元若夫人每天在中央镜面水景舞台的青石茶席上彩排点茶身段，机电总工、助教和直播摄像都在台下守着。若夫人腰腹内侧穿着一根传统养气的纯金穿孔金线，月白旗袍下谁也看不见。池底的潜水泵轴承有点偏，吸力时大时小。",
+   "title": "点茶的若夫人"
+  },
+  {
+   "content_tags": [
+    "romance_light",
+    "intimate",
+    "coercion_theme",
+    "violence",
+    "nightlife",
+    "crime"
+   ],
+   "default_person": "second",
+   "era": "1928 年",
+   "id": "the_register",
+   "modes": [
+    "daily",
+    "pressure"
+   ],
+   "region": "芝加哥南区，雪茄店暗门后的一间地下总会",
+   "sha256": "bc97c26a7ba0e8a28b9f6571b29e9b04c2bd32834a7c83ad237f21a7a3b44426",
+   "status": "released",
+   "summary": "名字写在册上，你才在这座城里存在；划掉它的那支笔，握在一个人手里。",
+   "title": "名册除名落魄女"
+  },
+  {
+   "content_tags": [
+    "romance_light",
+    "intimate",
+    "coercion_theme",
+    "workplace_power",
+    "workplace"
+   ],
+   "default_person": "second",
+   "era": "当代",
+   "id": "the_seventh",
+   "modes": [
+    "daily",
+    "pressure"
+   ],
+   "region": "一家虚拟主播公司的动捕棚、办公区和楼下的谷子咖啡馆",
+   "sha256": "d30d36b1a7c78d675e8bdd76837a3b49ab96c5c627cf1c76169bbf035d4b65b6",
+   "status": "released",
+   "summary": "屏幕上的那张脸已经换过六个人；第七任想知道，粉丝爱的到底是谁，自己能不能把名字留下。",
+   "title": "第七任中之人"
+  },
+  {
+   "content_tags": [
+    "romance_light",
+    "intimate",
+    "coercion_theme",
+    "workplace"
+   ],
+   "default_person": "second",
+   "era": "当代",
+   "id": "third_floor",
+   "modes": [
+    "daily",
+    "pressure"
+   ],
+   "region": "一条后巷的三楼，左边是只拍胶片的写真工作室，右边是绳艺教室，中间共用一间暗房",
+   "sha256": "b4493e6ef450533bbd298620cb7256bd34bbc59f1afde1f93e330796e12ac9f0",
+   "status": "released",
+   "summary": "这两行都把边界写在规矩里，一卷一约，铃响即止；规矩管得住快门和绳结，管不住人心。",
+   "title": "三楼暗室的绳结"
+  },
+  {
+   "content_tags": [
+    "intimate",
+    "workplace",
+    "workplace_power",
+    "violence",
+    "bodily_harm",
+    "crime",
+    "disaster",
+    "explicit",
+    "death"
+   ],
+   "default_person": "second",
+   "era": "近未来跨国重工财阀地下第三量子物理绝密深潜实验室午夜事故前夕",
+   "id": "timestop_laboratory_blindzone",
+   "modes": [
+    "daily",
+    "pressure"
+   ],
+   "region": "近未来东京湾人工岛地下八十米量子物理绝密实验室",
+   "sha256": "ab314799134b6831f5539f9285affaded34c290f935c264034d9c9b6e49a4099",
+   "status": "released",
+   "summary": "东京湾人工岛地下八十米，跨国重工财阀的量子物理绝密实验室。冷艳的科研主管带着首席硬件工程师调一台时空共振装置，监察官以查违规实验的名义驻进来。白天跑实验，夜里在隔离舱里写报告。装置的超导冷却回路报过两次警，主管坚持不停机。",
+   "title": "定格十二分钟"
+  },
+  {
+   "content_tags": [
+    "intimate",
+    "workplace",
+    "workplace_power",
+    "violence",
+    "bodily_harm",
+    "crime",
+    "disaster",
+    "explicit",
+    "death"
+   ],
+   "default_person": "second",
+   "era": "当代日本东京，台风季",
+   "id": "tokyo_interrogation_mirror_standoff",
+   "modes": [
+    "daily",
+    "pressure"
+   ],
+   "region": "当代东京警视厅本厅地下二层特搜审讯区",
+   "sha256": "d8ffa7f9eac3198b9fe9c54d3a10f95b7b10d7cf24361ee79037d96fb751c0d4",
+   "status": "released",
+   "summary": "警视厅本厅地下二层的特搜审讯区，冷艳的心理侧写官奉命审一位被体制出卖的前特警突击队长，限期问出一份政治刺杀底片的下落。白天对坐审讯，夜里在单向镜后看录像。幕后黑手派来的监察官带着督察队守在楼里，等着把人提走；律师、科搜研的技官和侧写官的老搭档各有打算。台风正在逼近东京。",
+   "title": "断电夜的侧写官"
+  },
+  {
+   "content_tags": [
+    "intimate",
+    "humiliation",
+    "workplace_power",
+    "workplace"
+   ],
+   "default_person": "second",
+   "era": "现代都市·万人盛典之夜",
+   "id": "top_idol_van_wardrobe_breakout",
+   "modes": [
+    "daily",
+    "pressure"
+   ],
+   "region": "盛典会展中心·地下贵宾停车匝道",
+   "sha256": "a2c47249a8921978e6e5f94725fafe9e1a530a97a7b2bc9d908fe12580320c81",
+   "status": "released",
+   "summary": "年度红毯盛典前一周，顶流女星每天在保姆车里跑通告：试礼服、彩排、采访，品牌公关总监、跟车礼服修补师和随行摄影师挤在中排后座。盛典会展中心的地下贵宾匝道只有一条出口，粉丝和代拍已经开始蹲点。",
+   "title": "红毯夹裙女明星"
+  },
+  {
+   "content_tags": [
+    "intimate",
+    "bodily_harm",
+    "death",
+    "crime",
+    "workplace",
+    "disaster"
+   ],
+   "default_person": "second",
+   "era": "重工业干线大提速与高原重载蒸汽列车时代",
+   "id": "train_boiler_overpressure_tunnel_crisis",
+   "modes": [
+    "daily",
+    "pressure"
+   ],
+   "region": "高原特长单线闭塞隧道内万吨重联重型蒸汽机车驾驶舱",
+   "sha256": "5aa3dc9e2546e7351ceaaf98201cf54dbe575f55f78cfe04b70ddd2406b4ffaf",
+   "status": "released",
+   "summary": "高原上的干线刚开始大提速。首任女机车司机开着万吨重联的蒸汽列车，跟老司炉长、见习司炉工三人一班，跑一条要穿过特长单线隧道的线路，铁路分局的监察员隔几趟就上车。隧道里的落石隐患报了几次，主调速汽阀的拉杆也有点松。",
+   "title": "失控列车女司机"
+  },
+  {
+   "content_tags": [
+    "intimate",
+    "crime",
+    "workplace",
+    "supernatural",
+    "disaster"
+   ],
+   "default_person": "second",
+   "era": "古典奇幻精灵王宫与远古月轮机关时代",
+   "id": "tsundere_elf_princess_gravity_rune_trap",
+   "modes": [
+    "daily",
+    "pressure"
+   ],
+   "region": "精灵王都王宫深处月轮大殿合拢中的秘银花瓣穹顶与月轮配重手柄",
+   "sha256": "2812baa89946d18f44c7c0e0ae8babb76494d61610e6bab66e478319a776b6b7",
+   "status": "released",
+   "summary": "精灵王都的月蚀庆典前七天，人类王国派来一位古代机关学者，修复王宫深处月轮大殿那座千年秘银花瓣穹顶。第一王女奉命陪同，嘴上嫌人类笨手笨脚，却天天守在殿里。穹顶的防御机关和地脉相连，千年来没人敢碰那根月轮配重手柄。",
+   "title": "嘴硬的精灵王女"
+  },
+  {
+   "content_tags": [
+    "intimate",
+    "workplace_power",
+    "disaster"
+   ],
+   "default_person": "second",
+   "era": "当代影视城深夜，古装巨制压轴夜戏开机前的清场",
+   "id": "tsundere_hanfu_makeup_bolt_jam",
+   "modes": [
+    "daily",
+    "pressure"
+   ],
+   "region": "影视城明清大殿实景妆造工坊独立厢房与回廊备场前厅",
+   "sha256": "e314b07f7eda4b490b7e39a57e91c583a059bc45556b2d83c2abe3b36e6a72de",
+   "status": "released",
+   "summary": "影视城里一部古装巨制拍到最后一周，剧组从苏州请来的梳头师每天在大殿东暖阁给女一号梳三个钟头的发髻、插满一头点翠头面，夜戏开机前才把人送出门。大殿的樟木大门年头久了，门轴有点沉降；秋天的风一大，门栓就会自己往下滑。",
+   "title": "大殿暖阁梳头师"
+  },
+  {
+   "content_tags": [
+    "intimate",
+    "substance",
+    "disaster"
+   ],
+   "default_person": "second",
+   "era": "当代瑞士阿尔卑斯百年水晶矿洞的孤品原石评级阶段",
+   "id": "tsundere_jewelry_appraiser_vault_trap",
+   "modes": [
+    "daily",
+    "pressure"
+   ],
+   "region": "瑞士阿尔卑斯山腹两百米深的百年水晶矿洞、宝石切磨工坊与鉴证舱",
+   "sha256": "27d931232e07036376d22a9147f76320d1cd16d9c2daa9b73edb5bc07a9bf37c",
+   "status": "released",
+   "summary": "阿尔卑斯山腹两百米深有一座百年老水晶矿洞，矿脉尽头改建成了宝石切磨工坊和鉴证舱。一颗刚从矿脉里取出的巨型烟晶等着评级，傲娇的首席珠宝鉴定师在矿洞口的木屋里住了一个月，矿洞的安防总工天天陪着下矿。山里偶尔有小震，三级气密门的自锁一碰就落。",
+   "title": "矿洞里的鉴定师"
+  },
+  {
+   "content_tags": [
+    "intimate",
+    "workplace_power",
+    "workplace",
+    "disaster"
+   ],
+   "default_person": "second",
+   "era": "当代商圈二次元街区，女仆咖啡馆三周年庆舞会散场后的深夜",
+   "id": "tsundere_maid_locker_overturn_trap",
+   "modes": [
+    "daily",
+    "pressure"
+   ],
+   "region": "主题女仆咖啡馆地下一层后台狭窄更衣通道与主舞台配电连廊",
+   "sha256": "542d156dce742cadd114a8428968bcce26a3e09eae0b19e1f8d498e6b4b22d68",
+   "status": "released",
+   "summary": "二次元街区的女仆咖啡馆要办三周年庆舞会，台柱女仆每晚在店里排练压轴的三支舞，穿着那身黑白演出女仆装在地下一层的后台通道里来回换装。执行店长、舞台工程师和街区的消防巡视员都在忙布置。后台的双排钢储物柜没固定，顶上就是剧场音箱。",
+   "title": "女仆咖啡的台柱"
+  },
+  {
+   "content_tags": [
+    "intimate",
+    "violence",
+    "bodily_harm",
+    "crime",
+    "workplace",
+    "disaster"
+   ],
+   "default_person": "second",
+   "era": "现代都市保税港区经侦交锋期",
+   "id": "undercover_detective_meat_locker",
+   "modes": [
+    "daily",
+    "pressure"
+   ],
+   "region": "滨海万吨肉联厂大型零下25℃排管冷库主通道",
+   "sha256": "ea394cf14b228d77f53710877b2d11f7d4381ea79b63029ef637770e39f227b2",
+   "status": "released",
+   "summary": "滨海保税港区的万吨肉联厂，经侦支队的卧底女警化名在冷链部门当夜班记录员，白天睡觉，夜里在零下二十五度的冷库里清点货箱编码。装卸工、海关专员和调度长里，总有人在帮走私集团把芯片藏进冻肉柜。冷库的铸铁转轮锁只能从外面开。",
+   "title": "冷库里的女刑警"
+  },
+  {
+   "content_tags": [
+    "intimate",
+    "workplace_power",
+    "crime",
+    "workplace",
+    "disaster"
+   ],
+   "default_person": "second",
+   "era": "近未来特大跨海沉管隧道深海基槽安装对接施工期",
+   "id": "underwater_pipeline_caisson_burst",
+   "modes": [
+    "daily",
+    "pressure"
+   ],
+   "region": "水下四十米沉管对接接头高压焊接密封隔舱",
+   "sha256": "692322857deea35aa9ee4c9d643179018c9f04aa5cc903cbdae42375f8fb84d5",
+   "status": "released",
+   "summary": "跨海沉管隧道的施工到了最后几节，潜水队在铺管母船的甲板饱和舱里住了二十一天，呼吸氦氧混合气，说起话来尖细走调，全靠一台氦语音解码器跟水面通话。冷艳的女总监在水面指挥，饱和潜水长在水下对接。这一段的海底暗涌最急，隔水蝶阀的扭矩报过警。",
+   "title": "饱和舱第二十一天"
+  },
+  {
+   "content_tags": [
+    "intimate",
+    "crime",
+    "supernatural",
+    "bodily_harm",
+    "workplace"
+   ],
+   "default_person": "second",
+   "era": "1897 年深秋，喀尔巴阡山麓的血族古堡",
+   "id": "vampire_crypt_uv_barrier_scepter_lever",
+   "modes": [
+    "daily",
+    "pressure"
+   ],
+   "region": "喀尔巴阡山麓的没落血族古堡：地宫棺室、圣物库与藏书回廊",
+   "sha256": "85835a03a43edcab5220bec5593954446474149d98e703bb65b35a72ea95a8bb",
+   "status": "released",
+   "summary": "十九世纪末，喀尔巴阡山麓一座古堡的地宫里，没落血族名门只剩最后一位真祖千金，靠变卖祖传藏品撑着门面。本该是宿敌的猎魔人学者受雇来整理古籍，已在古堡同住了整整一个月。入秋后，老管家每晚点亮拱廊两侧的枝形烛台，石室里飘着旧羊皮卷和蜂蜡的气味。",
+   "title": "末代血族千金"
+  },
+  {
+   "content_tags": [
+    "intimate",
+    "explicit",
+    "violence",
+    "coercion_theme",
+    "bodily_harm",
+    "substance",
+    "death",
+    "workplace_power",
+    "crime",
+    "workplace",
+    "disaster"
+   ],
+   "default_person": "second",
+   "era": "1789年法国大革命前夕凡尔赛宫盛大化装舞会与三级会议暴动前夜",
+   "id": "versailles_corset_wardrobe_secret",
+   "modes": [
+    "daily",
+    "pressure"
+   ],
+   "region": "1789年凡尔赛宫镜厅偏殿公爵夫人私密更衣室",
+   "sha256": "8d6d33e41cc329bfc123960dfb0fb42e5f68954f743c037bd80b4ef6b19499c4",
+   "status": "released",
+   "summary": "1789 年夏天的凡尔赛宫，冷傲的公爵夫人周旋在王后的沙龙和化装舞会之间，手里握着一份能调动王室近卫军的密诏。御前侍卫长奉命贴身护卫，革命法官以“观礼”之名住进了宫里。白天觐见、密谈，夜里换装赴宴。巴黎的暴民一天比一天多，宫门外已经能听见口号。",
+   "title": "公爵夫人更衣室"
+  },
+  {
+   "content_tags": [
+    "intimate",
+    "humiliation",
+    "crime",
+    "workplace"
+   ],
+   "default_person": "second",
+   "era": "当代上海高奢名宠水疗会馆，贵宾犬出浴前十五秒",
+   "id": "vet_spa_salon_collar_chain_jam",
+   "modes": [
+    "daily",
+    "pressure"
+   ],
+   "region": "名宠水疗会馆：全景玻璃水疗大厅、洗狗舱机械臂死角、磨砂玻璃大门与窗外贵宾休息区",
+   "sha256": "132b6c0b291cf4a594a5ca522a15981ee818df81e1ef56e6268c43a67506d20b",
+   "status": "released",
+   "summary": "上海的高奢名宠水疗会馆，治愈系的美女院长每天在全景玻璃大厅里给名媛们的爱犬洗澡、吹毛，投资合伙人、行业评审和美容师都是常客。院长浅粉刷手服领口里私下戴着一只白金项圈；微泡洗狗舱的伸缩机械臂是进口的，偶尔会卡一下。",
+   "title": "名宠水疗院院长"
+  },
+  {
+   "content_tags": [
+    "intimate",
+    "violence",
+    "coercion_theme",
+    "bodily_harm",
+    "substance",
+    "workplace_power",
+    "workplace",
+    "disaster"
+   ],
+   "default_person": "second",
+   "era": "欧式古典宫廷暗黑奇幻纪元（王城政变前夜）",
+   "id": "villainess_dungeon_pardon_standoff",
+   "modes": [
+    "daily",
+    "pressure"
+   ],
+   "region": "王城皇家地下玄武岩重型死牢石厅",
+   "sha256": "73e6e2afbe4d18a71ddbcc812e1b30dec2859fc4ee99b9f0665be1fc9c0cc706",
+   "status": "released",
+   "summary": "王城的权力斗争到了最后关头，被构陷定罪的公爵千金关在地下深处的玄武岩死牢里等候特赦审议。青年看守骑士每天送饭、陪着说几句话；大法官公署的公证官和水工营造匠人也常下来。王城里人人在传政变的日子，死牢的水压断头台和配重铁闸是几百年前的老机关。",
+   "title": "断头台前恶千金"
+  },
+  {
+   "content_tags": [
+    "intimate",
+    "bodily_harm",
+    "crime",
+    "workplace",
+    "disaster"
+   ],
+   "default_person": "second",
+   "era": "奇幻宫廷魔导工学与草药炼金时代",
+   "id": "villainess_greenhouse_barrier_collapse",
+   "modes": [
+    "daily",
+    "pressure"
+   ],
+   "region": "皇家魔导晶石穹顶植栽园底层狭窄排水检修廊道",
+   "sha256": "567787ce839e569ae4b6d1ac8fcbb57f85fb7670928d253b41f57a84526fbc74",
+   "status": "released",
+   "summary": "被王太子当众退婚的第七天，满宫都在传公爵千金给圣女候补下过毒。没人知道，皇家植栽园里那几株救命的药草，是千金天不亮就来亲手照看的；平民出身的宫廷药剂师常在排水夹道里撞见千金。植栽园的晶石穹顶靠地脉供能，最近一直过载。",
+   "title": "公爵千金的药圃"
+  },
+  {
+   "content_tags": [
+    "romance_light",
+    "intimate",
+    "violence"
+   ],
+   "default_person": "second",
+   "era": "架空的盛唐",
+   "id": "ward_curfew",
+   "modes": [
+    "daily",
+    "pressure"
+   ],
+   "region": "长安城里的怀远坊，暮鼓六百声后坊门落锁，一坊人自己过完这一夜",
+   "sha256": "1dff5b430487ce21f93080d607aaa2b9a7ac70ca42b42c2783f0a5ead2776769",
+   "status": "released",
+   "summary": "坊门一关，这一坊就是一座孤岛，夜里的规矩由谁来定？",
+   "title": "深巷闭户俏寡妇"
+  },
+  {
+   "content_tags": [
+    "intimate",
+    "violence",
+    "coercion_theme",
+    "bodily_harm",
+    "substance",
+    "death",
+    "workplace_power",
+    "crime",
+    "workplace",
+    "disaster"
+   ],
+   "default_person": "second",
+   "era": "核冬天酸雨纪元地下重度污染工业避难所孤立停运时期",
+   "id": "wasteland_clinic_desperate_pact",
+   "modes": [
+    "daily",
+    "pressure"
+   ],
+   "region": "核冬天第七工业避难所地下负三层战地诊所",
+   "sha256": "4ae04bcaf9283907cc6f758edef0ad580d1f8abf3bceec1471f2e22e7680aa0e",
+   "status": "released",
+   "summary": "核冬天的第七工业避难所，冷傲的首席女医官长管着地下负三层的诊所，手里握着仅存的三支抗辐射血清和每日的氧气配额。拾荒队长常带着伤从地表回来，安全保卫长一直想以戒严之名接管血清和能源。酸雨一年比一年重，负三层的重力隔离门锈得厉害。",
+   "title": "最后三支血清"
+  },
+  {
+   "content_tags": [
+    "intimate",
+    "violence",
+    "bodily_harm",
+    "workplace_power",
+    "crime",
+    "workplace",
+    "disaster"
+   ],
+   "default_person": "second",
+   "era": "核冬天末世辐射尘暴与地下废土期",
+   "id": "wasteland_vault_airlock_filter",
+   "modes": [
+    "daily",
+    "pressure"
+   ],
+   "region": "第07号地下重型防辐射避难所双向气闸大厅",
+   "sha256": "812b71466e723bcf6c014eb489381e9b885a8bbf51a66cefa1ccd1c1cf51413b",
+   "status": "released",
+   "summary": "第07号地下避难所封闭的第七年，首席女净化师管着双向气闸大厅和整套空气过滤系统，白天换滤芯、测辐射，夜里在大厅边的值班室里修探测仪。荒野拾荒斥候隔几天就从地表回来一趟，卫戍兵和过滤工都靠净化师的读数吃饭。外层滤网已经补过三次，尘暴季又要到了。",
+   "title": "酸雨夜的净化师"
+  },
+  {
+   "content_tags": [
+    "intimate",
+    "humiliation",
+    "substance",
+    "workplace_power",
+    "disaster"
+   ],
+   "default_person": "second",
+   "era": "当代上海外滩的超五星酒店，豪门世纪婚礼开场前十秒",
+   "id": "wedding_hostess_champagne_handcuff_jam",
+   "modes": [
+    "daily",
+    "pressure"
+   ],
+   "region": "酒店金色宴会厅：主舞台香槟塔、侧幕导播暗角、首排贵宾席与水晶主花道",
+   "sha256": "d3f9652c47ce37936504e364e72dccefaaca52427099346d1e10166162da368e",
+   "status": "released",
+   "summary": "外滩超五星酒店的金色大厅，一场豪门世纪婚礼下周举行，首席司仪这几天天天来彩排，调音师、香槟塔的保全主管和追光灯师都被叫来陪着走位。主舞台右侧要搭一座十二层的香槟塔，底座垂着加厚的铜质流苏。闺蜜伴娘总爱恶作剧，包里还藏着一副纯银情趣手铐。",
+   "title": "香槟塔前的司仪"
+  },
+  {
+   "content_tags": [
+    "intimate",
+    "death",
+    "workplace_power",
+    "crime",
+    "workplace",
+    "disaster"
+   ],
+   "default_person": "second",
+   "era": "昭和五十年初秋，台风带来的连夜暴雨",
+   "id": "widow_rainy_mansion_wake",
+   "modes": [
+    "daily",
+    "pressure"
+   ],
+   "region": "关东群山深处，九条家三百年的数寄屋老宅",
+   "sha256": "51c1987956b0751b7da1affd90c3acf9d7708013178672ef09ab629908dc4ce6",
+   "status": "released",
+   "summary": "昭和五十年的初秋，关东群山深处的九条家老宅，老家主刚刚过世，未亡人身着素白丧服守灵，近身随侍寸步不离。各怀鬼胎的旁系亲属和债务财阀的代表陆续住进宅里，有人手里拿着一份来路不明的遗嘱，盯着金库的密匙。秋雨下个不停，下山的木桥年久失修。",
+   "title": "断桥守灵未亡人"
+  },
+  {
+   "content_tags": [
+    "intimate",
+    "coercion_theme",
+    "humiliation",
+    "workplace_power",
+    "workplace",
+    "disaster"
+   ],
+   "default_person": "second",
+   "era": "当代国际时装周，青年新锐设计师联合大秀开场前的后台",
+   "id": "wild_gyaru_harness_cabinet_jam",
+   "modes": [
+    "daily",
+    "pressure"
+   ],
+   "region": "时装周主展馆后台：更衣布幔夹角、钢构巡场走廊、更衣柜检修背板与道具改装台",
+   "sha256": "bf8cbc55d123dcca5119bcd25d02718f8533ecfe11cd0dc7f3a158a95329dfc0",
+   "status": "released",
+   "summary": "时装周的新锐设计师联合大秀还有三天，一头金发、浑身辣妹打扮的年轻设计师天天泡在后台改衣服，压轴的是一条带重工强磁合金链的先锋机能皮革工装裙。暗恋多年的学长是今晚大秀的执行总监，打版师和灯光师也在后台忙。更衣柜的冷轧钢合页有个死角，夹过好几回布料。",
+   "title": "辣妹设计师首秀"
+  },
+  {
+   "content_tags": [
+    "romance_light",
+    "disaster"
+   ],
+   "default_person": "second",
+   "era": "长冬第三年（当代之后，不写高科技）",
+   "id": "winter_shelter",
+   "modes": [
+    "daily",
+    "pressure"
+   ],
+   "region": "旧体育馆改成的公共避难所",
+   "sha256": "85aee84034ccd80bc3290bcfec3276594e0b11826bc251b16b218c2989456894",
+   "status": "released",
+   "summary": "长冬第三年，几百人住在一座旧体育馆里；配给、轮值、床位和天气窗口，决定每个人的一天。",
+   "title": "极寒避难所"
+  },
+  {
+   "content_tags": [
+    "intimate",
+    "violence",
+    "bodily_harm",
+    "death",
+    "workplace_power",
+    "crime",
+    "workplace",
+    "supernatural",
+    "disaster"
+   ],
+   "default_person": "second",
+   "era": "中世纪晚期宗教裁判狂潮与古代奥术隐秘学术复兴时代",
+   "id": "witch_inquisition_dungeon_pact",
+   "modes": [
+    "daily",
+    "pressure"
+   ],
+   "region": "北方圣山修道院地底百尺花岗岩死牢与铁水浇筑水牢暗室",
+   "sha256": "5805fef5880145b27f5044dcb1ff8a514937da12ee6b857ad720c35dfbd31d19",
+   "status": "released",
+   "summary": "北方圣山的异端裁判所，出身星语魔女遗族的奥术天才被关在地底水牢里候审，罪名是“操弄黑巫术”，其实是不肯交出一部能测算日食与地脉的天象古谱。夜巡小队长、档案室的见习文书和地下学者同盟的信使都接触过这位囚犯。审判一拖再拖，火刑柱已经立在广场上。",
+   "title": "火刑颈圈小魔女"
+  },
+  {
+   "content_tags": [
+    "intimate",
+    "coercion_theme",
+    "bodily_harm",
+    "substance",
+    "crime",
+    "workplace",
+    "supernatural"
+   ],
+   "default_person": "second",
+   "era": "黑暗奇幻末期（迷雾纪元末叶）",
+   "id": "withered_elven_shrine",
+   "modes": [
+    "daily",
+    "pressure"
+   ],
+   "region": "永夜迷雾森林深处，母树巨根盘踞而成的半倒塌古代白石神殿",
+   "sha256": "32ef33802b73331515d672ba7ec1eaae1dbaac84a89ae9195e8a494ac4e0d661",
+   "status": "released",
+   "summary": "庇佑长生种千年的精灵母树正逐渐枯死，瘴气日夜侵蚀结界。长生种开始发作骨髓高热，神露越来越少，唯有短生种人类调制的暖石药浴和守夜的炭火能压住反噬。平日视人类为蝼蚁的高傲生灵，如今不得不在白石神殿的帷幔与祭坛前，向人类开口求助。",
+   "title": "神殿药浴女祭司"
+  },
+  {
+   "content_tags": [
+    "intimate",
+    "explicit",
+    "violence",
+    "coercion_theme",
+    "bodily_harm",
+    "substance",
+    "death",
+    "workplace_power",
+    "crime",
+    "gambling",
+    "workplace",
+    "disaster"
+   ],
+   "default_person": "second",
+   "era": "当代，热带风暴季的公海",
+   "id": "yacht_adjacent_suite_transgression",
+   "modes": [
+    "daily",
+    "pressure"
+   ],
+   "region": "当代公海十级风暴中超豪华私人游艇顶层连通套房",
+   "sha256": "d7086c50985e064ab1158ed67153c42ddf024c26945b237800e061c5765c9b2f",
+   "status": "released",
+   "summary": "财阀家族的超豪华私人游艇在公海上开一周的家族会议。长媳受够了豪门冷暴力，住在顶层套房，共用阳台另一侧住着相识多年、被家族构陷逐出的王牌法务顾问。丈夫每晚都醉在隔壁主卧，管家和保镖在走廊巡查。千亿对赌的清算日就在这周，热带风暴季的卫星信号时有时无。",
+   "title": "夜半移门名门媳"
+  },
+  {
+   "content_tags": [
+    "intimate",
+    "violence",
+    "bodily_harm",
+    "substance",
+    "death",
+    "workplace_power",
+    "crime",
+    "workplace",
+    "disaster"
+   ],
+   "default_person": "second",
+   "era": "1990年代末深冬（极道内讧避难的第三个月）",
+   "id": "yakuza_daughter_hideout_ointment",
+   "modes": [
+    "daily",
+    "pressure"
+   ],
+   "region": "关东箱根深山密林悬崖废弃猎人守林木屋与断壁旧伐木吊桥",
+   "sha256": "e029160b92f3c47b6de4c0c76a7d9a89aab84c85cfacac391c598086f2b5b353",
+   "status": "released",
+   "summary": "关东最大的极道组织内讧已经三个月，组长的独生继承人被送到箱根深山的一间旧猎人木屋避风头。贴身心腹死士寸步不离，退役的军医隔几天上山换一次药，偶尔还有避雪的流浪刀客借宿。后背那幅鬼百合刺青下的旧伤还没好透；叛乱的堂口一直在打听木屋的位置。",
+   "title": "雪屋取弹黑道女"
+  },
+  {
+   "content_tags": [
+    "intimate",
+    "romance_light",
+    "workplace",
+    "workplace_power",
+    "violence",
+    "bodily_harm",
+    "disaster"
+   ],
+   "default_person": "second",
+   "era": "当代，公海上一场热带气旋的深夜",
+   "id": "yakuza_princess_stormy_yacht",
+   "modes": [
+    "daily",
+    "pressure"
+   ],
+   "region": "私人游艇黑龙丸：底层防弹避难室、轮机走廊、主甲板套房与后甲板停机坪",
+   "sha256": "86b63da45bdadf330f8c7bdaf2ea74cf35962e204089f501f6a62dd23e60ec75",
+   "status": "released",
+   "summary": "龙神会第四代继承人、九条家的大小姐，带着贴身保镖、机要秘书和老舵手，乘私人游艇黑龙丸在公海上巡视家族的海上生意，一走就是半个月。白天开会、见客，夜里在甲板上喝酒。护卫若头一直对继承顺位不满，秘书其实是关西派来的卧底；热带气旋的季节到了。",
+   "title": "暴雨游艇极道女"
+  },
+  {
+   "content_tags": [
+    "intimate",
+    "explicit",
+    "violence",
+    "bodily_harm",
+    "substance",
+    "death",
+    "workplace_power",
+    "crime",
+    "gambling",
+    "workplace",
+    "nightlife",
+    "disaster"
+   ],
+   "default_person": "second",
+   "era": "1990年代初泡沫破裂前夕东京湾暴风雨夜黑市赌场洗钱风暴时期",
+   "id": "yakuza_vault_handcuff_pact",
+   "modes": [
+    "daily",
+    "pressure"
+   ],
+   "region": "1990年代初东京湾品川废弃码头地下二层黑市赌场与重金库",
+   "sha256": "6c65947c694da5fa1b00f1d5cddcb960908ca838e7d813676d2c771d9fa0a230",
+   "status": "released",
+   "summary": "泡沫破裂前夕的东京湾，品川废弃码头地下二层的黑市赌场是极道洗钱的命门。女若头少主背着整肃门户的担子，查账查到了一位冷峻精算师头上，把人留在赌场里对了一个月的账。老牌若头辅佐和外人勾结想夺权灭口；台风季的码头地下二层常进水，重金库的防爆门只有一把钥匙。",
+   "title": "铐精算师女若头"
+  },
+  {
+   "content_tags": [
+    "intimate",
+    "violence",
+    "bodily_harm",
+    "death",
+    "workplace_power",
+    "crime",
+    "workplace",
+    "disaster"
+   ],
+   "default_person": "second",
+   "era": "1990年代初，梅雨季的关东",
+   "id": "yakuza_widow_rainy_wake",
+   "modes": [
+    "daily",
+    "pressure"
+   ],
+   "region": "东京近郊千坪数寄屋造古宅与佛堂内院",
+   "sha256": "ada7bb8bee904b547141afe790bef1bd81d3f70cd6e5654bccb2554701662019",
+   "status": "released",
+   "summary": "1990 年代初，关东旧派极道黑龙组的九条老会长突然过世。少夫人穿着素白丧服守灵，先代的贴身近卫寸步不离，义子少当家和事务局的法务助理也住进了古宅。若头与直系组长都盯着继承金印；梅雨季的雨一下就是好几天。",
+   "title": "佛堂守灵少夫人"
+  },
+  {
+   "content_tags": [
+    "intimate",
+    "explicit",
+    "violence",
+    "coercion_theme",
+    "bodily_harm",
+    "substance",
+    "death",
+    "workplace_power",
+    "crime",
+    "workplace",
+    "disaster"
+   ],
+   "default_person": "second",
+   "era": "1980年代末香港油麻地老街八号风球暴雨封街江湖动荡时期",
+   "id": "yaumatei_bonesetter_typhoon_pact",
+   "modes": [
+    "daily",
+    "pressure"
+   ],
+   "region": "1980年代末香港油麻地庙街尽头保和堂跌打医馆",
+   "sha256": "34148c9a32b327fbb1e94f112944d1282e0735da48e210ef863cda9b8e685f24",
+   "status": "released",
+   "summary": "1980 年代末的香港油麻地，庙街尽头的保和堂跌打医馆，冷艳的女掌柜坐堂正骨，手里握着义安堂老龙头临终托付的账册和疗伤秘药。洪胜堂的王牌红棍常来看伤，反黑组的督察也常来喝茶。堂口内讧越闹越大；台风季的庙街一挂风球就落闸。",
+   "title": "风球夜跌打医馆"
+  },
+  {
+   "content_tags": [
+    "romance_light",
+    "intimate"
+   ],
+   "default_person": "second",
+   "era": "明治十四年",
+   "id": "yosai_machi",
+   "modes": [
+    "daily",
+    "pressure"
+   ],
+   "region": "横滨外国人居留地边上的一条町：洋裁店、译书所、旧式吴服店挤在一起",
+   "sha256": "d49beee125599074d75b8d775fcd65c351a4623991f02571a921ff64e4395eca",
+   "status": "released",
+   "summary": "新衣料和旧礼法对撞的时候，替人量身体的那双手，知道的比谁都多。",
+   "title": "横滨量体华族妻"
+  },
+  {
+   "content_tags": [
+    "intimate",
+    "violence",
+    "coercion_theme",
+    "bodily_harm",
+    "substance",
+    "death",
+    "workplace_power",
+    "crime",
+    "workplace",
+    "disaster"
+   ],
+   "default_person": "second",
+   "era": "盛唐开元天宝之交河西走廊与西域交界",
+   "id": "yumen_pass_black_sandstorm_beacon",
+   "modes": [
+    "daily",
+    "pressure"
+   ],
+   "region": "玉门关外三十里风蚀绝壁上的饮马泉烽燧",
+   "sha256": "7a345d6c497b25c0a75f60b1c2a0182ec4cc67fce8ea37d922b752533c272630",
+   "status": "released",
+   "summary": "盛唐开元天宝之交，玉门关外三十里的饮马泉烽燧，守将是三年前因拒绝屠城被兵部构陷的前折冲都尉，改名换姓在这里守了三年。奉旨远嫁西域的和亲长公主仪仗要从这里经过，河西节度使派来的按察将军和世袭老烽帅都在等。春天是沙暴季，突厥的游骑最近常在关外出没。",
+   "title": "孤烽燧的和亲公主"
+  }
+ ]
+}

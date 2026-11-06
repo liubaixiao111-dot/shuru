@@ -11,6 +11,7 @@ import { THEMES, useReadingPrefs, type ReadingTheme } from "@/hooks/useReadingPr
 import { useSpeech } from "@/hooks/useSpeech";
 import { Composer, type ComposerHandle } from "./Composer";
 import { StoryPanel } from "./StoryPanel";
+import { AtStoryPanel } from "./AtStoryPanel";
 
 export interface ReaderChapter {
   id: string;
@@ -34,6 +35,8 @@ interface ReaderBook {
   endingLeft: number | null;
   adult: boolean;
   lastReadChapterId: string | null;
+  /** legacy：书入自己的续写；at：叙事引擎 */
+  engine: string;
 }
 
 export interface ReaderBookmark {
@@ -47,7 +50,9 @@ type StreamEvent =
   | { t: "error"; message: string }
   | { t: "review" }
   | { t: "revising"; issues: string[] }
-  | { t: "revised"; v: string };
+  | { t: "revised"; v: string }
+  | { t: "recording" }
+  | { t: "writing" };
 
 type Panel = null | "toc" | "style" | "story" | "menu";
 
@@ -77,7 +82,9 @@ export function Reader({
   };
   const [viewIndex, setViewIndex] = useState(initialIndex);
   const [streaming, setStreaming] = useState<string | null>(null);
-  const [phase, setPhase] = useState<"writing" | "review" | "revising">("writing");
+  const [phase, setPhase] = useState<"writing" | "review" | "revising" | "recording">("writing");
+  const isAt = book.engine === "at";
+  const [atPaused, setAtPaused] = useState(false);
   const [error, setError] = useState("");
   const [panel, setPanel] = useState<Panel>(null);
   const [tocTab, setTocTab] = useState<"toc" | "marks">("toc");
@@ -120,6 +127,14 @@ export function Reader({
     }, 800);
     return () => clearTimeout(t);
   }, [viewing, book.id]);
+
+  // 叙事引擎的书：读一次是否在暂停中
+  useEffect(() => {
+    if (!isAt) return;
+    void api<{ safety?: { paused?: boolean } }>(`/api/books/${book.id}/at`, { body: { action: "context" } })
+      .then((c) => setAtPaused(!!c.safety?.paused))
+      .catch(() => {});
+  }, [isAt, book.id]);
 
   // 换章时停止朗读
   useEffect(() => speech.stop, [viewIndex]); // eslint-disable-line react-hooks/exhaustive-deps
@@ -178,6 +193,8 @@ export function Reader({
           if (ev.t === "review") setPhase("review");
           if (ev.t === "revising") setPhase("revising");
           if (ev.t === "revised") setStreaming(ev.v);
+          if (ev.t === "recording") setPhase("recording");
+          if (ev.t === "writing") setPhase("writing");
           if (ev.t === "error") throw new Error(ev.message);
         }
       }
@@ -199,6 +216,16 @@ export function Reader({
 
   async function undo() {
     if (!head) return;
+    if (isAt) {
+      try {
+        await api(`/api/books/${book.id}/at`, { body: { action: "undo" } });
+        setNotice(`已撤销第 ${head.index} 回合`);
+        router.refresh();
+      } catch (e) {
+        setNotice((e as Error).message);
+      }
+      return;
+    }
     if (!head.parentId) {
       setNotice("第一章不能撤销，可以用“改写上一段”重写它");
       return;
@@ -209,6 +236,12 @@ export function Reader({
   }
 
   async function setPaused(paused: boolean) {
+    if (isAt) {
+      await api(`/api/books/${book.id}/at`, { body: { action: "pause", paused } });
+      setAtPaused(paused);
+      setNotice(paused ? "已暂停。说“继续”恢复，或说“换个场景”" : "已解除暂停");
+      return;
+    }
     await api(`/api/books/${book.id}/prefs`, { method: "PUT", body: { paused } });
     router.refresh();
   }
@@ -346,7 +379,7 @@ export function Reader({
             {viewing.title}
           </h2>
           <p className="mt-2 text-xs" style={{ color: theme.muted }}>
-            第 {viewing.index} 章 · {viewing.content.length} 字
+            {isAt ? `第 ${viewing.index} 回合` : `第 ${viewing.index} 章`} · {viewing.content.length} 字
             {viewing.idea && ` · 你：${viewing.idea}`}
           </p>
           <div className="mt-6 whitespace-pre-wrap" style={textStyle}>
@@ -366,6 +399,7 @@ export function Reader({
         <article className={`${fontClass} mt-10`} ref={streamTop}>
           <div className="mb-6 flex items-center gap-3 text-xs" style={{ color: theme.muted }}>
             <span className="h-px flex-1" style={{ background: "currentColor", opacity: 0.3 }} />
+            {phase === "recording" && "正在推演这一回合…"}
             {phase === "writing" && "正在往下写…"}
             {phase === "review" && "写完了，正在校对剧情是否合理…"}
             {phase === "revising" && "发现了不合理的地方，正在修正…"}
@@ -411,8 +445,11 @@ export function Reader({
               </span>
             )}
             {!isAtHead && !finished && <button onClick={() => rewriteFrom(viewing)}>从这一章后改写</button>}
-            {atEnd && !finished && head && (
+            {atEnd && !finished && head && !isAt && (
               <button onClick={() => write(head.parentId, head.idea, null)}>不满意，重写这一章</button>
+            )}
+            {atEnd && !finished && head && isAt && head.parentId && (
+              <button onClick={() => write(head.id, head.idea ?? "", "rewrite")}>不满意，重写这一回合</button>
             )}
             {notice && <span>{notice}</span>}
           </div>
@@ -462,7 +499,7 @@ export function Reader({
           assistant={storyPrefs.assistant}
           busy={writing}
           error={error}
-          paused={storyPrefs.paused}
+          paused={isAt ? atPaused : storyPrefs.paused}
           onWrite={(t, m) => write(head?.id ?? null, t, m)}
           onUndo={head ? undo : undefined}
           onPause={setPaused}
@@ -558,7 +595,8 @@ export function Reader({
               </div>
             )}
 
-            {panel === "story" && (
+            {panel === "story" && isAt && <AtStoryPanel bookId={book.id} onPaused={setAtPaused} />}
+            {panel === "story" && !isAt && (
               <StoryPanel
                 bookId={book.id}
                 bible={bible}

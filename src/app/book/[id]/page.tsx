@@ -49,6 +49,7 @@ export default async function BookPage({
           endingLeft: book.endingLeft,
           adult: book.adult,
           lastReadChapterId: book.lastReadChapterId,
+          engine: book.engine,
         }}
         bookmarks={bookmarks.map((b) => ({ chapterId: b.chapterId, excerpt: b.excerpt }))}
         chapters={chapters}

@@ -6,6 +6,7 @@ import { handle } from "@/lib/http";
 import { checkInput } from "@/lib/moderation";
 import { fillName, getScene } from "@/lib/scenes";
 import type { Bible } from "@/lib/bible";
+import { createAtGame } from "@/lib/at/host";
 
 const Body = z.object({
   title: z.string().trim().min(1, "请填写书名").max(30, "书名最多 30 字"),
@@ -25,6 +26,17 @@ const Body = z.object({
     .optional(),
   // “我的人生”场景的问答
   answers: z.record(z.string().max(300)).optional(),
+  // 叙事引擎开局
+  at: z
+    .object({
+      mode: z.enum(["daily", "pressure", "random"]),
+      worldId: z.string().max(40).optional(),
+      worldQuery: z.string().max(40).optional(),
+      playerName: z.string().trim().max(12).optional(),
+      playerGender: z.enum(["male", "female"]).optional(),
+      npcGender: z.enum(["any", "mostly_female", "mostly_male", "female_only", "male_only", "mixed"]).optional(),
+    })
+    .optional(),
 });
 
 export const POST = handle(async (req: Request) => {
@@ -36,6 +48,33 @@ export const POST = handle(async (req: Request) => {
     if (!text) continue;
     const r = checkInput(text);
     if (!r.ok) throw new HttpError(400, r.reason);
+  }
+
+  if (body.at) {
+    const a = body.at;
+    const game = await createAtGame({
+      mode: a.mode,
+      ...(a.worldId ? { locks: { world_id: a.worldId } } : a.worldQuery ? { world_query: a.worldQuery } : {}),
+      player: { ...(a.playerName ? { name: a.playerName } : {}), ...(a.playerGender ? { gender: a.playerGender } : {}) },
+      ...(a.npcGender ? { npc_gender_preference: a.npcGender } : {}),
+      // 成人向关闭时尺度用“含蓄”；开启时按引擎默认
+      preferences: body.adult ? {} : { explicitness: "subtle" },
+    });
+    const book = await prisma.book.create({
+      data: {
+        userId: user.id,
+        title: body.title === "auto" ? game.opening.world.title : body.title,
+        genre: (game.opening as { mode?: string }).mode === "daily" ? "日常" : "压力",
+        bible: "{}",
+        adult: body.adult,
+        engine: "at",
+        atSession: game.session_id,
+        atRevision: game.revision,
+        atNextReq: game.next_request_id,
+        atOpening: JSON.stringify(game.opening),
+      },
+    });
+    return NextResponse.json({ id: book.id, needsFirstChapter: true });
   }
 
   if (body.sceneId) {
