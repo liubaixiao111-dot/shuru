@@ -59,7 +59,31 @@ function recentBlock(recent: RecentTurn[]) {
   return recent.map((r) => `【第 ${r.turn} 回合正文】\n${r.text}`).join("\n\n");
 }
 
-const j = (v: unknown) => JSON.stringify(v, null, 1);
+// 紧凑 JSON：不缩进，省下大约两成的 token
+const j = (v: unknown) => JSON.stringify(v);
+
+/** 每回合正文的篇幅（覆盖原文里“约 300–700 字”的说法） */
+export type TurnLength = "short" | "medium" | "long";
+export const LENGTHS: Record<TurnLength, { words: string; maxTokens: number }> = {
+  short: { words: "300–700 字", maxTokens: 1500 },
+  medium: { words: "1000–1500 字", maxTokens: 3000 },
+  long: { words: "1800–2500 字", maxTokens: 4500 },
+};
+export const DEFAULT_LENGTH: TurnLength = "medium";
+
+/**
+ * 完整上下文里基本不变的部分（世界、背景、地点、名字池、标签）放在用户消息最前面，
+ * 和系统提示词连成同一段前缀：同一本书每回合都一样，DeepSeek 等模型会按缓存价计费。
+ */
+const STABLE_KEYS = ["world", "background", "locations", "name_pool", "tags"];
+function splitContext(context: unknown) {
+  if (!context || typeof context !== "object") return { stable: {}, rest: context };
+  const c = context as Record<string, unknown>;
+  const stable: Record<string, unknown> = {};
+  const rest: Record<string, unknown> = {};
+  for (const [k, v] of Object.entries(c)) (STABLE_KEYS.includes(k) ? stable : rest)[k] = v;
+  return { stable, rest };
+}
 
 export function recordMessages(p: {
   context: unknown;
@@ -70,9 +94,12 @@ export function recordMessages(p: {
   twistCandidates?: unknown;
   replacesTurn?: number | null;
 }) {
+  const { stable, rest } = splitContext(p.context);
   const user = [
-    "## 运行时的当前上下文",
-    j(p.context),
+    "## 这本书的固定设定（运行时上下文的一部分）",
+    j(stable),
+    "## 运行时的当前上下文（其余部分）",
+    j(rest),
     "## 这一回合的记录模板",
     j(p.template),
     ...(p.twistCandidates ? ["## 转折候选（玩家说了“来点转折”）", j(p.twistCandidates)] : []),
@@ -119,7 +146,9 @@ export function writeMessages(p: {
   results: unknown;
   recent: RecentTurn[];
   playerInput: string;
+  length: TurnLength;
 }) {
+  const words = LENGTHS[p.length].words;
   const user = [
     "## 运行时记录后的上下文",
     j(p.context),
@@ -134,6 +163,7 @@ export function writeMessages(p: {
     "## 本次任务",
     [
       "按已记录的内容和运行时的结果，写这一回合的正文。掷骰、到期、离屏移动与传播以运行时为准，不要写出记录里没有的重大变化。",
+      `篇幅：这一回合正文写 ${words}（以这里为准，不按原文的“约 300–700 字”）。字数靠把这一回合里发生的事写足：动作、对话的来回、环境、人物的反应与细节，不靠注水、不重复、不提前写到下一回合，也不替玩家做决定。`,
       "正文直接从上一回合结尾那一刻接上，不加标题，不复述上一回合。结尾停在 open_action 描述的未决动作上，不替玩家接。",
       "玩家角色的台词只用玩家说过的意思。叙事助手开启时，末尾加“可以：① …… ② …… ③ ……”。",
       "不要写页脚（时间、地点、回合号），程序会加上。",
@@ -145,14 +175,15 @@ export function writeMessages(p: {
   ];
 }
 
-export function openingMessages(p: { opening: unknown; context: unknown }) {
+export function openingMessages(p: { opening: unknown; context: unknown; length?: TurnLength }) {
+  const words = p.length && p.length !== "short" ? LENGTHS[p.length].words : "约 300–700 字";
   const user = [
     "## 运行时返回的开局（opening）",
     j(p.opening),
     "## 运行时的当前上下文",
     j(p.context),
     "## 本次任务",
-    "按 Skill 原文“开局”第 5 步的格式写开局：先“世界观：”“人物：”两行，空一行，再写正文（不加标题，约 300–700 字；压力模式写出眼前的压力与近期期限，远期只作伏笔；结尾停在 hook 描述的未决动作上，不替玩家接）。不要写 footer 和 tip，程序会加上。",
+    `按 Skill 原文“开局”第 5 步的格式写开局：先“世界观：”“人物：”两行，空一行，再写正文（不加标题，${words}；压力模式写出眼前的压力与近期期限，远期只作伏笔；结尾停在 hook 描述的未决动作上，不替玩家接）。不要写 footer 和 tip，程序会加上。`,
   ].join("\n\n");
   return [
     { role: "system" as const, content: systemPrompt("write") },

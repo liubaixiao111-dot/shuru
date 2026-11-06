@@ -7,7 +7,24 @@ import { pathTo } from "../tree";
 import type { Mode } from "../story/modes";
 import { detectMode } from "../story/modes";
 import { engine, engineOk, EngineError, newRequestId, type Envelope } from "./engine";
-import { fixMessages, openingMessages, recordMessages, writeMessages, type RecentTurn } from "./prompts";
+import { DEFAULT_LENGTH, fixMessages, LENGTHS, openingMessages, recordMessages, writeMessages, type RecentTurn, type TurnLength } from "./prompts";
+
+/** 本书在书入这边存的写法偏好（引擎之外的）：每回合篇幅 */
+export function bookLength(prefs: string | null | undefined): TurnLength {
+  try {
+    const v = JSON.parse(prefs || "{}").length;
+    if (v === "short" || v === "medium" || v === "long") return v;
+  } catch {
+    // 忽略
+  }
+  return DEFAULT_LENGTH;
+}
+
+/** 各家返回的缓存命中数（DeepSeek：prompt_cache_hit_tokens；通义等：prompt_tokens_details.cached_tokens） */
+function cachedTokens(u: unknown): number {
+  const x = u as { prompt_cache_hit_tokens?: number; prompt_tokens_details?: { cached_tokens?: number } } | null;
+  return x?.prompt_cache_hit_tokens ?? x?.prompt_tokens_details?.cached_tokens ?? 0;
+}
 
 /**
  * 书入 × 叙事引擎的宿主循环：
@@ -27,6 +44,7 @@ type Book = NonNullable<Awaited<ReturnType<typeof prisma.book.findFirst>>>;
 interface Usage {
   prompt: number;
   completion: number;
+  cached?: number;
 }
 
 const SKIP: Record<string, Record<string, unknown>> = {
@@ -82,6 +100,11 @@ export function dropFailingOps(turn: Record<string, unknown>, error: EngineError
   return { ...turn, operations: ops.filter((_, i) => !bad.has(i)) };
 }
 
+/** 模型偶尔会自己写页脚，存档前去掉，只留程序加的那一行 */
+export function stripFooter(text: string) {
+  return text.replace(/\n*^[ \t]*【时间】[^\n]*回合[:：][^\n]*$/gm, "").trimEnd();
+}
+
 function footer(ctx: Record<string, unknown>, turn: number) {
   const clock = (ctx.clock as { label?: string } | undefined)?.label ?? "";
   const loc = (ctx.scene as { location?: string } | undefined)?.location ?? "";
@@ -98,6 +121,7 @@ async function complete(m: ResolvedModel, messages: { role: "system" | "user" | 
   const text = res.choices[0]?.message?.content ?? "";
   usage.prompt += res.usage?.prompt_tokens ?? estimateTokens(messages.map((x) => x.content).join(""));
   usage.completion += res.usage?.completion_tokens ?? estimateTokens(text);
+  usage.cached = (usage.cached ?? 0) + cachedTokens(res.usage);
   return text;
 }
 
@@ -106,12 +130,14 @@ async function streamText(
   messages: { role: "system" | "user" | "assistant"; content: string }[],
   usage: Usage,
   onDelta: (v: string) => void,
+  maxTokens?: number,
 ) {
   const stream = await m.client.chat.completions.create({
     model: m.model,
     messages,
     stream: true,
     temperature: 0.9,
+    ...(maxTokens ? { max_tokens: maxTokens } : {}),
     ...(PROVIDERS[m.provider].streamUsage ? { stream_options: { include_usage: true } } : {}),
   });
   let raw = "";
@@ -125,6 +151,7 @@ async function streamText(
   }
   usage.prompt += u?.prompt_tokens ?? estimateTokens(messages.map((x) => x.content).join(""));
   usage.completion += u?.completion_tokens ?? estimateTokens(raw);
+  usage.cached = (usage.cached ?? 0) + cachedTokens(u);
   return raw.trim();
 }
 
@@ -199,6 +226,7 @@ export async function generateAtTurn(args: {
   const models = await resolveModels(userId);
   const m = models[0];
   const usage: Usage = { prompt: 0, completion: 0 };
+  const length = bookLength(book.prefs);
 
   const encoder = new TextEncoder();
   const send = (ctl: ReadableStreamDefaultController<Uint8Array>, e: AtEvent) =>
@@ -212,12 +240,12 @@ export async function generateAtTurn(args: {
           const ctx = await engineOk("get-context", { session_id: book.atSession, depth: "full" });
           const opening = JSON.parse(book.atOpening ?? "{}");
           send(ctl, { t: "writing" });
-          const text = await streamText(m, openingMessages({ opening, context: ctx.context }), usage, (v) =>
+          const text = await streamText(m, openingMessages({ opening, context: ctx.context, length }), usage, (v) =>
             send(ctl, { t: "delta", v }),
-          );
+          LENGTHS[length].maxTokens);
           const tail = [opening.footer, opening.tip].filter(Boolean).join("\n");
           if (tail) send(ctl, { t: "delta", v: `\n\n${tail}` });
-          const saved = await saveTurn({ book, parentId: null, turn: 1, text: tail ? `${text}\n\n${tail}` : text, idea: null, mode: "action", title: opening.world?.title ?? "开局" });
+          const saved = await saveTurn({ book, parentId: null, turn: 1, text: tail ? `${stripFooter(text)}\n\n${tail}` : stripFooter(text), idea: null, mode: "action", title: opening.world?.title ?? "开局" });
           await recordUsage({ userId, bookId: book.id, m, promptTokens: usage.prompt, completionTokens: usage.completion });
           send(ctl, { t: "done", chapter: saved });
           ctl.close();
@@ -240,7 +268,8 @@ export async function generateAtTurn(args: {
         const template = (skip && ctx.skip_template?.turns?.[0]) || ctx.commit_template?.turns?.[0] || ctx.commit_template;
         // 改写时，最近正文里不放被改掉的那一回合
         const base = rewriting ? path.slice(0, -1) : path;
-        const recent: RecentTurn[] = base.slice(-3).map((c) => ({ turn: c.index, text: c.content }));
+        // 记录只看最近两回合，写正文只看上一回合（衔接用；更早的事在上下文里有摘要）
+        const recent: RecentTurn[] = base.slice(-2).map((c) => ({ turn: c.index, text: c.content }));
         const hint = {
           action: "",
           continue: "玩家按了“继续”：action_mode 写 continue",
@@ -313,9 +342,10 @@ export async function generateAtTurn(args: {
         const turnNo = data.turn;
         const text = await streamText(
           m,
-          writeMessages({ context: data.context, committed: turn, results: data.turns ?? [], recent, playerInput: idea ?? "" }),
+          writeMessages({ context: data.context, committed: turn, results: data.turns ?? [], recent: recent.slice(-1), playerInput: idea ?? "", length }),
           usage,
           (v) => send(ctl, { t: "delta", v }),
+          LENGTHS[length].maxTokens,
         );
         const foot = footer(data.context, turnNo);
         send(ctl, { t: "delta", v: `\n\n${foot}` });
@@ -326,13 +356,14 @@ export async function generateAtTurn(args: {
           book,
           parentId: rewriting ? head.parentId : head.id,
           turn: turnNo,
-          text: `${text}\n\n${foot}`,
+          text: `${stripFooter(text)}\n\n${foot}`,
           idea,
           mode: detected.mode,
           title: clock ? `${clock}` : `第 ${turnNo} 回合`,
           summary: typeof turn?.summary === "string" ? turn.summary : "",
         });
         await recordUsage({ userId, bookId: book.id, m, promptTokens: usage.prompt, completionTokens: usage.completion });
+        console.log(`[at] 第 ${turnNo} 回合：输入 ${usage.prompt}（缓存命中 ${usage.cached ?? 0}），输出 ${usage.completion}`);
         send(ctl, { t: "done", chapter: saved });
         ctl.close();
       } catch (e) {

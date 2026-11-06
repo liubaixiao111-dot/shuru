@@ -25,14 +25,16 @@ export function AtStoryPanel({ bookId, onPaused }: { bookId: string; onPaused: (
   const [detail, setDetail] = useState<string | null>(null);
   const [prefs, setPrefs] = useState<Prefs | null>(null);
   const [safety, setSafety] = useState<Safety | null>(null);
+  const [length, setLength] = useState<"short" | "medium" | "long">("medium");
   const [boundary, setBoundary] = useState("");
   const [error, setError] = useState("");
 
   const call = <T,>(body: Record<string, unknown>) => api<T>(`/api/books/${bookId}/at`, { body });
 
   async function loadContext() {
-    const c = await call<{ preferences: Prefs; safety: Safety }>({ action: "context" });
+    const c = await call<{ preferences: Prefs; safety: Safety; length?: "short" | "medium" | "long" }>({ action: "context" });
     setPrefs(c.preferences);
+    if (c.length) setLength(c.length);
     setSafety(c.safety);
     onPaused(!!c.safety?.paused);
   }
@@ -113,6 +115,21 @@ export function AtStoryPanel({ bookId, onPaused }: { bookId: string; onPaused: (
 
       {tab === "prefs" && prefs && (
         <div className="space-y-5 text-sm">
+          <Row label="篇幅">
+            <Segment
+              value={length}
+              options={[["short", "短"], ["medium", "中"], ["long", "长"]]}
+              onChange={(v) => {
+                const prev = length;
+                setLength(v as typeof length);
+                call({ action: "length", length: v }).catch((e) => {
+                  setLength(prev);
+                  setError((e as Error).message);
+                });
+              }}
+            />
+          </Row>
+          <p className="-mt-3 text-xs opacity-50">每回合大约：短 300–700 字，中 1000–1500 字，长 1800–2500 字。越长越费 token。</p>
           <Row label="节奏">
             <Segment value={prefs.pace ?? "standard"} options={[["slow", "慢热"], ["standard", "标准"], ["direct", "直接"]]} onChange={(v) => update({ pace: v as Prefs["pace"] })} />
           </Row>
