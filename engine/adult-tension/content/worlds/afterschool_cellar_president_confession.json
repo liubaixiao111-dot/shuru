@@ -1,0 +1,2356 @@
+{
+ "background_cast": [
+  {
+   "adult_context": "年满二十一岁、读研究生的风纪委员会干事。",
+   "age_range": [
+    21,
+    25
+   ],
+   "function": "obstacle",
+   "gender": "any",
+   "id": "bg_curfew_sentry",
+   "line": "到点了，楼里还有人吗？",
+   "location_ids": [
+    "clocktower_cable_catacomb"
+   ],
+   "name": null,
+   "role": "风纪哨兵"
+  },
+  {
+   "adult_context": "年满五十八岁、在圣罗兰看了三十年门的老校工。",
+   "age_range": [
+    58,
+    66
+   ],
+   "function": "helper",
+   "gender": "male",
+   "id": "bg_old_janitor",
+   "line": "门卫室的电话响了，我拿着钥匙就来。",
+   "location_ids": [
+    "demolition_staging_ground"
+   ],
+   "name": null,
+   "role": "值夜老校工"
+  },
+  {
+   "adult_context": "年满二十八岁、开推土机的工程队副司机。",
+   "age_range": [
+    28,
+    40
+   ],
+   "function": "witness",
+   "gender": "male",
+   "id": "bg_site_driver",
+   "line": "主管昨晚收了个信封，我可什么都没看见。",
+   "location_ids": [
+    "demolition_staging_ground"
+   ],
+   "name": null,
+   "role": "工程队副司机"
+  },
+  {
+   "adult_context": "年满三十五岁、在校医务室值夜班的医生。",
+   "age_range": [
+    35,
+    50
+   ],
+   "function": "helper",
+   "gender": "female",
+   "id": "bg_school_nurse",
+   "line": "喘成这样还待在地窖里？先把人抬上来。",
+   "location_ids": [
+    "demolition_staging_ground"
+   ],
+   "name": null,
+   "role": "校医务室值班医生"
+  },
+  {
+   "adult_context": "年满二十二岁、读研究生的敌对派系干事。",
+   "age_range": [
+    22,
+    26
+   ],
+   "function": "rumor_source",
+   "gender": "any",
+   "id": "bg_rival_cadre",
+   "line": "听说了吗，会长私吞了三百万。",
+   "location_ids": [
+    "loc_old_clocktower_broadcast_booth"
+   ],
+   "name": null,
+   "role": "敌对派系干事"
+  },
+  {
+   "adult_context": "年满二十八岁、替校董跑腿的秘书。",
+   "age_range": [
+    28,
+    40
+   ],
+   "function": "messenger",
+   "gender": "any",
+   "id": "bg_trustee_secretary",
+   "line": "董事让我问一句，调解书签了没有。",
+   "location_ids": [
+    "demolition_staging_ground"
+   ],
+   "name": null,
+   "role": "校董秘书"
+  }
+ ],
+ "cast_combos": [
+  {
+   "chemistry": "全会上下只有你能在下课后留在暗室里陪{proud_president_ayaka.name}对账，这是{proud_president_ayaka.ta}亲口准的。",
+   "id": "combo_ayaka_npc_high_clerk",
+   "identity_ids": [
+    "rebellious_scholarship_student"
+   ],
+   "player_positions": [
+    "low"
+   ],
+   "power_structure": "npc_high",
+   "relations": [
+    {
+     "a": "player",
+     "a_to_b": {
+      "tension": 3,
+      "trust": 4
+     },
+     "b": "proud_president_ayaka",
+     "b_to_a": {
+      "tension": 3,
+      "trust": 4
+     },
+     "reason": "上个月雨夜留在地窖对账，会长摘下发带先吻了你，绕在你腕上说：你一拉就听你的，我说停就停。",
+     "stage": "intimate"
+    }
+   ],
+   "slots": [
+    "proud_president_ayaka"
+   ],
+   "stakes": {
+    "irreplaceable_goal": "{proud_president_ayaka.ta}要你陪{proud_president_ayaka.ta}把兄长的账护过今晚。",
+    "limit_gap": "{proud_president_ayaka.ta}一句话能定你的奖学金，你帮{proud_president_ayaka.ta}搬账箱就是违规。",
+    "meeting_reason": "{proud_president_ayaka.name}把三年前记着寒门私助名单的暗账摊在煤油灯下，轻声问你今晚愿不愿意帮{proud_president_ayaka.ta}把这箱底册转移出去。",
+    "resource_gap": "{proud_president_ayaka.ta}握着全校社团的决算签批，你只有一本庶务簿。"
+   },
+   "tags": [
+    "intimate"
+   ],
+   "tension_engine_ids": [
+    "te_brother_ledger",
+    "te_last_night"
+   ]
+  },
+  {
+   "chemistry": "你和{proud_president_ayaka.name}共持底册会签权，账上的每一个字，你们都得一起认。",
+   "id": "combo_ayaka_equal_auditor",
+   "identity_ids": [
+    "audit_representative",
+    "campus_radio_chief_director"
+   ],
+   "player_positions": [
+    "equal"
+   ],
+   "power_structure": "equal",
+   "relations": [
+    {
+     "a": "player",
+     "a_to_b": {
+      "tension": 3,
+      "trust": 3
+     },
+     "b": "proud_president_ayaka",
+     "b_to_a": {
+      "tension": 3,
+      "trust": 3
+     },
+     "reason": "上周在钟楼核对社团印鉴，两人手指在印泥盒上叠在一起，{proud_president_ayaka.ta}耳根微红，把私人储物柜的副匙放进你的笔袋。",
+     "stage": "flirting"
+    }
+   ],
+   "slots": [
+    "proud_president_ayaka"
+   ],
+   "stakes": {
+    "irreplaceable_goal": "{proud_president_ayaka.ta}要你在会签栏上落一个名字。",
+    "limit_gap": "{proud_president_ayaka.ta}要你签“账目无误”，你签了就是共犯。",
+    "meeting_reason": "{proud_president_ayaka.name}在档案室里被三百万的账面亏空困住，抬头看着你，试探你肯不肯在移交前签下账目无误。",
+    "resource_gap": "{proud_president_ayaka.ta}有决算签批，你有封存会签章。"
+   },
+   "tags": [
+    "intimate"
+   ],
+   "tension_engine_ids": [
+    "te_brother_ledger",
+    "te_board_feud"
+   ]
+  },
+  {
+   "chemistry": "两家在校董会分属两派，你和{proud_president_ayaka.name}却早就私定了终身。",
+   "id": "combo_ayaka_player_high_trustee",
+   "identity_ids": [
+    "board_trustee_inspector"
+   ],
+   "player_positions": [
+    "high"
+   ],
+   "power_structure": "player_high",
+   "relations": [
+    {
+     "a": "player",
+     "a_to_b": {
+      "tension": 2,
+      "trust": 5
+     },
+     "b": "proud_president_ayaka",
+     "b_to_a": {
+      "tension": 2,
+      "trust": 5
+     },
+     "reason": "半年前京都研修旅行时两人私定终身，此后每逢周五下课，就在旧校舍顶层广播室放一张老爵士唱片相会。",
+     "stage": "committed"
+    }
+   ],
+   "slots": [
+    "proud_president_ayaka"
+   ],
+   "stakes": {
+    "irreplaceable_goal": "{proud_president_ayaka.ta}要你用理事的身份，替兄长挡这一回。",
+    "limit_gap": "你护{proud_president_ayaka.ta}就得罪自家那一派，{proud_president_ayaka.ta}求你就是逼你选边。",
+    "meeting_reason": "面对天一亮就要进场的拆迁队和校董会的查账通牒，{proud_president_ayaka.name}解下发间的真丝发带放进你掌心，求你保住兄长留下的助学声誉。",
+    "resource_gap": "你握着资产移交的裁决权，{proud_president_ayaka.ta}只有兄长留下的一箱暗账。"
+   },
+   "tags": [
+    "intimate"
+   ],
+   "tension_engine_ids": [
+    "te_board_feud",
+    "te_last_night"
+   ]
+  },
+  {
+   "chemistry": "{vice_president_yui.name}替会长挡了十年的事，今晚第一次替自己开口。",
+   "id": "combo_yui_vice_president_deal",
+   "identity_ids": [
+    "audit_representative",
+    "campus_radio_chief_director"
+   ],
+   "player_positions": [
+    "equal"
+   ],
+   "power_structure": "equal",
+   "relations": [
+    {
+     "a": "player",
+     "a_to_b": {
+      "tension": 3,
+      "trust": 3
+     },
+     "b": "vice_president_yui",
+     "b_to_a": {
+      "tension": 3,
+      "trust": 3
+     },
+     "reason": "前天整理校庆旧礼服，副会长借着昏暗光线替你系好领扣，低声问：哪天不替会长做事了，你还留不留下。",
+     "stage": "flirting"
+    }
+   ],
+   "slots": [
+    "vice_president_yui"
+   ],
+   "stakes": {
+    "irreplaceable_goal": "{vice_president_yui.ta}要你帮{vice_president_yui.ta}找一条不撕破脸的路。",
+    "limit_gap": "{vice_president_yui.ta}拿底册就背叛闺蜜，你帮{vice_president_yui.ta}就对不起会长。",
+    "meeting_reason": "{vice_president_yui.name}握着联络校董会的专线电话守在配线回廊口，说家里逼{vice_president_yui.ta}今晚拿到底册，问你肯不肯陪{vice_president_yui.ta}去劝会长先交一部分出来。",
+    "resource_gap": "{vice_president_yui.ta}有公文用印和校董会专线，你有会签章或广播推子。"
+   },
+   "tags": [
+    "intimate"
+   ],
+   "tension_engine_ids": [
+    "te_board_feud"
+   ]
+  },
+  {
+   "chemistry": "{student_journalist_reina.name}什么都敢拍，唯独那张你的单人照，一直夹在你课本里没讨回去。",
+   "id": "combo_reina_darkroom_film",
+   "identity_ids": [
+    "rebellious_scholarship_student"
+   ],
+   "player_positions": [
+    "low"
+   ],
+   "power_structure": "npc_high",
+   "relations": [
+    {
+     "a": "player",
+     "a_to_b": {
+      "tension": 3,
+      "trust": 3
+     },
+     "b": "student_journalist_reina",
+     "b_to_a": {
+      "tension": 3,
+      "trust": 3
+     },
+     "reason": "上回你帮着往暗房搬显影药水，撞见一卷偷拍底片，主编笑着把一张抓拍你的单人照夹进你课本当封口礼。",
+     "stage": "flirting"
+    }
+   ],
+   "slots": [
+    "student_journalist_reina"
+   ],
+   "stakes": {
+    "irreplaceable_goal": "{student_journalist_reina.ta}要一条比那张底片更值钱的消息。",
+    "limit_gap": "{student_journalist_reina.ta}登出底片就毁了会长，你拿消息去换就是出卖。",
+    "meeting_reason": "{student_journalist_reina.name}举着单反拦在前庭围挡边，晃了晃拍到你夜入地窖的底片，试探你今晚肯拿什么独家来换。",
+    "resource_gap": "{student_journalist_reina.ta}握着校报付印权和那卷底片，你只有一本庶务簿。"
+   },
+   "tags": [
+    "intimate"
+   ],
+   "tension_engine_ids": [
+    "te_last_night"
+   ]
+  },
+  {
+   "chemistry": "{veteran_alumnus_mentor_daiki.name}和你结下的盟约，写在一份谁也没见过的备忘录上。",
+   "id": "combo_daiki_injunction_file",
+   "identity_ids": [
+    "board_trustee_inspector"
+   ],
+   "player_positions": [
+    "high"
+   ],
+   "power_structure": "player_high",
+   "relations": [
+    {
+     "a": "player",
+     "a_to_b": {
+      "tension": 3,
+      "trust": 2
+     },
+     "b": "veteran_alumnus_mentor_daiki",
+     "b_to_a": {
+      "tension": 3,
+      "trust": 3
+     },
+     "reason": "两周前的校友法务茶会上，对方借着递茶把一份校产低价转让的疑点备忘录塞进你西装内袋，指尖擦过你的手背。",
+     "stage": "flirting"
+    }
+   ],
+   "slots": [
+    "veteran_alumnus_mentor_daiki"
+   ],
+   "stakes": {
+    "irreplaceable_goal": "对方要你今晚在申请书上落章。",
+    "limit_gap": "你盖章就和另一派校董翻脸，对方没有账册就打不赢官司。",
+    "meeting_reason": "{veteran_alumnus_mentor_daiki.name}带着拟好的拆迁暂缓申请书来到前庭，只等你加盖印章，就能拦下天一亮进场的工程车队。",
+    "resource_gap": "你握着理事的印章，对方握着暂缓申请书和地契疑点。"
+   },
+   "tags": [
+    "intimate"
+   ],
+   "tension_engine_ids": [
+    "te_board_feud",
+    "te_last_night"
+   ]
+  },
+  {
+   "chemistry": "{demolition_crew_boss_goro.name}只认工期，谁拦推土机就跟谁急，对你这个理事也不例外。",
+   "id": "combo_goro_site_standoff",
+   "identity_ids": [
+    "board_trustee_inspector"
+   ],
+   "player_positions": [
+    "high"
+   ],
+   "power_structure": "player_high",
+   "relations": [
+    {
+     "a": "player",
+     "a_to_b": {
+      "tension": 4,
+      "trust": 0
+     },
+     "b": "demolition_crew_boss_goro",
+     "b_to_a": {
+      "tension": 4,
+      "trust": 1
+     },
+     "reason": "进场第一天你当着工程队驳回了施工计划，主管摔了安全帽，第二天却照你的意思改了围挡。",
+     "stage": "testing"
+    }
+   ],
+   "slots": [
+    "demolition_crew_boss_goro"
+   ],
+   "stakes": {
+    "irreplaceable_goal": "{demolition_crew_boss_goro.ta}要你给一句明话：推，还是不推。",
+    "limit_gap": "你叫停就得担工期违约，{demolition_crew_boss_goro.ta}停工就拿不到尾款。",
+    "meeting_reason": "{demolition_crew_boss_goro.name}把推土机停在后门口，熄了火却不肯走，问你这个理事今晚到底拦不拦。",
+    "resource_gap": "你握着资产移交的裁决权，{demolition_crew_boss_goro.ta}握着推土机的钥匙。"
+   },
+   "tags": [
+    "workplace"
+   ],
+   "tension_engine_ids": [
+    "te_last_night",
+    "te_board_feud"
+   ]
+  },
+  {
+   "chemistry": "{discipline_chief_ren.name}每回巡楼都在走廊尽头多站一会儿，给你留一盏提灯。",
+   "id": "combo_ren_curfew_lock",
+   "identity_ids": [
+    "rebellious_scholarship_student",
+    "audit_representative",
+    "campus_radio_chief_director",
+    "board_trustee_inspector"
+   ],
+   "player_positions": [
+    "low",
+    "equal",
+    "high"
+   ],
+   "power_structure": "switchable",
+   "relations": [
+    {
+     "a": "player",
+     "a_to_b": {
+      "tension": 1,
+      "trust": 4
+     },
+     "b": "discipline_chief_ren",
+     "b_to_a": {
+      "tension": 1,
+      "trust": 4
+     },
+     "reason": "入秋以来你常在旧校舍整理文献到深夜，执纪长每回摇铃巡楼，都在走廊尽头多等一会儿，给你留一盏煤油提灯。",
+     "stage": "familiar"
+    }
+   ],
+   "slots": [
+    "discipline_chief_ren"
+   ],
+   "stakes": {
+    "irreplaceable_goal": "对方要你帮忙决定，今晚这把锁落不落。",
+    "limit_gap": "对方放你就是违纪，你求情就是让对方为难。",
+    "meeting_reason": "{discipline_chief_ren.name}提着黄铜挂锁站在地下通道口，一边是校董会封楼的死命令，一边是当年资助过自己的前会长的旧账，等你一句话。",
+    "resource_gap": "对方握着总挂锁钥匙，你握着今晚能不能留在楼里的理由。"
+   },
+   "tags": [
+    "workplace"
+   ],
+   "tension_engine_ids": [
+    "te_curfew_seal",
+    "te_brother_ledger"
+   ]
+  },
+  {
+   "chemistry": "{vice_president_yui.name}拿着收据要会长交账，{discipline_chief_ren.name}握着挂锁不肯落，两人都没提那张化名领据。",
+   "id": "combo_duo_archive_vault_night",
+   "identity_ids": [
+    "rebellious_scholarship_student",
+    "audit_representative",
+    "campus_radio_chief_director",
+    "board_trustee_inspector"
+   ],
+   "player_positions": [
+    "low",
+    "equal",
+    "high"
+   ],
+   "power_structure": "switchable",
+   "relations": [
+    {
+     "a": "player",
+     "a_to_b": {
+      "tension": 3,
+      "trust": 4
+     },
+     "b": "vice_president_yui",
+     "b_to_a": {
+      "tension": 3,
+      "trust": 4
+     },
+     "reason": "那天清点完账箱，{vice_president_yui.ta}在空教室拉住你的手吻了你，要你别站错队。",
+     "stage": "intimate"
+    },
+    {
+     "a": "player",
+     "a_to_b": {
+      "tension": 3,
+      "trust": 2
+     },
+     "b": "discipline_chief_ren",
+     "b_to_a": {
+      "tension": 3,
+      "trust": 2
+     },
+     "reason": "巡楼进门前执纪长总会重重咳一声给你报信，目光却在你和会长交叠的衣角上停过一瞬。",
+     "stage": "testing"
+    },
+    {
+     "a": "vice_president_yui",
+     "a_to_b": {
+      "tension": 3,
+      "trust": 1
+     },
+     "b": "discipline_chief_ren",
+     "b_to_a": {
+      "tension": 4,
+      "trust": 1
+     },
+     "reason": "副会长手里有执纪长当年的化名领据，两人见面都很客气。",
+     "stage": "testing"
+    }
+   ],
+   "slots": [
+    "vice_president_yui",
+    "discipline_chief_ren"
+   ],
+   "stakes": {
+    "irreplaceable_goal": "这箱账锁不锁、交不交，两个人都在等你开口。",
+    "limit_gap": "副会长一交收据，执纪长的名字就跟着见光；执纪长一落锁，这箱账就再没人能查。",
+    "meeting_reason": "{vice_president_yui.name}拿到了前任会长挪用公款资助特招生的原始收据，要你帮着劝会长交出账册；{discipline_chief_ren.name}站在铁门边握着挂锁，坦白自己就是受助名单上的第一个人。",
+    "resource_gap": "收据和领据在{vice_president_yui.ta}手里，档案室的挂锁在{discipline_chief_ren.ta}手里。"
+   },
+   "tags": [
+    "intimate"
+   ],
+   "tension_engine_ids": [
+    "te_brother_ledger",
+    "te_curfew_seal"
+   ]
+  }
+ ],
+ "channels": [
+  {
+   "fidelity": "exact",
+   "id": "ch_wired_broadcast",
+   "reach": "全校的扩音喇叭同时响起",
+   "text": "钟楼有线广播"
+  },
+  {
+   "fidelity": "exact",
+   "id": "ch_magneto_phone",
+   "reach": "接到门卫室和校医务室",
+   "text": "旧校舍手摇磁石电话"
+  },
+  {
+   "fidelity": "distorted",
+   "id": "ch_corridor_whispers",
+   "reach": "一顿晚饭就传遍各院系",
+   "text": "研究生会走廊的耳语"
+  }
+ ],
+ "character_templates": [
+  {
+   "adult_context": "年满二十二岁、读研究生二年级的研究生会会长。",
+   "age_range": [
+    22,
+    24
+   ],
+   "appearance_options": [
+    "深蓝双排扣西装外套配及膝百褶裙，青丝如瀑，发间系一条深蓝真丝发带，下巴总是微微扬着。",
+    "肤色白皙，眉眼清冷骄矜，翻账页时指尖很稳，只有说到兄长时睫毛会颤一下。"
+   ],
+   "decision": {
+    "avoids": [
+     "被人可怜"
+    ],
+    "contrast": "人前清冷得像高岭上的雪；被你看穿时，耳尖先红。",
+    "core_value": "名门的体面，是替别人扛事的体面。",
+    "goal_options": [
+     "保住兄长的身后清名",
+     "护住受助的寒门特招生",
+     "听你说一句今晚站在她身边"
+    ],
+    "never": [
+     "出卖兄长资助过的人"
+    ],
+    "prefers": [
+     "敢跟她平视的人"
+    ],
+    "pressure_responses": {
+     "breaking": "崩溃时坐在煤油灯前，抱着兄长的暗账一动不动。",
+     "high": "高压时摘下会长的架子，红着眼问你肯不肯帮她。",
+     "low": "低压时冷淡应对，一个字也不多说。",
+     "mid": "中压时把发带解下来又系上。"
+    },
+    "relationship_stance": "骄傲，喜欢一个人也要对方先低头。",
+    "withdrawal": "一个人留在地窖里，把账页一页页重抄。"
+   },
+   "gender": "female",
+   "gender_reason": "标题写明是女会长，名门闺秀形象，固定为女性。",
+   "id": "proud_president_ayaka",
+   "identity": {
+    "authority": "掌控全校四十八个社团的年度决算签批权。",
+    "exposure": "三百万日元亏空是已故兄长为资助寒门特招生留下的暗账，她每晚独自留在地窖里对这本账。",
+    "hidden": "她发间那条深蓝真丝发带从不离身，衬里藏着一行她半年前绣好的字，她谁都没给看过。",
+    "limits": [
+     "底册要和审计代表会签才能取出"
+    ],
+    "obligations": [
+     "给四十八个社团一个清白的交代"
+    ],
+    "resources": [
+     "研究生会会长印章",
+     "兄长留下的那本暗账"
+    ]
+   },
+   "intimacy_tendency": {
+    "attraction_sources": [
+     "你替她扛箱子时不说一句怨言",
+     "你当面驳她的那股劲"
+    ],
+    "boundaries": [
+     "她说“停”就停"
+    ],
+    "desire_range": [
+     2,
+     4
+    ],
+    "desired_position": "煤油灯下和你并肩对账的那张长凳",
+    "dislikes": [
+     "当众失态"
+    ],
+    "expression": "耳尖染红、下巴微扬，把解下的发带缠在对方手腕上打个结，说今晚过后，只许你一个人这样看她。",
+    "likes": [
+     "一罐热红茶",
+     "老爵士唱片"
+    ],
+    "preconditions": [
+     "两人都清醒，是她自己愿意",
+     "账的事有了着落之后"
+    ],
+    "self_control_range": [
+     3,
+     5
+    ]
+   },
+   "public_role": "研究生会会长",
+   "schedule": [
+    {
+     "from": 0,
+     "location_id": "loc_old_clocktower_broadcast_booth",
+     "to": 480
+    },
+    {
+     "from": 480,
+     "location_id": "demolition_staging_ground",
+     "to": 1020
+    },
+    {
+     "from": 1020,
+     "location_id": "cellar_archive_vault",
+     "to": 1439
+    }
+   ],
+   "situation": {
+    "exits": [
+     {
+      "cost": "兄长挪用经费的事要在法庭上摊开。",
+      "option": "把暗账交给清算特派员作证据"
+     },
+     {
+      "cost": "一旦被查到，她要背上隐匿账册的处分。",
+      "option": "连夜把账箱转移出旧校舍"
+     }
+    ],
+    "pressure": "公开账册就毁了兄长和受助生，藏起来就是违规。",
+    "trigger": "推土机进场前，地窖里的暗账必须有个去处。"
+   },
+   "tags": [
+    "workplace_power",
+    "intimate"
+   ],
+   "voices": {
+    "inner": "要是这箱账见了光，哥哥用命护着的那些人就全完了。",
+    "surface": "这一页你再核一遍，我不想出错。"
+   }
+  },
+  {
+   "adult_context": "年满二十三岁、读研究生的风纪委员会执纪长。",
+   "age_range": [
+    23,
+    25
+   ],
+   "appearance_options": [
+    "风纪袖标别得一丝不苟，手里提着一串黄铜挂锁钥匙。",
+    "眉目冷峻，走路无声，摇铃时手腕很稳。"
+   ],
+   "decision": {
+    "avoids": [
+     "拿恩情做要挟"
+    ],
+    "contrast": "人前铁面无私；巡楼时会故意咳一声，给楼里的人报信。",
+    "core_value": "规矩能护人，也能杀人。",
+    "goal_options": [
+     "替前任会长守住秘密",
+     "交出一份过得去的报告",
+     "让你知道当年的事"
+    ],
+    "never": [
+     "出卖资助过自己的人"
+    ],
+    "prefers": [
+     "守信的人"
+    ],
+    "pressure_responses": {
+     "breaking": "崩溃时独自坐在钟楼石阶上，把袖标摘了又戴。",
+     "high": "高压时握着挂锁，坦白自己就在受助名单上。",
+     "low": "低压时照章巡楼，一句话不多。",
+     "mid": "中压时在走廊尽头多站一会儿。"
+    },
+    "relationship_stance": "冷面热心，欠了谁的情就一直记着。",
+    "withdrawal": "回风纪室把巡楼记录一笔笔补全。"
+   },
+   "gender": "any",
+   "gender_reason": "执纪长与玩家是熟络又暗藏心事的同事，性别开局再定。",
+   "id": "discipline_chief_ren",
+   "identity": {
+    "authority": "掌控旧校舍夜间清场封存的黄铜总挂锁钥匙和违纪通报处分的呈报权。",
+    "exposure": "当年正是靠前任会长的暗账资助才读完书的寒门特招生。",
+    "hidden": "想替旧主守密，又被校董会逼着今晚交报告；最怕会长知道那张化名领据。",
+    "limits": [
+     "必须按时封楼"
+    ],
+    "obligations": [
+     "今晚交出清查报告"
+    ],
+    "resources": [
+     "黄铜总挂锁钥匙",
+     "违纪通报的呈报权"
+    ]
+   },
+   "intimacy_tendency": {
+    "attraction_sources": [
+     "你深夜整理文献的那份专注",
+     "你从不打听别人的过去"
+    ],
+    "boundaries": [
+     "对方说“够了”就停"
+    ],
+    "desire_range": [
+     1,
+     3
+    ],
+    "desired_position": "回廊尽头提灯照着的那一小块地方",
+    "dislikes": [
+     "被人求情"
+    ],
+    "expression": "亲近时也很克制，先把提灯递过来，再站近一步。",
+    "likes": [
+     "一盏煤油提灯"
+    ],
+    "preconditions": [
+     "两人都清醒，对方先放下钥匙"
+    ],
+    "self_control_range": [
+     3,
+     5
+    ]
+   },
+   "public_role": "风纪委员会执纪长",
+   "schedule": [
+    {
+     "from": 0,
+     "location_id": "demolition_staging_ground",
+     "to": 480
+    },
+    {
+     "from": 480,
+     "location_id": "clocktower_cable_catacomb",
+     "to": 1200
+    },
+    {
+     "from": 1200,
+     "location_id": "clocktower_cable_catacomb",
+     "to": 1439
+    }
+   ],
+   "situation": {
+    "exits": [
+     {
+      "cost": "恩人的暗账被翻出来，自己的受助往事也瞒不住。",
+      "option": "照实交出报告"
+     },
+     {
+      "cost": "校董会追究下来，执纪长的位子保不住。",
+      "option": "压下报告，按时封楼了事"
+     }
+    ],
+    "pressure": "交了报告对不起恩人，不交就丢了执纪长的位子。",
+    "trigger": "校董会逼着今晚交出清查报告。"
+   },
+   "tags": [
+    "workplace_power"
+   ],
+   "voices": {
+    "inner": "我要是交了报告，就是亲手把恩人的账翻出来。",
+    "surface": "到点了，楼里的人都出去。"
+   }
+  },
+  {
+   "adult_context": "年满二十二岁、读研究生的研究生会副会长。",
+   "age_range": [
+    22,
+    24
+   ],
+   "appearance_options": [
+    "栗色长发低挽，米白开衫，说话前总先笑一下。",
+    "手指纤细，抱着一叠公文，指甲修得很圆。"
+   ],
+   "decision": {
+    "avoids": [
+     "撕破脸"
+    ],
+    "contrast": "人前处处替会长善后；单独对你时，会说出她自己想要什么。",
+    "core_value": "能体面解决的事，就别闹大。",
+    "goal_options": [
+     "拿到底册交差",
+     "不让会长恨她",
+     "让你站到她这一边"
+    ],
+    "never": [
+     "亲手毁掉朋友"
+    ],
+    "prefers": [
+     "懂分寸的人"
+    ],
+    "pressure_responses": {
+     "breaking": "崩溃时躲在回廊分叉口，捂着嘴不出声。",
+     "high": "高压时红着眼说家里逼她。",
+     "low": "低压时温柔周到，替人倒茶。",
+     "mid": "中压时攥着专线电话不放。"
+    },
+    "relationship_stance": "温柔，但心里有一杆秤。",
+    "withdrawal": "回会长室把所有公文重新归档。"
+   },
+   "gender": "female",
+   "gender_reason": "温婉世家的智囊闺蜜形象，固定为女性。",
+   "id": "vice_president_yui",
+   "identity": {
+    "authority": "掌握研究生会对外公文用印权和联络校董会紧急听证的专线电话。",
+    "exposure": "家里逼她今晚拿到旧账底册，交给敌对校董，好掩掉贱卖校产的事。",
+    "hidden": "她和会长是十年的朋友，她不想背叛，可也不敢违抗家里。",
+    "limits": [
+     "家里替她定了联姻"
+    ],
+    "obligations": [
+     "替会长处处善后"
+    ],
+    "resources": [
+     "研究生会公文用印",
+     "校董会专线电话"
+    ]
+   },
+   "intimacy_tendency": {
+    "attraction_sources": [
+     "你替人留余地的样子",
+     "你听她说话时的耐心"
+    ],
+    "boundaries": [
+     "她说“不行了”就停"
+    ],
+    "desire_range": [
+     2,
+     4
+    ],
+    "desired_position": "会长室窗边那张小圆桌",
+    "dislikes": [
+     "吵闹"
+    ],
+    "expression": "亲近时先替你理一理领口，指尖停在扣子上。",
+    "likes": [
+     "一杯温热的奶茶"
+    ],
+    "preconditions": [
+     "两人都清醒，她先开的口"
+    ],
+    "self_control_range": [
+     3,
+     5
+    ]
+   },
+   "public_role": "研究生会副会长",
+   "schedule": [
+    {
+     "from": 0,
+     "location_id": "loc_old_clocktower_broadcast_booth",
+     "to": 480
+    },
+    {
+     "from": 480,
+     "location_id": "clocktower_cable_catacomb",
+     "to": 1140
+    },
+    {
+     "from": 1140,
+     "location_id": "cellar_archive_vault",
+     "to": 1439
+    }
+   ],
+   "situation": {
+    "exits": [
+     {
+      "cost": "和会长十年的情分一刀两断。",
+      "option": "把底册交给家里"
+     },
+     {
+      "cost": "家里断了她的生活费，联姻也一起作废。",
+      "option": "向会长坦白家里的逼迫"
+     }
+    ],
+    "pressure": "拿到了就背叛闺蜜，拿不到就违抗家里。",
+    "trigger": "家里要她今晚拿到底册。"
+   },
+   "tags": [
+    "workplace_power"
+   ],
+   "voices": {
+    "inner": "我要是把底册交出去，她就再也不会叫我一声朋友。",
+    "surface": "别担心，我来想办法。"
+   }
+  },
+  {
+   "adult_context": "年满二十六岁、持证上岗的拆迁工程驻场主管。",
+   "age_range": [
+    26,
+    30
+   ],
+   "appearance_options": [
+    "安全帽压着短寸头，工装夹克上全是灰，嗓门很大。",
+    "手臂粗壮，指间常夹着一根没点的烟。"
+   ],
+   "decision": {
+    "avoids": [
+     "读书人的弯弯绕"
+    ],
+    "contrast": "人前脾气暴烈只认钱；有人提起寒门研究生，他会突然不说话。",
+    "core_value": "工期就是饭碗。",
+    "goal_options": [
+     "拿到拆迁尾款",
+     "把加急费的事藏住",
+     "看清你是不是来拦他的"
+    ],
+    "never": [
+     "拆了有人在里面的楼"
+    ],
+    "prefers": [
+     "说话直的人"
+    ],
+    "pressure_responses": {
+     "breaking": "崩溃时独自坐在推土机驾驶室里，熄了火发呆。",
+     "high": "高压时摔了烟，说这活他本来就不想接。",
+     "low": "低压时只谈工期，嗓门大。",
+     "mid": "中压时把安全帽往围挡上一磕。"
+    },
+    "relationship_stance": "粗中有细，认人只认一次。",
+    "withdrawal": "回工棚喝一壶浓茶，谁敲门都不开。"
+   },
+   "gender": "male",
+   "gender_reason": "粗犷硬派的拆迁工程主管形象，固定为男性。",
+   "id": "demolition_crew_boss_goro",
+   "identity": {
+    "authority": "掌握旧校舍外围施工围挡的封锁和重型机械进场清运的先后。",
+    "exposure": "他收了敌对校董一笔加急费，被授意天亮前先把地下档案室连同旧账一起封填。",
+    "hidden": "他家里也是靠助学金读完技校的，接这单之后一直睡不好。",
+    "limits": [
+     "工期写在合同里"
+    ],
+    "obligations": [
+     "按期拆完拿到尾款"
+    ],
+    "resources": [
+     "推土机的钥匙",
+     "施工围挡的封锁权"
+    ]
+   },
+   "intimacy_tendency": {
+    "attraction_sources": [
+     "你敢站在推土机前跟他讲理",
+     "你不拿学历压人"
+    ],
+    "boundaries": [
+     "他摆手就退开"
+    ],
+    "desire_range": [
+     0,
+     2
+    ],
+    "desired_position": "推土机履带边避风的那块地",
+    "dislikes": [
+     "被看不起"
+    ],
+    "expression": "不谈情爱，服一个人就把钥匙交出来。",
+    "likes": [
+     "一壶浓茶"
+    ],
+    "preconditions": [
+     "彼此清醒、把话说开了"
+    ],
+    "self_control_range": [
+     4,
+     5
+    ]
+   },
+   "public_role": "旧校舍拆迁工程驻场主管",
+   "schedule": [
+    {
+     "from": 0,
+     "location_id": "demolition_staging_ground",
+     "to": 600
+    },
+    {
+     "from": 600,
+     "location_id": "demolition_staging_ground",
+     "to": 1200
+    },
+    {
+     "from": 1200,
+     "location_id": "demolition_staging_ground",
+     "to": 1439
+    }
+   ],
+   "situation": {
+    "exits": [
+     {
+      "cost": "敌对校董扣下尾款，工程队这个月发不出工钱。",
+      "option": "拖延进场，等研究生会搬完账箱"
+     },
+     {
+      "cost": "地窖里的账和他自己的良心一起埋进土里。",
+      "option": "照约天亮前进场"
+     }
+    ],
+    "pressure": "推了就埋掉寒门研究生的账，不推就丢了尾款。",
+    "trigger": "敌对校董催他天亮前先推倒钟楼。"
+   },
+   "tags": [
+    "workplace",
+    "crime"
+   ],
+   "voices": {
+    "inner": "那一百万我要是没收，今晚就能睡个好觉。",
+    "surface": "天一亮就推，谁也拦不住。"
+   }
+  },
+  {
+   "adult_context": "年满二十一岁、读研究生一年级的校报主编。",
+   "age_range": [
+    21,
+    24
+   ],
+   "appearance_options": [
+    "短发别着发卡，格子外套，脖子上挂一台机械单反。",
+    "眼神亮，说话快，口袋里塞满胶卷盒。"
+   ],
+   "decision": {
+    "avoids": [
+     "被收买"
+    ],
+    "contrast": "人前追着丑闻不放；单独和你待着，会把最好的那张照片先给你看。",
+    "core_value": "照片不说谎。",
+    "goal_options": [
+     "保住校报的独立经费",
+     "拍到旧校舍最后的真相",
+     "看你肯不肯陪她冒一回险"
+    ],
+    "never": [
+     "编造新闻"
+    ],
+    "prefers": [
+     "敢说真话的人"
+    ],
+    "pressure_responses": {
+     "breaking": "崩溃时钻进暗房，把胶卷曝了光。",
+     "high": "高压时把底片拍在桌上，问你值不值。",
+     "low": "低压时笑嘻嘻追着问。",
+     "mid": "中压时晃一晃胶卷盒。"
+    },
+    "relationship_stance": "热血，喜欢一个人就天天跟着跑。",
+    "withdrawal": "钻进暗房冲一整夜胶卷。"
+   },
+   "gender": "female",
+   "gender_reason": "敏锐执着的女记者形象，固定为女性。",
+   "id": "student_journalist_reina",
+   "identity": {
+    "authority": "掌握校报拆迁纪念特刊的终审付印权和全套旧校舍纪实底片。",
+    "exposure": "她相机里拍到了会长深夜和人在地下钟楼独处的背影。",
+    "hidden": "她犹豫要不要拿这张底片去换校报下学期的独立办刊经费，又舍不得毁掉一张好照片。",
+    "limits": [
+     "校报经费下学期就要断"
+    ],
+    "obligations": [
+     "给旧校舍留一份真相"
+    ],
+    "resources": [
+     "一台机械单反和几卷胶卷",
+     "特刊付印权"
+    ]
+   },
+   "intimacy_tendency": {
+    "attraction_sources": [
+     "你肯陪她蹲点到半夜",
+     "你看照片时的眼光"
+    ],
+    "boundaries": [
+     "她说“收工”就停"
+    ],
+    "desire_range": [
+     2,
+     4
+    ],
+    "desired_position": "暗房红灯下挨着你的位置",
+    "dislikes": [
+     "拐弯抹角的官话"
+    ],
+    "expression": "亲近时也像抢新闻，凑得很近，再突然红了脸。",
+    "likes": [
+     "暗房药水的味道"
+    ],
+    "preconditions": [
+     "两人都清醒，相机先收起来"
+    ],
+    "self_control_range": [
+     2,
+     4
+    ]
+   },
+   "public_role": "校报新闻社主编",
+   "schedule": [
+    {
+     "from": 0,
+     "location_id": "loc_old_clocktower_broadcast_booth",
+     "to": 480
+    },
+    {
+     "from": 480,
+     "location_id": "demolition_staging_ground",
+     "to": 1140
+    },
+    {
+     "from": 1140,
+     "location_id": "demolition_staging_ground",
+     "to": 1439
+    }
+   ],
+   "situation": {
+    "exits": [
+     {
+      "cost": "校报下学期的经费没了着落。",
+      "option": "把底片还给当事人"
+     },
+     {
+      "cost": "会长名誉扫地，她自己也背上偷拍的骂名。",
+      "option": "把底片登上特刊"
+     }
+    ],
+    "pressure": "登了就伤了人，不登校报就关门。",
+    "trigger": "相机里那张底片能换校报一年的经费。"
+   },
+   "tags": [
+    "workplace"
+   ],
+   "voices": {
+    "inner": "我要是登了这张，就欠下会长一辈子；不登，校报就办不下去。",
+    "surface": "别动，这张一定要拍到。"
+   }
+  },
+  {
+   "adult_context": "年满二十四岁、读法学博士的大学法人资产清算特派员。",
+   "age_range": [
+    24,
+    28
+   ],
+   "appearance_options": [
+    "深灰西装，金丝眼镜，公文包里塞满卷宗。",
+    "说话慢条斯理，签字前总要把条款读两遍。"
+   ],
+   "decision": {
+    "avoids": [
+     "拿感情谈条件"
+    ],
+    "contrast": "人前严谨克制；跟你结盟后，会在卷宗空白处给你留一句玩笑。",
+    "core_value": "条款写了什么，就是什么。",
+    "goal_options": [
+     "拿到原始账册",
+     "拦下明面上的强拆",
+     "让你在申请书上盖章"
+    ],
+    "never": [
+     "伪造证据"
+    ],
+    "prefers": [
+     "讲证据的人"
+    ],
+    "pressure_responses": {
+     "breaking": "崩溃时独自坐在前庭长椅上，一页页翻卷宗。",
+     "high": "高压时摘下眼镜，说这一仗输不起。",
+     "low": "低压时按章办事，条理分明。",
+     "mid": "中压时把申请书推到你面前。"
+    },
+    "relationship_stance": "克制，信任一个人要很久。",
+    "withdrawal": "回资料室把卷宗整理到天亮。"
+   },
+   "gender": "any",
+   "gender_reason": "清算特派员与玩家是利益结盟与暧昧试探，性别开局再定。",
+   "id": "veteran_alumnus_mentor_daiki",
+   "identity": {
+    "authority": "掌握向地方裁判所申请拆迁暂缓令的法务代理权和校史文物封存章。",
+    "exposure": "查出地皮转让合同里藏着校董会贱卖校产的阴阳条款。",
+    "hidden": "急需研究生会的原始账册，又清楚这些账册会把已故前会长也一起拖上法庭。",
+    "limits": [
+     "申请要有原始账册作证"
+    ],
+    "obligations": [
+     "查清旧校舍地皮转让"
+    ],
+    "resources": [
+     "拆迁暂缓申请书",
+     "校史文物封存章"
+    ]
+   },
+   "intimacy_tendency": {
+    "attraction_sources": [
+     "你看出条款漏洞时的那一眼",
+     "你守口如瓶"
+    ],
+    "boundaries": [
+     "对方说“到这里”就停"
+    ],
+    "desire_range": [
+     1,
+     3
+    ],
+    "desired_position": "前庭长椅上挨着你的那一侧",
+    "dislikes": [
+     "草率"
+    ],
+    "expression": "亲近时先把眼镜摘下，再低声说一句真心话。",
+    "likes": [
+     "一支好钢笔"
+    ],
+    "preconditions": [
+     "两人都清醒，卷宗合上之后"
+    ],
+    "self_control_range": [
+     3,
+     5
+    ]
+   },
+   "public_role": "大学法人资产清算特派员",
+   "schedule": [
+    {
+     "from": 0,
+     "location_id": "loc_old_clocktower_broadcast_booth",
+     "to": 480
+    },
+    {
+     "from": 480,
+     "location_id": "demolition_staging_ground",
+     "to": 1140
+    },
+    {
+     "from": 1140,
+     "location_id": "cellar_archive_vault",
+     "to": 1439
+    }
+   ],
+   "situation": {
+    "exits": [
+     {
+      "cost": "前会长的暗账要在法庭上公开。",
+      "option": "用原始账册申请暂缓令"
+     },
+     {
+      "cost": "证据不足，裁判所可能当场驳回。",
+      "option": "只凭地契复印件去碰运气"
+     }
+    ],
+    "pressure": "递了要翻出暗账，不递校产就被贱卖。",
+    "trigger": "天亮前必须递上暂缓申请。"
+   },
+   "tags": [
+    "workplace",
+    "crime"
+   ],
+   "voices": {
+    "inner": "账册一上法庭，会长哥哥的名字也保不住。",
+    "surface": "这份申请，只差你的印章。"
+   }
+  }
+ ],
+ "clock_start": {
+  "label": "2002 年，秋末的一个周五",
+  "minute": 1065
+ },
+ "clock_style": "hm",
+ "content_tags": [
+  "intimate",
+  "workplace",
+  "workplace_power",
+  "crime",
+  "bodily_harm"
+ ],
+ "custom": false,
+ "customs": [
+  "研究生会里有句老话：账页空白处写的字，只给对面那个人看。",
+  "风纪巡楼摇铃三声，是提醒楼里的人该走了。",
+  "名门子弟互赠发带，意思是把自己的体面交到对方手上。",
+  "旧校舍的钟楼每晚响一次，拆楼前最后一响，全校都会出来听。"
+ ],
+ "daily_activities": [
+  {
+   "beats": [
+    "煤油灯的暖光里，会长微微低头，露出一截雪白的后颈",
+    "让{player.name}解下那条束了一整天的深蓝真丝发带"
+   ],
+   "duration_minutes": 15,
+   "hook_ids": [
+    "hook_ayaka_lamp_flower",
+    "hook_ayaka_empty_stool",
+    "hook_ayaka_cold_fingers"
+   ],
+   "id": "act_ribbon_untie",
+   "location_ids": [
+    "cellar_archive_vault"
+   ],
+   "start_minute": null,
+   "tags": [
+    "intimate"
+   ],
+   "title": "发梢真丝发带的轻解"
+  },
+  {
+   "beats": [
+    "两人共用一盏黄铜煤油提灯，隔着铺满泛黄收据的旧木桌",
+    "凑在一起拨算盘，核对一个个数字"
+   ],
+   "duration_minutes": 40,
+   "hook_ids": [],
+   "id": "act_lantern_ledger_check",
+   "location_ids": [
+    "cellar_archive_vault"
+   ],
+   "start_minute": null,
+   "tags": [
+    "workplace"
+   ],
+   "title": "煤油提灯下的并肩对账"
+  },
+  {
+   "beats": [
+    "点着便携煤油取暖炉的小房间里，握住对方冻僵的指尖",
+    "放在炉网边慢慢捂热"
+   ],
+   "duration_minutes": 20,
+   "hook_ids": [],
+   "id": "act_furnace_hand_warming",
+   "location_ids": [
+    "subterranean_boiler_room"
+   ],
+   "start_minute": null,
+   "tags": [
+    "intimate"
+   ],
+   "title": "停用暖炉房的烘手时刻"
+  },
+  {
+   "beats": [
+    "切断外放喇叭，只留监听音箱放一张老爵士黑胶",
+    "并肩坐在窗台上，看秋夜校区的灯火"
+   ],
+   "duration_minutes": 40,
+   "hook_ids": [],
+   "id": "act_booth_jazz_record",
+   "location_ids": [
+    "loc_old_clocktower_broadcast_booth"
+   ],
+   "start_minute": null,
+   "tags": [
+    "intimate"
+   ],
+   "title": "顶层广播室的黑胶唱片"
+  },
+  {
+   "beats": [
+    "当着别的干事不便多说，在泛黄账页的空白处写一行短句",
+    "把账本轻轻推过去，等对方回一行"
+   ],
+   "duration_minutes": 10,
+   "hook_ids": [],
+   "id": "act_ledger_margin_note",
+   "location_ids": [
+    "cellar_archive_vault"
+   ],
+   "start_minute": null,
+   "tags": [
+    "intimate"
+   ],
+   "title": "账页空白处的字条"
+  },
+  {
+   "beats": [
+    "走过幽暗曲折的砖石回廊，一手举着提灯",
+    "一手自然地牵住身后人的手腕，免得绊倒"
+   ],
+   "duration_minutes": 15,
+   "hook_ids": [],
+   "id": "act_corridor_lantern_lead",
+   "location_ids": [
+    "clocktower_cable_catacomb"
+   ],
+   "start_minute": null,
+   "tags": [
+    "intimate"
+   ],
+   "title": "配线回廊的提灯引路"
+  },
+  {
+   "beats": [
+    "从门廊那台老式投币贩卖机里买两罐热红茶",
+    "先贴在对方微凉的脸颊上，再拉开拉环分着喝"
+   ],
+   "duration_minutes": 15,
+   "hook_ids": [],
+   "id": "act_canned_tea_cheek",
+   "location_ids": [
+    "demolition_staging_ground"
+   ],
+   "start_minute": null,
+   "tags": [
+    "intimate"
+   ],
+   "title": "罐装热红茶的贴脸分享"
+  },
+  {
+   "beats": [
+    "借着广播室隔间的暗红安全灯，和身边的人一起举起刚冲好的底片",
+    "对着光一张张端详，肩膀挨着肩膀"
+   ],
+   "duration_minutes": 25,
+   "hook_ids": [],
+   "id": "act_safelight_negatives",
+   "location_ids": [
+    "loc_old_clocktower_broadcast_booth"
+   ],
+   "start_minute": null,
+   "tags": [
+    "workplace"
+   ],
+   "title": "暗红安全灯下的底片"
+  }
+ ],
+ "default_npc_gender_mix": {
+  "female": 0.55,
+  "male": 0.4,
+  "nonbinary": 0.05
+ },
+ "default_person": "second",
+ "era": "2002 年秋末，旧校舍拆除前夕",
+ "extends": null,
+ "forbidden_terms": [
+  "智能手机",
+  "无线局域网",
+  "移动支付",
+  "无人机航拍",
+  "蓝牙耳机",
+  "电子门禁卡",
+  "人脸识别",
+  "平板电脑"
+ ],
+ "hooks": [
+  {
+   "id": "hook_ayaka_lamp_flower",
+   "kind": "observe",
+   "location_ids": [
+    "cellar_archive_vault"
+   ],
+   "slot": "proud_president_ayaka",
+   "text": "地下档案室的煤油灯芯轻轻爆出一朵灯花，会长{npc.name}捏着那册三年前的社团暗账，抬手用指尖碰了碰发间系着的深蓝真丝发带。"
+  },
+  {
+   "id": "hook_ayaka_empty_stool",
+   "kind": "approach",
+   "location_ids": [
+    "cellar_archive_vault"
+   ],
+   "slot": "proud_president_ayaka",
+   "text": "{npc.name}把煤油灯往你那边推了推，拍拍身边的空凳，示意你坐下一起核这一页。"
+  },
+  {
+   "id": "hook_ayaka_cold_fingers",
+   "kind": "approach",
+   "location_ids": [
+    "subterranean_boiler_room"
+   ],
+   "slot": "proud_president_ayaka",
+   "text": "{npc.name}把冻得发白的指尖伸到你面前，别过脸说：借你的手用一下。"
+  },
+  {
+   "id": "hook_ren_bell_steps",
+   "kind": "approach",
+   "location_ids": [
+    "clocktower_cable_catacomb"
+   ],
+   "slot": "discipline_chief_ren",
+   "text": "走廊尽头传来风纪执纪长{npc.name}清脆的摇铃声与黄铜挂锁碰撞声，封楼的巡检脚步正顺着石阶一步步往下走。"
+  },
+  {
+   "id": "hook_ren_lantern_handoff",
+   "kind": "approach",
+   "location_ids": [
+    "clocktower_cable_catacomb"
+   ],
+   "slot": "discipline_chief_ren",
+   "text": "{npc.name}在回廊尽头停下，把一盏煤油提灯塞进你手里，低声说今晚别走正门。"
+  },
+  {
+   "id": "hook_yui_fork_glance",
+   "kind": "observe",
+   "location_ids": [
+    "clocktower_cable_catacomb"
+   ],
+   "slot": "vice_president_yui",
+   "text": "副会长{npc.name}站在配线回廊的分叉口，手里紧紧攥着一张盖着校董会红章的调解书，目光复杂地望向暗室门内。"
+  },
+  {
+   "id": "hook_yui_collar_button",
+   "kind": "approach",
+   "location_ids": [
+    "clocktower_cable_catacomb"
+   ],
+   "slot": "vice_president_yui",
+   "text": "{npc.name}凑过来替你理好歪掉的领口，指尖停在扣子上，轻声问你今晚站哪一边。"
+  },
+  {
+   "id": "hook_reina_lens_glint",
+   "kind": "observe",
+   "location_ids": [
+    "demolition_staging_ground"
+   ],
+   "slot": "student_journalist_reina",
+   "text": "前庭围挡外传来拆迁队推土机试车的低沉轰鸣，贴近地面的气窗铁栅外，校报主编{npc.name}的单反镜头在暮色里闪过一丝反光。"
+  },
+  {
+   "id": "hook_reina_film_canister",
+   "kind": "approach",
+   "location_ids": [
+    "demolition_staging_ground"
+   ],
+   "slot": "student_journalist_reina",
+   "text": "{npc.name}举着相机拦在围挡边，晃了晃手里的胶卷盒，笑着问你要不要谈一笔交易。"
+  },
+  {
+   "id": "hook_daiki_uncapped_pen",
+   "kind": "approach",
+   "location_ids": [
+    "demolition_staging_ground"
+   ],
+   "slot": "veteran_alumnus_mentor_daiki",
+   "text": "{npc.name}把拟好的暂缓申请书递到你面前，钢笔帽已经拔开了。"
+  },
+  {
+   "id": "hook_daiki_deed_request",
+   "kind": "request",
+   "location_ids": [
+    "cellar_archive_vault"
+   ],
+   "slot": "veteran_alumnus_mentor_daiki",
+   "text": "{npc.name}压低声音，请你帮忙从账箱里翻出建校那年的地契副本。"
+  },
+  {
+   "id": "hook_goro_hardhat_knock",
+   "kind": "approach",
+   "location_ids": [
+    "demolition_staging_ground"
+   ],
+   "slot": "demolition_crew_boss_goro",
+   "text": "{npc.name}摘下安全帽往围挡上一磕，冲你扬扬下巴：有话就趁现在说。"
+  },
+  {
+   "id": "hook_goro_red_tea",
+   "kind": "approach",
+   "location_ids": [
+    "demolition_staging_ground"
+   ],
+   "slot": "demolition_crew_boss_goro",
+   "text": "{npc.name}靠在推土机履带边，丢给你一罐热红茶，说喝完这罐，{npc.ta}就得发车了。"
+  }
+ ],
+ "id": "afterschool_cellar_president_confession",
+ "locations": [
+  {
+   "affordances": [
+    "档案柜后的死角",
+    "带罩的黄铜煤油灯",
+    "三年前那册社团暗账"
+   ],
+   "detail": "钟楼底下一间砖砌地窖，高大的木档案柜排成几列，旧木桌上摊着泛黄收据和算盘，贴近地面有一扇带铁栅的气窗。",
+   "exits": [
+    "clocktower_cable_catacomb",
+    "subterranean_boiler_room"
+   ],
+   "id": "cellar_archive_vault",
+   "name": "旧校舍地窖档案密室",
+   "pressure_modifiers": {},
+   "privacy": "private",
+   "tags": [
+    "intimate"
+   ],
+   "visibility": "气窗外的人蹲下来就能往里看，档案柜后面却是一处死角。",
+   "witnesses": []
+  },
+  {
+   "affordances": [
+    "墙上的广播配线",
+    "直通顶层的窄竖井",
+    "一部手摇磁石电话"
+   ],
+   "detail": "连着地窖、暖炉房和前庭出口的一条砖石回廊，墙上走着钟楼的广播配线，一道窄竖井直通顶层广播室。",
+   "exits": [
+    "cellar_archive_vault",
+    "subterranean_boiler_room",
+    "demolition_staging_ground",
+    "loc_old_clocktower_broadcast_booth"
+   ],
+   "id": "clocktower_cable_catacomb",
+   "name": "地下钟楼配线回廊",
+   "pressure_modifiers": {},
+   "privacy": "semi",
+   "tags": [
+    "workplace"
+   ],
+   "visibility": "回廊曲折，提灯只照得见前后几步。",
+   "witnesses": [
+    "bg_curfew_sentry"
+   ]
+  },
+  {
+   "affordances": [
+    "便携煤油取暖炉",
+    "备品箱里的旧蜡烛",
+    "一件宽大的呢子大衣"
+   ],
+   "detail": "停用多年的暖炉房，干燥避风，堆着备品木箱和旧蜡烛，一只便携煤油取暖炉还能点着。",
+   "exits": [
+    "cellar_archive_vault",
+    "clocktower_cable_catacomb"
+   ],
+   "id": "subterranean_boiler_room",
+   "name": "旧校舍地下停用暖炉房",
+   "pressure_modifiers": {},
+   "privacy": "private",
+   "tags": [
+    "intimate"
+   ],
+   "visibility": "门一掩，回廊里只看得见门缝的一线光。",
+   "witnesses": []
+  },
+  {
+   "affordances": [
+    "投币贩卖机里的罐装热红茶",
+    "推土机的履带",
+    "围挡上的拆迁公告"
+   ],
+   "detail": "旧校舍门前的前庭已经围上铁皮围挡，推土机停在一角试车，门廊下还有一台老式投币贩卖机亮着灯。",
+   "exits": [
+    "clocktower_cable_catacomb"
+   ],
+   "id": "demolition_staging_ground",
+   "name": "旧校舍前庭拆迁围挡区",
+   "pressure_modifiers": {},
+   "privacy": "public",
+   "tags": [
+    "workplace"
+   ],
+   "visibility": "围挡外就是主干道，路过的人都能看见谁在前庭说话。",
+   "witnesses": [
+    "bg_site_driver",
+    "bg_old_janitor"
+   ]
+  },
+  {
+   "affordances": [
+    "监听音箱里的老爵士",
+    "暗红安全灯",
+    "一张能睡人的旧沙发"
+   ],
+   "detail": "钟楼最高处的广播室，一张旧沙发、一台黑胶唱机和监听音箱，隔间挂着暗红安全灯可以冲胶卷，窗外是整个秋夜的校区。",
+   "exits": [
+    "clocktower_cable_catacomb"
+   ],
+   "id": "loc_old_clocktower_broadcast_booth",
+   "name": "钟楼顶层有线广播室",
+   "pressure_modifiers": {},
+   "privacy": "private",
+   "tags": [
+    "intimate"
+   ],
+   "visibility": "门在竖井口上方，外面的人要爬上来才看得见里面。",
+   "witnesses": []
+  }
+ ],
+ "name_pools": {
+  "family": [
+   "九条",
+   "神宫寺",
+   "橘",
+   "白鸟",
+   "一条",
+   "鹰司",
+   "西园寺",
+   "水无月",
+   "绫濑",
+   "藤原",
+   "黑泽",
+   "浅仓"
+  ],
+  "given_female": [
+   "绫香",
+   "千冬",
+   "雪乃",
+   "诗织",
+   "遥香",
+   "真理奈",
+   "玲奈",
+   "美月",
+   "彩音",
+   "千鹤",
+   "绘里奈",
+   "由实"
+  ],
+  "given_male": [
+   "悠真",
+   "拓也",
+   "健一",
+   "俊介",
+   "宏树",
+   "直树",
+   "龙之介",
+   "苍介",
+   "浩平",
+   "翔太",
+   "雅人",
+   "吾郎"
+  ],
+  "given_neutral": [
+   "司",
+   "涉",
+   "清",
+   "透",
+   "葵",
+   "律",
+   "薰",
+   "凉",
+   "和",
+   "真",
+   "光",
+   "遥"
+  ],
+  "nickname_patterns": [
+   {
+    "gender": "any",
+    "pattern": "{family}"
+   },
+   {
+    "gender": "any",
+    "pattern": "{given}"
+   }
+  ],
+  "order": "family_first"
+ },
+ "notes": "按原稿加入，改动见提交说明。\n2026-10-24 按写作规则 v2 与 Gemini 创意卡改造：删掉发带拉电闸和铁门变形，改成旧校舍拆除前一夜，围绕亡兄的助学暗账、校董会平账调解和两派校董斗法。",
+ "player_identities": [
+  {
+   "age_range": [
+    22,
+    28
+   ],
+   "baseline": "你是靠全额奖学金入学的寒门研究生，在研究生会做庶务，替会长整理地下档案室的箱笼、跑腿打杂，下课后常留在暗室里陪着对账。",
+   "gender": "any",
+   "id": "rebellious_scholarship_student",
+   "reputation": "会里最勤快、也最不起眼的干事。",
+   "resources": [
+    "地下档案室的备用钥匙",
+    "一本记着箱号的庶务簿"
+   ],
+   "risks": [
+    "奖学金一停，你连学都上不成。"
+   ],
+   "role": "特招工读的研究生会庶务干事",
+   "social_position": "low",
+   "title_patterns": [
+    {
+     "gender": "any",
+     "pattern": "{family}"
+    },
+    {
+     "gender": "any",
+     "pattern": "{given}"
+    }
+   ]
+  },
+  {
+   "age_range": [
+    23,
+    30
+   ],
+   "baseline": "你是各院系推选出来的审计代表，和会长共同持有历年社团经费底册的封存会签权，今晚的清查报告要你签字。",
+   "gender": "any",
+   "id": "audit_representative",
+   "reputation": "院系里出了名较真的审计代表。",
+   "resources": [
+    "底册封存会签权",
+    "一枚审计会签章"
+   ],
+   "risks": [
+    "账上签错一个字，你就成了替人平账的共犯。"
+   ],
+   "role": "研究生会独立审计代表",
+   "social_position": "equal",
+   "title_patterns": [
+    {
+     "gender": "any",
+     "pattern": "{family}"
+    },
+    {
+     "gender": "any",
+     "pattern": "{given}"
+    }
+   ]
+  },
+  {
+   "age_range": [
+    22,
+    28
+   ],
+   "baseline": "你执掌钟楼顶层的有线广播室和全校扩音喇叭，手里有通往地下配线廊的专用钥匙，旧校舍最后一晚的告别广播归你。",
+   "gender": "any",
+   "id": "campus_radio_chief_director",
+   "reputation": "全校都认得声音的站长。",
+   "resources": [
+    "地下配线廊钥匙",
+    "全校扩音喇叭的总推子"
+   ],
+   "risks": [
+    "广播里播错一句话，全校的议论都冲着你来。"
+   ],
+   "role": "校内有线广播站站长",
+   "social_position": "equal",
+   "title_patterns": [
+    {
+     "gender": "any",
+     "pattern": "{family}"
+    },
+    {
+     "gender": "any",
+     "pattern": "{given}"
+    }
+   ]
+  },
+  {
+   "age_range": [
+    26,
+    34
+   ],
+   "baseline": "你代表校董会来督办旧校舍资产移交，研究生会的去留和封楼拆迁，你都有直接裁决权。",
+   "gender": "any",
+   "id": "board_trustee_inspector",
+   "reputation": "校董会里年纪最轻、话却最管用的理事。",
+   "resources": [
+    "资产移交的裁决权",
+    "校董会公函用印"
+   ],
+   "risks": [
+    "你偏向哪一派，另一派校董就会把账记在你家头上。"
+   ],
+   "role": "校董会特派青年监察理事",
+   "social_position": "high",
+   "title_patterns": [
+    {
+     "gender": "any",
+     "pattern": "{family}"
+    },
+    {
+     "gender": "any",
+     "pattern": "{given}"
+    }
+   ]
+  }
+ ],
+ "premise": "2002 年秋末，名门私立圣罗兰大学的百年西洋旧校舍即将拆除、改建新礼堂。研究生会女会长带着干事在地下钟楼的备品档案室里清查历年社团经费底册，一箱一箱核到黄昏，发现三年前有几笔专项拨款怎么也对不上。风纪委员会每晚按点巡楼落锁，校报的记者也常在旧校舍外围打转。",
+ "pressures": [
+  {
+   "choice": "护人，还是保账面干净。",
+   "exits": [
+    {
+     "cost": "副会长要你在听证会上替那一派说话。",
+     "option": "你把领据抽出来贴身收好"
+    },
+    {
+     "cost": "执纪长按利益回避原则被革职。",
+     "option": "请执纪长承认受助往事，交出门禁钥匙配合转移账册"
+    },
+    {
+     "cost": "会长得自掏腰包补齐亏空，卖掉母亲留下的振袖。",
+     "option": "劝会长把这笔款补签成夜间安保勤工津贴"
+    }
+   ],
+   "far": {
+    "consequence": "受助名单整份公开，特招生被追缴助学金。",
+    "due_days": 21,
+    "trigger": "领据落到敌对校董手里"
+   },
+   "flags": [
+    "timed",
+    "leverage"
+   ],
+   "hook_ids": [],
+   "id": "p_alias_stipend_receipt",
+   "immediate": {
+    "minutes": 10,
+    "text": "领据压在煤油灯下。"
+   },
+   "leverage": {
+    "basis": "{vice_president_yui.name}手里有那张按着{discipline_chief_ren.name}指印的化名领据。",
+    "holder": "vice_president_yui",
+    "subject": "discipline_chief_ren"
+   },
+   "location_ids": [
+    "cellar_archive_vault"
+   ],
+   "near": {
+    "deadline_minutes": 120,
+    "text": "领据交到校董会，执纪长的毕业就悬了。"
+   },
+   "objective": "移交前压下这张领据。",
+   "source": "person",
+   "start_minute": null,
+   "tags": [
+    "workplace",
+    "crime"
+   ],
+   "title": "受助特招生的化名领据",
+   "trigger": "{vice_president_yui.name}翻检暗账夹层，查出{discipline_chief_ren.name}当年用化名领五十万日元助学金的亲笔收据，钱出自社团基建费。"
+  },
+  {
+   "choice": "逼主管撤车，交给校报，还是送法院保全。",
+   "exits": [
+    {
+     "cost": "主管狗急跳墙，当晚就切断了旧校舍的市政供电。",
+     "option": "拿收条复印件逼拆迁主管撤走后门的推土机，留出搬档案的工夫"
+    },
+    {
+     "cost": "强拆丑闻见了报，地下室里没来得及转移的特招生名单也一起被翻出来。",
+     "option": "把收条交给校报主编发号外曝光"
+    },
+    {
+     "cost": "法警进场封存全部账箱，前会长的违规暗账也要依法移交公审。",
+     "option": "请清算特派员拿收条去地方裁判所申请紧急证据保全"
+    }
+   ],
+   "far": {
+    "consequence": "强拆照常，校产贱卖的事再也翻不了案。",
+    "due_days": 30,
+    "trigger": "收条没用上"
+   },
+   "flags": [
+    "timed"
+   ],
+   "hook_ids": [],
+   "id": "p_demolition_rush_fee",
+   "immediate": {
+    "minutes": 10,
+    "text": "推土机在后门口试了一下车，围挡跟着震。"
+   },
+   "leverage": null,
+   "location_ids": [
+    "demolition_staging_ground"
+   ],
+   "near": {
+    "deadline_minutes": 180,
+    "text": "主管一发车，地窖里的账就埋进土里。"
+   },
+   "objective": "在推土机进场前，用好这张收条。",
+   "source": "money",
+   "start_minute": null,
+   "tags": [
+    "crime"
+   ],
+   "title": "拆迁加急费的收条",
+   "trigger": "清算特派员从工程队副司机的记账本里，查到拆迁主管收了敌对校董一百万日元加急费、答应天亮前推倒地下钟楼的收条复印件。"
+  },
+  {
+   "choice": "躲进死角，还是出去堵人。",
+   "exits": [
+    {
+     "cost": "桌上的亏空汇总表被气窗外的微距镜头拍下了标题。",
+     "option": "拉着会长闪进木档案柜的死角，吹熄煤油灯"
+    },
+    {
+     "cost": "会长一个人留在漆黑的地窖里，副会长趁机进屋翻了账箱。",
+     "option": "从配线回廊绕上前庭，在围挡拐角堵住正在换胶卷的人"
+    },
+    {
+     "cost": "你得拿校董会贱卖校产的内幕线索，去换这卷底片。",
+     "option": "走到气窗前拉上内侧帆布遮光帘，约校报主编去顶层广播室单独谈"
+    }
+   ],
+   "far": {
+    "consequence": "地窖里的人和桌上的亏空汇总表一起登上校报。",
+    "due_days": 7,
+    "trigger": "那卷胶卷被冲出来"
+   },
+   "flags": [
+    "timed"
+   ],
+   "hook_ids": [
+    "hook_ayaka_lamp_flower",
+    "hook_ayaka_empty_stool",
+    "hook_ayaka_cold_fingers"
+   ],
+   "id": "p_lightwell_shutter",
+   "immediate": {
+    "minutes": 3,
+    "text": "快门又响了一声，有人在换角度。"
+   },
+   "leverage": null,
+   "location_ids": [
+    "cellar_archive_vault"
+   ],
+   "near": {
+    "deadline_minutes": 20,
+    "text": "胶卷一拍完，人就要走了。"
+   },
+   "objective": "不让气窗外的人拍到桌上的东西。",
+   "source": "person",
+   "start_minute": null,
+   "tags": [
+    "intimate"
+   ],
+   "title": "气窗外的快门声",
+   "trigger": "黄昏的余晖从贴地的气窗照进地窖，{player.name}替会长重新系好散开的深蓝真丝发带，气窗铁栅外忽然响起机械单反清脆的过片和快门声。"
+  },
+  {
+   "choice": "拔线，夺稿，还是叫人清场。",
+   "exits": [
+    {
+     "cost": "旧校舍最后一晚的告别钟声和纪念广播彻底哑火，全校出来围观。",
+     "option": "赶在推子推上去前，到配线回廊拔掉通往全校扩音器的主音频插头"
+    },
+    {
+     "cost": "会长得在致辞里当众承诺交出全部账册，接受校董会审计。",
+     "option": "冲进广播室夺下检举稿，请会长对着麦克风做旧校舍告别致辞镇住场面"
+    },
+    {
+     "cost": "校卫队进驻，把地下档案室也贴上封条，今晚谁也别想再碰账册。",
+     "option": "请副会长用专线叫校卫队上来清场"
+    }
+   ],
+   "far": {
+    "consequence": "会长被暂停职务，研究生会的账交由校董会接管。",
+    "due_days": 7,
+    "trigger": "检举稿播了出去"
+   },
+   "flags": [
+    "timed"
+   ],
+   "hook_ids": [],
+   "id": "p_broadcast_denouncement",
+   "immediate": {
+    "minutes": 3,
+    "text": "广播室的指示灯亮了，推子推到了一半。"
+   },
+   "leverage": null,
+   "location_ids": [
+    "loc_old_clocktower_broadcast_booth"
+   ],
+   "near": {
+    "deadline_minutes": 30,
+    "text": "下课钟一响，全校就都听见了。"
+   },
+   "objective": "在检举稿播出去之前截住它。",
+   "source": "rumor",
+   "start_minute": null,
+   "tags": [
+    "workplace_power"
+   ],
+   "title": "钟楼广播里的检举稿",
+   "trigger": "敌对派系的研究生干事趁换班溜进钟楼广播室，准备在下课钟响时用全校有线喇叭播一篇会长私吞三百万社团经费的匿名检举稿。"
+  },
+  {
+   "choice": "保住亡兄和寒门研究生，还是保住揭穿校产贱卖的证据。",
+   "exits": [
+    {
+     "cost": "原始账册交出去，清算特派员揭穿贱卖校产的证据再也找不回来。",
+     "option": "劝会长签下调解书，保住亡兄的身后清名和十几个寒门研究生的前途"
+    },
+    {
+     "cost": "两大家族彻底撕破脸，会长今晚就得搬出家族宅邸。",
+     "option": "拒绝签字，联合清算特派员拿阴阳合同正面反击"
+    },
+    {
+     "cost": "你背上作伪证的风险，往后在校里再抬不起头。",
+     "option": "你出面作证，说账册因旧校舍返潮早已损毁"
+    }
+   ],
+   "far": {
+    "consequence": "贱卖校产的阴阳合同从此没了原始账册对证。",
+    "due_days": 30,
+    "trigger": "调解书签了"
+   },
+   "flags": [
+    "timed"
+   ],
+   "hook_ids": [],
+   "id": "p_board_settlement",
+   "immediate": {
+    "minutes": 15,
+    "text": "调解书摊在配线回廊的木箱上，校董秘书等着回话。"
+   },
+   "leverage": null,
+   "location_ids": [
+    "clocktower_cable_catacomb"
+   ],
+   "near": {
+    "deadline_minutes": 240,
+    "text": "不签就视为拒绝，校董会按挪用公款立案。"
+   },
+   "objective": "在调解书回复期限前定下签不签。",
+   "source": "institution",
+   "start_minute": null,
+   "tags": [
+    "workplace_power"
+   ],
+   "title": "校董会的平账调解书",
+   "trigger": "校董会派人送来内部调解书：只要会长签字同意拆迁、交出历年原始账册，就把三百万亏空按旧校舍折旧核销，不追究亡兄和受助的寒门研究生。"
+  },
+  {
+   "choice": "守在原地，爬上钟楼，还是求人开锁。",
+   "exits": [
+    {
+     "cost": "翻盖手机在地下没有信号，得在暗室里熬到天亮拆迁队开门。",
+     "option": "带身边的人退进干燥避风的暖炉房，点上旧蜡烛，裹紧同一件宽大的呢子大衣取暖"
+    },
+    {
+     "cost": "爬满是灰的竖井极耗体力，钟声还会惊动校董会值班室。",
+     "option": "照着配线图摸黑爬钟楼竖井上顶层广播室，摇响铜钟求助"
+    },
+    {
+     "cost": "开锁记录登记在案，坐实深夜滞留禁区的违纪事实。",
+     "option": "用旧校舍的手摇磁石电话打通门卫室，请值夜老校工来开锁"
+    }
+   ],
+   "far": {
+    "consequence": "天一亮推土机照常进场，地下还有人的事才被发现。",
+    "due_days": 1,
+    "trigger": "一直没人来开锁"
+   },
+   "flags": [
+    "timed"
+   ],
+   "hook_ids": [],
+   "id": "p_power_cut_lockdown",
+   "immediate": {
+    "minutes": 5,
+    "text": "最后一盏煤油灯的火苗矮了下去。"
+   },
+   "leverage": null,
+   "location_ids": [
+    "subterranean_boiler_room"
+   ],
+   "near": {
+    "deadline_minutes": 120,
+    "text": "地下的寒气越来越重。"
+   },
+   "objective": "让困在地下的人熬过这一夜。",
+   "source": "accident",
+   "start_minute": null,
+   "tags": [
+    "workplace"
+   ],
+   "title": "拉闸断电与铁门落锁",
+   "trigger": "拆迁队提前拉下了旧校舍的外部供电，不知内情的风纪哨兵按规矩从外侧锁上了通往地面的生铁大门，地下室一下陷进黑暗和秋夜的阴寒。"
+  },
+  {
+   "choice": "就地等医生，还是马上背出去。",
+   "exits": [
+    {
+     "cost": "清查当场中断，没封箱的暗账摆在赶来的校医和保卫干事眼前。",
+     "option": "用手摇电话叫校医务室值班医生带氧气袋和雾化器赶来，再请校外救护车到校门口接应送医"
+    },
+    {
+     "cost": "地窖只剩执纪长一人看守，账册去向全凭对方一念之间。",
+     "option": "先扶对方上通风的顶层广播室沙发平躺，热水敷手，请副会长去医务室取平喘药、顺路请校医过来"
+    },
+    {
+     "cost": "两人今晚都回不了旧校舍，推土机照原计划进场。",
+     "option": "从配线通道背对方出楼，直奔校医院急诊观察室彻夜陪护"
+    }
+   ],
+   "far": {
+    "consequence": "转成肺炎，整个秋天都下不了床。",
+    "due_days": 10,
+    "trigger": "病一直拖着"
+   },
+   "flags": [
+    "timed"
+   ],
+   "hook_ids": [
+    "hook_ayaka_lamp_flower",
+    "hook_ayaka_empty_stool",
+    "hook_ayaka_cold_fingers"
+   ],
+   "id": "p_mold_asthma",
+   "immediate": {
+    "minutes": 5,
+    "text": "对方的呼吸一声比一声紧。"
+   },
+   "leverage": null,
+   "location_ids": [
+    "cellar_archive_vault"
+   ],
+   "near": {
+    "deadline_minutes": 60,
+    "text": "再拖下去，气喘会越来越重。"
+   },
+   "objective": "把对方交到医生手里。",
+   "source": "accident",
+   "start_minute": null,
+   "tags": [
+    "bodily_harm"
+   ],
+   "title": "霉尘引发的哮喘与低热",
+   "trigger": "对方连着几天在阴湿的地窖里翻检发霉的陈年账册，断电受寒后突发低热和过敏性气喘，冰凉的手指攥着{player.name}的衣袖，呼吸急促。"
+  }
+ ],
+ "region": "私立圣罗兰大学百年旧校舍：地窖档案室、钟楼配线回廊与顶层广播室",
+ "rules": [
+  {
+   "id": "r_curfew_lock",
+   "text": "旧校舍每晚由风纪委员会按点巡楼，从外侧挂锁封楼，封楼后滞留者按违纪通报。"
+  },
+  {
+   "id": "r_ledger_cosign",
+   "text": "历年社团经费底册由会长和审计代表共同会签封存，单方不得取出。"
+  },
+  {
+   "id": "r_demolition_order",
+   "text": "拆迁令下达后，旧校舍内物品须在推土机进场前清点移交，逾期一律清运。"
+  },
+  {
+   "id": "r_no_flame_archive",
+   "text": "档案室里只许点带罩的煤油灯，不许明火吸烟。"
+  }
+ ],
+ "schema_version": 1,
+ "stage_labels": {
+  "acquainted": "会议点头",
+  "committed": "发带为约",
+  "familiar": "灯下同事",
+  "flirting": "账页传字",
+  "intimate": "地窖私情",
+  "stranger": "走廊陌路",
+  "testing": "封楼对峙"
+ },
+ "status": "released",
+ "style_hint": "写复古学院的克制与心动：煤油灯、胶卷相机、手摇电话、翻盖手机没有信号。人体面、骄傲，心事藏在账页空白处的一行字里。",
+ "tension_engines": [
+  {
+   "id": "te_last_night",
+   "text": "旧校舍拆除前的最后一夜，推土机天一亮就进场，地窖里的东西要么搬走，要么埋掉。"
+  },
+  {
+   "id": "te_brother_ledger",
+   "text": "三百万亏空原来是已故前会长资助寒门特招生的暗账，公开就毁了一群人。"
+  },
+  {
+   "id": "te_board_feud",
+   "text": "两派校董借拆迁斗法，谁拿到原始账册，谁就能掀翻对方。"
+  },
+  {
+   "id": "te_curfew_seal",
+   "text": "风纪委员会按点封楼，挂锁一落，楼里的人谁也出不去。"
+  }
+ ],
+ "title": "被绑发带女会长",
+ "tone": [
+  "千禧年初的秋末",
+  "煤油灯下的旧账",
+  "深蓝真丝发带",
+  "推土机在围挡外",
+  "旧校舍最后一夜"
+ ],
+ "twists": [
+  {
+   "category": "资源",
+   "id": "tw_brother_trust_receipt",
+   "requires": [
+    "discipline_chief_ren"
+   ],
+   "text": "暗账木箱底层压着一封银行信托回执：已故前会长生前用个人专利费设了还账信托，本月刚好解冻；可启动信托要当年的受助代表{discipline_chief_ren.name}出面作证，实名一出就会被校董会取消毕业资格。"
+  },
+  {
+   "category": "制度",
+   "id": "tw_public_land_deed",
+   "requires": [
+    "veteran_alumnus_mentor_daiki"
+   ],
+   "text": "{veteran_alumnus_mentor_daiki.name}在地基档案里找到建校时的公益用地契约，证实敌对校董私签的商业拆迁合同根本违法；可要用它叫停拆迁，研究生会也得公开五年的全部原始流水接受质证。"
+  },
+  {
+   "category": "人事",
+   "id": "tw_yui_family_seal",
+   "requires": [
+    "vice_president_yui"
+   ],
+   "text": "{vice_president_yui.name}崩溃坦白：校产贱卖的那份转让合同，经手盖章的正是{vice_president_yui.ta}家的商社；要追回校产，{vice_president_yui.ta}就得指证自己的父亲。"
+  },
+  {
+   "category": "信息",
+   "id": "tw_reina_real_subject",
+   "requires": [
+    "student_journalist_reina"
+   ],
+   "text": "{student_journalist_reina.name}冲出气窗外拍的胶卷，边缘竟拍到了拆迁主管和敌对校董秘书在后院交接现金；可{student_journalist_reina.ta}要你今晚陪{student_journalist_reina.ta}去校外印刷厂印号外，你就没法留在地下室守夜。"
+  },
+  {
+   "category": "时限",
+   "id": "tw_last_bell_broadcast",
+   "requires": [
+    "proud_president_ayaka"
+   ],
+   "text": "钟楼的百年机械大钟就要最后一次鸣响，若在钟声里接通广播话筒，{proud_president_ayaka.name}就能让全校住宿生听见旧校舍拆迁前的真相；可一开麦，风纪委员会和校董会保安马上冲上钟楼拿人。"
+  },
+  {
+   "category": "关系",
+   "id": "tw_ribbon_embroidery",
+   "requires": [
+    "proud_president_ayaka"
+   ],
+   "text": "你解开{proud_president_ayaka.name}那条从不离身的深蓝真丝发带，衬里用银线绣着你的名字缩写，半年前就绣好了；可今晚要让会长全身而退，你就得把那箱账带回自己宿舍顶罪。"
+  },
+  {
+   "category": "关系",
+   "id": "tw_lock_on_purpose",
+   "requires": [
+    "discipline_chief_ren",
+    "proud_president_ayaka"
+   ],
+   "text": "生铁大门并不是哨兵不知内情锁上的：是{discipline_chief_ren.name}亲手从外面落了锁，只想让{proud_president_ayaka.name}和你有一夜不被打扰，把三年前的事说清楚。"
+  },
+  {
+   "category": "人事",
+   "id": "tw_goro_hands_key",
+   "requires": [
+    "demolition_crew_boss_goro"
+   ],
+   "text": "人前只认工期、对谁都吼的{demolition_crew_boss_goro.name}，私下把推土机的钥匙交给了清算特派员，说那一百万{demolition_crew_boss_goro.ta}一分没动，就压在工棚的饭盒底下。"
+  }
+ ]
+}

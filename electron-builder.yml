@@ -1,0 +1,42 @@
+appId: ai.shuru.desktop
+productName: 书入
+directories:
+  output: dist
+  buildResources: build
+files:
+  - dist-electron/**/*
+  - package.json
+# 不包含 src / .next / node_modules / prisma —— 它们已构建进 standalone，或通过 extraResources 注入
+extraResources:
+  - from: .next/standalone
+    to: standalone
+    filter: ["**/*"]
+  - from: prisma
+    to: prisma
+    filter: ["schema.prisma"]
+  - from: node_modules/prisma
+    to: prisma-cli
+    filter: ["**/*"]
+  - from: node_modules/@prisma
+    to: prisma-cli/node_modules/@prisma
+    filter: ["**/*"]
+  - from: node_modules/.prisma
+    to: prisma-client
+    filter: ["**/*"]
+asarUnpack:
+  # native binary 不能压进 asar，Node 的 require 无法加载 asar 内的 .node 文件
+  - "**/libquery_engine-*.dll.node"
+  - "**/prisma-cli/**"
+win:
+  target:
+    - target: nsis
+      arch: [x64]
+nsis:
+  oneClick: false
+  perMachine: false
+  allowToChangeInstallationDirectory: true
+  createDesktopShortcut: true
+  createStartMenuShortcut: true
+  shortcutName: 书入
+  uninstallDisplayName: 书入
+  language: "2052"
