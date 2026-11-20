@@ -4,6 +4,16 @@
 
 这是网页版第一版（手机优先），后续会做成 App。产品方案见项目里的《「书入」产品方案》文档。
 
+> **来源说明**：书入的续写引擎、世界库与叙事/尺度规则来自 [daha1216/dsh-adult-tension](https://github.com/daha1216/dsh-adult-tension)（作者 daha1216），原样放在 `engine/adult-tension/`。其中叙事素材与文档按 CC BY-NC 4.0 授权（须署名、不得商用），运行时代码按 MIT 授权。完整的来源、许可和改动说明见 [CREDITS.md](CREDITS.md)。
+
+## 截图
+
+| 开新书 | 开局设置 | 开局正文 | 状态 |
+| --- | --- | --- | --- |
+| ![开新书](docs/screenshots/1-开新书-世界列表.png) | ![开局设置](docs/screenshots/3-开局设置.png) | ![开局正文](docs/screenshots/4-开局正文.png) | ![状态](docs/screenshots/6-状态.png) |
+
+更多截图在 [`docs/screenshots/`](docs/screenshots/)；两份宿主系统提示词的导出样本在 [`docs/host-prompts/`](docs/host-prompts/)。
+
 ## 本地运行
 
 ```bash
@@ -62,3 +72,9 @@ src/components/     阅读器、开书、设置等页面组件
 - **手机号登录**：国内用户更习惯短信验证码登录。
 - **语音输入**：现在用浏览器自带的语音识别，iOS Safari 可用；安卓 Chrome 依赖境外服务，国内可能用不了。做 App 时换成国内语音识别（讯飞、阿里云），`src/hooks/useVoiceInput.ts` 的接口不用变。
 - 第二阶段：广场（分享作品、邀请他人续写）、App。
+
+## 来源与许可
+
+- `engine/adult-tension/` 及其衍生的提示词（`src/lib/at/prompts.ts` 拼出的系统提示词、`docs/host-prompts/`）：来自 [daha1216/dsh-adult-tension](https://github.com/daha1216/dsh-adult-tension)，代码部分 MIT，叙事素材与文档部分 CC BY-NC 4.0（不得商用）。
+- 第三方 npm 依赖按各自许可证。
+- 详见 [CREDITS.md](CREDITS.md)。
